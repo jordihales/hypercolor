@@ -7,8 +7,7 @@
     </h1>
     <div class="max-w-xl mx-auto mb-12 font-light tracking-tight text-gray-900">
       <p>
-        A curated collection of beautiful premade gradients using default colors
-        from the
+        A curated collection of beautiful premade gradients using default colors from the
         <a class="text-teal-500" href="https://tailwindcss.com/">Tailwind</a>
         palette as well as a selection of custom color gradients.
       </p>
@@ -25,12 +24,7 @@
         viewBox="0 0 24 24"
         stroke="currentColor"
       >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M19 9l-7 7-7-7"
-        />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
       </svg>
     </a>
   </div>
