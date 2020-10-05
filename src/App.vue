@@ -4,18 +4,20 @@
       <Banner></Banner>
       <Gradients></Gradients>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Banner from '@/components/Banner'
 import Gradients from '@/components/Gradients'
+import Footer from '@/components/Footer'
 
 export default {
   components: {
     Banner,
     Gradients,
+    Footer,
   },
 }
 </script>
-
