@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="gradients">
     <div>
       <div class="sm:hidden">
         <select aria-label="Selected tab" class="block w-full form-select">

@@ -1,13 +1,16 @@
 module.exports = {
   future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
   },
-  purge: [],
+  purge: ['./src/*.vue', './src/components/*.vue'],
   theme: {
     extend: {
       fontFamily: {
         sans: 'Inter',
+      },
+      animation: {
+        bounce: 'bounce 1.5s ease-in-out infinite',
       },
     },
   },

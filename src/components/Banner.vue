@@ -1,13 +1,11 @@
 <template>
-  <div class="flex flex-col items-center justify-center h-screen">
-    <div
+  <div class="flex flex-col items-center justify-center h-screen text-center">
+    <h1
       class="mb-6 text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500"
     >
       Hypercolor
-    </div>
-    <div
-      class="max-w-xl mx-auto mb-12 font-light tracking-tight text-center text-gray-900"
-    >
+    </h1>
+    <div class="max-w-xl mx-auto mb-12 font-light tracking-tight text-gray-900">
       <p>
         A curated collection of beautiful premade gradients using default colors
         from the
@@ -16,7 +14,8 @@
       </p>
       <p>Simply copy the code snippets to use within your own apps.</p>
     </div>
-    <div
+    <a
+      href="#gradients"
       class="p-2 rounded-full bg-gradient-to-br from-red-500 via-pink-500 to-yellow-500 animate-bounce"
     >
       <svg
@@ -33,7 +32,7 @@
           d="M19 9l-7 7-7-7"
         />
       </svg>
-    </div>
+    </a>
   </div>
 </template>
 
