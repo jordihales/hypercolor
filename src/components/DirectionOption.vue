@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    class="inline-flex items-center justify-center w-8 h-8 text-sm font-semibold leading-none bg-gray-200 rounded-full focus:outline-none focus:shadow-outline hover:bg-gray-300"
+    class="inline-flex items-center justify-center w-6 h-6 text-sm font-semibold leading-none bg-gray-200 rounded-full lg:w-8 lg:h-8 focus:outline-none focus:shadow-outline hover:bg-gray-300"
     :class="activeClass"
     @click="fireAction(direction)"
   >

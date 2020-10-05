@@ -6,12 +6,12 @@ export const gradients = [
   },
   {
     title: 'Oceanic',
-    theme: 'Cold',
+    theme: 'Cool',
     colors: 'bg-gradient-to-r from-teal-300 via-blue-500 to-purple-600',
   },
   {
     title: 'Cotton Candy',
-    theme: 'Sweet',
+    theme: 'Pastel',
     colors: 'bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400',
   },
   {
@@ -22,6 +22,6 @@ export const gradients = [
   {
     title: 'Sand',
     theme: 'Warm',
-    colors: 'bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-200',
+    colors: 'bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500',
   },
 ]

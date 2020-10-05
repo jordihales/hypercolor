@@ -2,13 +2,13 @@
   <div class="rounded-lg shadow-md">
     <div class="h-48 rounded-t-lg" :class="customisedColors"></div>
     <div class="px-6 py-8 space-y-4">
-      <h2 class="text-lg font-extrabold text-gray-900">{{ title }}</h2>
+      <h2 class="text-xl font-extrabold text-gray-900">{{ title }}</h2>
       <div class="font-mono text-sm text-gray-900">
         {{ customisedColors }}
       </div>
       <div>
         <h2 class="font-bold text-gray-900">Direction</h2>
-        <div class="inline-flex items-center mt-4 space-x-2">
+        <div class="flex items-center mt-4 space-x-2">
           <DirectionOption
             v-for="(value, key) of directions"
             :key="key"
