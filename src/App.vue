@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import Banner from './components/Banner'
-import Gradients from './components/Gradients'
+import Banner from '@/components/Banner'
+import Gradients from '@/components/Gradients'
+
 export default {
-  name: 'app',
   components: {
     Banner,
     Gradients,
@@ -19,6 +19,3 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import 'assets/styles/main.scss';
-</style>
