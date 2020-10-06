@@ -8,7 +8,7 @@
         class="underline"
         href="https://twitter.com/consolelogjordi"
         target="_blank"
-        rel="nofollow"
+        rel="noreferrer"
       >
         jordihales
       </a>
@@ -17,7 +17,7 @@
         class="underline"
         href="https://twitter.com/itsmarkmead"
         target="_blank"
-        rel="nofollow"
+        rel="noreferrer"
         >markmead</a
       >
       using
@@ -25,7 +25,7 @@
         class="underline"
         href="https://tailwindcss.com/"
         target="_blank"
-        rel="nofollow"
+        rel="noreferrer"
         >Tailwind</a
       >
       and
@@ -33,7 +33,7 @@
         class="underline"
         href="https://vuejs.org/"
         target="_blank"
-        rel="nofollow"
+        rel="noreferrer"
         >Vue</a
       >
     </div>
