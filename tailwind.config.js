@@ -3,7 +3,12 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: ['./src/*.vue', './src/components/*.vue', './src/assets/data/*.js'],
+  purge: {
+    content: ['./src/*.vue', './src/components/*.vue', './src/assets/data/*.js'],
+    options: {
+      whitelist: ['aos-init', 'aos-animate'],
+    },
+  },
   theme: {
     extend: {
       fontFamily: {

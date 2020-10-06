@@ -28,6 +28,7 @@
         :key="gradient.title"
         :title="gradient.title"
         :colors="gradient.colors"
+        data-aos="fade-up"
       />
     </div>
   </section>
@@ -38,6 +39,9 @@ import Gradient from '@/components/Gradient'
 import FilterOption from '@/components/FilterOption'
 
 import { gradients } from '@/assets/data/gradients'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default {
   data() {
@@ -78,6 +82,8 @@ export default {
     })
 
     this.themes = themes
+
+    AOS.init()
   },
 }
 </script>
