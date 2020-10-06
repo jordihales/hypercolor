@@ -22,7 +22,7 @@ export default {
   computed: {
     activeClass() {
       return this.active === this.theme
-        ? 'border-gray-300 bg-gray-200'
+        ? 'border-gray-300 bg-gray-50'
         : 'border-transparent'
     },
   },

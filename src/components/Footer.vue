@@ -1,15 +1,41 @@
 <template>
-  <div class="flex items-center justify-center py-8 bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500">
+  <div
+    class="flex items-center justify-center py-8 bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500"
+  >
     <div class="font-light text-center text-white">
-      Created by <a class="underline" href="https://twitter.com/consolelogjordi">jordihales</a> and
-      <a class="underline" href="https://twitter.com/itsmarkmead">markmead</a> using
-      <a class="underline" href="https://tailwindcss.com/">Tailwind</a>
+      Created by
+      <a
+        class="underline"
+        href="https://twitter.com/consolelogjordi"
+        target="_blank"
+        rel="nofollow"
+      >
+        jordihales
+      </a>
+      and
+      <a
+        class="underline"
+        href="https://twitter.com/itsmarkmead"
+        target="_blank"
+        rel="nofollow"
+        >markmead</a
+      >
+      using
+      <a
+        class="underline"
+        href="https://tailwindcss.com/"
+        target="_blank"
+        rel="nofollow"
+        >Tailwind</a
+      >
+      and
+      <a
+        class="underline"
+        href="https://vuejs.org/"
+        target="_blank"
+        rel="nofollow"
+        >Vue</a
+      >
     </div>
   </div>
 </template>
-
-<script>
-export default {}
-</script>
-
-<style></style>

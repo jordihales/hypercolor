@@ -1,10 +1,10 @@
 <template>
   <div id="app" class="bg-gray-100">
-    <div class="max-w-screen-xl px-6 mx-auto">
+    <main class="max-w-screen-xl px-6 mx-auto">
       <Banner />
       <Gradients />
-    </div>
-    <Footer></Footer>
+    </main>
+    <Footer />
   </div>
 </template>
 
