@@ -89,4 +89,34 @@ export const gradients = [
     theme: 'Cool',
     colors: 'bg-gradient-to-r from-gray-400 via-gray-600 to-blue-800',
   },
+  {
+    title: 'Arendelle',
+    theme: 'Cool',
+    colors: 'bg-gradient-to-r from-blue-100 via-blue-300 to-blue-500',
+  },
+  {
+    title: 'Spearmint',
+    theme: 'Cool',
+    colors: 'bg-gradient-to-r from-green-200 via-green-400 to-teal-500',
+  },
+  {
+    title: 'Minnesota',
+    theme: 'Warm',
+    colors: 'bg-gradient-to-r from-purple-400 to-yellow-400',
+  },
+  {
+    title: 'Acadia',
+    theme: 'Warm',
+    colors: 'bg-gradient-to-r from-red-800 via-orange-600 to-yellow-500',
+  },
+  {
+    title: 'Sonora',
+    theme: 'Warm',
+    colors: 'bg-gradient-to-r from-yellow-200 to-yellow-500',
+  },
+  {
+    title: 'Paradise',
+    theme: 'Pastel',
+    colors: 'bg-gradient-to-r from-blue-300 via-teal-200 to-yellow-300',
+  },
 ]
