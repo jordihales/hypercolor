@@ -2,7 +2,7 @@ export const gradients = [
   {
     title: 'Hyper',
     theme: 'Warm',
-    colors: 'bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500',
+    colors: 'bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500',
   },
   {
     title: 'Oceanic',
@@ -63,5 +63,30 @@ export const gradients = [
     title: 'Valentine',
     theme: 'Warm',
     colors: 'bg-gradient-to-r from-red-200 to-red-600',
+  },
+  {
+    title: 'Hawaii',
+    theme: 'Pastel',
+    colors: 'bg-gradient-to-r from-teal-300 via-yellow-300 to-pink-300',
+  },
+  {
+    title: 'Lavender',
+    theme: 'Pastel',
+    colors: 'bg-gradient-to-r from-indigo-300 to-purple-400',
+  },
+  {
+    title: 'Wintergreen',
+    theme: 'Cool',
+    colors: 'bg-gradient-to-r from-teal-200 to-teal-500',
+  },
+  {
+    title: 'Huckleberry',
+    theme: 'Cool',
+    colors: 'bg-gradient-to-r from-purple-200 via-purple-400 to-purple-800',
+  },
+  {
+    title: 'Blue Steel',
+    theme: 'Cool',
+    colors: 'bg-gradient-to-r from-gray-400 via-gray-600 to-blue-800',
   },
 ]
