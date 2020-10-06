@@ -2,16 +2,8 @@
   <section id="gradients">
     <div>
       <div class="sm:hidden">
-        <select
-          aria-label="Selected tab"
-          class="block w-full p-3 rounded shadow-md form-select"
-          v-model="theme"
-        >
-          <option
-            v-for="gradient in themes"
-            :key="gradient.title"
-            :value="gradient.theme"
-          >
+        <select aria-label="Selected tab" class="block w-full p-3 rounded shadow-md form-select" v-model="theme">
+          <option v-for="gradient in themes" :key="gradient.title" :value="gradient.theme">
             {{ gradient.theme }}
           </option>
         </select>
@@ -70,18 +62,14 @@ export default {
 
       const self = this
 
-      let gradients = this.gradients.filter(
-        (gradient) => gradient.theme === self.theme
-      )
+      let gradients = this.gradients.filter((gradient) => gradient.theme === self.theme)
 
       return gradients
     },
   },
   beforeMount() {
     let themes = this.gradients.filter(
-      (gradient, index, self) =>
-        self.findIndex((_gradient) => _gradient.theme === gradient.theme) ===
-        index
+      (gradient, index, self) => self.findIndex((_gradient) => _gradient.theme === gradient.theme) === index
     )
 
     themes.unshift({

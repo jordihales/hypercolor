@@ -6,6 +6,7 @@
       <div class="font-mono text-sm text-gray-900">
         {{ customisedColors }}
       </div>
+      <ClickCopy :gradient="customisedColors" />
       <div>
         <h2 class="font-bold text-gray-900">Direction</h2>
         <div class="flex items-center mt-4 space-x-2">
@@ -23,6 +24,7 @@
 </template>
 
 <script>
+import ClickCopy from '@/components/ClickCopy'
 import DirectionOption from '@/components/DirectionOption'
 import { directions } from '@/assets/data/directions'
 
@@ -54,6 +56,7 @@ export default {
   },
   components: {
     DirectionOption,
+    ClickCopy,
   },
 }
 </script>

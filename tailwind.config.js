@@ -12,8 +12,13 @@ module.exports = {
       animation: {
         bounce: 'bounce 1.5s ease-in-out infinite',
       },
+      transition: {
+        size: ['width', 'height'],
+      },
     },
   },
-  variants: {},
+  variants: {
+    width: ['hover', 'responsive', 'group-hover'],
+  },
   plugins: [],
 }

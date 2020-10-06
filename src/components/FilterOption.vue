@@ -6,7 +6,7 @@
     @click="fireAction(theme)"
   >
     <div class="w-10 h-10 rounded" :class="colors"></div>
-    <span class="ml-3 text-sm font-semibold leading-none text-gray-500">
+    <span class="ml-3 text-sm font-light leading-none text-gray-600">
       {{ theme }}
     </span>
   </button>
@@ -21,9 +21,7 @@ export default {
   },
   computed: {
     activeClass() {
-      return this.active === this.theme
-        ? 'border-gray-300 bg-gray-50'
-        : 'border-transparent'
+      return this.active === this.theme ? 'border-gray-300 bg-gray-50' : 'border-transparent'
     },
   },
   methods: {
