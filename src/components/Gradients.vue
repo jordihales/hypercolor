@@ -22,7 +22,7 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-1 gap-8 py-20 lg:grid-cols-3">
+    <div class="grid grid-cols-1 py-20 gap-x-8 gap-y-16 lg:grid-cols-3">
       <Gradient
         v-for="gradient in filteredGradients"
         :key="gradient.title"
