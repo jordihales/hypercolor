@@ -3,7 +3,7 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  purge: [],
+  purge: ['./src/*.vue', './src/components/*.vue', './src/assets/data/*.js'],
   theme: {
     extend: {
       fontFamily: {
