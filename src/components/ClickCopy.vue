@@ -8,7 +8,7 @@
         v-clipboard:copy="gradient"
         v-clipboard:success="onCopy"
         v-clipboard:error="onError"
-        data-gradient="gradient"
+        :data-gradient="gradient"
       >
         Copy CSS
       </button>
@@ -28,7 +28,7 @@ export default {
   methods: {
     onCopy(e) {
       const text = e.trigger.innerText
-      e.trigger.innerText = 'Copied!'
+      e.trigger.innerText = 'Copied 🎉'
 
       setTimeout(() => (e.trigger.innerText = text), 2000)
 
