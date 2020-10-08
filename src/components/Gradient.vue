@@ -6,7 +6,7 @@
       <div class="font-mono text-sm text-gray-900">
         {{ customisedColors }}
       </div>
-      <ClickCopy :gradient="customisedColors" />
+      <ClickCopy :gradient="customisedColors" :name="title" />
       <div>
         <h2 class="font-bold text-gray-900">Direction</h2>
         <div class="flex items-center mt-4 space-x-2">
