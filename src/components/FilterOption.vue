@@ -1,12 +1,12 @@
 <template>
   <button
     type="button"
-    class="inline-flex items-center justify-center px-4 py-3 border rounded focus:outline-none focus:shadow-outline hover:border-gray-300 dark:hover:border-gray-700"
+    class="inline-flex items-center justify-center px-4 py-3 border rounded focus:outline-none focus:shadow-outline hover:border-app-border"
     :class="activeClass"
     @click="fireAction(theme)"
   >
     <div class="w-10 h-10 rounded" :class="colors"></div>
-    <span class="ml-3 text-sm font-medium leading-none text-gray-600 dark:text-gray-400">
+    <span class="ml-3 text-sm font-medium leading-none text-app-text">
       {{ theme }}
     </span>
   </button>
@@ -21,7 +21,7 @@ export default {
   },
   computed: {
     activeClass() {
-      return this.active === this.theme ? 'border-gray-300 dark:border-gray-700' : 'border-transparent'
+      return this.active === this.theme ? 'border-app-border' : 'border-transparent'
     },
   },
   methods: {

@@ -5,13 +5,14 @@
     >
       Hypercolor
     </h1>
-    <div class="max-w-xl mx-auto mb-12 font-light tracking-tight text-gray-900 dark:text-gray-100">
+    <div class="max-w-xl mx-auto mb-12 font-medium tracking-tight text-app-text">
       <p>
         A curated collection of beautiful premade gradients using default colors from the
         <a class="text-teal-500" href="https://tailwindcss.com/">Tailwind</a>
         palette as well as a selection of custom color gradients.
+        <br class="hidden md:block" />
+        Simply copy the code snippets to use within your own apps.
       </p>
-      <p>Simply copy the code snippets to use within your own apps.</p>
     </div>
     <a
       href="#gradients"

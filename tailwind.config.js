@@ -20,9 +20,11 @@ module.exports = {
       transition: {
         size: ['width', 'height'],
       },
-      screens: {
-        dark: { raw: '(prefers-color-scheme: dark)' },
-        light: { raw: '(prefers-color-scheme: light)' },
+      colors: {
+        'app-text': 'var(--text-color)',
+        'app-border': 'var(--border-color)',
+        'app-bg': 'var(--bg-color)',
+        'app-btn': 'var(--btn-bg-color)',
       },
     },
   },
