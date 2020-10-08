@@ -8,6 +8,7 @@
         v-clipboard:copy="gradient"
         v-clipboard:success="onCopy"
         v-clipboard:error="onError"
+        data-gradient="gradient"
       >
         Copy CSS
       </button>
@@ -25,15 +26,23 @@ export default {
     gradient: String,
   },
   methods: {
-    onCopy: function(e) {
+    onCopy(e) {
       const text = e.trigger.innerText
       e.trigger.innerText = 'Copied!'
-      setTimeout(() => {
-        e.trigger.innerText = text
-      }, 2000)
+
+      setTimeout(() => (e.trigger.innerText = text), 2000)
+
+      this.$gtag.event('Success', {
+        event_category: 'Copy Gradient',
+        value: e.trigger.dataset.gradient,
+      })
     },
-    onError: function() {
+    onError(e) {
       alert('Failed to copy texts')
+      this.$gtag.event('Failed', {
+        event_category: 'Copy Gradient',
+        value: e.trigger.dataset.gradient,
+      })
     },
   },
 }

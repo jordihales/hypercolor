@@ -19,5 +19,12 @@ export default {
     Gradients,
     Footer,
   },
+  methods: {
+    track() {
+      this.$gtag.pageview({
+        page_path: '/',
+      })
+    },
+  },
 }
 </script>
