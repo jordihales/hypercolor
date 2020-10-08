@@ -20,6 +20,7 @@
     "vue-gtag": "^1.9.1"
   },
   "devDependencies": {
+    "@tailwindcss/custom-forms": "^0.2.1",
     "@vue/cli-plugin-babel": "^3.9.0",
     "@vue/cli-plugin-eslint": "^3.9.0",
     "@vue/cli-service": "^3.9.0",
