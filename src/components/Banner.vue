@@ -5,7 +5,7 @@
     >
       Hypercolor
     </h1>
-    <div class="max-w-xl mx-auto mb-12 font-light tracking-tight text-gray-900">
+    <div class="max-w-xl mx-auto mb-12 font-light tracking-tight text-gray-900 dark:text-gray-100">
       <p>
         A curated collection of beautiful premade gradients using default colors from the
         <a class="text-teal-500" href="https://tailwindcss.com/">Tailwind</a>

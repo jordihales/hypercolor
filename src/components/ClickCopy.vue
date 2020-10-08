@@ -3,7 +3,7 @@
     <input type="hidden" v-model="gradient" />
     <div class="inline-flex flex-col items-start group">
       <button
-        class="text-sm font-medium focus:outline-none focus:shadow-outline"
+        class="text-sm font-medium text-gray-900 focus:outline-none focus:shadow-outline dark:text-gray-100"
         type="button"
         v-clipboard:copy="gradient"
         v-clipboard:success="onCopy"

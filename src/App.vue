@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="bg-gray-100">
+  <div class="bg-gray-100 dark:bg-gray-900">
     <main class="max-w-screen-xl px-6 mx-auto">
       <Banner />
       <Gradients />
