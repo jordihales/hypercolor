@@ -18,19 +18,19 @@ import ToggleButton from '@/components/ToggleButton'
 export default {
   data() {
     return {
-      darkMode: false
+      darkMode: false,
     }
   },
   components: {
     Banner,
     Gradients,
     Footer,
-    ToggleButton
+    ToggleButton,
   },
   computed: {
     themeClass() {
       return this.darkMode ? 'dark-mode' : 'light-mode'
-    }
+    },
   },
   methods: {
     handleTheme() {
@@ -43,9 +43,8 @@ export default {
     },
   },
   beforeMount() {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches)
       this.darkMode = true
-    }
-  }
+  },
 }
 </script>

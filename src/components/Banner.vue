@@ -8,26 +8,22 @@
     <div class="max-w-xl mx-auto mb-12 font-medium tracking-tight text-app-text">
       <p>
         A curated collection of beautiful premade gradients using default colors from the
-        <a class="text-teal-500" href="https://tailwindcss.com/">Tailwind</a>
+        <a class="text-teal-600" href="https://tailwindcss.com/">Tailwind</a>
         palette as well as a selection of custom color gradients.
         <br class="hidden md:block" />
         Simply copy the code snippets to use within your own apps.
       </p>
     </div>
-    <a
-      href="#gradients"
-      class="p-2 rounded-full bg-gradient-to-br from-red-500 via-pink-500 to-yellow-500 animate-bounce"
-      aria-label="Navigate down to gradients"
-    >
-      <svg
-        class="h-6 text-white"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-      </svg>
-    </a>
+    <ScrollButton />
   </div>
 </template>
+
+<script>
+import ScrollButton from '@/components/ScrollButton'
+
+export default {
+  components: {
+    ScrollButton,
+  },
+}
+</script>
