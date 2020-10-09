@@ -5,10 +5,7 @@
       <Gradients />
     </main>
     <Footer />
-
-    <button type="button" class="fixed bottom-0 right-0 px-6 py-3 text-sm font-medium leading-none text-white transform -translate-x-6 -translate-y-6 rounded-lg shadow-lg bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 focus:outline-none focus:shadow-outline" @click="handleTheme">
-      Toggle Theme
-    </button>
+    <ToggleButton @action="handleTheme" />
   </div>
 </template>
 
@@ -16,6 +13,7 @@
 import Banner from '@/components/Banner'
 import Gradients from '@/components/Gradients'
 import Footer from '@/components/Footer'
+import ToggleButton from '@/components/ToggleButton'
 
 export default {
   data() {
@@ -27,6 +25,7 @@ export default {
     Banner,
     Gradients,
     Footer,
+    ToggleButton
   },
   computed: {
     themeClass() {

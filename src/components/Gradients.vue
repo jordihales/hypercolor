@@ -35,13 +35,13 @@
 </template>
 
 <script>
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 import Gradient from '@/components/Gradient'
 import FilterOption from '@/components/FilterOption'
 
 import { gradients } from '@/assets/data/gradients'
-
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 
 export default {
   data() {
