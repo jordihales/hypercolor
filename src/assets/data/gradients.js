@@ -149,4 +149,19 @@ export const gradients = [
     theme: 'Pastel',
     colors: 'bg-gradient-to-r from-yellow-200 via-pink-200 to-pink-400',
   },
+  {
+    title: 'Flamingo',
+    theme: 'Pastel',
+    colors: 'bg-gradient-to-r from-pink-400 to-pink-600',
+  },
+  {
+    title: 'Burning Sunrise',
+    theme: 'Warm',
+    colors: 'bg-gradient-to-r from-yellow-600 to-red-600',
+  },
+  {
+    title: 'Apple',
+    theme: 'Cool',
+    colors: 'bg-gradient-to-r from-green-500 to-green-700',
+  },
 ]
