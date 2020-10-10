@@ -1,29 +1,11 @@
-![Vue.js Logo](https://github.com/vercel/vercel/blob/master/packages/frameworks/logos/vue.svg)
+# Hypercolor
 
-# Vue.js Example
+[hypercolor.dev](https://hypercolor.dev/)
 
-This directory is a brief example of a [Vue.js](https://vuejs.org/) app that can be deployed with Vercel and zero configuration.
+A curated collection of beautiful premade gradients using default colors from the Tailwind CSS library.
 
-## Deploy Your Own
+---
 
-Deploy your own Vue.js project with Vercel.
+Created by [Jordi Hales](https://twitter.com/consolelogjordi) and [Mark Mead](https://twitter.com/itsmarkmead) using [Tailwind](https://tailwindcss.com/) and [Vue](https://vuejs.org/).
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/vercel/tree/master/examples/vue)
-
-_Live Example: https://vue.now-examples.now.sh_
-
-### How We Created This Example
-
-To get started with Vue.js deployed with Vercel, you can use the [Vue CLI](https://cli.vuejs.org/guide/creating-a-project.html#vue-create) to initialize the project:
-
-```shell
-$ vue create
-```
-
-### Deploying From Your Terminal
-
-You can deploy your new Vue.js project with a single command from your terminal using [Vercel CLI](https://vercel.com/download):
-
-```shell
-$ vercel
-```
+Unaffiliated with [Tailwind Labs](https://twitter.com/tailwindlabs)
