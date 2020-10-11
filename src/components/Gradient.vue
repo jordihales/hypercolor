@@ -8,6 +8,7 @@
           {{ customisedColors }}
         </div>
         <ClickCopy :gradient="customisedColors" :name="title" />
+        <ClickCopy :gradient="customisedColors" :name="title" :vanilla="true" />
       </div>
       <div class="space-y-4">
         <h2 class="font-bold text-app-text">Direction</h2>

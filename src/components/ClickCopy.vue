@@ -5,16 +5,16 @@
       <button
         class="text-sm font-medium focus:outline-none focus:shadow-outline text-app-text"
         type="button"
-        v-clipboard:copy="gradient"
+        v-clipboard:copy="value"
         v-clipboard:success="onCopy"
         v-clipboard:error="onError"
         :data-gradient="name"
       >
-        Copy CSS
+        Copy <span v-if="vanilla">Vanilla</span> CSS
       </button>
       <span
         class="inline-block w-6 h-1 mt-1 duration-100 ease-in-out rounded-full transition-size group-hover:w-full"
-        :class="gradient"
+        :class="gradient" ref="gradientUnderline"
       ></span>
     </div>
   </div>
@@ -25,6 +25,14 @@ export default {
   props: {
     gradient: String,
     name: String,
+    vanilla: Boolean,
+    value: String,
+  },
+  mounted() {
+    this.value = this.vanilla ? getComputedStyle(this.$refs.gradientUnderline).getPropertyValue('background-image') : this.gradient
+  },
+  updated() {
+    this.value = this.vanilla ? getComputedStyle(this.$refs.gradientUnderline).getPropertyValue('background-image') : this.gradient
   },
   methods: {
     onCopy(e) {
