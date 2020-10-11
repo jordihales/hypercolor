@@ -26,13 +26,25 @@ export default {
     gradient: String,
     name: String,
     vanilla: Boolean,
-    value: String,
+  },
+  data() {
+    return {
+      mounted: false,
+    }
   },
   mounted() {
-    this.value = this.vanilla ? getComputedStyle(this.$refs.gradientUnderline).getPropertyValue('background-image') : this.gradient
+    this.mounted = true
   },
-  updated() {
-    this.value = this.vanilla ? getComputedStyle(this.$refs.gradientUnderline).getPropertyValue('background-image') : this.gradient
+  computed: {
+    value() {
+      if (!this.mounted) return null
+      
+      if (this.vanilla) {
+        return getComputedStyle(this.$refs.gradientUnderline).getPropertyValue('background-image')
+      }
+
+      return this.gradient
+    }
   },
   methods: {
     onCopy(e) {
