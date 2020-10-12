@@ -164,4 +164,9 @@ export const gradients = [
     theme: 'Cool',
     colors: 'bg-gradient-to-r from-green-500 to-green-700',
   },
+  {
+    title: 'Watermelon',
+    theme: 'Pastel',
+    colors: 'bg-gradient-to-r from-red-500 to-green-500',
+  },
 ]
