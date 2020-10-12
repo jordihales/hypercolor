@@ -1,10 +1,10 @@
-# Hypercolor
+![Hypercolor](https://hypercolor.dev/social.png)
 
-[hypercolor.dev](https://hypercolor.dev/)
+### [hypercolor.dev](https://hypercolor.dev/)
 
 A curated collection of beautiful premade gradients using default colors from the Tailwind CSS library.
 
---
+---
 
 ## Hacktoberfest
 
