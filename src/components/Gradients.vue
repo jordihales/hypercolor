@@ -2,7 +2,7 @@
   <section id="gradients">
     <div>
       <div class="sm:hidden">
-        <select aria-label="Selected tab" class="block w-full p-3 rounded shadow-md form-select" v-model="theme">
+        <select aria-label="Filter" class="block w-full px-4 py-2 rounded-md shadow-sm" v-model="theme">
           <option v-for="gradient in themes" :key="gradient.title" :value="gradient.theme">
             {{ gradient.theme }}
           </option>
