@@ -27,12 +27,12 @@ export const gradients = [
   {
     title: 'Mojave',
     theme: 'Warm',
-    colors: 'bg-gradient-to-r from-orange-100 via-orange-300 to-orange-500',
+    colors: 'bg-gradient-to-r from-yellow-100 via-yellow-300 to-yellow-500',
   },
   {
     title: 'Beachside',
     theme: 'Cool',
-    colors: 'bg-gradient-to-r from-orange-200 via-green-200 to-green-500',
+    colors: 'bg-gradient-to-r from-yellow-200 via-green-200 to-green-500',
   },
   {
     title: 'Gunmetal',
@@ -52,7 +52,7 @@ export const gradients = [
   {
     title: 'Pumpkin',
     theme: 'Warm',
-    colors: 'bg-gradient-to-r from-orange-200 via-orange-400 to-orange-700',
+    colors: 'bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-700',
   },
   {
     title: 'Pandora',
@@ -112,7 +112,7 @@ export const gradients = [
   {
     title: 'Acadia',
     theme: 'Warm',
-    colors: 'bg-gradient-to-r from-red-800 via-orange-600 to-yellow-500',
+    colors: 'bg-gradient-to-r from-red-800 via-yellow-600 to-yellow-500',
   },
   {
     title: 'Sonora',
@@ -132,7 +132,7 @@ export const gradients = [
   {
     title: 'Creamsicle',
     theme: 'Warm',
-    colors: 'bg-gradient-to-r from-orange-200 via-orange-300 to-orange-400',
+    colors: 'bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-400',
   },
   {
     title: 'Midnight',
