@@ -1,22 +1,20 @@
 <template>
   <div class="container">
     <input type="hidden" v-model="gradient" />
-    <div class="inline-flex flex-col items-start group">
-      <button
-        class="text-sm font-medium focus:outline-none focus:shadow-outline text-app-text"
-        type="button"
-        v-clipboard:copy="gradient"
-        v-clipboard:success="onCopy"
-        v-clipboard:error="onError"
-        :data-gradient="name"
-      >
-        Copy CSS
-      </button>
+    <button
+      class="text-sm font-medium focus:outline-none focus:shadow-outline group text-app-text"
+      type="button"
+      v-clipboard:copy="gradient"
+      v-clipboard:success="onCopy"
+      v-clipboard:error="onError"
+      :data-gradient="name"
+    >
+      <span ref="text">Copy CSS</span>
       <span
-        class="inline-block w-6 h-1 mt-1 duration-100 ease-in-out rounded-full transition-size group-hover:w-full"
+        class="block w-full h-1 mt-1 transition-transform origin-left scale-x-50 rounded-full transform-gpu group-hover:scale-x-100"
         :class="gradient"
       ></span>
-    </div>
+    </button>
   </div>
 </template>
 
@@ -28,12 +26,12 @@ export default {
   },
   methods: {
     onCopy(e) {
-      const text = e.trigger.innerText
+      const text = this.$refs.text.innerText
       const gradient = e.trigger.dataset.gradient
 
-      e.trigger.innerText = 'Copied 🎉'
+      this.$refs.text.innerText = 'Copied 🎉'
 
-      setTimeout(() => (e.trigger.innerText = text), 2000)
+      setTimeout(() => (this.$refs.text.innerText = text), 2000)
 
       this.$gtag.event('Success', {
         event_category: 'Copy Gradient',

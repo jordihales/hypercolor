@@ -1,17 +1,24 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-
 module.exports = {
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
   purge: {
     content: ['./src/*.vue', './src/components/*.vue', './src/assets/data/*.js'],
     options: {
       whitelist: ['aos-init', 'aos-animate'],
     },
   },
-  darkMode: false,
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: 'Inter',
+      },
+      animation: {
+        bounce: 'bounce 1.5s ease-in-out infinite',
+      },
+      transition: {
+        size: ['width', 'height'],
       },
       colors: {
         'app-text': 'var(--text-color)',
@@ -22,9 +29,6 @@ module.exports = {
     },
   },
   variants: {
-    extend: {
-      scale: ['group-hover'],
-    },
+    width: ['hover', 'responsive', 'group-hover'],
   },
-  plugins: [require('@tailwindcss/forms')],
 }
