@@ -7,7 +7,7 @@ export const gradients = [
   {
     title: 'Oceanic',
     theme: 'Cool',
-    colors: 'bg-gradient-to-r from-teal-300 via-blue-500 to-purple-600',
+    colors: 'bg-gradient-to-r from-green-300 via-blue-500 to-purple-600',
   },
   {
     title: 'Cotton Candy',
@@ -32,7 +32,7 @@ export const gradients = [
   {
     title: 'Beachside',
     theme: 'Cool',
-    colors: 'bg-gradient-to-r from-orange-200 via-teal-200 to-teal-500',
+    colors: 'bg-gradient-to-r from-orange-200 via-green-200 to-green-500',
   },
   {
     title: 'Gunmetal',
@@ -47,7 +47,7 @@ export const gradients = [
   {
     title: 'Seafoam',
     theme: 'Cool',
-    colors: 'bg-gradient-to-r from-teal-200 via-teal-300 to-blue-500',
+    colors: 'bg-gradient-to-r from-green-200 via-green-300 to-blue-500',
   },
   {
     title: 'Pumpkin',
@@ -57,7 +57,7 @@ export const gradients = [
   {
     title: 'Pandora',
     theme: 'Cool',
-    colors: 'bg-gradient-to-r from-green-200 via-teal-400 to-purple-700',
+    colors: 'bg-gradient-to-r from-green-200 via-green-400 to-purple-700',
   },
   {
     title: 'Valentine',
@@ -67,7 +67,7 @@ export const gradients = [
   {
     title: 'Hawaii',
     theme: 'Pastel',
-    colors: 'bg-gradient-to-r from-teal-300 via-yellow-300 to-pink-300',
+    colors: 'bg-gradient-to-r from-green-300 via-yellow-300 to-pink-300',
   },
   {
     title: 'Lavender',
@@ -77,7 +77,7 @@ export const gradients = [
   {
     title: 'Wintergreen',
     theme: 'Cool',
-    colors: 'bg-gradient-to-r from-teal-200 to-teal-500',
+    colors: 'bg-gradient-to-r from-green-200 to-green-500',
   },
   {
     title: 'Huckleberry',
@@ -97,7 +97,7 @@ export const gradients = [
   {
     title: 'Spearmint',
     theme: 'Cool',
-    colors: 'bg-gradient-to-r from-green-200 via-green-400 to-teal-500',
+    colors: 'bg-gradient-to-r from-green-200 via-green-400 to-green-500',
   },
   {
     title: 'Minnesota',
@@ -122,7 +122,7 @@ export const gradients = [
   {
     title: 'Paradise',
     theme: 'Pastel',
-    colors: 'bg-gradient-to-r from-blue-300 via-teal-200 to-yellow-300',
+    colors: 'bg-gradient-to-r from-blue-300 via-green-200 to-yellow-300',
   },
   {
     title: 'Sierra Mist',
@@ -142,7 +142,7 @@ export const gradients = [
   {
     title: 'Borealis',
     theme: 'Pastel',
-    colors: 'bg-gradient-to-r from-teal-300 to-purple-400',
+    colors: 'bg-gradient-to-r from-green-300 to-purple-400',
   },
   {
     title: 'Strawberry',

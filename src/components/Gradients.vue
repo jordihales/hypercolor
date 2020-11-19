@@ -78,7 +78,7 @@ export default {
 
     themes.unshift({
       theme: 'All',
-      colors: 'bg-gradient-to-r from-teal-400 to-green-600',
+      colors: 'bg-gradient-to-r from-green-400 to-green-600',
     })
 
     this.themes = themes

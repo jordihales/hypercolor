@@ -8,7 +8,7 @@
     <div class="max-w-xl mx-auto mb-12 font-medium tracking-tight text-app-text">
       <p>
         A curated collection of beautiful premade gradients using default colors from the
-        <a class="text-teal-600" href="https://tailwindcss.com/">Tailwind</a>
+        <a class="text-green-600" href="https://tailwindcss.com/">Tailwind</a>
         palette as well as a selection of custom color gradients.
         <br class="hidden md:block" />
         Simply copy the code snippets to use within your own apps.
