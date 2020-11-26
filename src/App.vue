@@ -5,7 +5,10 @@
       <Gradients />
     </main>
     <Footer />
-    <ToggleButton @action="handleTheme" />
+    <div class="fixed inline-flex items-center space-x-4 right-6 bottom-6">
+      <ScrollTopButton />
+      <ToggleButton @action="handleTheme" />
+    </div>
   </div>
 </template>
 
@@ -14,6 +17,7 @@ import Banner from '@/components/Banner'
 import Gradients from '@/components/Gradients'
 import Footer from '@/components/Footer'
 import ToggleButton from '@/components/ToggleButton'
+import ScrollTopButton from '@/components/ScrollTopButton'
 
 export default {
   data() {
@@ -26,6 +30,7 @@ export default {
     Gradients,
     Footer,
     ToggleButton,
+    ScrollTopButton,
   },
   computed: {
     themeClass() {
@@ -43,8 +48,7 @@ export default {
     },
   },
   beforeMount() {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches)
-      this.darkMode = true
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) this.darkMode = true
   },
 }
 </script>

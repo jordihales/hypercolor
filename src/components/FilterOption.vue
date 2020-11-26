@@ -1,12 +1,12 @@
 <template>
   <button
     type="button"
-    class="inline-flex items-center justify-center px-4 py-3 border rounded focus:outline-none focus:shadow-outline hover:border-app-border"
+    class="inline-flex items-center justify-center px-4 py-3 border rounded hover:border-app-border"
     :class="activeClass"
     @click="fireAction(theme)"
   >
     <div class="w-10 h-10 rounded" :class="colors"></div>
-    <span class="ml-3 text-sm font-medium leading-none text-app-text">
+    <span class="ml-3 text-sm font-medium text-app-text">
       {{ theme }}
     </span>
   </button>

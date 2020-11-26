@@ -1,8 +1,7 @@
 <template>
   <div class="container">
-    <input type="hidden" v-model="gradient" />
     <button
-      class="text-sm font-medium focus:outline-none focus:shadow-outline group text-app-text"
+      class="text-sm font-medium group text-app-text"
       type="button"
       v-clipboard:copy="gradient"
       v-clipboard:success="onCopy"

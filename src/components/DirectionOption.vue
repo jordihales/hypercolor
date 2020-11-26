@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    class="inline-flex items-center justify-center w-6 h-6 text-sm font-semibold leading-none transition-opacity duration-100 ease-in rounded-full lg:w-8 lg:h-8 focus:outline-none focus:shadow-outline text-app-text bg-app-btn hover:opacity-50"
+    class="inline-flex items-center justify-center w-6 h-6 text-sm font-semibold transition-opacity duration-100 ease-in rounded-full lg:w-8 lg:h-8 text-app-text bg-app-btn hover:opacity-50"
     @click="fireAction(direction)"
   >
     {{ title }}
