@@ -195,7 +195,7 @@ export const gradients = [
     colors: 'bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500',
   },
   {
-    title: 'Midnight',
+    title: 'Witch',
     theme: 'Cool',
     colors: 'bg-gradient-to-r from-blue-gray-900 via-purple-900 to-blue-gray-900',
   },

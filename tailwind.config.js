@@ -36,8 +36,8 @@ module.exports = {
   },
   variants: {
     extend: {
-      scale: ['group-hover'],
       display: ['dark'],
+      scale: ['group-hover'],
     },
   },
   plugins: [require('@tailwindcss/forms')],

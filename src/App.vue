@@ -16,10 +16,10 @@
 
 <script>
 import Banner from '@/components/Banner'
-import Gradients from '@/components/Gradients'
 import Footer from '@/components/Footer'
-import ToggleButton from '@/components/ToggleButton'
+import Gradients from '@/components/Gradients'
 import ScrollTopButton from '@/components/ScrollTopButton'
+import ToggleButton from '@/components/ToggleButton'
 
 export default {
   data() {
@@ -29,10 +29,10 @@ export default {
   },
   components: {
     Banner,
-    Gradients,
     Footer,
-    ToggleButton,
+    Gradients,
     ScrollTopButton,
+    ToggleButton,
   },
   computed: {
     themeClass() {

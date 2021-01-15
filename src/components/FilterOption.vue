@@ -14,9 +14,9 @@
 <script>
 export default {
   props: {
-    theme: String,
-    colors: String,
     active: String,
+    colors: String,
+    theme: String,
   },
   computed: {
     activeClass() {

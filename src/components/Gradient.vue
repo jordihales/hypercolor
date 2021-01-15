@@ -43,8 +43,8 @@ export default {
     }
   },
   props: {
-    title: String,
     colors: String,
+    title: String,
   },
   computed: {
     customisedColors() {
@@ -62,8 +62,8 @@ export default {
     },
   },
   components: {
-    DirectionOption,
     ClickCopy,
+    DirectionOption,
   },
 }
 </script>

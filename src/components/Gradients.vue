@@ -38,8 +38,8 @@
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-import Gradient from '@/components/Gradient'
 import FilterOption from '@/components/FilterOption'
+import Gradient from '@/components/Gradient'
 
 import { gradients } from '@/assets/data/gradients'
 
@@ -47,13 +47,13 @@ export default {
   data() {
     return {
       gradients,
-      themes: [],
       theme: 'All',
+      themes: [],
     }
   },
   components: {
-    Gradient,
     FilterOption,
+    Gradient,
   },
   methods: {
     handleFilter(theme) {
