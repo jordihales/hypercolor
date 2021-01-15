@@ -166,7 +166,112 @@ export const gradients = [
   },
   {
     title: 'Watermelon',
-    theme: 'Pastel',
+    theme: 'Warm',
     colors: 'bg-gradient-to-r from-red-500 to-green-500',
+  },
+  {
+    title: 'Pig',
+    theme: 'Pastel',
+    colors: 'bg-gradient-to-r from-pink-50 to-pink-100',
+  },
+  {
+    title: 'Flare',
+    theme: 'Warm',
+    colors: 'bg-gradient-to-r from-orange-600 to-orange-500',
+  },
+  {
+    title: 'Rasta',
+    theme: 'Warm',
+    colors: 'bg-gradient-to-r from-lime-600 via-yellow-300 to-red-600',
+  },
+  {
+    title: 'Lust',
+    theme: 'Warm',
+    colors: 'bg-gradient-to-r from-rose-700 to-pink-600',
+  },
+  {
+    title: 'Sublime',
+    theme: 'Cool',
+    colors: 'bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500',
+  },
+  {
+    title: 'Midnight',
+    theme: 'Cool',
+    colors: 'bg-gradient-to-r from-blue-gray-900 via-purple-900 to-blue-gray-900',
+  },
+  {
+    title: 'Powerpuff',
+    theme: 'Cool',
+    colors: 'bg-gradient-to-r from-light-blue-400 via-rose-400 to-lime-400',
+  },
+  {
+    title: 'Solid Blue',
+    theme: 'Cool',
+    colors: 'bg-gradient-to-r from-blue-500 to-blue-600',
+  },
+  {
+    title: 'Ice',
+    theme: 'Pastel',
+    colors: 'bg-gradient-to-r from-rose-100 to-teal-100',
+  },
+  {
+    title: 'Sky',
+    theme: 'Pastel',
+    colors: 'bg-gradient-to-b from-light-blue-400 to-light-blue-200',
+  },
+  {
+    title: 'Horizon',
+    theme: 'Warm',
+    colors: 'bg-gradient-to-b from-orange-500 to-yellow-300',
+  },
+  {
+    title: 'Morning',
+    theme: 'Warm',
+    colors: 'bg-gradient-to-r from-rose-400 to-orange-300',
+  },
+  {
+    title: 'Space',
+    theme: 'Monochrome',
+    colors: 'bg-gradient-to-b from-cool-gray-900 to-warm-gray-600',
+  },
+  {
+    title: 'Earth',
+    theme: 'Pastel',
+    colors: 'bg-gradient-to-r from-teal-200 to-lime-200',
+  },
+  {
+    title: 'Picture',
+    theme: 'Warm',
+    colors: 'bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400',
+  },
+  {
+    title: 'Messenger',
+    theme: 'Cool',
+    colors: 'bg-gradient-to-r from-light-blue-400 to-blue-500',
+  },
+  {
+    title: 'Sea',
+    theme: 'Cool',
+    colors: 'bg-gradient-to-r from-cyan-200 to-cyan-400',
+  },
+  {
+    title: 'Payment',
+    theme: 'Cool',
+    colors: 'bg-gradient-to-r from-light-blue-400 to-cyan-300',
+  },
+  {
+    title: 'Video',
+    theme: 'Warm',
+    colors: 'bg-gradient-to-r from-red-500 to-red-800',
+  },
+  {
+    title: 'Passion',
+    theme: 'Warm',
+    colors: 'bg-gradient-to-r from-rose-500 via-red-400 to-red-500',
+  },
+  {
+    title: 'Flower',
+    theme: 'Warm',
+    colors: 'bg-gradient-to-r from-violet-300 to-violet-400',
   },
 ]
