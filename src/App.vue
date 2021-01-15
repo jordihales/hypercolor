@@ -1,13 +1,15 @@
 <template>
-  <div class="relative bg-app-bg" :class="themeClass">
-    <main class="max-w-screen-xl px-6 mx-auto">
-      <Banner />
-      <Gradients />
-    </main>
-    <Footer />
-    <div class="fixed inline-flex items-center space-x-4 right-6 bottom-6">
-      <ScrollTopButton />
-      <ToggleButton @action="handleTheme" />
+  <div :class="themeClass">
+    <div class="relative bg-white dark:bg-gray-900">
+      <main class="max-w-screen-xl px-6 mx-auto">
+        <Banner />
+        <Gradients />
+      </main>
+      <Footer />
+      <div class="fixed inline-flex items-center space-x-4 right-6 bottom-6">
+        <ScrollTopButton />
+        <ToggleButton @action="handleTheme" />
+      </div>
     </div>
   </div>
 </template>
@@ -34,7 +36,7 @@ export default {
   },
   computed: {
     themeClass() {
-      return this.darkMode ? 'dark-mode' : 'light-mode'
+      return this.darkMode ? 'dark' : 'light'
     },
   },
   methods: {

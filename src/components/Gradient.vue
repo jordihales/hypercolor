@@ -1,16 +1,18 @@
 <template>
-  <div class="relative flex flex-col rounded-lg shadow-md">
+  <div class="relative overflow-hidden rounded-lg shadow-md">
     <div class="h-48 rounded-t-lg" :class="customisedColors" />
-    <div class="flex flex-col justify-between flex-1 px-6 py-8 space-y-4 rounded-b-lg bg-app-bg">
+
+    <div class="px-6 py-8 space-y-4 bg-white dark:bg-gray-900">
       <div class="space-y-4">
-        <h2 class="text-xl font-extrabold text-app-text">{{ title }}</h2>
-        <div class="font-mono text-sm text-app-text">
+        <h2 class="text-xl font-extrabold text-gray-900 dark:text-gray-100">{{ title }}</h2>
+        <div class="font-mono text-sm text-gray-800 dark:text-gray-200">
           {{ customisedColors }}
         </div>
         <ClickCopy :gradient="customisedColors" :name="title" />
       </div>
+
       <div class="space-y-4">
-        <h2 class="font-bold text-app-text">Direction</h2>
+        <h2 class="font-bold text-gray-900 dark:text-gray-100">Direction</h2>
         <div class="flex items-center space-x-2">
           <DirectionOption
             v-for="(value, key) of directions"
@@ -22,7 +24,8 @@
         </div>
       </div>
     </div>
-    <div class="dark-border" :class="customisedColors" />
+
+    <div class="absolute inset-x-0 bottom-0 hidden w-full h-1 dark:block" :class="customisedColors" />
   </div>
 </template>
 
@@ -64,13 +67,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-.dark-border {
-  @apply h-1 absolute inset-x-0 bottom-0 rounded-b-lg;
-
-  .light-mode & {
-    @apply hidden;
-  }
-}
-</style>

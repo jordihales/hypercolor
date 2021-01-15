@@ -1,3 +1,4 @@
+const colors = require('tailwindcss/colors')
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
@@ -7,23 +8,36 @@ module.exports = {
       whitelist: ['aos-init', 'aos-animate'],
     },
   },
-  darkMode: false,
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        'app-text': 'var(--text-color)',
-        'app-border': 'var(--border-color)',
-        'app-bg': 'var(--bg-color)',
-        'app-btn': 'var(--btn-bg-color)',
+        'blue-gray': colors.blueGray,
+        'cool-gray': colors.coolGray,
+        'true-gray': colors.trueGray,
+        'warm-gray': colors.warmGray,
+        orange: colors.orange,
+        amber: colors.amber,
+        lime: colors.lime,
+        emerald: colors.emerald,
+        teal: colors.teal,
+        cyan: colors.cyan,
+        'light-blue': colors.lightBlue,
+        violet: colors.violet,
+        purple: colors.purple,
+        fuchsia: colors.fuchsia,
+        rose: colors.rose,
+        ...defaultTheme.colors,
       },
     },
   },
   variants: {
     extend: {
       scale: ['group-hover'],
+      display: ['dark'],
     },
   },
   plugins: [require('@tailwindcss/forms')],

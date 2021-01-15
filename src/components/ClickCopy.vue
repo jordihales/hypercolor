@@ -1,8 +1,7 @@
 <template>
   <div class="container">
     <button
-      class="text-sm font-medium group text-app-text"
-      type="button"
+      class="text-sm font-medium text-gray-900 group dark:text-gray-100"
       v-clipboard:copy="gradient"
       v-clipboard:success="onCopy"
       v-clipboard:error="onError"
