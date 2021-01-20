@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "db": "json-server --watch db.json",
     "start": "vue-cli-service serve",
     "dev": "vue-cli-service serve --port $PORT",
     "build": "vue-cli-service build",
@@ -13,6 +14,7 @@
     "aos": "^2.3.4",
     "autoprefixer": "^9",
     "core-js": "^2.6.5",
+    "json-server": "^0.16.3",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typeface-inter": "^3.15.0",

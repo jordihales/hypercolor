@@ -41,12 +41,12 @@ import 'aos/dist/aos.css'
 import FilterOption from '@/components/FilterOption'
 import Gradient from '@/components/Gradient'
 
-import { gradients } from '@/assets/data/gradients'
+// import { gradients } from '@/assets/data/gradients'
 
 export default {
   data() {
     return {
-      gradients,
+      gradients: [],
       theme: 'All',
       themes: [],
     }
@@ -72,16 +72,24 @@ export default {
     },
   },
   beforeMount() {
-    let themes = this.gradients.filter(
-      (gradient, index, self) => self.findIndex((_gradient) => _gradient.theme === gradient.theme) === index
+    fetch('http://localhost:8080/gradients.json').then((res) =>
+      res
+        .json()
+        .then((data) => ({
+          data: data,
+        }))
+        .then((res) => {
+          this.gradients = res.data.gradients
+        })
+        .then(() => {
+          let themes = this.gradients.filter(
+            (gradient, index, self) => self.findIndex((_gradient) => _gradient.theme === gradient.theme) === index
+          )
+
+          themes.unshift({ theme: 'All', colors: 'bg-gradient-to-r from-green-400 to-green-600' })
+          this.themes = themes
+        })
     )
-
-    themes.unshift({
-      theme: 'All',
-      colors: 'bg-gradient-to-r from-green-400 to-green-600',
-    })
-
-    this.themes = themes
 
     AOS.init()
   },
