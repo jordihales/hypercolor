@@ -32,11 +32,12 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 .fade-enter-active,
 .fade-leave-active {
   @apply transition-all duration-300;
 }
+
 .fade-enter,
 .fade-leave-to {
   @apply transform translate-y-2 opacity-0;

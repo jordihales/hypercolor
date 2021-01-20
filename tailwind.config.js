@@ -30,7 +30,6 @@ module.exports = {
         purple: colors.purple,
         fuchsia: colors.fuchsia,
         rose: colors.rose,
-        ...defaultTheme.colors,
       },
     },
   },
