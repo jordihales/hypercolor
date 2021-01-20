@@ -72,7 +72,7 @@ export default {
     },
   },
   beforeMount() {
-    fetch('http://localhost:8080/gradients.json').then((res) =>
+    fetch(`${window.location}/gradients.json`).then((res) =>
       res
         .json()
         .then((data) => ({
