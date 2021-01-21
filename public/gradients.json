@@ -171,11 +171,6 @@
       "colors": "bg-gradient-to-r from-red-500 to-green-500"
     },
     {
-      "title": "Pig",
-      "theme": "Pastel",
-      "colors": "bg-gradient-to-r from-pink-50 to-pink-100"
-    },
-    {
       "title": "Flare",
       "theme": "Warm",
       "colors": "bg-gradient-to-r from-orange-600 to-orange-500"

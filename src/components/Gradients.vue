@@ -2,12 +2,17 @@
   <section id="gradients">
     <div>
       <div class="sm:hidden">
-        <select aria-label="Filter" class="block w-full px-4 py-2 rounded-md shadow-sm" v-model="theme">
+        <select
+          aria-label="Filter"
+          class="block w-full px-4 py-2 text-gray-900 rounded-md shadow-sm dark:bg-gray-800 dark:text-gray-100"
+          v-model="theme"
+        >
           <option v-for="gradient in themes" :key="gradient.title" :value="gradient.theme">
             {{ gradient.theme }}
           </option>
         </select>
       </div>
+
       <div class="hidden sm:block">
         <div class="flex items-center justify-center space-x-8">
           <FilterOption
@@ -65,14 +70,14 @@ export default {
     },
   },
   beforeMount() {
-    fetch(`${window.location}/gradients.json`).then((res) =>
-      res
+    fetch(`${window.location.origin}/gradients.json`).then((response) =>
+      response
         .json()
         .then((data) => ({
           data: data,
         }))
-        .then((res) => {
-          this.gradients = res.data.gradients
+        .then((response) => {
+          this.gradients = response.data.gradients
         })
         .then(() => {
           let themes = this.gradients.filter(

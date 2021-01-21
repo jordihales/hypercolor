@@ -3,7 +3,6 @@
     <a
       href="#gradients"
       class="px-6 py-3 text-sm font-medium text-white rounded-lg shadow-lg bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"
-      aria-label="Scroll to gradients"
       v-show="show"
     >
       Scroll to Top
