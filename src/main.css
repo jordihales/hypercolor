@@ -2,6 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-button {
+html button {
   @apply focus:outline-none focus:ring-2 focus:ring-pink-500;
 }
