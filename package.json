@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "db": "json-server --watch db.json",
     "start": "vue-cli-service serve",
     "dev": "vue-cli-service serve --port $PORT",
     "build": "vue-cli-service build",

@@ -41,8 +41,6 @@ import 'aos/dist/aos.css'
 import FilterOption from '@/components/FilterOption'
 import Gradient from '@/components/Gradient'
 
-// import { gradients } from '@/assets/data/gradients'
-
 export default {
   data() {
     return {
@@ -63,12 +61,7 @@ export default {
   computed: {
     filteredGradients() {
       if (this.theme === 'All') return this.gradients
-
-      const self = this
-
-      let gradients = this.gradients.filter((gradient) => gradient.theme === self.theme)
-
-      return gradients
+      return this.gradients.filter((gradient) => gradient.theme === this.theme)
     },
   },
   beforeMount() {
@@ -83,10 +76,11 @@ export default {
         })
         .then(() => {
           let themes = this.gradients.filter(
-            (gradient, index, self) => self.findIndex((_gradient) => _gradient.theme === gradient.theme) === index
+            (gradient, index, self) => self.findIndex((item) => item.theme === gradient.theme) === index
           )
 
           themes.unshift({ theme: 'All', colors: 'bg-gradient-to-r from-green-400 to-green-600' })
+
           this.themes = themes
         })
     )
