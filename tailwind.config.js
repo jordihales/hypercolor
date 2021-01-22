@@ -5,7 +5,7 @@ module.exports = {
   purge: {
     content: ['./src/*.vue', './src/**/*.vue', './src/assets/data/*.js'],
     options: {
-      safelist: ['aos-init', 'aos-animate'],
+      safelist: ['aos-init', 'aos-animate', /to-/, /from-/, /via-/],
     },
   },
   darkMode: 'class',
