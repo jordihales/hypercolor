@@ -1,6 +1,6 @@
 <template>
   <button
-    class="p-2 text-xs font-semibold tracking-widest text-gray-600 uppercase transition-opacity bg-gray-100 rounded-lg dark:text-gray-100 dark:bg-gray-800 hover:bg-opacity-50"
+    class="p-2 text-xs font-semibold text-gray-500 uppercase transition-opacity bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800 hover:bg-opacity-50"
     v-clipboard:copy="gradient"
     v-clipboard:error="onError"
     v-clipboard:success="onCopy"

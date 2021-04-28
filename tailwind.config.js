@@ -5,7 +5,7 @@ module.exports = {
   purge: {
     content: ['./src/*.vue', './src/**/*.vue', './src/assets/data/*.js'],
     options: {
-      safelist: ['aos-init', 'aos-animate', /to-/, /from-/, /via-/],
+      safelist: ['aos-init', 'aos-animate'],
     },
   },
   darkMode: 'class',
@@ -38,12 +38,10 @@ module.exports = {
     },
   },
   variants: {
-    gradientColorStops: [],
-    backgroundImage: [],
     extend: {
       display: ['dark'],
       scale: ['group-hover'],
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [],
 }

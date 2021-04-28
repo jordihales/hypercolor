@@ -9,7 +9,6 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@tailwindcss/forms": "^0.2.1",
     "aos": "^2.3.4",
     "autoprefixer": "^9",
     "core-js": "^2.6.5",

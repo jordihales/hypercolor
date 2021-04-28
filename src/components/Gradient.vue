@@ -1,32 +1,35 @@
 <template>
   <div class="aos-animate" data-aos="fade-up">
-    <div class="h-64 rounded-t-3xl" :class="customisedColors"></div>
-    <div class="w-full p-6 -mt-8 bg-white shadow-sm dark:bg-gray-900 rounded-3xl">
-      <p class="text-lg font-medium text-gray-800 dark:text-gray-100">{{ title }}</p>
+    <div class="h-64 rounded-3xl" :class="customisedColors"></div>
 
-      <p
-        class="p-2 mt-2 -mx-2 font-mono text-sm text-gray-600 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800"
-      >
-        {{ customisedColors }}
-      </p>
+    <div class="px-0.5 -mt-8">
+      <div class="p-6 space-y-4 bg-white shadow-sm dark:bg-gray-900 rounded-3xl">
+        <p class="text-xl font-semibold text-gray-800 dark:text-gray-300">{{ title }}</p>
 
-      <div class="flex items-center mt-4 space-x-3">
-        <p class="text-xs font-semibold tracking-widest text-gray-600 uppercase dark:text-gray-300">Copy as:</p>
-        <CopyCSS :gradient="customisedColors" :name="title" />
-        <CopyTailwind :gradient="customisedColors" :name="title" />
-      </div>
+        <p class="p-2 -mx-2 font-mono text-xs text-gray-500 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800">
+          {{ customisedColors }}
+        </p>
 
-      <div class="mt-4">
-        <p class="text-xs font-semibold tracking-widest text-gray-600 uppercase dark:text-gray-300">Direction:</p>
+        <div class="flex items-center space-x-3">
+          <p class="text-xs font-semibold tracking-widest text-gray-500 uppercase dark:text-gray-300">Copy as:</p>
+          <CopyCSS :gradient="customisedColors" :name="title" />
+          <CopyTailwind :gradient="customisedColors" :name="title" />
+        </div>
 
-        <div class="flex items-center mt-2 space-x-2">
-          <DirectionOption
-            v-for="(value, key) of directions"
-            :key="key"
-            :direction="value"
-            :title="key"
-            @action="handleDirection"
-          />
+        <div>
+          <p class="text-xs font-semibold tracking-widest text-gray-500 uppercase dark:text-gray-300">Direction:</p>
+
+          <div class="flow-root mt-2">
+            <div class="flex flex-wrap -m-1">
+              <DirectionOption
+                v-for="(value, key) of directions"
+                :key="key"
+                :direction="value"
+                :title="key"
+                @action="handleDirection"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
