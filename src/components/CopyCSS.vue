@@ -1,18 +1,15 @@
 <template>
-  <div class="container">
+  <div>
     <button
-      class="text-sm font-medium text-gray-900 group dark:text-gray-100"
-      v-clipboard:copy="gradient"
+      class="p-2 text-xs font-semibold tracking-widest text-gray-600 uppercase transition-opacity bg-gray-100 rounded-lg dark:text-gray-100 dark:bg-gray-800 hover:bg-opacity-50"
+      v-clipboard:copy="css"
       v-clipboard:error="onError"
       v-clipboard:success="onCopy"
       :data-gradient="name"
     >
-      <span ref="text">Copy CSS</span>
-      <span
-        class="block w-full h-1 mt-1 transition-transform origin-left scale-x-50 rounded-full transform-gpu group-hover:scale-x-100"
-        :class="gradient"
-      ></span>
+      CSS
     </button>
+    <div :class="gradient" ref="gradient"></div>
   </div>
 </template>
 
@@ -22,14 +19,17 @@ export default {
     gradient: String,
     name: String,
   },
+  data() {
+    return {
+      css: '',
+    }
+  },
   methods: {
     onCopy(e) {
-      const text = this.$refs.text.innerText
       const gradient = e.trigger.dataset.gradient
+      e.trigger.innerText = 'Copied'
 
-      this.$refs.text.innerText = 'Copied 🎉'
-
-      setTimeout(() => (this.$refs.text.innerText = text), 2000)
+      setTimeout(() => (e.trigger.innerText = 'CSS'), 2000)
 
       this.$gtag.event('Success', {
         event_category: 'Copy Gradient',
@@ -46,6 +46,9 @@ export default {
         event_label: gradient,
       })
     },
+  },
+  mounted() {
+    this.css = getComputedStyle(this.$refs.gradient).getPropertyValue('background-image')
   },
 }
 </script>

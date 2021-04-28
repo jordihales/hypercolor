@@ -1,25 +1,20 @@
 <template>
   <div :class="themeClass">
-    <div class="relative bg-white dark:bg-gray-900">
-      <main class="max-w-screen-xl px-6 mx-auto">
+    <div class="py-20 bg-white dark:bg-gray-900">
+      <Header @action="handleTheme" />
+
+      <main>
         <Banner />
         <Gradients />
       </main>
-      <Footer />
-      <div class="fixed inline-flex items-center space-x-4 right-6 bottom-6">
-        <ScrollTopButton />
-        <ToggleButton @action="handleTheme" />
-      </div>
     </div>
   </div>
 </template>
 
 <script>
+import Header from '@/components/Header'
 import Banner from '@/components/Banner'
-import Footer from '@/components/Footer'
 import Gradients from '@/components/Gradients'
-import ScrollTopButton from '@/components/ScrollTopButton'
-import ToggleButton from '@/components/ToggleButton'
 
 export default {
   data() {
@@ -28,11 +23,9 @@ export default {
     }
   },
   components: {
+    Header,
     Banner,
-    Footer,
     Gradients,
-    ScrollTopButton,
-    ToggleButton,
   },
   computed: {
     themeClass() {

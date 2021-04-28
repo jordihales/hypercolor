@@ -1,19 +1,25 @@
 <template>
-  <div class="relative overflow-hidden rounded-lg shadow-md">
-    <div class="h-48 rounded-t-lg" :class="customisedColors" />
+  <div class="aos-animate" data-aos="fade-up">
+    <div class="h-64 rounded-t-3xl" :class="customisedColors"></div>
+    <div class="w-full p-6 -mt-8 bg-white shadow-sm dark:bg-gray-900 rounded-3xl">
+      <p class="text-lg font-medium text-gray-800 dark:text-gray-100">{{ title }}</p>
 
-    <div class="px-6 py-8 space-y-4 bg-white dark:bg-gray-900">
-      <div class="space-y-4">
-        <h2 class="text-xl font-extrabold text-gray-900 dark:text-gray-100">{{ title }}</h2>
-        <div class="font-mono text-sm text-gray-800 dark:text-gray-200">
-          {{ customisedColors }}
-        </div>
-        <ClickCopy :gradient="customisedColors" :name="title" />
+      <p
+        class="p-2 mt-2 -mx-2 font-mono text-sm text-gray-600 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800"
+      >
+        {{ customisedColors }}
+      </p>
+
+      <div class="flex items-center mt-4 space-x-3">
+        <p class="text-xs font-semibold tracking-widest text-gray-600 uppercase dark:text-gray-300">Copy as:</p>
+        <CopyCSS :gradient="customisedColors" :name="title" />
+        <CopyTailwind :gradient="customisedColors" :name="title" />
       </div>
 
-      <div class="space-y-4">
-        <h2 class="font-bold text-gray-900 dark:text-gray-100">Direction</h2>
-        <div class="flex items-center space-x-2">
+      <div class="mt-4">
+        <p class="text-xs font-semibold tracking-widest text-gray-600 uppercase dark:text-gray-300">Direction:</p>
+
+        <div class="flex items-center mt-2 space-x-2">
           <DirectionOption
             v-for="(value, key) of directions"
             :key="key"
@@ -24,13 +30,12 @@
         </div>
       </div>
     </div>
-
-    <div class="absolute inset-x-0 bottom-0 hidden w-full h-1 dark:block" :class="customisedColors" />
   </div>
 </template>
 
 <script>
-import ClickCopy from '@/components/ClickCopy'
+import CopyTailwind from '@/components/CopyTailwind'
+import CopyCSS from '@/components/CopyCSS'
 import DirectionOption from '@/components/DirectionOption'
 
 import { directions } from '@/assets/data/directions'
@@ -62,7 +67,8 @@ export default {
     },
   },
   components: {
-    ClickCopy,
+    CopyTailwind,
+    CopyCSS,
     DirectionOption,
   },
 }

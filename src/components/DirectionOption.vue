@@ -1,6 +1,6 @@
 <template>
   <button
-    class="inline-flex items-center justify-center w-6 h-6 text-sm font-medium transition-opacity duration-100 ease-in bg-gray-100 rounded-full lg:w-8 lg:h-8 hover:bg-opacity-50 dark:bg-gray-800 dark:text-gray-100"
+    class="inline-flex items-center justify-center w-6 h-6 text-xs font-semibold text-gray-600 uppercase transition-opacity bg-gray-100 rounded-lg dark:text-gray-100 dark:bg-gray-800 hover:bg-opacity-50 lg:w-8 lg:h-8"
     @click="fireAction(direction)"
   >
     {{ title }}
