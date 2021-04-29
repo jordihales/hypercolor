@@ -1,5 +1,7 @@
 <template>
-  <header class="fixed inset-x-0 top-0 z-50 bg-white bg-opacity-50 dark:bg-gray-900 bg-blur">
+  <header
+    class="fixed inset-x-0 top-0 z-50 bg-white bg-opacity-50 dark:bg-gray-900 dark:bg-opacity-50 backdrop-filter backdrop-blur-sm"
+  >
     <div class="container flex items-center justify-between py-4">
       <button
         class="inline-flex items-center justify-center w-10 h-10 text-gray-500 transition-colors rounded-lg dark:text-gray-300 dark:bg-gray-800 dark:hover:text-white hover:text-gray-800"
