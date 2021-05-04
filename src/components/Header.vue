@@ -1,6 +1,6 @@
 <template>
   <header
-    class="fixed inset-x-0 top-0 z-50 bg-white bg-opacity-50 dark:bg-gray-900 dark:bg-opacity-50 backdrop-filter backdrop-blur-sm"
+    class="sticky inset-x-0 top-0 z-50 bg-white bg-opacity-50 dark:bg-gray-900 dark:bg-opacity-50 backdrop-filter backdrop-blur-sm"
   >
     <div class="container flex items-center justify-between py-4">
       <button

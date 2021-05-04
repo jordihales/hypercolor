@@ -1,6 +1,7 @@
 <template>
   <div :class="themeClass">
-    <div class="py-20 bg-white dark:bg-gray-900">
+    <Announcement />
+    <div class="pb-20 bg-white dark:bg-gray-900">
       <Header @action="handleTheme" />
 
       <main>
@@ -12,6 +13,7 @@
 </template>
 
 <script>
+import Announcement from '@/components/Announcement'
 import Header from '@/components/Header'
 import Banner from '@/components/Banner'
 import Gradients from '@/components/Gradients'
@@ -23,6 +25,7 @@ export default {
     }
   },
   components: {
+    Announcement,
     Header,
     Banner,
     Gradients,
