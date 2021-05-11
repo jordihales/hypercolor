@@ -269,4 +269,49 @@ export const gradients = [
     theme: 'Warm',
     colors: 'bg-gradient-to-r from-violet-300 to-violet-400',
   },
+  {
+    title: 'Cool Sunset',
+    theme: 'Cool',
+    colors: 'bg-gradient-to-r from-orange-300 to-rose-300',
+  },
+  {
+    title: 'Pink Neon',
+    theme: 'Warm',
+    colors: 'bg-gradient-to-r from-fuchsia-600 to-pink-600',
+  },
+  {
+    title: 'Blue Sand',
+    theme: 'Cool',
+    colors: 'bg-gradient-to-r from-blue-gray-500 to-yellow-100',
+  },
+  {
+    title: 'Emerald',
+    theme: 'Cool',
+    colors: 'bg-gradient-to-r from-emerald-500 to-lime-600',
+  },
+  {
+    title: 'Relaxed Rose',
+    theme: 'Cool',
+    colors: 'bg-gradient-to-r from-rose-300 to-rose-500',
+  },
+  {
+    title: 'Purple Haze',
+    theme: 'Warm',
+    colors: 'bg-gradient-to-r from-purple-800 via-violet-900 to-purple-800',
+  },
+  {
+    title: 'Silver',
+    theme: 'Monocrhome',
+    colors: 'bg-gradient-to-r from-cool-gray-100 to-cool-gray-300',
+  },
+  {
+    title: 'Orange Coral',
+    theme: 'Warm',
+    colors: 'bg-gradient-to-r from-orange-400 to-rose-400',
+  },
+  {
+    title: 'Blue Coral',
+    theme: 'Warm',
+    colors: 'bg-gradient-to-r from-blue-400 to-emerald-400',
+  },
 ]
