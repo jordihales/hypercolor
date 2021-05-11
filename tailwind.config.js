@@ -38,10 +38,7 @@ module.exports = {
     },
   },
   variants: {
-    extend: {
-      display: ['dark'],
-      scale: ['group-hover'],
-    },
+    extend: {},
   },
   plugins: [],
 }

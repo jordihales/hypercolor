@@ -3,8 +3,6 @@ import App from './App.vue'
 import VueGtag from 'vue-gtag'
 import VueClipboard from 'vue-clipboard2'
 
-import '@/main.css'
-
 import 'typeface-inter'
 import 'tailwindcss/tailwind.css'
 
