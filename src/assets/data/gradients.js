@@ -301,7 +301,7 @@ export const gradients = [
   },
   {
     title: 'Silver',
-    theme: 'Monocrhome',
+    theme: 'Monochrome',
     colors: 'bg-gradient-to-r from-cool-gray-100 to-cool-gray-300',
   },
   {

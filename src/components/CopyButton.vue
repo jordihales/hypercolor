@@ -2,12 +2,12 @@
   <div>
     <button
       class="p-2 text-xs font-semibold text-gray-500 uppercase transition-opacity bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800 hover:bg-opacity-50"
-      v-clipboard:copy="css"
+      v-clipboard:copy="value"
       v-clipboard:error="onError"
       v-clipboard:success="onCopy"
       :data-gradient="name"
     >
-      CSS
+      {{ label }}
     </button>
     <div :class="gradient" ref="gradient"></div>
   </div>
@@ -16,23 +16,29 @@
 <script>
 export default {
   props: {
+    css: Boolean,
     gradient: String,
     name: String,
   },
   data() {
     return {
-      css: '',
+      value: '',
     }
+  },
+  computed: {
+    label() {
+      return this.css ? 'CSS' : 'Tailwind'
+    },
   },
   methods: {
     onCopy(e) {
       const gradient = e.trigger.dataset.gradient
       e.trigger.innerText = 'Copied'
 
-      setTimeout(() => (e.trigger.innerText = 'CSS'), 2000)
+      setTimeout(() => (e.trigger.innerText = this.label), 2000)
 
       this.$gtag.event('Success', {
-        event_category: 'Copy Gradient',
+        event_category: 'Copy Gradien',
         event_label: gradient,
       })
     },
@@ -48,7 +54,7 @@ export default {
     },
   },
   mounted() {
-    this.css = getComputedStyle(this.$refs.gradient).getPropertyValue('background-image')
+    this.value = this.css ? getComputedStyle(this.$refs.gradient).getPropertyValue('background-image') : this.gradient
   },
 }
 </script>

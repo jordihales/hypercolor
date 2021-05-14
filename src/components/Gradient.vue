@@ -10,10 +10,10 @@
           {{ customisedColors }}
         </p>
 
-        <div class="flex items-center space-x-3">
-          <p class="text-xs font-semibold tracking-widest text-gray-500 uppercase dark:text-gray-300">Copy as:</p>
-          <CopyCSS :gradient="customisedColors" :name="title" />
-          <CopyTailwind :gradient="customisedColors" :name="title" />
+        <div class="flex items-center space-x-2">
+          <p class="text-xs font-semibold tracking-widest text-gray-500 uppercase dark:text-gray-300">Copy:</p>
+          <CopyButton :gradient="customisedColors" :name="title" :css="true" />
+          <CopyButton :gradient="customisedColors" :name="title" :css="false" />
         </div>
 
         <div>
@@ -37,8 +37,7 @@
 </template>
 
 <script>
-import CopyTailwind from '@/components/CopyTailwind'
-import CopyCSS from '@/components/CopyCSS'
+import CopyButton from '@/components/CopyButton'
 import DirectionOption from '@/components/DirectionOption'
 
 import { directions } from '@/assets/data/directions'
@@ -70,8 +69,7 @@ export default {
     },
   },
   components: {
-    CopyTailwind,
-    CopyCSS,
+    CopyButton,
     DirectionOption,
   },
 }
