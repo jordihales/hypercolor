@@ -4,7 +4,9 @@
 
     <div class="px-0.5 -mt-8">
       <div class="p-6 space-y-4 bg-white shadow-sm dark:bg-gray-900 rounded-3xl">
-        <p class="text-xl font-semibold text-gray-800 dark:text-gray-300">{{ title }}</p>
+        <div class="flex justify-between">
+          <p class="text-xl font-semibold text-gray-800 dark:text-gray-300">{{ title }}</p>
+        </div>
 
         <p class="p-2 -mx-2 font-mono text-xs text-gray-500 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800">
           {{ customisedColors }}
