@@ -383,4 +383,34 @@ export const gradients = [
     colors: 'bg-gradient-conic-t from-gray-900 via-gray-100 to-gray-900',
     conic: true,
   },
+  {
+    title: 'Safari Sunset',
+    theme: 'Conic',
+    colors: 'bg-gradient-conic-l from-yellow-500 via-purple-500 to-blue-500',
+    conic: true,
+  },
+  {
+    title: 'High Tide',
+    theme: 'Conic',
+    colors: 'bg-gradient-conic-tl from-light-blue-500 via-orange-200 to-yellow-600',
+    conic: true,
+  },
+  {
+    title: 'Hunniepop',
+    theme: 'Conic',
+    colors: 'bg-gradient-conic-bl from-fuchsia-300 via-green-400 to-rose-700',
+    conic: true,
+  },
+  {
+    title: 'Soft Metal',
+    theme: 'Conic',
+    colors: 'bg-gradient-conic-r from-indigo-200 via-blue-gray-600 to-indigo-200',
+    conic: true,
+  },
+  {
+    title: 'Coral Sun',
+    theme: 'Conic',
+    colors: 'bg-gradient-conic-tl from-yellow-200 via-emerald-200 to-yellow-200',
+    conic: true,
+  },
 ]
