@@ -21,7 +21,7 @@
 
       <div
         v-if="theme === 'Conic'"
-        class="max-w-5xl p-4 p-8 mx-auto mt-16 text-gray-500 bg-gray-200 rounded-lg dark:text-gray-300 dark:bg-gray-800"
+        class="max-w-5xl p-8 mx-auto mt-16 text-gray-500 bg-gray-200 rounded-lg dark:text-gray-300 dark:bg-gray-800"
       >
         <p class="text-lg font-semibold">Add the following to your <code>tailwind.config.js</code></p>
 
@@ -30,9 +30,9 @@
 backgroundImage: {
   'gradient-conic': 'conic-gradient(var(--tw-gradient-stops))',
   'gradient-conic-t': 'conic-gradient(at top, var(--tw-gradient-stops))',
-  'gradient-conic-l': 'conic-gradient(at left, var(--tw-gradient-stops))',
   'gradient-conic-r': 'conic-gradient(at right, var(--tw-gradient-stops))',
   'gradient-conic-b': 'conic-gradient(at bottom, var(--tw-gradient-stops))',
+  'gradient-conic-l': 'conic-gradient(at left, var(--tw-gradient-stops))',
   'gradient-conic-tr': 'conic-gradient(at top right, var(--tw-gradient-stops))',
   'gradient-conic-tl': 'conic-gradient(at top left, var(--tw-gradient-stops))',
   'gradient-conic-br': 'conic-gradient(at bottom right, var(--tw-gradient-stops))',
@@ -48,6 +48,7 @@ backgroundImage: {
           :key="gradient.title"
           :title="gradient.title"
           :colors="gradient.colors"
+          :conic="gradient.conic"
           data-aos="fade-up"
         />
       </div>

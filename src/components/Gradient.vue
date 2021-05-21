@@ -42,18 +42,19 @@
 import CopyButton from '@/components/CopyButton'
 import DirectionOption from '@/components/DirectionOption'
 
-import { directions } from '@/assets/data/directions'
+import { directions, conicDirections } from '@/assets/data/directions'
 
 export default {
   data() {
     return {
       direction: '',
-      directions,
+      directions: [],
     }
   },
   props: {
     colors: String,
     title: String,
+    conic: Boolean,
   },
   computed: {
     customisedColors() {
@@ -69,6 +70,9 @@ export default {
     handleDirection(direction) {
       this.direction = direction
     },
+  },
+  mounted() {
+    this.directions = this.conic ? conicDirections : directions
   },
   components: {
     CopyButton,
