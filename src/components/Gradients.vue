@@ -6,7 +6,7 @@
           Select gradient type:
         </p>
 
-        <div class="grid grid-cols-2 gap-4 mt-8 sm:grid-cols-6">
+        <div class="grid max-w-5xl grid-cols-2 gap-4 mx-auto mt-8 sm:grid-cols-6">
           <FilterOption
             v-for="gradient in themes"
             :key="gradient.title"
@@ -18,30 +18,9 @@
         </div>
       </div>
 
-      <div
-        v-if="theme === 'Conic'"
-        class="max-w-5xl p-8 mx-auto mt-16 text-gray-500 bg-gray-200 rounded-lg dark:text-gray-300 dark:bg-gray-800"
-      >
-        <p class="text-lg font-semibold">Add the following to your <code>tailwind.config.js</code></p>
+      <ConicBlog v-if="theme === 'Conic'" />
 
-        <pre class="mt-4 overflow-x-auto">
-          <code>
-backgroundImage: {
-  'gradient-conic': 'conic-gradient(var(--tw-gradient-stops))',
-  'gradient-conic-t': 'conic-gradient(at top, var(--tw-gradient-stops))',
-  'gradient-conic-r': 'conic-gradient(at right, var(--tw-gradient-stops))',
-  'gradient-conic-b': 'conic-gradient(at bottom, var(--tw-gradient-stops))',
-  'gradient-conic-l': 'conic-gradient(at left, var(--tw-gradient-stops))',
-  'gradient-conic-tr': 'conic-gradient(at top right, var(--tw-gradient-stops))',
-  'gradient-conic-tl': 'conic-gradient(at top left, var(--tw-gradient-stops))',
-  'gradient-conic-br': 'conic-gradient(at bottom right, var(--tw-gradient-stops))',
-  'gradient-conic-bl': 'conic-gradient(at bottom left, var(--tw-gradient-stops))',
-},
-          </code>
-        </pre>
-      </div>
-
-      <div class="grid grid-cols-1 gap-8 mt-24 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="grid grid-cols-1 gap-8 mt-12 sm:mt-24 sm:grid-cols-2 lg:grid-cols-3">
         <Gradient
           v-for="gradient in filteredGradients"
           :key="gradient.title"
@@ -75,6 +54,7 @@ export default {
   components: {
     FilterOption,
     Gradient,
+    ConicBlog: () => import('@/components/ConicBlog'),
   },
   methods: {
     handleFilter(theme) {
