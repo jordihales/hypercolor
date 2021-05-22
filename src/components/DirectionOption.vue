@@ -1,12 +1,10 @@
 <template>
-  <span class="p-1">
-    <button
-      class="inline-flex items-center justify-center w-8 h-8 text-xs font-semibold text-gray-500 uppercase transition-opacity bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800 hover:bg-opacity-50"
-      @click="fireAction(direction)"
-    >
-      {{ title }}
-    </button>
-  </span>
+  <button
+    class="inline-flex items-center justify-center w-8 h-8 text-xs font-semibold text-gray-500 uppercase transition-opacity bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800 hover:bg-opacity-50"
+    @click="fireAction(direction)"
+  >
+    {{ title }}
+  </button>
 </template>
 
 <script>

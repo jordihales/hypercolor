@@ -21,16 +21,14 @@
         <div>
           <p class="text-xs font-semibold tracking-widest text-gray-500 uppercase dark:text-gray-300">Direction:</p>
 
-          <div class="flow-root mt-2">
-            <div class="flex flex-wrap -m-1">
-              <DirectionOption
-                v-for="(value, key) of directions"
-                :key="key"
-                :direction="value"
-                :title="key"
-                @action="handleDirection"
-              />
-            </div>
+          <div class="grid grid-cols-8 gap-0.5 mt-2">
+            <DirectionOption
+              v-for="(value, key) of directions"
+              :key="key"
+              :direction="value"
+              :title="key"
+              @action="handleDirection"
+            />
           </div>
         </div>
       </div>
