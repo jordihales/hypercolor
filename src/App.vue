@@ -1,10 +1,11 @@
 <template>
   <div :class="themeClass">
     <Announcement />
-    <div class="pb-20 bg-white dark:bg-gray-900">
+
+    <div class="pb-12 bg-white sm:pb-24 dark:bg-gray-900">
       <Header @action="handleTheme" />
 
-      <main>
+      <main role="main">
         <Banner />
         <Gradients />
       </main>
@@ -13,22 +14,17 @@
 </template>
 
 <script>
-import Announcement from '@/components/Announcement'
-import Header from '@/components/Header'
-import Banner from '@/components/Banner'
-import Gradients from '@/components/Gradients'
-
 export default {
+  components: {
+    Announcement: () => import('@/components/Announcement'),
+    Header: () => import('@/components/Header'),
+    Banner: () => import('@/components/Banner'),
+    Gradients: () => import('@/components/Gradients'),
+  },
   data() {
     return {
       darkMode: false,
     }
-  },
-  components: {
-    Announcement,
-    Header,
-    Banner,
-    Gradients,
   },
   computed: {
     themeClass() {
@@ -50,3 +46,9 @@ export default {
   },
 }
 </script>
+
+<style>
+.app-subtitle {
+  @apply text-xs font-semibold uppercase tracking-widest;
+}
+</style>

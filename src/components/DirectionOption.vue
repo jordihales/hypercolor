@@ -1,17 +1,34 @@
 <template>
   <button
-    class="inline-flex items-center justify-center w-8 h-8 text-xs font-semibold text-gray-500 uppercase transition-opacity bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800 hover:bg-opacity-50"
+    class="block p-2 text-gray-500 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800"
     @click="fireAction(direction)"
   >
-    {{ title }}
+    <span class="relative block transform" :class="chevronClass">
+      <IconChevron iconClass="w-5 h-5" />
+    </span>
   </button>
 </template>
 
 <script>
+import { chevronDirections } from '@/assets/data/directions.js'
+
 export default {
+  components: {
+    IconChevron: () => import('@/components/IconChevron'),
+  },
+  data() {
+    return {
+      chevronDirections,
+    }
+  },
   props: {
     direction: String,
     title: String,
+  },
+  computed: {
+    chevronClass() {
+      return this.chevronDirections[this.title]
+    },
   },
   methods: {
     fireAction(direction) {
