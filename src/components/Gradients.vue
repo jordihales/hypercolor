@@ -5,17 +5,16 @@
         <p class="text-xs font-semibold tracking-widest text-center text-gray-500 uppercase dark:text-gray-300">
           Select gradient type:
         </p>
-        <div class="flow-root mt-8">
-          <div class="flex flex-wrap items-center justify-center -m-2">
-            <FilterOption
-              v-for="gradient in themes"
-              :key="gradient.title"
-              :theme="gradient.theme"
-              :active="theme"
-              :colors="gradient.colors"
-              @action="handleFilter"
-            />
-          </div>
+
+        <div class="grid grid-cols-2 gap-4 mt-8 sm:grid-cols-6">
+          <FilterOption
+            v-for="gradient in themes"
+            :key="gradient.title"
+            :theme="gradient.theme"
+            :active="theme"
+            :colors="gradient.colors"
+            @action="handleFilter"
+          />
         </div>
       </div>
 

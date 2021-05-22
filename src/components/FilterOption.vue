@@ -1,17 +1,15 @@
 <template>
-  <span class="p-2">
-    <button
-      class="inline-flex items-center justify-center p-1 rounded-xl group"
-      :class="colors"
-      @click="fireAction(theme)"
+  <button
+    class="inline-flex items-center justify-center p-1 rounded-xl group"
+    :class="colors"
+    @click="fireAction(theme)"
+  >
+    <span
+      class="w-full px-6 py-4 text-xs font-semibold tracking-widest text-gray-800 uppercase transition-opacity bg-white rounded-lg group-hover:opacity-0 dark:text-gray-300 dark:bg-gray-900"
     >
-      <span
-        class="px-6 py-4 text-xs font-semibold tracking-widest text-gray-800 uppercase transition-opacity bg-white rounded-lg group-hover:opacity-0 dark:text-gray-300 dark:bg-gray-900"
-      >
-        {{ theme }}
-      </span>
-    </button>
-  </span>
+      {{ theme }}
+    </span>
+  </button>
 </template>
 
 <script>
