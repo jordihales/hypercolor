@@ -12,9 +12,11 @@
     "aos": "^2.3.4",
     "autoprefixer": "^9",
     "core-js": "^2.6.5",
+    "html-to-image": "^1.6.2",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typeface-inter": "^3.15.0",
+    "v-click-outside": "^3.1.2",
     "vue": "^2.6.10",
     "vue-clipboard2": "^0.3.1",
     "vue-gtag": "^1.9.1"

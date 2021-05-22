@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div class="relative" v-click-outside="hideDropdown">
     <button
       class="inline-flex items-center p-3 space-x-3 border border-gray-700 rounded-xl"
       @click="showDropdown = !showDropdown"
@@ -51,6 +51,9 @@ export default {
     },
     themeHref(name) {
       return `#${name}`
+    },
+    hideDropdown() {
+      this.showDropdown = false
     },
   },
 }
