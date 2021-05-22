@@ -1,12 +1,11 @@
 <template>
   <section>
     <div
-      class="sticky inset-x-0 top-0 z-50 bg-white border-t border-b border-gray-200 dark:border-gray-800 dark:bg-gray-900"
+      class="sticky inset-x-0 top-0 z-50 bg-white border-t border-b border-gray-100 dark:border-gray-800 dark:bg-gray-900"
     >
       <div class="container flex items-center justify-between py-4">
         <FilterTheme :themes="themes" :theme="theme" @action="handleTheme" />
-
-        <SaveOptions :types="types" :type="type" @action="handleType" />
+        <SaveOptions :type="type" @action="handleType" />
       </div>
     </div>
 
@@ -48,7 +47,6 @@ export default {
       themes,
       theme: '',
       type: 'Tailwind',
-      types: ['Tailwind', 'CSS', 'JPEG'],
     }
   },
   methods: {

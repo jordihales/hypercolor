@@ -1,14 +1,14 @@
 <template>
   <div class="relative" v-click-outside="hideDropdown">
     <button
-      class="inline-flex items-center p-3 space-x-3 border border-gray-200 dark:border-gray-700 rounded-xl"
+      class="inline-flex items-center p-3 space-x-3 text-gray-500 border border-gray-200 dark:border-gray-700 rounded-xl dark:text-gray-300"
       @click="showDropdown = !showDropdown"
     >
       <span class="flex-shrink-0 w-8 h-8 rounded-lg" :class="theme.colors"></span>
-      <span class="text-sm font-medium text-gray-500 dark:text-gray-300">
+      <span class="text-sm font-medium">
         {{ theme.theme }}
       </span>
-      <IconSelector iconClass="w-5 h-5 text-gray-300" />
+      <SelectorIcon className="w-5 h-5" />
     </button>
 
     <ul
@@ -22,9 +22,7 @@
           @click="fireAction(theme)"
         >
           <span class="flex-shrink-0 w-8 h-8 rounded-lg" :class="theme.colors"></span>
-          <span class="text-sm font-medium text-gray-500 dark:text-gray-300">
-            {{ theme.theme }}
-          </span>
+          <span class="text-sm font-medium text-gray-500 dark:text-gray-300" v-text="theme.theme" />
         </a>
       </li>
     </ul>
@@ -34,7 +32,7 @@
 <script>
 export default {
   components: {
-    IconSelector: () => import('@/components/IconSelector'),
+    SelectorIcon: () => import('@/components/icons/Selector'),
   },
   data() {
     return {

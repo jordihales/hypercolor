@@ -1,10 +1,10 @@
 <template>
   <div class="hidden sm:block">
     <button
-      class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 text-white bg-gray-800 rounded-lg"
-      @click="onSave"
+      class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 text-gray-500 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800"
+      @click="handleClick"
     >
-      <IconImage iconClass="w-5 h-5" />
+      <ImageIcon className="w-5 h-5" />
     </button>
 
     <div class="sr-only">
@@ -18,19 +18,14 @@ import * as htmlToImage from 'html-to-image'
 
 export default {
   components: {
-    IconImage: () => import('@/components/IconImage'),
-  },
-  data() {
-    return {
-      value: '',
-    }
+    ImageIcon: () => import('@/components/icons/Image'),
   },
   props: {
     gradient: String,
     name: String,
   },
   methods: {
-    onSave() {
+    handleClick() {
       htmlToImage.toJpeg(this.$refs.gradient, { pixelRatio: 1, quality: 1 }).then((dataUrl) => {
         this.handleDownload(this.name, dataUrl)
       })

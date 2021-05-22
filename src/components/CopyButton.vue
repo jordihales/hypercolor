@@ -1,12 +1,12 @@
 <template>
   <div class="hidden sm:block">
     <button
-      class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 text-white bg-gray-800 rounded-lg"
+      class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 text-gray-500 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800"
       v-clipboard:copy="value"
       v-clipboard:error="onError"
       v-clipboard:success="onCopy"
     >
-      <IconClipboard iconClass="w-5 h-5" />
+      <ClipboardIcon className="w-5 h-5" />
     </button>
 
     <div :class="gradient" ref="gradient" v-if="isCSS"></div>
@@ -16,7 +16,7 @@
 <script>
 export default {
   components: {
-    IconClipboard: () => import('@/components/IconClipboard'),
+    ClipboardIcon: () => import('@/components/icons/Clipboard'),
   },
   data() {
     return {
