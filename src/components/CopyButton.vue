@@ -1,60 +1,54 @@
 <template>
   <div>
     <button
-      class="p-2 text-xs font-semibold text-gray-500 uppercase transition-opacity bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800 hover:bg-opacity-50"
+      class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 text-white bg-gray-800 rounded-lg"
       v-clipboard:copy="value"
       v-clipboard:error="onError"
       v-clipboard:success="onCopy"
-      :data-gradient="name"
     >
-      {{ label }}
+      <IconClipboard iconClass="w-5 h-5" />
     </button>
-    <div :class="gradient" ref="gradient" v-if="css"></div>
+
+    <div :class="gradient" ref="gradient" v-if="isCSS"></div>
   </div>
 </template>
 
 <script>
 export default {
-  props: {
-    css: Boolean,
-    gradient: String,
-    name: String,
+  components: {
+    IconClipboard: () => import('@/components/IconClipboard'),
   },
   data() {
     return {
       value: '',
     }
   },
+  props: {
+    gradient: String,
+    name: String,
+    type: String,
+  },
   computed: {
-    label() {
-      return this.css ? 'CSS' : 'Tailwind'
+    isCSS() {
+      return this.type === 'CSS'
     },
   },
   methods: {
-    onCopy(e) {
-      const gradient = e.trigger.dataset.gradient
-      e.trigger.innerText = 'Copied'
-
-      setTimeout(() => (e.trigger.innerText = this.label), 2000)
-
+    onCopy() {
       this.$gtag.event('Success', {
         event_category: 'Copy Gradient',
-        event_label: gradient,
+        event_label: this.name,
       })
     },
-    onError(e) {
-      const gradient = e.trigger.dataset.gradient
-
-      alert(`Failed to copy ${gradient}`)
-
+    onError() {
       this.$gtag.event('Failed', {
         event_category: 'Copy Gradient',
-        event_label: gradient,
+        event_label: this.name,
       })
     },
   },
   mounted() {
-    this.value = this.css ? getComputedStyle(this.$refs.gradient).getPropertyValue('background-image') : this.gradient
+    this.value = this.isCSS ? getComputedStyle(this.$refs.gradient).getPropertyValue('background-image') : this.gradient
   },
 }
 </script>

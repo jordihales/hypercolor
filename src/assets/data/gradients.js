@@ -414,3 +414,9 @@ export const gradients = [
     conic: true,
   },
 ]
+
+export function getGradients(theme) {
+  if (theme === 'All') return gradients
+
+  return gradients.filter((gradient) => gradient.theme === theme)
+}

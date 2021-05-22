@@ -1,23 +1,14 @@
 <template>
-  <section class="pt-16 sm:pt-24">
-    <div class="container space-y-12 sm:space-y-16">
-      <div class="space-y-8">
-        <p class="text-center text-gray-500 app-subtitle dark:text-gray-300">
-          Filter gradients
-        </p>
+  <section>
+    <div class="sticky inset-x-0 top-0 z-50 bg-white border-t border-b border-gray-800 dark:bg-gray-900">
+      <div class="container flex items-center justify-between py-4">
+        <FilterTheme :themes="themes" :theme="theme" @action="handleTheme" />
 
-        <div class="grid grid-cols-2 gap-8 sm:grid-cols-6">
-          <FilterOption
-            v-for="gradient in themes"
-            :key="gradient.title"
-            :theme="gradient.theme"
-            :active="theme"
-            :colors="gradient.colors"
-            @action="handleFilter"
-          />
-        </div>
+        <SaveOptions :types="types" :type="type" @action="handleType" />
       </div>
+    </div>
 
+    <div class="container mt-12 space-y-8 sm:mt-16">
       <ConicBlog v-if="theme === 'Conic'" />
 
       <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -27,6 +18,7 @@
           :title="gradient.title"
           :colors="gradient.colors"
           :conic="gradient.conic"
+          :type="type"
           data-aos="fade-up"
         />
       </div>
@@ -38,45 +30,42 @@
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-import { gradients } from '@/assets/data/gradients'
+import { getGradients, gradients } from '@/assets/data/gradients'
+import { getTheme, themes } from '@/assets/data/themes.js'
 
 export default {
   components: {
-    FilterOption: () => import('@/components/FilterOption'),
+    FilterTheme: () => import('@/components/FilterTheme'),
+    SaveOptions: () => import('@/components/SaveOptions'),
     Gradient: () => import('@/components/Gradient'),
     ConicBlog: () => import('@/components/ConicBlog'),
   },
   data() {
     return {
       gradients,
-      theme: 'All',
-      themes: [],
+      themes,
+      theme: '',
+      type: 'Tailwind',
+      types: ['Tailwind', 'CSS', 'JPEG'],
     }
   },
   methods: {
-    handleFilter(theme) {
+    handleTheme(theme) {
       this.theme = theme
+    },
+    handleType(type) {
+      this.type = type
     },
   },
   computed: {
     filteredGradients() {
-      if (this.theme === 'All') return this.gradients
-      return this.gradients.filter((gradient) => gradient.theme === this.theme)
+      const name = this.theme.theme
+      return getGradients(name)
     },
   },
-  beforeMount() {
-    if (window.location.hash) this.theme = window.location.hash.replace('#', '')
-
-    const themes = this.gradients.filter(
-      (gradient, index, self) => self.findIndex((_gradient) => _gradient.theme === gradient.theme) === index
-    )
-
-    themes.unshift({
-      theme: 'All',
-      colors: 'bg-gradient-to-r from-green-400 to-green-600',
-    })
-
-    this.themes = themes
+  mounted() {
+    const themeFromHash = window.location.hash.replace('#', '')
+    this.theme = themeFromHash ? getTheme(themeFromHash) : themes[0]
 
     AOS.init()
   },

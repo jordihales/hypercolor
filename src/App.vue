@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style>
-.app-subtitle {
-  @apply text-xs font-semibold uppercase tracking-widest;
+html button {
+  @apply focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-offset-gray-900 ring-pink-600;
 }
 </style>
