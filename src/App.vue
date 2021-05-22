@@ -17,9 +17,9 @@
 export default {
   components: {
     Announcement: () => import('@/components/Announcement'),
-    Header: () => import('@/components/Header'),
     Banner: () => import('@/components/Banner'),
     Gradients: () => import('@/components/Gradients'),
+    Header: () => import('@/components/Header'),
   },
   data() {
     return {
@@ -48,7 +48,8 @@ export default {
 </script>
 
 <style>
-html button {
-  @apply focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-offset-gray-900 ring-pink-600;
+html button:focus,
+html a:focus {
+  @apply outline-none ring ring-pink-600;
 }
 </style>

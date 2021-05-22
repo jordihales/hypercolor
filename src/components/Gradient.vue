@@ -45,8 +45,8 @@ import { directions, conicDirections } from '@/assets/data/directions'
 export default {
   components: {
     CopyButton: () => import('@/components/CopyButton'),
-    SaveButton: () => import('@/components/SaveButton'),
     DirectionOption: () => import('@/components/DirectionOption'),
+    SaveButton: () => import('@/components/SaveButton'),
   },
   data() {
     return {
@@ -57,8 +57,8 @@ export default {
   },
   props: {
     colors: String,
-    title: String,
     conic: Boolean,
+    title: String,
     type: String,
   },
   computed: {

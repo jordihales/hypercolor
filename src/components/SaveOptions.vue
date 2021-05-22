@@ -1,5 +1,5 @@
 <template>
-  <ul class="flex items-center space-x-3">
+  <ul class="items-center hidden space-x-3 sm:flex">
     <li v-for="type of types" :key="type">
       <button
         class="inline-flex items-center p-3 space-x-3 border rounded-xl"

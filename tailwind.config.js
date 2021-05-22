@@ -53,7 +53,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      ringOffsetColor: ['dark'],
+    },
   },
   plugins: [],
 }

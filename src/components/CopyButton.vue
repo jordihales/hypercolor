@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hidden sm:block">
     <button
       class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 text-white bg-gray-800 rounded-lg"
       v-clipboard:copy="value"
