@@ -7,6 +7,7 @@
   >
     <span
       class="w-full px-6 py-4 text-xs font-semibold tracking-widest text-center text-gray-800 uppercase transition-opacity bg-white rounded-lg group-hover:opacity-0 dark:text-gray-300 dark:bg-gray-900"
+      :class="activeClass"
     >
       {{ theme }}
     </span>
@@ -22,7 +23,7 @@ export default {
   },
   computed: {
     activeClass() {
-      return this.active === this.theme ? 'dark:bg-gray-800 bg-gray-100' : ''
+      return this.active === this.theme ? 'opacity-0' : ''
     },
     url() {
       return `#${this.theme}`
