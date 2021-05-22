@@ -9,7 +9,7 @@
     >
       {{ label }}
     </button>
-    <div :class="gradient" ref="gradient"></div>
+    <div :class="gradient" ref="gradient" v-if="css"></div>
   </div>
 </template>
 
@@ -38,7 +38,7 @@ export default {
       setTimeout(() => (e.trigger.innerText = this.label), 2000)
 
       this.$gtag.event('Success', {
-        event_category: 'Copy Gradien',
+        event_category: 'Copy Gradient',
         event_label: gradient,
       })
     },

@@ -1,16 +1,12 @@
 <template>
   <a
-    class="inline-flex items-center justify-center p-1 rounded-xl group"
-    :class="colors"
+    class="flex items-center transition-opacity opacity-60 sm:justify-center hover:opacity-100"
+    :class="activeClass"
     @click="fireAction(theme)"
     :href="url"
   >
-    <span
-      class="w-full px-6 py-4 text-xs font-semibold tracking-widest text-center text-gray-800 uppercase transition-opacity bg-white rounded-lg group-hover:opacity-0 dark:text-gray-300 dark:bg-gray-900"
-      :class="activeClass"
-    >
-      {{ theme }}
-    </span>
+    <span class="flex-shrink-0 block w-10 h-10 rounded-lg" :class="colors"></span>
+    <span class="ml-4 text-gray-500 app-subtitle dark:text-gray-300" v-text="theme" />
   </a>
 </template>
 
@@ -23,7 +19,7 @@ export default {
   },
   computed: {
     activeClass() {
-      return this.active === this.theme ? 'opacity-0' : ''
+      return this.active === this.theme ? 'opacity-100' : ''
     },
     url() {
       return `#${this.theme}`
