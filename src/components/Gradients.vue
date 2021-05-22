@@ -68,6 +68,8 @@ export default {
     },
   },
   beforeMount() {
+    if (window.location.hash) this.theme = window.location.hash.replace('#', '')
+
     let themes = this.gradients.filter(
       (gradient, index, self) => self.findIndex((_gradient) => _gradient.theme === gradient.theme) === index
     )
