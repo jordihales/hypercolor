@@ -34,7 +34,7 @@
       </button>
     </li>
 
-    <li>
+    <li class="pr-4 sm:pr-0">
       <button
         class="inline-flex items-center p-3 space-x-3 text-gray-500 border rounded-xl dark:text-gray-300"
         :class="activeClass('JPEG')"
