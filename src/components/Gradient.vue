@@ -18,7 +18,6 @@
             :key="copyKey"
             v-if="['Tailwind', 'CSS'].includes(type)"
           />
-          <SaveButton :gradient="customisedColors" :name="title" :key="copyKey" v-if="type === 'JPEG'" />
         </div>
 
         <div>
@@ -46,7 +45,6 @@ export default {
   components: {
     CopyButton: () => import('@/components/CopyButton'),
     DirectionOption: () => import('@/components/DirectionOption'),
-    SaveButton: () => import('@/components/SaveButton'),
   },
   data() {
     return {

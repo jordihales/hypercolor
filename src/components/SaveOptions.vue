@@ -33,23 +33,6 @@
         </span>
       </button>
     </li>
-
-    <li class="pr-4 sm:pr-0">
-      <button
-        class="inline-flex items-center p-3 space-x-3 text-gray-500 border rounded-xl dark:text-gray-300"
-        :class="activeClass('JPEG')"
-        @click="fireAction('JPEG')"
-      >
-        <span
-          class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 bg-gray-100 rounded-lg dark:bg-gray-800"
-        >
-          <ImageIcon className="w-5 h-5" />
-        </span>
-        <span class="text-sm font-medium">
-          JPEG
-        </span>
-      </button>
-    </li>
   </ul>
 </template>
 
@@ -58,7 +41,6 @@ export default {
   components: {
     SparkleIcon: () => import('@/components/icons/Sparkle'),
     CodeIcon: () => import('@/components/icons/Code'),
-    ImageIcon: () => import('@/components/icons/Image'),
   },
   props: {
     type: String,

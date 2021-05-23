@@ -36,13 +36,13 @@ export default {
   methods: {
     onCopy() {
       this.$gtag.event('Success', {
-        event_category: 'Copy Gradient',
+        event_category: `Copy Gradient (${this.type})`,
         event_label: this.name,
       })
     },
     onError() {
       this.$gtag.event('Failed', {
-        event_category: 'Copy Gradient',
+        event_category: `Copy Gradient (${this.type})`,
         event_label: this.name,
       })
     },
