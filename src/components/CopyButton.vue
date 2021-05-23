@@ -2,14 +2,14 @@
   <div>
     <button
       class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 text-gray-500 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800"
-      v-clipboard:copy="value"
+      v-clipboard:copy="copyValue"
       v-clipboard:error="onError"
       v-clipboard:success="onCopy"
     >
       <ClipboardIcon className="w-5 h-5" />
     </button>
 
-    <div :class="gradient" ref="gradient" v-if="isCSS"></div>
+    <div :class="gradient" ref="gradient"></div>
   </div>
 </template>
 
@@ -20,7 +20,8 @@ export default {
   },
   data() {
     return {
-      value: '',
+      tailwindValue: '',
+      cssValue: '',
     }
   },
   props: {
@@ -29,8 +30,8 @@ export default {
     type: String,
   },
   computed: {
-    isCSS() {
-      return this.type === 'CSS'
+    copyValue() {
+      return this.type === 'CSS' ? this.cssValue : this.tailwindValue
     },
   },
   methods: {
@@ -48,7 +49,8 @@ export default {
     },
   },
   mounted() {
-    this.value = this.isCSS ? getComputedStyle(this.$refs.gradient).getPropertyValue('background-image') : this.gradient
+    this.cssValue = getComputedStyle(this.$refs.gradient).getPropertyValue('background-image')
+    this.tailwindValue = this.gradient
   },
 }
 </script>
