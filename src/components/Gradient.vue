@@ -6,15 +6,18 @@
       <div class="p-6 space-y-4 bg-white shadow-sm dark:bg-gray-900 rounded-3xl">
         <p class="text-xl font-medium text-gray-900 dark:text-white">{{ title }}</p>
 
-        <p class="p-2 -mx-2 font-mono text-xs text-gray-500 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800">
-          {{ customisedColors }}
-        </p>
+        <div class="flex items-stretch space-x-3">
+          <code class="h-12 p-2 text-xs text-gray-500 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800">
+            {{ customisedColors }}
+          </code>
 
-        <div class="flex items-center space-x-2">
-          <p class="text-gray-500 app-subtitle dark:text-gray-300">Copy:</p>
-
-          <CopyButton :gradient="customisedColors" :name="title" :css="true" :key="cssKey" />
-          <CopyButton :gradient="customisedColors" :name="title" :css="false" :key="tailwindKey" />
+          <CopyButton
+            :type="type"
+            :gradient="customisedColors"
+            :name="title"
+            :key="copyKey"
+            v-if="['Tailwind', 'CSS'].includes(type)"
+          />
         </div>
 
         <div>
@@ -47,14 +50,14 @@ export default {
     return {
       direction: '',
       directions,
-      cssKey: 0,
-      tailwindKey: 0,
+      copyKey: '',
     }
   },
   props: {
     colors: String,
-    title: String,
     conic: Boolean,
+    title: String,
+    type: String,
   },
   computed: {
     customisedColors() {
@@ -69,12 +72,15 @@ export default {
   methods: {
     handleDirection(direction) {
       this.direction = direction
-      this.cssKey += 1
-      this.tailwindKey += 1
+      this.copyKey = this.setKey()
+    },
+    setKey() {
+      return `${this.title} ${Math.random()}`
     },
   },
   mounted() {
     this.directions = this.conic ? conicDirections : directions
+    this.copyKey = this.setKey()
   },
 }
 </script>

@@ -4,7 +4,7 @@
     @click="fireAction(direction)"
   >
     <span class="relative block transform" :class="chevronClass">
-      <IconChevron iconClass="w-5 h-5" />
+      <ChevronUpIcon className="w-5 h-5" />
     </span>
   </button>
 </template>
@@ -14,7 +14,7 @@ import { chevronDirections } from '@/assets/data/directions.js'
 
 export default {
   components: {
-    IconChevron: () => import('@/components/IconChevron'),
+    ChevronUpIcon: () => import('@/components/icons/ChevronUp'),
   },
   data() {
     return {

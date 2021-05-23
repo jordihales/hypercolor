@@ -17,9 +17,9 @@
 export default {
   components: {
     Announcement: () => import('@/components/Announcement'),
-    Header: () => import('@/components/Header'),
     Banner: () => import('@/components/Banner'),
     Gradients: () => import('@/components/Gradients'),
+    Header: () => import('@/components/Header'),
   },
   data() {
     return {
@@ -48,7 +48,8 @@ export default {
 </script>
 
 <style>
-.app-subtitle {
-  @apply text-xs font-semibold uppercase tracking-widest;
+html button:focus,
+html a:focus {
+  @apply outline-none ring ring-pink-600;
 }
 </style>

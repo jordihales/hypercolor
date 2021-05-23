@@ -1,6 +1,6 @@
 <template>
   <section role="banner">
-    <div class="container pt-12 sm:pt-24">
+    <div class="container py-24 lg:py-36">
       <div class="max-w-3xl mx-auto space-y-8 text-center">
         <h1
           class="text-4xl font-black leading-snug tracking-widest text-transparent uppercase sm:text-6xl bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"

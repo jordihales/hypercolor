@@ -693,6 +693,11 @@
     "@babel/helper-validator-identifier" "^7.12.11"
     to-fast-properties "^2.0.0"
 
+"@fontsource/inter@^4.3.0":
+  version "4.3.0"
+  resolved "https://registry.npmjs.org/@fontsource/inter/-/inter-4.3.0.tgz#deb5c5d5d2ce0d8d16173a68ba1e961741ef6d30"
+  integrity sha512-qtUF+Fn9vH4O7V/13kOeemEJpQfhTMxtnOJzJw3kY7SOwl1cbs4fnd9QnQOczU3AVBJEPF1ik639uvaOg7g43A==
+
 "@fullhuman/postcss-purgecss@^3.1.3":
   version "3.1.3"
   resolved "https://registry.npmjs.org/@fullhuman/postcss-purgecss/-/postcss-purgecss-3.1.3.tgz#47af7b87c9bfb3de4bc94a38f875b928fffdf339"
@@ -731,11 +736,6 @@
   integrity sha512-tAag0jEcjwH+P2quUfipd7liWCNX2F8NvYjQp2wtInsZxnMlypdw0FtAOLxtvvkO+GSRRbmNi8m/5y42PQJYCQ==
   dependencies:
     "@hapi/hoek" "^8.3.0"
-
-"@heroicons/vue@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/@heroicons/vue/-/vue-1.0.1.tgz#bd37662a45ed031d9b4ab1c860574e2174ca1bd3"
-  integrity sha512-pClbScVNpkBCHdM86+EAjQ5iUAs1PVjRHDFRNImQQyot75KrAk4SDfeKGDkQqPaGdJ9ZHIK13cl2W0eYc29QWg==
 
 "@intervolga/optimize-cssnano-plugin@^1.0.5":
   version "1.0.6"
@@ -822,6 +822,13 @@
   version "1.5.4"
   resolved "https://registry.npmjs.org/@types/q/-/q-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
   integrity sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==
+
+"@vue-hero-icons/outline@^1.7.2":
+  version "1.7.2"
+  resolved "https://registry.npmjs.org/@vue-hero-icons/outline/-/outline-1.7.2.tgz#ec723ee45e142d2249948c58be65f5d35e3c4ed3"
+  integrity sha512-mgMpncarjZHXY1K2tyjbYHf53yQG9amroDR9t2iH/umpsN8+f8RNcTy1m131EZ8WBCm8MpF97XpXPV129rvtVg==
+  dependencies:
+    babel-helper-vue-jsx-merge-props "^2.0.3"
 
 "@vue/babel-helper-vue-jsx-merge-props@^1.2.1":
   version "1.2.1"
@@ -1576,6 +1583,11 @@ babel-eslint@^10.0.1:
     "@babel/types" "^7.7.0"
     eslint-visitor-keys "^1.0.0"
     resolve "^1.12.0"
+
+babel-helper-vue-jsx-merge-props@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.npmjs.org/babel-helper-vue-jsx-merge-props/-/babel-helper-vue-jsx-merge-props-2.0.3.tgz#22aebd3b33902328e513293a8e4992b384f9f1b6"
+  integrity sha512-gsLiKK7Qrb7zYJNgiXKpXblxbV5ffSwR0f5whkPAaBAR4fhi6bwRZxX9wBlIc5M/v8CCkXUbXZL4N/nSE97cqg==
 
 babel-loader@^8.0.5:
   version "8.2.2"
@@ -4301,6 +4313,11 @@ html-tags@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/html-tags/-/html-tags-3.1.0.tgz#7b5e6f7e665e9fb41f30007ed9e0d41e97fb2140"
   integrity sha512-1qYz89hW3lFDEazhjW0yVAV87lw8lVkrJocr72XmBkMKsoSVJCQx3W8BXsC7hO2qAt8BoVjYjtAcZ9perqGnNg==
+
+html-to-image@^1.6.2:
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/html-to-image/-/html-to-image-1.6.2.tgz#9d444424cc638df13db5c7be810ac0d2962f5edd"
+  integrity sha512-X6X7wJW2KQ+AGqMeBITdntCcQnxBgZY62MdGOi042Y70+0SMe8/iJCzUv8RNaUoXqUjWw5FPyoTDmdGoapTQIQ==
 
 html-webpack-plugin@^3.2.0:
   version "3.2.0"
@@ -8177,11 +8194,6 @@ typedarray@^0.0.6:
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typeface-inter@^3.15.0:
-  version "3.15.1"
-  resolved "https://registry.npmjs.org/typeface-inter/-/typeface-inter-3.15.1.tgz#bbd39cc26ed1c7b3a2bc797996a9d053b507e727"
-  integrity sha512-xlEvjfaTvFnr3ZmwM6fs5/KOKLpAuNksAUxiYfa6dKqZham2oTGm0gI1j/tcgxh1reihhrKbTFfFjtCV9wwxXA==
-
 uglify-js@3.4.x:
   version "3.4.10"
   resolved "https://registry.npmjs.org/uglify-js/-/uglify-js-3.4.10.tgz#9ad9563d8eb3acdfb8d38597d2af1d815f6a755f"
@@ -8388,6 +8400,11 @@ uuid@^3.3.2, uuid@^3.4.0:
   version "3.4.0"
   resolved "https://registry.npmjs.org/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
+
+v-click-outside@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.npmjs.org/v-click-outside/-/v-click-outside-3.1.2.tgz#1dbaa14bf09a21bd16f23a38f03bfa3988f71281"
+  integrity sha512-gMdRqfRE6m6XU6SiFi3dyBlFB2MWogiXpof8Aa3LQysrl9pzTndqp/iEaAphLoadaQUFnQ0ec6fLLaxr7LiY6A==
 
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
