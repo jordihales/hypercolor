@@ -46,6 +46,11 @@ export default {
   methods: {
     fireAction(name) {
       this.$emit('action', name)
+
+      this.$gtag.event('Change', {
+        event_category: 'Change Theme',
+        event_label: name,
+      })
     },
     themeHref(name) {
       return `#${name}`
