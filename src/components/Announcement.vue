@@ -1,5 +1,5 @@
 <template>
-  <section class="text-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+  <section class="text-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500" v-if="!hideAnnouncement">
     <div class="container py-3">
       <p class="text-sm font-medium text-white">
         HyperUI: Components for Tailwind CSS! 80+ Components for $10
@@ -10,3 +10,18 @@
     </div>
   </section>
 </template>
+
+<script>
+import { validLicense } from '@/utils/auth'
+
+export default {
+  data() {
+    return {
+      hideAnnouncement: true,
+    }
+  },
+  mounted() {
+    this.hideAnnouncement = this.$route.name === 'Validate' || validLicense()
+  },
+}
+</script>

@@ -3,8 +3,7 @@
     <Announcement />
 
     <div class="pb-12 bg-white sm:pb-24 dark:bg-gray-900">
-      <Header @action="handleTheme" />
-      <Validate />
+      <Header @action="handleTheme" v-if="$route.name !== 'Validate'" />
 
       <main role="main">
         <router-view />
@@ -18,7 +17,6 @@ export default {
   components: {
     Announcement: () => import('@/components/Announcement'),
     Header: () => import('@/components/Header'),
-    Validate: () => import('@/components/Validate'),
   },
   data() {
     return {

@@ -8,6 +8,8 @@
 </template>
 
 <script>
+import { validLicense } from '@/utils/auth'
+
 export default {
   components: {
     OptionButton: () => import('@/components/OptionButton'),
@@ -25,6 +27,9 @@ export default {
     setSaveOption(option) {
       this.$emit('setSaveOption', option)
     },
+  },
+  mounted() {
+    this.valid = validLicense()
   },
 }
 </script>

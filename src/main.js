@@ -14,6 +14,7 @@ import 'tailwindcss/tailwind.css'
 
 const routes = [
   { path: '/', name: 'Home', component: () => import('@/components/pages/Index') },
+  { path: '/validate', name: 'Validate', component: () => import('@/components/pages/Validate') },
   { path: '*', component: () => import('@/components/pages/NotFound') },
 ]
 
