@@ -73,6 +73,11 @@ export default {
     handleDirection(direction) {
       this.direction = direction
       this.copyKey = this.setKey()
+
+      this.$gtag.event('Change', {
+        event_category: 'Change Direction',
+        event_label: direction,
+      })
     },
     setKey() {
       return `${this.title} ${Math.random()}`

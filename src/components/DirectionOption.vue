@@ -33,11 +33,6 @@ export default {
   methods: {
     fireAction(direction) {
       this.$emit('action', direction)
-
-      this.$gtag.event('Change', {
-        event_category: 'Change Direction',
-        event_label: direction,
-      })
     },
   },
 }

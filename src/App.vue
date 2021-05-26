@@ -34,6 +34,12 @@ export default {
   methods: {
     handleTheme() {
       this.darkMode = !this.darkMode
+      const pageTheme = this.darkMode ? 'Dark' : 'Light'
+
+      this.$gtag.event('Change', {
+        event_category: 'Change Page Theme',
+        event_label: pageTheme,
+      })
     },
     track() {
       this.$gtag.pageview({
