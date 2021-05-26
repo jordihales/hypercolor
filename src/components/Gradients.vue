@@ -5,7 +5,7 @@
     >
       <div class="container flex items-center justify-between py-4 space-x-6">
         <FilterTheme :themes="themes" :theme="theme" @action="handleTheme" />
-        <SaveOptions :type="type" @action="handleType" />
+        <SaveOptions :type="type" @setSaveOption="handleType" />
       </div>
     </div>
 

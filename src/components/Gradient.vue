@@ -11,13 +11,15 @@
             {{ customisedColors }}
           </code>
 
-          <CopyButton
-            :type="type"
-            :gradient="customisedColors"
-            :name="title"
-            :key="copyKey"
-            v-if="['Tailwind', 'CSS'].includes(type)"
-          />
+          <div :key="copyKey">
+            <CopyButton
+              :type="type"
+              :gradient="customisedColors"
+              :name="title"
+              v-if="['Tailwind', 'CSS'].includes(type)"
+            />
+            <SaveButton :gradient="customisedColors" :name="title" v-if="type === 'JPEG'" />
+          </div>
         </div>
 
         <div>
@@ -44,6 +46,7 @@ import { directions, conicDirections } from '@/assets/data/directions'
 export default {
   components: {
     CopyButton: () => import('@/components/CopyButton'),
+    SaveButton: () => import('@/components/SaveButton'),
     DirectionOption: () => import('@/components/DirectionOption'),
   },
   data() {
