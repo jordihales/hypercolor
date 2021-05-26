@@ -17,11 +17,11 @@ import { validLicense } from '@/utils/auth'
 export default {
   data() {
     return {
-      hideAnnouncement: true,
+      hideAnnouncement: false,
     }
   },
   mounted() {
-    this.hideAnnouncement = this.$route.name === 'Validate' || validLicense()
+    this.hideAnnouncement = this.$route.name === 'Validate' || this.$route.name === 'NotFound' || validLicense()
   },
 }
 </script>

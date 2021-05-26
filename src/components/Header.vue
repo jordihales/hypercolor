@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-white dark:bg-gray-900">
+  <header class="bg-white dark:bg-gray-900" v-if="!hideHeader">
     <div class="container flex items-center justify-between py-4">
       <button
         class="block p-2 text-gray-500 transition-colors bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800 dark:hover:text-white hover:text-gray-800"
@@ -32,10 +32,18 @@ export default {
     SunIcon: () => import('@/components/icons/Sun'),
     GitHubIcon: () => import('@/components/icons/GitHub'),
   },
+  data() {
+    return {
+      hideHeader: false,
+    }
+  },
   methods: {
     fireAction() {
       this.$emit('action')
     },
+  },
+  mounted() {
+    this.hideHeader = this.$route.name === 'Validate' || this.$route.name === 'NotFound'
   },
 }
 </script>

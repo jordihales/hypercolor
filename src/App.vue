@@ -2,8 +2,8 @@
   <div :class="themeClass">
     <Announcement />
 
-    <div class="pb-12 bg-white sm:pb-24 dark:bg-gray-900">
-      <Header @action="handleTheme" v-if="$route.name !== 'Validate'" />
+    <div class="bg-white dark:bg-gray-900" :class="paddingClass">
+      <Header @action="handleTheme" />
 
       <main role="main">
         <router-view />
@@ -26,6 +26,10 @@ export default {
   computed: {
     themeClass() {
       return this.darkMode ? 'dark' : 'light'
+    },
+    paddingClass() {
+      if (this.$route.name === 'Validate' || this.$route.name === 'NotFound') return
+      return 'pb-12 sm:pb-24'
     },
   },
   methods: {

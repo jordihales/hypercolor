@@ -3,6 +3,7 @@
     <a
       class="inline-flex items-center p-3 space-x-3 text-gray-500 border border-gray-200 dark:border-gray-700 rounded-xl dark:text-gray-300"
       href="https://gumroad.com/a/1027282035"
+      @click="trackClick"
       target="_blank"
     >
       <span
@@ -25,6 +26,14 @@ export default {
   props: {
     name: String,
     type: String,
+  },
+  methods: {
+    trackClick() {
+      this.$gtag.event('Click', {
+        event_category: 'Offsite',
+        event_label: 'Gumroad',
+      })
+    },
   },
 }
 </script>
