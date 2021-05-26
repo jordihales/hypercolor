@@ -12,7 +12,8 @@
     "@vue-hero-icons/outline": "^1.7.2",
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
-    "vue-gtag": "^1.9.1"
+    "vue-gtag": "^1.9.1",
+    "vue-router": "^3.5.1"
   },
   "devDependencies": {
     "@fontsource/inter": "^4.3.0",
