@@ -12,7 +12,7 @@
         <CodeIcon className="w-5 h-5" v-if="name === 'CSS'" />
         <ImageIcon className="w-5 h-5" v-if="name === 'JPEG'" />
       </span>
-      <span class="text-sm font-medium" v-text="name" />
+      <span class="hidden text-sm font-medium sm:block" v-text="name" />
     </button>
   </li>
 </template>
