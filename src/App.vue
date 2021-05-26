@@ -3,11 +3,10 @@
     <Announcement />
 
     <div class="pb-12 bg-white sm:pb-24 dark:bg-gray-900">
-      <Header @action="handleTheme" />
+      <Header @action="handleTheme" v-if="$route.name !== 'Validate'" />
 
       <main role="main">
-        <Banner />
-        <Gradients />
+        <router-view />
       </main>
     </div>
   </div>
@@ -17,8 +16,6 @@
 export default {
   components: {
     Announcement: () => import('@/components/Announcement'),
-    Banner: () => import('@/components/Banner'),
-    Gradients: () => import('@/components/Gradients'),
     Header: () => import('@/components/Header'),
   },
   data() {
@@ -41,11 +38,6 @@ export default {
         event_label: pageTheme,
       })
     },
-    track() {
-      this.$gtag.pageview({
-        page_path: '/',
-      })
-    },
   },
   beforeMount() {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) this.darkMode = true
@@ -55,7 +47,8 @@ export default {
 
 <style>
 html button:focus,
-html a:focus {
+html a:focus,
+html input:focus {
   @apply outline-none ring ring-pink-600;
 }
 </style>

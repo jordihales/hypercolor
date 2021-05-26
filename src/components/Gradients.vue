@@ -1,11 +1,11 @@
 <template>
   <section>
     <div
-      class="sticky inset-x-0 top-0 z-50 bg-white border-t border-b border-gray-100 dark:border-gray-800 dark:bg-gray-900"
+      class="sticky inset-x-0 top-0 z-40 bg-white border-t border-b border-gray-100 dark:border-gray-800 dark:bg-gray-900"
     >
       <div class="container flex items-center justify-between py-4 space-x-6">
         <FilterTheme :themes="themes" :theme="theme" @action="handleTheme" />
-        <SaveOptions :type="type" @action="handleType" />
+        <SaveOptions :type="type" @setSaveOption="handleType" />
       </div>
     </div>
 
