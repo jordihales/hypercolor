@@ -1,8 +1,8 @@
 <template>
-  <section class="text-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500" v-if="!hideAnnouncement">
+  <section class="text-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
     <div class="container py-3">
       <p class="text-sm font-medium text-white">
-        HyperUI: Components for Tailwind CSS! 80+ Components for $10
+        HyperUI: Components for Tailwind CSS! 90+ Components for $20
         <a href="https://gumroad.com/l/uUMQe/hypercolor" class="underline" target="_blank">
           25% OFF for HYPERCOLOR Users
         </a>
@@ -10,18 +10,3 @@
     </div>
   </section>
 </template>
-
-<script>
-import { validLicense } from '@/utils/auth'
-
-export default {
-  data() {
-    return {
-      hideAnnouncement: false,
-    }
-  },
-  mounted() {
-    this.hideAnnouncement = this.$route.name === 'Validate' || this.$route.name === 'NotFound' || validLicense()
-  },
-}
-</script>
