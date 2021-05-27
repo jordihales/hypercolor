@@ -11,7 +11,7 @@
       >
         <ImageIcon className="w-5 h-5" />
       </span>
-      <span class="text-sm font-medium">
+      <span class="hidden text-sm font-medium sm:block">
         JPEG
       </span>
     </a>
