@@ -2,6 +2,8 @@
   <div :class="themeClass">
     <Announcement />
 
+    <Popup />
+
     <div class="bg-white dark:bg-gray-900" :class="paddingClass">
       <Header @action="handleTheme" />
 
@@ -17,6 +19,7 @@ export default {
   components: {
     Announcement: () => import('@/components/Announcement'),
     Header: () => import('@/components/Header'),
+    Popup: () => import('@/components/Popup'),
   },
   data() {
     return {

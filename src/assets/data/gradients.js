@@ -420,3 +420,7 @@ export function getGradients(theme) {
 
   return gradients.filter((gradient) => gradient.theme === theme)
 }
+
+export function randomGradient() {
+  return gradients[Math.floor(Math.random() * gradients.length)]
+}
