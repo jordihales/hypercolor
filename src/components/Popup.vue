@@ -1,18 +1,18 @@
 <template>
   <div class="fixed inset-x-0 bottom-0 z-50 p-2" v-if="showPopup">
-    <div class="relative max-w-xl p-6 bg-gray-100 rounded-lg shadow-sm dark:bg-gray-800">
+    <div class="relative max-w-sm">
+      <div class="absolute inset-0 rounded-xl" :class="gradient.colors"></div>
+
       <button
         type="button"
         @click="showPopup = false"
-        class="absolute p-1 text-gray-500 bg-white border border-gray-200 rounded-full dark:text-gray-300 dark:bg-gray-900 dark:border-gray-700 -top-1 -right-1"
+        class="absolute z-10 p-1 text-gray-500 bg-white border border-gray-200 rounded-full dark:text-gray-300 dark:bg-gray-800 dark:border-gray-700 -top-1.5 -right-1.5"
       >
         <CloseIcon className="w-3 h-3" />
       </button>
 
-      <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
-        <div class="w-full h-full rounded-xl" :class="gradient.colors"></div>
-
-        <div class="col-span-2">
+      <div class="relative p-0.5">
+        <div class="p-6 bg-gray-100 rounded-xl dark:bg-gray-800">
           <h2 class="text-xl font-black leading-snug tracking-widest uppercase">
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
               Hypercolor
@@ -69,8 +69,8 @@ export default {
   methods: {
     trackClick() {
       this.$gtag.event('Click', {
-        event_category: 'Offsite',
-        event_label: 'Gumroad',
+        event_category: 'Gumroad',
+        event_label: 'Hypercolor',
       })
     },
   },
@@ -83,7 +83,7 @@ export default {
 
     setInterval(() => {
       this.gradient = randomGradient()
-    }, 3000)
+    }, 1500)
   },
 }
 </script>

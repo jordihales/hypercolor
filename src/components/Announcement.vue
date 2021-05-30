@@ -3,10 +3,28 @@
     <div class="container py-3">
       <p class="text-sm font-medium text-white">
         HyperUI: Components for Tailwind CSS!
-        <a href="https://gumroad.com/l/uUMQe/hypercolor" class="underline" data-gumroad-single-product="true">
-          100+ Components for $10
+        <a
+          href="https://gumroad.com/l/uUMQe/hypercolor"
+          class="underline"
+          data-gumroad-single-product="true"
+          @click="trackClick"
+        >
+          100+ Components for $7.50
         </a>
       </p>
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  methods: {
+    trackClick() {
+      this.$gtag.event('Click', {
+        event_category: 'Gumroad',
+        event_label: 'HyperUI',
+      })
+    },
+  },
+}
+</script>
