@@ -9,10 +9,10 @@
         <CloseIcon className="w-3 h-3" />
       </button>
 
-      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <div class="w-full h-full rounded-xl" :class="gradient.colors"></div>
 
-        <div>
+        <div class="col-span-2">
           <h2 class="text-xl font-black leading-snug tracking-widest uppercase">
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
               Hypercolor
@@ -28,14 +28,22 @@
             collection as JPEGs.
           </p>
 
-          <div class="mt-6 sm:text-right">
+          <div class="justify-between mt-6 sm:flex">
+            <a
+              href="https://twitter.com/itsmarkmead/status/1396148858191630340?s=20"
+              target="_blank"
+              class="block w-full px-6 py-3 text-sm font-medium text-center text-white border border-pink-500 rounded-lg"
+            >
+              Watch preview
+            </a>
+
             <a
               href="https://gumroad.com/a/1027282035/TjkKF?wanted=true"
               @click="trackClick"
               data-gumroad-single-product="true"
-              class="inline-block px-6 py-3 font-medium text-white rounded-lg bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
+              class="block w-full px-6 py-3 mt-3 text-sm font-medium text-center text-white rounded-lg bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 sm:mt-0 sm:ml-3"
             >
-              Buy for $3
+              Buy for $1
             </a>
           </div>
         </div>
