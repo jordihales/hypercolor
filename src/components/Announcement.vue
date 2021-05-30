@@ -4,7 +4,7 @@
       <p class="text-sm font-medium text-white">
         HyperUI: Components for Tailwind CSS!
         <a href="https://gumroad.com/l/uUMQe/hypercolor" class="underline" data-gumroad-single-product="true">
-          100+ Components for $15
+          100+ Components for $10
         </a>
       </p>
     </div>
