@@ -30,8 +30,8 @@ export default {
   methods: {
     trackClick() {
       this.$gtag.event('Click', {
-        event_category: 'Offsite',
-        event_label: 'Gumroad',
+        event_category: 'Gumroad',
+        event_label: 'Hypercolor',
       })
     },
   },
