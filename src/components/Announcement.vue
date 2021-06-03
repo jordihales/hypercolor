@@ -3,13 +3,8 @@
     <div class="container py-3">
       <p class="text-sm font-medium text-white">
         HyperUI: Components for Tailwind CSS!
-        <a
-          href="https://gumroad.com/l/uUMQe/hypercolor"
-          class="underline"
-          data-gumroad-single-product="true"
-          @click="trackClick"
-        >
-          100+ Components for $7.50
+        <a href="https://gumroad.com/l/uUMQe/hypercolor" class="underline" data-gumroad-single-product="true">
+          {{ count }} Components for {{ price }}
         </a>
       </p>
     </div>
@@ -18,13 +13,20 @@
 
 <script>
 export default {
-  methods: {
-    trackClick() {
-      this.$gtag.event('Click', {
-        event_category: 'Gumroad',
-        event_label: 'HyperUI',
+  data() {
+    return {
+      count: '100+',
+      price: '$10',
+    }
+  },
+  mounted() {
+    fetch('https://www.hyperui.dev/data.json', { method: 'get' })
+      .then((response) => response.json())
+      .then((data) => {
+        const price = data.price.substring(1)
+        this.count = data.count
+        this.price = `$${price * 0.75}`
       })
-    },
   },
 }
 </script>
