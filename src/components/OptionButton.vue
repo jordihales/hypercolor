@@ -8,21 +8,28 @@
       <span
         class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 bg-gray-100 rounded-lg dark:bg-gray-800"
       >
-        <SparkleIcon className="w-5 h-5" v-if="name === 'Tailwind'" />
-        <CodeIcon className="w-5 h-5" v-if="name === 'CSS'" />
-        <ImageIcon className="w-5 h-5" v-if="name === 'JPEG'" />
+        <SparkleIcon v-if="name === 'Tailwind'" />
+        <CodeIcon v-if="name === 'CSS'" />
+        <ImageIcon v-if="name === 'JPEG'" />
       </span>
-      <span class="hidden text-sm font-medium sm:block" v-text="name" />
+      <span
+        class="hidden text-sm font-medium sm:block"
+        v-text="name"
+      />
     </button>
   </li>
 </template>
 
 <script>
+import SparkleIcon from '@/components/icons/Sparkle'
+import ImageIcon from '@/components/icons/Image'
+import CodeIcon from '@/components/icons/Code'
+
 export default {
   components: {
-    SparkleIcon: () => import('@/components/icons/Sparkle'),
-    ImageIcon: () => import('@/components/icons/Image'),
-    CodeIcon: () => import('@/components/icons/Code'),
+    SparkleIcon,
+    ImageIcon,
+    CodeIcon,
   },
   props: {
     name: String,

@@ -4,7 +4,10 @@
 
     <Popup />
 
-    <div class="bg-white dark:bg-gray-900" :class="paddingClass">
+    <div
+      class="bg-white dark:bg-gray-900"
+      :class="paddingClass"
+    >
       <Header @action="handleTheme" />
 
       <main role="main">
@@ -35,6 +38,9 @@ export default {
       return 'pb-12 sm:pb-24'
     },
   },
+  beforeMount() {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) this.darkMode = true
+  },
   methods: {
     handleTheme() {
       this.darkMode = !this.darkMode
@@ -45,9 +51,6 @@ export default {
         event_label: pageTheme,
       })
     },
-  },
-  beforeMount() {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) this.darkMode = true
   },
 }
 </script>

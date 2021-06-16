@@ -10,7 +10,11 @@
 
         <p class="max-w-2xl mx-auto text-lg text-gray-500 sm:text-xl dark:text-gray-300">
           A curated collection of beautiful premade gradients using default colors from the
-          <a href="https://tailwindcss.com/" target="_blank" class="text-cyan-400 hover:text-cyan-300">
+          <a
+            href="https://tailwindcss.com/"
+            target="_blank"
+            class="text-cyan-400 hover:text-cyan-300"
+          >
             Tailwind CSS
           </a>
           color palette. Simply copy the code snippets to use within your own apps.

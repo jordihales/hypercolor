@@ -4,11 +4,15 @@
       class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 text-gray-500 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800"
       @click="handleClick"
     >
-      <ImageIcon className="w-5 h-5" />
+      <ImageIcon />
     </button>
 
     <div class="sr-only">
-      <div :class="gradient" ref="gradient" class="w-screen h-screen"></div>
+      <div
+        ref="gradient"
+        :class="gradient"
+        class="w-screen h-screen"
+      />
     </div>
   </div>
 </template>
@@ -16,9 +20,11 @@
 <script>
 import * as htmlToImage from 'html-to-image'
 
+import ImageIcon from '@/components/icons/Image'
+
 export default {
   components: {
-    ImageIcon: () => import('@/components/icons/Image'),
+    ImageIcon
   },
   props: {
     gradient: String,

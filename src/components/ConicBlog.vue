@@ -9,7 +9,7 @@
 
       <span
         class="absolute inset-x-0 bottom-0 h-0.5 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 group-hover:opacity-50 transition-opacity"
-      ></span>
+      />
     </a>
   </div>
 </template>

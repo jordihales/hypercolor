@@ -1,14 +1,20 @@
 <template>
-  <div class="fixed inset-x-0 bottom-0 z-50 p-2" v-if="showPopup">
+  <div
+    v-if="showPopup"
+    class="fixed inset-x-0 bottom-0 z-50 p-2"
+  >
     <div class="relative max-w-sm">
-      <div class="absolute inset-0 rounded-xl" :class="gradient.colors"></div>
+      <div
+        class="absolute inset-0 rounded-xl"
+        :class="gradient.colors"
+      />
 
       <button
         type="button"
-        @click="showPopup = false"
         class="absolute z-10 p-1 text-gray-500 bg-white border border-gray-200 rounded-full dark:text-gray-300 dark:bg-gray-800 dark:border-gray-700 -top-1.5 -right-1.5"
+        @click="showPopup = false"
       >
-        <CloseIcon className="w-3 h-3" />
+        <CloseIcon />
       </button>
 
       <div class="relative p-0.5">
@@ -18,7 +24,10 @@
               Hypercolor
             </span>
 
-            <span class="block text-3xl text-transparent bg-clip-text" :class="gradient.colors">
+            <span
+              class="block text-3xl text-transparent bg-clip-text"
+              :class="gradient.colors"
+            >
               Full Access
             </span>
           </h2>
@@ -38,9 +47,7 @@
             </a>
 
             <a
-              href="https://gumroad.com/a/1027282035/TjkKF?wanted=true"
-              @click="trackClick"
-              data-gumroad-single-product="true"
+              href="https://gumroad.com/a/1027282035/TjkKF"
               class="block w-full px-6 py-3 mt-3 text-sm font-medium text-center text-white rounded-lg bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 sm:mt-0 sm:ml-3"
             >
               Buy for $1
@@ -54,25 +61,19 @@
 
 <script>
 import { validLicense } from '@/utils/auth'
-import { randomGradient } from '@/assets/data/gradients.js'
+import { randomGradient } from '@/assets/data/gradients'
+
+import CloseIcon from '@/components/icons/Close'
 
 export default {
   components: {
-    CloseIcon: () => import('@/components/icons/Close'),
+    CloseIcon
   },
   data() {
     return {
       showPopup: false,
       gradient: '',
     }
-  },
-  methods: {
-    trackClick() {
-      this.$gtag.event('Click', {
-        event_category: 'Gumroad',
-        event_label: 'Hypercolor',
-      })
-    },
   },
   mounted() {
     let showPopup = validLicense() === null

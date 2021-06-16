@@ -1,10 +1,18 @@
 <template>
-  <article class="aos-animate" data-aos="fade-up">
-    <div class="h-64 rounded-3xl" :class="customisedColors"></div>
+  <article
+    class="aos-animate"
+    data-aos="fade-up"
+  >
+    <div
+      class="h-64 rounded-3xl"
+      :class="customisedColors"
+    />
 
     <div class="px-0.5 -mt-8">
       <div class="p-6 space-y-4 bg-white shadow-sm dark:bg-gray-900 rounded-3xl">
-        <p class="text-xl font-medium text-gray-900 dark:text-white">{{ title }}</p>
+        <p class="text-xl font-medium text-gray-900 dark:text-white">
+          {{ title }}
+        </p>
 
         <div class="flex items-stretch space-x-3">
           <code class="h-12 p-2 text-xs text-gray-500 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800">
@@ -13,17 +21,23 @@
 
           <div :key="copyKey">
             <CopyButton
+              v-if="['Tailwind', 'CSS'].includes(type)"
               :type="type"
               :gradient="customisedColors"
               :name="title"
-              v-if="['Tailwind', 'CSS'].includes(type)"
             />
-            <SaveButton :gradient="customisedColors" :name="title" v-if="type === 'JPEG'" />
+            <SaveButton
+              v-if="type === 'JPEG'"
+              :gradient="customisedColors"
+              :name="title"
+            />
           </div>
         </div>
 
         <div>
-          <p class="text-gray-500 app-subtitle dark:text-gray-300">Direction:</p>
+          <p class="text-gray-500 app-subtitle dark:text-gray-300">
+            Direction:
+          </p>
 
           <div class="flex mt-2 space-x-1">
             <DirectionOption
@@ -43,11 +57,21 @@
 <script>
 import { directions, conicDirections } from '@/assets/data/directions'
 
+import CopyButton from '@/components/CopyButton'
+import SaveButton from '@/components/SaveButton'
+import DirectionOption from '@/components/DirectionOption'
+
 export default {
   components: {
-    CopyButton: () => import('@/components/CopyButton'),
-    SaveButton: () => import('@/components/SaveButton'),
-    DirectionOption: () => import('@/components/DirectionOption'),
+    CopyButton,
+    SaveButton,
+    DirectionOption,
+  },
+  props: {
+    colors: String,
+    conic: Boolean,
+    title: String,
+    type: String,
   },
   data() {
     return {
@@ -55,12 +79,6 @@ export default {
       directions,
       copyKey: '',
     }
-  },
-  props: {
-    colors: String,
-    conic: Boolean,
-    title: String,
-    type: String,
   },
   computed: {
     customisedColors() {
@@ -71,6 +89,10 @@ export default {
 
       return colors.join(' ')
     },
+  },
+  mounted() {
+    this.directions = this.conic ? conicDirections : directions
+    this.copyKey = this.setKey()
   },
   methods: {
     handleDirection(direction) {
@@ -85,10 +107,6 @@ export default {
     setKey() {
       return `${this.title} ${Math.random()}`
     },
-  },
-  mounted() {
-    this.directions = this.conic ? conicDirections : directions
-    this.copyKey = this.setKey()
   },
 }
 </script>

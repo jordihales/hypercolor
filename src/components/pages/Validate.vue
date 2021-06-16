@@ -2,7 +2,9 @@
   <section class="bg-white dark:bg-gray-900">
     <div class="container flex items-center justify-center h-screen">
       <div class="max-w-2xl mx-auto text-center">
-        <p class="text-sm font-medium tracking-widest text-pink-500 uppercase">Thank you for your purchase</p>
+        <p class="text-sm font-medium tracking-widest text-pink-500 uppercase">
+          Thank you for your purchase
+        </p>
 
         <h5
           class="mt-4 text-3xl font-black leading-snug tracking-widest text-transparent uppercase bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
@@ -11,19 +13,29 @@
         </h5>
 
         <div class="mt-8 space-y-3">
-          <div ref="error" class="text-sm font-medium text-red-500" v-if="error">{{ error }}</div>
-          <div ref="success" class="text-sm font-medium text-green-500" v-if="success">
+          <div
+            v-if="error"
+            ref="error"
+            class="text-sm font-medium text-red-500"
+          >
+            {{ error }}
+          </div>
+          <div
+            v-if="success"
+            ref="success"
+            class="text-sm font-medium text-green-500"
+          >
             License is valid, thank you for your support!
-            <br />
+            <br>
             You will be now redirect to the home page with full access.
           </div>
 
           <input
-            type="text"
             v-model="licenseKey"
+            type="text"
             class="w-full p-6 text-gray-500 bg-transparent border border-gray-300 rounded-xl dark:text-gray-300 dark:border-gray-800"
             placeholder="Enter license key"
-          />
+          >
 
           <button
             type="button"
@@ -42,9 +54,11 @@
 </template>
 
 <script>
+import UnlockIcon from '@/components/icons/Unlock'
+
 export default {
   components: {
-    UnlockIcon: () => import('@/components/icons/Unlock'),
+    UnlockIcon
   },
   data() {
     return {
@@ -73,15 +87,12 @@ export default {
           if (data.success) self.validateSuccess()
           else self.error = data.message
         })
-        .catch(function(err) {
-          alert(err)
-        })
     },
     validateSuccess() {
       this.error = false
       this.success = true
       localStorage.setItem('validLicense', true)
-      setTimeout(() => (window.location.href = '/'), 5000)
+      setTimeout(() => (window.location.href = '/'), 3000)
     },
   },
 }

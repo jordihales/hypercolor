@@ -6,10 +6,13 @@
 </template>
 
 <script>
+import Banner from '@/components/Banner'
+import Gradients from '@/components/Gradients'
+
 export default {
   components: {
-    Banner: () => import('@/components/Banner'),
-    Gradients: () => import('@/components/Gradients'),
+    Banner,
+    Gradients
   },
 }
 </script>

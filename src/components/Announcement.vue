@@ -3,7 +3,10 @@
     <div class="container py-3">
       <p class="text-sm font-medium text-white">
         HyperUI: Components for Tailwind CSS!
-        <a href="https://gumroad.com/l/uUMQe/hypercolor" class="underline" data-gumroad-single-product="true">
+        <a
+          href="https://gumroad.com/l/uUMQe/hypercolor"
+          class="underline"
+        >
           {{ count }} Components for {{ price }}
         </a>
       </p>
@@ -24,6 +27,7 @@ export default {
       .then((response) => response.json())
       .then((data) => {
         const price = data.price.substring(1)
+
         this.count = data.count
         this.price = `$${price * 0.75}`
       })

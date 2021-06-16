@@ -3,27 +3,32 @@
     class="block p-2 text-gray-500 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800"
     @click="fireAction(direction)"
   >
-    <span class="relative block transform" :class="chevronClass">
-      <ChevronUpIcon className="w-5 h-5" />
+    <span
+      class="relative block transform"
+      :class="chevronClass"
+    >
+      <ChevronUpIcon />
     </span>
   </button>
 </template>
 
 <script>
-import { chevronDirections } from '@/assets/data/directions.js'
+import { chevronDirections } from '@/assets/data/directions'
+
+import ChevronUpIcon from '@/components/icons/ChevronUp'
 
 export default {
   components: {
-    ChevronUpIcon: () => import('@/components/icons/ChevronUp'),
+    ChevronUpIcon
+  },
+  props: {
+    direction: String,
+    title: String,
   },
   data() {
     return {
       chevronDirections,
     }
-  },
-  props: {
-    direction: String,
-    title: String,
   },
   computed: {
     chevronClass() {

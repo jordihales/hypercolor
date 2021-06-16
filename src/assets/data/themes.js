@@ -1,4 +1,4 @@
-import { gradients } from './gradients.js'
+import { gradients } from './gradients'
 
 function getThemes() {
   const filteredThemes = gradients.filter((g, i, s) => s.findIndex((cg) => cg.theme === g.theme) === i)
@@ -9,12 +9,6 @@ function getThemes() {
   })
 
   return filteredThemes
-}
-
-export function getTheme(name) {
-  const themes = getThemes()
-
-  return themes.find((theme) => theme.theme === name)
 }
 
 export const themes = getThemes()

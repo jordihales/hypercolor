@@ -4,8 +4,15 @@
       class="sticky inset-x-0 top-0 z-40 bg-white border-t border-b border-gray-100 dark:border-gray-800 dark:bg-gray-900"
     >
       <div class="container flex items-center justify-between py-4 space-x-6">
-        <FilterTheme :themes="themes" :theme="theme" @action="handleTheme" />
-        <SaveOptions :type="type" @setSaveOption="handleType" />
+        <FilterTheme
+          :themes="themes"
+          :selected="theme"
+          @action="handleTheme"
+        />
+        <SaveOptions
+          :type="type"
+          @setSaveOption="handleType"
+        />
       </div>
     </div>
 
@@ -32,14 +39,19 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 import { getGradients, gradients } from '@/assets/data/gradients'
-import { getTheme, themes } from '@/assets/data/themes.js'
+import { themes } from '@/assets/data/themes'
+
+import FilterTheme from '@/components/FilterTheme'
+import SaveOptions from '@/components/SaveOptions'
+import Gradient from '@/components/Gradient'
+import ConicBlog from '@/components/ConicBlog'
 
 export default {
   components: {
-    FilterTheme: () => import('@/components/FilterTheme'),
-    SaveOptions: () => import('@/components/SaveOptions'),
-    Gradient: () => import('@/components/Gradient'),
-    ConicBlog: () => import('@/components/ConicBlog'),
+    FilterTheme,
+    SaveOptions,
+    Gradient,
+    ConicBlog,
   },
   data() {
     return {
@@ -48,6 +60,15 @@ export default {
       theme: '',
       type: 'Tailwind',
     }
+  },
+  computed: {
+    filteredGradients() {
+      const name = this.theme.theme
+      return getGradients(name)
+    },
+  },
+  mounted() {
+    AOS.init()
   },
   methods: {
     handleTheme(theme) {
@@ -61,18 +82,6 @@ export default {
     handleType(type) {
       this.type = type
     },
-  },
-  computed: {
-    filteredGradients() {
-      const name = this.theme.theme
-      return getGradients(name)
-    },
-  },
-  mounted() {
-    const themeFromHash = window.location.hash.replace('#', '')
-    this.theme = themeFromHash ? getTheme(themeFromHash) : themes[0]
-
-    AOS.init()
   },
 }
 </script>
