@@ -55,7 +55,7 @@ export default {
 
       this.$gtag.event('Change', {
         event_category: 'Change Theme',
-        event_label: theme,
+        event_label: theme.theme,
       })
     },
     handleType(type) {
