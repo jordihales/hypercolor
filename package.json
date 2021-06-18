@@ -22,14 +22,14 @@
     "aos": "^2.3.4",
     "autoprefixer": "^9",
     "babel-eslint": "^10.0.1",
+    "eslint": "^7.24.0",
+    "eslint-plugin-vue": "^7.8.0",
     "html-to-image": "^1.6.2",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "v-click-outside": "^3.1.2",
     "vue-clipboard2": "^0.3.1",
-    "vue-template-compiler": "^2.6.10",
-    "eslint": "^7.24.0",
-    "eslint-plugin-vue": "^7.8.0"
+    "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
     "root": true,
