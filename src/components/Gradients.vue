@@ -57,7 +57,7 @@ export default {
     return {
       gradients,
       themes,
-      theme: '',
+      theme: 'All',
       type: 'Tailwind',
     }
   },
