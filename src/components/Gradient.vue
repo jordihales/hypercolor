@@ -1,9 +1,6 @@
 <template>
   <lazy-component>
-    <article
-      class="aos-animate"
-      data-aos="fade-up"
-    >
+    <article>
       <div
         class="h-64 rounded-3xl"
         :class="customisedColors"

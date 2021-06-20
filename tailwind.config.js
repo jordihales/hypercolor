@@ -6,9 +6,6 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   purge: {
     content: ['./src/*.vue', './src/**/*.vue', './src/assets/data/*.js'],
-    options: {
-      safelist: ['aos-init', 'aos-animate'],
-    },
   },
   darkMode: 'class',
   theme: {

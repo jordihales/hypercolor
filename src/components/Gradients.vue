@@ -27,7 +27,6 @@
           :colors="gradient.colors"
           :conic="gradient.conic"
           :type="type"
-          data-aos="fade-up"
         />
       </div>
     </div>
