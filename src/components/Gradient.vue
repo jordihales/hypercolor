@@ -1,5 +1,5 @@
 <template>
-  <lazy-component @show="loaded">
+  <lazy-component>
     <article
       class="aos-animate"
       data-aos="fade-up"
@@ -16,7 +16,7 @@
           </p>
 
           <div class="flex items-stretch space-x-3">
-            <code class="h-12 p-2 text-xs text-gray-500 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800">
+            <code class="h-12 p-2 text-xs text-gray-600 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800">
               {{ customisedColors }}
             </code>
 
@@ -36,7 +36,7 @@
           </div>
 
           <div>
-            <p class="text-gray-500 app-subtitle dark:text-gray-300">
+            <p class="font-medium text-gray-600 dark:text-gray-300">
               Direction:
             </p>
 

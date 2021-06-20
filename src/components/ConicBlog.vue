@@ -1,7 +1,7 @@
 <template>
   <div class="text-center">
     <a
-      class="relative pb-2 text-lg font-medium text-gray-500 sm:text-xl dark:text-gray-300 group"
+      class="relative pb-2 text-lg font-medium text-gray-600 sm:text-xl dark:text-gray-300 group"
       href="https://www.markmead.dev/blog/add-conic-gradients-tailwind/"
       target="_blank"
     >

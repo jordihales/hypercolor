@@ -4,7 +4,7 @@
     class="relative"
   >
     <button
-      class="inline-flex items-center p-3 space-x-3 text-gray-500 border border-gray-200 dark:border-gray-700 rounded-xl dark:text-gray-300"
+      class="inline-flex items-center p-3 space-x-3 text-gray-600 border border-gray-200 dark:border-gray-700 rounded-xl dark:text-gray-300"
       @click="showDropdown = !showDropdown"
     >
       <span
@@ -35,7 +35,7 @@
             :class="theme.colors"
           />
           <span
-            class="text-sm font-medium text-gray-500 dark:text-gray-300"
+            class="text-sm font-medium text-gray-600 dark:text-gray-300"
             v-text="theme.theme"
           />
         </button>

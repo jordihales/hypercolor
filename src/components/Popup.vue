@@ -11,7 +11,8 @@
 
       <button
         type="button"
-        class="absolute z-10 p-1 text-gray-500 bg-white border border-gray-200 rounded-full dark:text-gray-300 dark:bg-gray-800 dark:border-gray-700 -top-1.5 -right-1.5"
+        class="absolute z-10 p-1 text-gray-600 bg-white border border-gray-200 rounded-full dark:text-gray-300 dark:bg-gray-800 dark:border-gray-700 -top-1.5 -right-1.5"
+        aria-label="Close popup"
         @click="showPopup = false"
       >
         <CloseIcon />
@@ -32,7 +33,7 @@
             </span>
           </h2>
 
-          <p class="mt-4 text-sm text-gray-500 dark:text-gray-300">
+          <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">
             With the full access upgrade, you get the ability to download the gradients you love from our ever growing
             collection as JPEGs.
           </p>

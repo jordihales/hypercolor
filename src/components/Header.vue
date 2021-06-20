@@ -5,8 +5,8 @@
   >
     <div class="container flex items-center py-4 space-x-8">
       <button
-        class="block p-2 text-gray-500 transition-colors bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800 dark:hover:text-white hover:text-gray-800"
-        aria-label="Toggle theme"
+        class="block p-2 text-gray-600 transition-colors bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800 dark:hover:text-white hover:text-gray-800"
+        aria-label="Toggle website theme"
         @click="fireAction"
       >
         <SunIcon />

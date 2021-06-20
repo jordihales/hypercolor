@@ -1,8 +1,9 @@
 <template>
   <li>
     <button
-      class="inline-flex items-center p-3 space-x-3 text-gray-500 border rounded-xl dark:text-gray-300"
+      class="inline-flex items-center p-3 space-x-3 text-gray-600 border rounded-xl dark:text-gray-300"
       :class="activeClass"
+      :aria-label="`Switch to saving gradients as ${type}`"
       @click="$emit('setSaveOption')"
     >
       <span

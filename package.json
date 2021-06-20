@@ -17,7 +17,6 @@
     "@vue/cli-plugin-babel": "^3.9.0",
     "@vue/cli-plugin-eslint": "^3.9.0",
     "@vue/cli-service": "^3.9.0",
-    "aos": "^2.3.4",
     "autoprefixer": "^9",
     "babel-eslint": "^10.0.1",
     "eslint": "^7.24.0",

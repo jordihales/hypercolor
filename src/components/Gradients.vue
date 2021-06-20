@@ -35,9 +35,6 @@
 </template>
 
 <script>
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-
 import { getGradients, gradients } from '@/assets/data/gradients'
 import { themes } from '@/assets/data/themes'
 
@@ -66,9 +63,6 @@ export default {
       const name = this.theme.theme
       return getGradients(name)
     },
-  },
-  mounted() {
-    AOS.init()
   },
   methods: {
     handleTheme(theme) {

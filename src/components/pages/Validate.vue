@@ -33,7 +33,7 @@
           <input
             v-model="licenseKey"
             type="text"
-            class="w-full p-6 text-gray-500 bg-transparent border border-gray-300 rounded-xl dark:text-gray-300 dark:border-gray-800"
+            class="w-full p-6 text-gray-600 bg-transparent border border-gray-300 rounded-xl dark:text-gray-300 dark:border-gray-800"
             placeholder="Enter license key"
           >
 

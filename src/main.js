@@ -8,10 +8,7 @@ import VueLazyload from 'vue-lazyload'
 
 import App from '@/App'
 
-import '@fontsource/inter/400.css'
-import '@fontsource/inter/500.css'
-import '@fontsource/inter/900.css'
-import 'tailwindcss/tailwind.css'
+import '@/main.css'
 
 const routes = [
   { path: '/', name: 'Home', component: () => import('@/components/pages/Index') },

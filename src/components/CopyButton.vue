@@ -4,7 +4,7 @@
       v-clipboard:copy="copyValue"
       v-clipboard:error="onError"
       v-clipboard:success="onCopy"
-      class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 text-gray-500 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800"
+      class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 text-gray-600 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800"
       :aria-label="`Copy gradient as ${type}`"
     >
       <ClipboardIcon />

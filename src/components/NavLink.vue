@@ -2,7 +2,7 @@
   <a
     :href="url"
     target="_blank"
-    class="text-gray-500 transition-opacity opacity-75 app-subtitle dark:text-gray-300 hover:opacity-100"
+    class="font-medium text-gray-600 dark:text-gray-300"
     rel="noreferrer"
     v-text="title"
   />

@@ -8,7 +8,7 @@
           Hypercolor
         </h1>
 
-        <p class="max-w-2xl mx-auto text-lg text-gray-500 sm:text-xl dark:text-gray-300">
+        <p class="max-w-2xl mx-auto text-lg font-medium text-gray-600 sm:text-xl dark:text-gray-300">
           A curated collection of beautiful premade gradients using default colors from the
           <a
             href="https://tailwindcss.com/"
