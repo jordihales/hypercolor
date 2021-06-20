@@ -1,14 +1,14 @@
 <template>
   <section role="banner">
     <div class="container py-24 lg:py-36">
-      <div class="max-w-3xl mx-auto space-y-8 text-center">
+      <div class="max-w-2xl mx-auto space-y-8 text-center">
         <h1
           class="text-4xl font-black leading-snug tracking-widest text-transparent uppercase sm:text-6xl bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
         >
           Hypercolor
         </h1>
 
-        <p class="max-w-2xl mx-auto text-lg font-medium text-gray-600 sm:text-xl dark:text-gray-300">
+        <p class="text-xl font-medium text-gray-600 dark:text-gray-300">
           A curated collection of beautiful premade gradients using default colors from the
           <a
             href="https://tailwindcss.com/"

@@ -6,6 +6,9 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   purge: {
     content: ['./src/*.vue', './src/**/*.vue', './src/assets/data/*.js'],
+    options: {
+      keyframes: true,
+    },
   },
   darkMode: 'class',
   theme: {
@@ -52,9 +55,7 @@ module.exports = {
     },
   },
   variants: {
-    extend: {
-      ringOffsetColor: ['dark'],
-    },
+    extend: {},
   },
   plugins: [],
 }
