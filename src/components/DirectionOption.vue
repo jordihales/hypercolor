@@ -1,6 +1,7 @@
 <template>
   <button
     class="block p-2 text-gray-500 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800"
+    :aria-label="`Change gradient direction ${direction}`"
     @click="fireAction(direction)"
   >
     <span

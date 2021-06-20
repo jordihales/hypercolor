@@ -31,7 +31,7 @@ module.exports = {
         emerald: colors.emerald,
         teal: colors.teal,
         cyan: colors.cyan,
-        'light-blue': colors.lightBlue,
+        sky: colors.sky,
         violet: colors.violet,
         purple: colors.purple,
         fuchsia: colors.fuchsia,

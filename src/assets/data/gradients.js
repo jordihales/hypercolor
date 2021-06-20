@@ -236,7 +236,7 @@ export const gradients = [
   {
     title: 'Powerpuff',
     theme: 'Cool',
-    colors: 'bg-gradient-to-r from-light-blue-400 via-rose-400 to-lime-400',
+    colors: 'bg-gradient-to-r from-sky-400 via-rose-400 to-lime-400',
     conic: false,
   },
   {
@@ -254,7 +254,7 @@ export const gradients = [
   {
     title: 'Sky',
     theme: 'Pastel',
-    colors: 'bg-gradient-to-b from-light-blue-400 to-light-blue-200',
+    colors: 'bg-gradient-to-b from-sky-400 to-sky-200',
     conic: false,
   },
   {
@@ -290,7 +290,7 @@ export const gradients = [
   {
     title: 'Messenger',
     theme: 'Cool',
-    colors: 'bg-gradient-to-r from-light-blue-400 to-blue-500',
+    colors: 'bg-gradient-to-r from-sky-400 to-blue-500',
     conic: false,
   },
   {
@@ -302,7 +302,7 @@ export const gradients = [
   {
     title: 'Payment',
     theme: 'Cool',
-    colors: 'bg-gradient-to-r from-light-blue-400 to-cyan-300',
+    colors: 'bg-gradient-to-r from-sky-400 to-cyan-300',
     conic: false,
   },
   {
@@ -392,7 +392,7 @@ export const gradients = [
   {
     title: 'High Tide',
     theme: 'Conic',
-    colors: 'bg-gradient-conic-tl from-light-blue-500 via-orange-200 to-yellow-600',
+    colors: 'bg-gradient-conic-tl from-sky-500 via-orange-200 to-yellow-600',
     conic: true,
   },
   {

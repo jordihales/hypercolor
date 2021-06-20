@@ -57,7 +57,7 @@ export default {
     return {
       gradients,
       themes,
-      theme: '',
+      theme: themes[0],
       type: 'Tailwind',
     }
   },
@@ -69,8 +69,6 @@ export default {
   },
   mounted() {
     AOS.init()
-
-    this.theme = this.themes[0]
   },
   methods: {
     handleTheme(theme) {

@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import vClickOutside from 'v-click-outside'
 import VueClipboard from 'vue-clipboard2'
 import VueGtag from 'vue-gtag'
+import VueLazyload from 'vue-lazyload'
 
 import App from '@/App'
 
@@ -30,6 +31,12 @@ Vue.use(vClickOutside)
 Vue.use(VueClipboard)
 Vue.use(VueGtag, { config: { id: 'UA-177960351-4' } }, router)
 Vue.use(VueRouter)
+Vue.use(VueLazyload, {
+  observer: true,
+  throttleWait: 500,
+  listenEvents: ['scroll'],
+  lazyComponent: true,
+})
 
 Vue.config.productionTip = false
 

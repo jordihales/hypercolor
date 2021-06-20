@@ -12,6 +12,7 @@
           A curated collection of beautiful premade gradients using default colors from the
           <a
             href="https://tailwindcss.com/"
+            rel="noreferrer"
             target="_blank"
             class="text-cyan-400 hover:text-cyan-300"
           >
