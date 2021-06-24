@@ -4,8 +4,10 @@
       <p class="text-sm font-medium text-white">
         HyperUI: Components for Tailwind CSS!
         <a
-          href="https://gumroad.com/l/uUMQe/hypercolor"
+          href="https://www.hyperui.dev/"
           class="underline"
+          rel="noreferrer"
+          target="_blank"
         >
           {{ count }} Components for {{ price }}
         </a>
@@ -18,8 +20,8 @@
 export default {
   data() {
     return {
-      count: '15+',
-      price: '$11.25',
+      count: '',
+      price: '',
     }
   },
   mounted() {
@@ -29,7 +31,7 @@ export default {
         const price = data.price.substring(1)
 
         this.count = data.count
-        this.price = `$${price * 0.75}`
+        this.price = `$${price}`
       })
   },
 }
