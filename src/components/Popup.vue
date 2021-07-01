@@ -53,7 +53,7 @@
               rel="noreferrer"
               class="block w-full px-6 py-3 mt-3 text-sm font-medium text-center text-white rounded-lg bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 sm:mt-0 sm:ml-3"
             >
-              Buy for $1
+              Buy for $3
             </a>
           </div>
         </div>
