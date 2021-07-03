@@ -9,6 +9,7 @@
           :selected="theme"
           @action="handleTheme"
         />
+
         <SaveOptions
           :type="type"
           @setSaveOption="handleType"
@@ -17,7 +18,7 @@
     </div>
 
     <div class="container mt-12 space-y-8 sm:mt-16">
-      <ConicBlog v-if="theme === 'Conic'" />
+      <ConicBlog v-if="theme.theme === 'Conic'" />
 
       <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <Gradient
