@@ -13,6 +13,7 @@
         <CodeIcon v-if="name === 'CSS'" />
         <ImageIcon v-if="name === 'JPEG'" />
       </span>
+
       <span
         class="hidden text-sm font-medium sm:block"
         v-text="name"

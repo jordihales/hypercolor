@@ -1,7 +1,6 @@
 <template>
   <div :class="themeClass">
     <Announcement />
-
     <Popup />
 
     <div
@@ -18,11 +17,15 @@
 </template>
 
 <script>
+import Announcement from '@/components/Announcement'
+import Header from '@/components/Header'
+import Popup from '@/components/Popup'
+
 export default {
   components: {
-    Announcement: () => import('@/components/Announcement'),
-    Header: () => import('@/components/Header'),
-    Popup: () => import('@/components/Popup'),
+    Announcement,
+    Header,
+    Popup,
   },
   data() {
     return {

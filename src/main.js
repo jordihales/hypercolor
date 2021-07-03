@@ -4,16 +4,19 @@ import VueRouter from 'vue-router'
 import vClickOutside from 'v-click-outside'
 import VueClipboard from 'vue-clipboard2'
 import VueGtag from 'vue-gtag'
-import VueLazyload from 'vue-lazyload'
 
 import App from '@/App'
 
 import '@/main.css'
 
+import Index from '@/components/pages/Index'
+import Validate from '@/components/pages/Validate'
+import NotFound from '@/components/pages/NotFound'
+
 const routes = [
-  { path: '/', name: 'Home', component: () => import('@/components/pages/Index') },
-  { path: '/validate', name: 'Validate', component: () => import('@/components/pages/Validate') },
-  { path: '*', name: 'NotFound', component: () => import('@/components/pages/NotFound') },
+  { path: '/', name: 'Home', component: Index },
+  { path: '/validate', name: 'Validate', component: Validate },
+  { path: '*', name: 'NotFound', component: NotFound },
 ]
 
 const router = new VueRouter({
@@ -28,12 +31,6 @@ Vue.use(vClickOutside)
 Vue.use(VueClipboard)
 Vue.use(VueGtag, { config: { id: 'UA-177960351-4' } }, router)
 Vue.use(VueRouter)
-Vue.use(VueLazyload, {
-  observer: true,
-  throttleWait: 500,
-  listenEvents: ['scroll'],
-  lazyComponent: true,
-})
 
 Vue.config.productionTip = false
 

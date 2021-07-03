@@ -1,56 +1,54 @@
 <template>
-  <lazy-component>
-    <article>
-      <div
-        class="h-64 rounded-3xl"
-        :class="customisedColors"
-      />
+  <article>
+    <div
+      class="h-64 rounded-3xl"
+      :class="customisedColors"
+    />
 
-      <div class="px-0.5 -mt-8">
-        <div class="p-6 space-y-4 bg-white shadow-sm dark:bg-gray-900 rounded-3xl">
-          <p class="text-xl font-medium text-gray-900 dark:text-white">
-            {{ title }}
+    <div class="px-0.5 -mt-8">
+      <div class="p-6 space-y-4 bg-white shadow-sm dark:bg-gray-900 rounded-3xl">
+        <p class="text-xl font-medium text-gray-900 dark:text-white">
+          {{ title }}
+        </p>
+
+        <div class="flex items-stretch space-x-3">
+          <code class="h-12 p-2 text-xs text-gray-600 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800">
+            {{ customisedColors }}
+          </code>
+
+          <div :key="copyKey">
+            <CopyButton
+              v-if="['Tailwind', 'CSS'].includes(type)"
+              :type="type"
+              :gradient="customisedColors"
+              :name="title"
+            />
+            <SaveButton
+              v-if="type === 'JPEG'"
+              :gradient="customisedColors"
+              :name="title"
+            />
+          </div>
+        </div>
+
+        <div>
+          <p class="font-medium text-gray-600 dark:text-gray-300">
+            Direction:
           </p>
 
-          <div class="flex items-stretch space-x-3">
-            <code class="h-12 p-2 text-xs text-gray-600 bg-gray-100 rounded-lg dark:text-gray-300 dark:bg-gray-800">
-              {{ customisedColors }}
-            </code>
-
-            <div :key="copyKey">
-              <CopyButton
-                v-if="['Tailwind', 'CSS'].includes(type)"
-                :type="type"
-                :gradient="customisedColors"
-                :name="title"
-              />
-              <SaveButton
-                v-if="type === 'JPEG'"
-                :gradient="customisedColors"
-                :name="title"
-              />
-            </div>
-          </div>
-
-          <div>
-            <p class="font-medium text-gray-600 dark:text-gray-300">
-              Direction:
-            </p>
-
-            <div class="flex mt-2 space-x-1">
-              <DirectionOption
-                v-for="(value, key) of directions"
-                :key="key"
-                :direction="value"
-                :title="key"
-                @action="handleDirection"
-              />
-            </div>
+          <div class="flex mt-2 space-x-1">
+            <DirectionOption
+              v-for="(value, key) of directions"
+              :key="key"
+              :direction="value"
+              :title="key"
+              @action="handleDirection"
+            />
           </div>
         </div>
       </div>
-    </article>
-  </lazy-component>
+    </div>
+  </article>
 </template>
 
 <script>

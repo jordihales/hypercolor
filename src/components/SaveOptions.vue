@@ -5,18 +5,20 @@
       :type="type"
       @setSaveOption="setSaveOption('Tailwind')"
     />
+
     <OptionButton
       name="CSS"
       :type="type"
       @setSaveOption="setSaveOption('CSS')"
     />
+
     <OptionButton
       v-if="valid"
       name="JPEG"
       :type="type"
       @setSaveOption="setSaveOption('JPEG')"
     />
-    <UpgradeButton v-if="!valid" />
+    <UpgradeButton v-else />
   </ul>
 </template>
 
