@@ -6,7 +6,10 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   purge: {
     content: ['./src/*.vue', './src/**/*.vue', './src/assets/data/*.js'],
-    safelist: ['from-', 'via-', 'to-'],
+    options: {
+      safelist: [/to-/, /from-/, /via-/],
+      keyframes: true,
+    },
   },
   darkMode: 'class',
   theme: {
@@ -53,6 +56,8 @@ module.exports = {
     },
   },
   variants: {
+    gradientColorStops: [],
+    backgroundImage: [],
     extend: {},
   },
   plugins: [require('@tailwindcss/forms')],
