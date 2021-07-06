@@ -8,6 +8,7 @@ module.exports = {
     content: ['./src/*.vue', './src/**/*.vue', './src/assets/data/*.js'],
     options: {
       keyframes: true,
+      safelist: ['from', 'via', 'to'],
     },
   },
   darkMode: 'class',
