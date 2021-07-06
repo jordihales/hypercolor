@@ -19,10 +19,17 @@
         <NavLink
           url="https://twitter.com/consolelogjordi"
           title="Jordi"
+          :external="true"
         />
         <NavLink
           url="https://twitter.com/itsmarkmead"
           title="Mark"
+          :external="true"
+        />
+        <NavLink
+          url="/creator"
+          title="Create"
+          :external="false"
         />
       </nav>
     </div>

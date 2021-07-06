@@ -10,11 +10,13 @@ import App from '@/App'
 import '@/main.css'
 
 import Index from '@/components/pages/Index'
+import Creator from '@/components/pages/Creator'
 import Validate from '@/components/pages/Validate'
 import NotFound from '@/components/pages/NotFound'
 
 const routes = [
   { path: '/', name: 'Home', component: Index },
+  { path: '/Creator', name: 'Creator', component: Creator },
   { path: '/validate', name: 'Validate', component: Validate },
   { path: '*', name: 'NotFound', component: NotFound },
 ]
