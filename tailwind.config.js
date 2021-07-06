@@ -6,10 +6,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   purge: {
     content: ['./src/*.vue', './src/**/*.vue', './src/assets/data/*.js'],
-    options: {
-      keyframes: true,
-      safelist: ['from-', 'via-', 'to-'],
-    },
+    safelist: ['from-', 'via-', 'to-'],
   },
   darkMode: 'class',
   theme: {
