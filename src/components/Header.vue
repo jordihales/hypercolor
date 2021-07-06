@@ -13,24 +13,35 @@
       </button>
 
       <nav
-        class="flex items-center space-x-4"
+        class="flex items-center justify-between flex-1"
         role="navigation"
       >
-        <NavLink
-          url="https://twitter.com/consolelogjordi"
-          title="Jordi"
-          :external="true"
-        />
-        <NavLink
-          url="https://twitter.com/itsmarkmead"
-          title="Mark"
-          :external="true"
-        />
-        <NavLink
-          url="/creator"
-          title="Create"
-          :external="false"
-        />
+        <div class="flex space-x-4">
+          <NavLink
+            url="/"
+            title="Gradients"
+            :external="false"
+          />
+
+          <NavLink
+            url="/creator"
+            title="Create"
+            :external="false"
+          />
+        </div>
+
+        <div class="flex space-x-4">
+          <NavLink
+            url="https://twitter.com/consolelogjordi"
+            title="Jordi"
+            :external="true"
+          />
+          <NavLink
+            url="https://twitter.com/itsmarkmead"
+            title="Mark"
+            :external="true"
+          />
+        </div>
       </nav>
     </div>
   </header>

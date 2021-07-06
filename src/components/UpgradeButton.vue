@@ -5,6 +5,7 @@
       href="https://gumroad.com/a/1027282035/TjkKF"
       rel="noreferrer"
       aria-label="Upgrade access Gumroad product page"
+      target="_blank"
     >
       <span
         class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 bg-gray-100 rounded-lg dark:bg-gray-800"
