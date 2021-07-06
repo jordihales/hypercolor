@@ -19,13 +19,13 @@
         <div class="flex space-x-4">
           <NavLink
             url="/"
-            title="Gradients"
+            title="Home"
             :external="false"
           />
 
           <NavLink
             url="/creator"
-            title="Create"
+            title="Creator"
             :external="false"
           />
         </div>
