@@ -239,7 +239,7 @@ export default {
       this.$refs.cta.classList.remove('active')
     },
     updateControlsKey() {
-      this.controlsKey += 1
+      this.controlsKey = Math.random()
     }
   },
 }
