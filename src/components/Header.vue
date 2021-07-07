@@ -13,17 +13,35 @@
       </button>
 
       <nav
-        class="flex items-center space-x-4"
+        class="flex items-center justify-between flex-1"
         role="navigation"
       >
-        <NavLink
-          url="https://twitter.com/consolelogjordi"
-          title="Jordi"
-        />
-        <NavLink
-          url="https://twitter.com/itsmarkmead"
-          title="Mark"
-        />
+        <div class="flex space-x-4">
+          <NavLink
+            url="/"
+            title="Home"
+            :external="false"
+          />
+
+          <NavLink
+            url="/creator"
+            title="Creator"
+            :external="false"
+          />
+        </div>
+
+        <div class="flex space-x-4">
+          <NavLink
+            url="https://twitter.com/consolelogjordi"
+            title="Jordi"
+            :external="true"
+          />
+          <NavLink
+            url="https://twitter.com/itsmarkmead"
+            title="Mark"
+            :external="true"
+          />
+        </div>
       </nav>
     </div>
   </header>

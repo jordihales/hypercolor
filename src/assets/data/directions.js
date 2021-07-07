@@ -30,3 +30,9 @@ export const chevronDirections = {
   bl: '-rotate-135',
   br: 'rotate-135',
 }
+
+export function allDirections() {
+  const allDirections = [Object.values(directions), Object.values(conicDirections)]
+
+  return allDirections.flat()
+}

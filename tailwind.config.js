@@ -7,6 +7,7 @@ module.exports = {
   purge: {
     content: ['./src/*.vue', './src/**/*.vue', './src/assets/data/*.js'],
     options: {
+      safelist: [/to-/, /from-/, /via-/],
       keyframes: true,
     },
   },
@@ -55,7 +56,9 @@ module.exports = {
     },
   },
   variants: {
+    gradientColorStops: [],
+    backgroundImage: [],
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 }

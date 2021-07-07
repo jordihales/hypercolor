@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="showPopup"
-    class="fixed inset-x-0 bottom-0 z-50 p-2"
+    class="fixed bottom-0 left-0 z-50 p-2"
   >
     <div class="relative max-w-sm">
       <div
@@ -51,6 +51,7 @@
             <a
               href="https://gumroad.com/a/1027282035/TjkKF"
               rel="noreferrer"
+              target="_blank"
               class="block w-full px-6 py-3 mt-3 text-sm font-medium text-center text-white rounded-lg bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 sm:mt-0 sm:ml-3"
             >
               Buy for $3

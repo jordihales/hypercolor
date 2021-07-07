@@ -13,10 +13,14 @@
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.3.3",
     "@vue/cli-plugin-babel": "^4.5.13",
     "@vue/cli-plugin-eslint": "^4.5.13",
     "@vue/cli-service": "^4.5.13",
     "autoprefixer": "^9",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
     "html-to-image": "^1.6.2",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
@@ -24,10 +28,7 @@
     "vue-clipboard2": "^0.3.1",
     "vue-gtag": "^1.9.1",
     "vue-router": "^3.5.1",
-    "vue-template-compiler": "^2.6.10",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2"
+    "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
     "root": true,
