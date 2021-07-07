@@ -184,7 +184,7 @@
 <script>
 import { validLicense } from '@/utils/auth'
 import { fromColors, viaColors, toColors } from '@/assets/data/colors'
-import { allDirections } from '@/assets/data/directions'
+import { allDirections as directions } from '@/assets/data/directions'
 
 import CopyButton from '@/components/CopyButton'
 import SaveButton from '@/components/SaveButton'
@@ -203,7 +203,7 @@ export default {
       fromColors,
       viaColors,
       toColors,
-      directions: allDirections(),
+      directions,
       direction: '',
       from: '',
       via: '',

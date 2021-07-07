@@ -413,6 +413,48 @@ export const gradients = [
     colors: 'bg-gradient-conic-tl from-yellow-200 via-emerald-200 to-yellow-200',
     conic: true,
   },
+  {
+    title: 'Power Pink',
+    theme: 'Conic',
+    colors: 'bg-gradient-conic-l from-rose-500 to-indigo-700',
+    conic: true,
+  },
+  {
+    title: 'Powder Blue',
+    theme: 'Conic',
+    colors: 'bg-gradient-conic-l from-sky-400 to-blue-800',
+    conic: true,
+  },
+  {
+    title: 'Moody Sunset',
+    theme: 'Conic',
+    colors: 'bg-gradient-conic-l from-rose-900 via-amber-800 to-rose-400',
+    conic: true,
+  },
+  {
+    title: 'Burnt Sand',
+    theme: 'Conic',
+    colors: 'bg-gradient-conic-l from-yellow-200 via-red-500 to-fuchsia-500',
+    conic: true,
+  },
+  {
+    title: 'Blue / White Split',
+    theme: 'Conic',
+    colors: 'bg-gradient-conic-b from-white via-sky-500 to-sky-500',
+    conic: true,
+  },
+  {
+    title: 'Purple Beam',
+    theme: 'Cool',
+    colors: 'bg-gradient-to-bl from-indigo-900 via-indigo-400 to-indigo-900',
+    conic: false,
+  },
+  {
+    title: 'Sand Beam',
+    theme: 'Conic',
+    colors: 'bg-gradient-conic-t from-orange-900 via-amber-100 to-orange-900',
+    conic: true,
+  },
 ]
 
 export function getGradients(theme) {
