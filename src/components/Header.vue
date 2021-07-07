@@ -16,7 +16,7 @@
         class="flex items-center justify-between flex-1"
         role="navigation"
       >
-        <div class="flex space-x-4">
+        <div class="flex space-x-6">
           <NavLink
             url="/"
             title="Home"
@@ -24,13 +24,13 @@
           />
 
           <NavLink
-            url="/creator"
-            title="Creator"
+            url="/generator"
+            title="Generator"
             :external="false"
           />
         </div>
 
-        <div class="flex space-x-4">
+        <div class="hidden sm:flex sm:space-x-6">
           <NavLink
             url="https://twitter.com/consolelogjordi"
             title="Jordi"
