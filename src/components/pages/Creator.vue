@@ -27,6 +27,7 @@
               id="direction"
               v-model="direction"
               class="w-full p-3 mt-1 space-x-3 text-sm text-gray-600 bg-transparent border border-gray-200 dark:border-gray-700 rounded-xl dark:text-gray-300"
+              @change="updateControlsKey"
             >
               <option
                 v-for="twDirection of directions"
@@ -50,6 +51,7 @@
               id="from"
               v-model="from"
               class="w-full p-3 mt-1 space-x-3 text-sm text-gray-600 bg-transparent border border-gray-200 dark:border-gray-700 rounded-xl dark:text-gray-300"
+              @change="updateControlsKey"
             >
               <option
                 v-for="color of fromColors"
@@ -73,6 +75,7 @@
               id="via"
               v-model="via"
               class="w-full p-3 mt-1 space-x-3 text-sm text-gray-600 bg-transparent border border-gray-200 dark:border-gray-700 rounded-xl dark:text-gray-300"
+              @change="updateControlsKey"
             >
               <option
                 v-for="color of viaColors"
@@ -96,6 +99,7 @@
               id="to"
               v-model="to"
               class="w-full p-3 mt-1 space-x-3 text-sm text-gray-600 bg-transparent border border-gray-200 dark:border-gray-700 rounded-xl dark:text-gray-300"
+              @change="updateControlsKey"
             >
               <option
                 v-for="color of toColors"
@@ -122,7 +126,10 @@
             <RefreshIcon />
           </button>
 
-          <div class="flex space-x-3">
+          <div
+            :key="controlsKey"
+            class="flex space-x-3"
+          >
             <CopyButton
               type="Tailwind"
               :gradient="customisedColors"
@@ -202,15 +209,14 @@ export default {
       via: '',
       to: '',
       valid: false,
+      controlsKey: 0
     }
   },
   computed: {
     customisedColors() {
-      if (this.via !== 'none') {
-        return `${this.direction} ${this.from} ${this.via} ${this.to}`
-      } else {
-        return `${this.direction} ${this.from} ${this.to}`
-      }
+      return this.via !== 'none'
+        ? `${this.direction} ${this.from} ${this.via} ${this.to}`
+        : `${this.direction} ${this.from} ${this.to}`
     },
   },
   mounted() {
@@ -223,12 +229,17 @@ export default {
       this.from = this.fromColors[Math.floor(Math.random() * this.fromColors.length)]
       this.via = this.viaColors[Math.floor(Math.random() * this.viaColors.length)]
       this.to = this.toColors[Math.floor(Math.random() * this.toColors.length)]
+
+      this.updateControlsKey()
     },
     highlightCta() {
       this.$refs.cta.classList.add('active')
     },
     unhighlightCta() {
       this.$refs.cta.classList.remove('active')
+    },
+    updateControlsKey() {
+      this.controlsKey += 1
     }
   },
 }
