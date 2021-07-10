@@ -455,6 +455,36 @@ export const gradients = [
     colors: 'bg-gradient-conic-t from-orange-900 via-amber-100 to-orange-900',
     conic: true,
   },
+  {
+    title: 'Island Waves',
+    theme: 'Pastel',
+    colors: 'bg-gradient-to-r from-yellow-400 via-gray-50 to-teal-300',
+    conic: false,
+  },
+  {
+    title: 'Big Sur',
+    theme: 'Pastel',
+    colors: 'bg-gradient-to-tr from-violet-500 to-orange-300',
+    conic: false,
+  },
+  {
+    title: 'Oahu',
+    theme: 'Pastel',
+    colors: 'bg-gradient-to-t from-orange-400 to-sky-400',
+    conic: false,
+  },
+  {
+    title: 'Peach Pie',
+    theme: 'Pastel',
+    colors: 'bg-gradient-conic-r from-red-900 via-violet-200 to-orange-500',
+    conic: true,
+  },
+  {
+    title: 'Salem',
+    theme: 'Cool',
+    colors: 'bg-gradient-to-b from-gray-900 via-purple-900 to-violet-600',
+    conic: false,
+  },
 ]
 
 export function getGradients(theme) {
