@@ -8,7 +8,8 @@
       class="relative block transform"
       :class="chevronClass"
     >
-      <ChevronUpIcon />
+      <StatusIcon v-if="title === 'c'" />
+      <ChevronUpIcon v-else />
     </span>
   </button>
 </template>
@@ -17,10 +18,12 @@
 import { chevronDirections } from '@/assets/data/directions'
 
 import ChevronUpIcon from '@/components/icons/ChevronUp'
+import StatusIcon from '@/components/icons/Status'
 
 export default {
   components: {
-    ChevronUpIcon
+    ChevronUpIcon,
+    StatusIcon
   },
   props: {
     direction: String,

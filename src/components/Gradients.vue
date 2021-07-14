@@ -19,6 +19,7 @@
 
     <div class="container mt-12 space-y-8 sm:mt-16">
       <ConicBlog v-if="theme.theme === 'Conic'" />
+      <RadialBlog v-if="theme.theme === 'Radial'" />
 
       <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <Gradient
@@ -26,7 +27,7 @@
           :key="gradient.title"
           :title="gradient.title"
           :colors="gradient.colors"
-          :conic="gradient.conic"
+          :theme="gradient.theme"
           :type="type"
         />
       </div>
@@ -42,6 +43,7 @@ import FilterTheme from '@/components/FilterTheme'
 import SaveOptions from '@/components/SaveOptions'
 import Gradient from '@/components/Gradient'
 import ConicBlog from '@/components/ConicBlog'
+import RadialBlog from '@/components/RadialBlog'
 
 export default {
   components: {
@@ -49,6 +51,7 @@ export default {
     SaveOptions,
     Gradient,
     ConicBlog,
+    RadialBlog,
   },
   data() {
     return {
