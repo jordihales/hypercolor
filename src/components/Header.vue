@@ -36,6 +36,7 @@
             title="Jordi"
             :external="true"
           />
+
           <NavLink
             url="https://twitter.com/itsmarkmead"
             title="Mark"
