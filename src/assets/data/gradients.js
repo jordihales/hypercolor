@@ -409,6 +409,16 @@ export const gradients = [
     colors: 'bg-gradient-to-b from-gray-900 via-purple-900 to-violet-600',
     conic: false,
   },
+  {
+    title: 'Amber Sunrise',
+    theme: 'Radial',
+    colors: 'bg-gradient-radial-at-b from-amber-900 to-yellow-300',
+  },
+  {
+    title: 'Sky Sea',
+    theme: 'Radial',
+    colors: 'bg-gradient-radial-at-r from-sky-400 to-indigo-900',
+  },
 ]
 
 export function getGradients(theme) {
