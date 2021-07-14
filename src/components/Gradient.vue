@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import { directions, conicDirections } from '@/assets/data/directions'
+import { getDirections } from '@/assets/data/directions'
 
 import CopyButton from '@/components/CopyButton'
 import SaveButton from '@/components/SaveButton'
@@ -66,14 +66,14 @@ export default {
   },
   props: {
     colors: String,
-    conic: Boolean,
     title: String,
     type: String,
+    theme: String,
   },
   data() {
     return {
       direction: '',
-      directions,
+      directions: [],
       copyKey: '',
     }
   },
@@ -88,7 +88,7 @@ export default {
     },
   },
   mounted() {
-    this.directions = this.conic ? conicDirections : directions
+    this.directions = getDirections(this.theme)
     this.copyKey = this.setKey()
   },
   methods: {

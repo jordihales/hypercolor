@@ -19,7 +19,7 @@
         <div class="flex space-x-6">
           <NavLink
             url="/"
-            title="Home"
+            title="Gradients"
             :external="false"
           />
 
@@ -36,6 +36,7 @@
             title="Jordi"
             :external="true"
           />
+
           <NavLink
             url="https://twitter.com/itsmarkmead"
             title="Mark"
