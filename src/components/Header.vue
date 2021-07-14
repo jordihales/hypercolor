@@ -19,7 +19,7 @@
         <div class="flex space-x-6">
           <NavLink
             url="/"
-            title="Home"
+            title="Gradients"
             :external="false"
           />
 
