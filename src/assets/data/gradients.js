@@ -424,6 +424,11 @@ export const gradients = [
     theme: 'Radial',
     colors: 'bg-gradient-radial-at-t from-amber-700 via-orange-300 to-rose-800',
   },
+  {
+    title: 'Blue Flame',
+    theme: 'Radial',
+    colors: 'bg-gradient-radial-at-b from-amber-200 via-violet-600 to-sky-900'
+  }
 ]
 
 export function getGradients(theme) {
