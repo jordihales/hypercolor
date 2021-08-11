@@ -62,6 +62,9 @@ module.exports = {
         '135': '135deg',
         '-135': '-135deg',
       },
+      fill: theme => ({
+       'red': theme('colors.red.500')
+     })
     },
   },
   variants: {

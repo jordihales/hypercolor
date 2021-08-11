@@ -12,8 +12,8 @@
       </div>
     </section>
 
-    <div class="container">
-      <div class="max-w-3xl mx-auto mt-8 space-y-8">
+    <div class="container mt-8">
+      <div class="max-w-3xl mx-auto space-y-8">
         <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
           <div>
             <label

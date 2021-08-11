@@ -1,5 +1,27 @@
 <template>
-  <article>
+  <article class="relative">
+    <div
+      class="absolute top-3 right-3"
+    >
+      <button
+        v-if="favourite"
+        type="button"
+        class="p-2 text-gray-600 bg-white rounded-full dark:text-gray-300 dark:bg-gray-900"
+        @click="handleRemoveFavourite"
+      >
+        <HeartIcon class="text-transparent fill-red" />
+      </button>
+
+      <button
+        v-else
+        type="button"
+        class="p-2 text-gray-600 bg-white rounded-full dark:text-gray-300 dark:bg-gray-900"
+        @click="handleSaveFavourite"
+      >
+        <HeartIcon />
+      </button>
+    </div>
+
     <div
       class="h-64 rounded-3xl"
       :class="customisedColors"
@@ -57,12 +79,14 @@ import { getDirections } from '@/assets/data/directions'
 import CopyButton from '@/components/CopyButton'
 import SaveButton from '@/components/SaveButton'
 import DirectionOption from '@/components/DirectionOption'
+import HeartIcon from '@/components/icons/Heart'
 
 export default {
   components: {
     CopyButton,
     SaveButton,
     DirectionOption,
+    HeartIcon,
   },
   props: {
     colors: String,
@@ -75,6 +99,7 @@ export default {
       direction: '',
       directions: [],
       copyKey: '',
+      favourite: null
     }
   },
   computed: {
@@ -89,21 +114,30 @@ export default {
   },
   mounted() {
     this.directions = getDirections(this.theme)
-    this.copyKey = this.setKey()
+    this.copyKey = this.setCopyKey()
+    this.favourite = localStorage.getItem(this.title) === '❤️'
   },
   methods: {
     handleDirection(direction) {
       this.direction = direction
-      this.copyKey = this.setKey()
+      this.copyKey = this.setCopyKey()
 
       this.$gtag.event('Change', {
         event_category: 'Change Direction',
         event_label: direction,
       })
     },
-    setKey() {
+    setCopyKey() {
       return `${this.title} ${Math.random()}`
     },
+    handleSaveFavourite() {
+      localStorage.setItem(this.title, '❤️')
+      this.favourite = true
+    },
+    handleRemoveFavourite() {
+      localStorage.removeItem(this.title)
+      this.favourite = false
+    }
   },
 }
 </script>

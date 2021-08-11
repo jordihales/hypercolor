@@ -4,7 +4,7 @@
     <Popup />
 
     <div
-      class="bg-white dark:bg-gray-900"
+      class="min-h-screen bg-white dark:bg-gray-900"
       :class="paddingClass"
     >
       <Header @action="handleTheme" />

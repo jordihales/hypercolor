@@ -405,7 +405,7 @@ export const gradients = [
     colors: 'bg-gradient-to-b from-gray-900 via-purple-900 to-violet-600',
   },
   {
-    title: 'Purple Haze',
+    title: 'Purple Burst',
     theme: 'Radial',
     colors: 'bg-gradient-radial from-purple-900 to-indigo-500',
   },
