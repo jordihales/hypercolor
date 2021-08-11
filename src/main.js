@@ -13,11 +13,13 @@ import Index from '@/components/pages/Index'
 import Generator from '@/components/pages/Generator'
 import Validate from '@/components/pages/Validate'
 import NotFound from '@/components/pages/NotFound'
+import Favourites from '@/components/pages/Favourites'
 
 const routes = [
   { path: '/', name: 'Home', component: Index },
   { path: '/generator', name: 'Generator', component: Generator },
   { path: '/validate', name: 'Validate', component: Validate },
+  { path: '/favourites', name: 'Favourites', component: Favourites },
   { path: '/creator', redirect: '/generator' },
   { path: '*', name: 'NotFound', component: NotFound },
 ]

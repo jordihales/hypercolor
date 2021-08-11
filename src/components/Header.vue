@@ -28,6 +28,12 @@
             title="Generator"
             :external="false"
           />
+
+          <NavLink
+            url="/favourites"
+            title="Favourites"
+            :external="false"
+          />
         </div>
 
         <div class="hidden sm:flex sm:space-x-6">
