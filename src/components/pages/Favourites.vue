@@ -14,7 +14,7 @@
 
     <section>
       <div
-        v-if="favouriteGradients.length > 0"
+        v-if="gradients.length > 0"
         class="sticky inset-x-0 top-0 z-40 bg-white border-t border-b border-gray-100 dark:border-gray-800 dark:bg-gray-900"
       >
         <div class="container flex items-center justify-center py-4 space-x-6">
@@ -27,16 +27,17 @@
 
       <div class="container mt-8">
         <div
-          v-if="favouriteGradients.length > 0"
+          v-if="gradients.length > 0"
           class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
         >
           <Gradient
-            v-for="gradient in favouriteGradients"
+            v-for="gradient in gradients"
             :key="gradient.title"
             :title="gradient.title"
             :colors="gradient.colors"
             :theme="gradient.theme"
             :type="type"
+            @removeGradient="handleRemoveGradient"
           />
         </div>
 
@@ -76,17 +77,23 @@ export default {
       type: 'Tailwind'
     }
   },
-  computed: {
-    favouriteGradients() {
-      const keys = Object.keys(localStorage)
-
-      return this.gradients.filter(gradient => keys.includes(gradient.title))
-    }
+  mounted() {
+    this.favouriteGradients()
   },
   methods: {
     handleType(type) {
       this.type = type
     },
+    handleRemoveGradient() {
+      this.favouriteGradients()
+    },
+    favouriteGradients() {
+      const keys = Object.keys(localStorage)
+
+      console.log(keys)
+
+      this.gradients = this.gradients.filter(gradient => keys.includes(gradient.title))
+    }
   }
 }
 </script>

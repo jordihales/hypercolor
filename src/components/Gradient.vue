@@ -137,6 +137,7 @@ export default {
     handleRemoveFavourite() {
       localStorage.removeItem(this.title)
       this.favourite = false
+      this.$emit('removeGradient')
     }
   },
 }
