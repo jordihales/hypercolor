@@ -1,22 +1,24 @@
 <template>
   <section>
-    <div class="container mt-16 space-y-8">
+    <div class="container grid grid-cols-1 gap-8 mt-16 lg:grid-cols-2">
       <div
-        class="h-[400px] sm:h-[600px] rounded-3xl"
+        class="h-[300px] lg:h-full lg:min-h-[400px] rounded-3xl"
         :class="gradient"
       />
 
-      <div
-        class="p-8 text-center rounded-xl"
-        v-for="example of examples"
-        :key="example.id"
-        :class="example"
-      >
-        <p
-          class="text-2xl font-black text-transparent bg-clip-text"
-          :class="gradient"
-          v-text="text"
-        />
+      <div class="grid gap-y-8">
+        <div
+          class="flex items-center p-8 text-center rounded-xl"
+          v-for="example of examples"
+          :key="example.id"
+          :class="example"
+        >
+          <p
+            class="text-lg font-black text-transparent sm:text-2xl bg-clip-text"
+            :class="gradient"
+            v-text="text"
+          />
+        </div>
       </div>
     </div>
   </section>

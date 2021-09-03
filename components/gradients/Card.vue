@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article class="relative">
     <div class="h-64 rounded-3xl" ref="gradient" :class="gradient"></div>
 
     <div class="p-6 mx-1.5 -mt-8 text-white bg-gray-900 rounded-3xl">

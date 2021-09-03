@@ -9,10 +9,6 @@
         <nuxt-link :to="{ name: 'generator' }">
           Generator
         </nuxt-link>
-
-        <nuxt-link :to="{ name: 'favourites' }" class="line-through opacity-50 pointer-events-none">
-          Favourites
-        </nuxt-link>
       </nav>
 
       <div class="flex items-center sm:space-x-8">

@@ -7,28 +7,27 @@
       A curated collection of beautiful Tailwind CSS gradients using the full range of Tailwind CSS colors. Easily copy and paste the class names, CSS or even save the gradients as an image.
     </shared-banner>
 
-    <generator-controls>
-      <div class="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:items-center">
+    <generator-controls
+      @random="handleRandomiser"
+      @edit="handleEdit"
+    >
+      <div
+        class="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:items-center lg:col-span-2"
+        slot="selects"
+      >
         <generator-select v-model="direction" :items="directions" id="Direction" />
         <generator-select v-model="from" :items="fromColors" id="From" />
         <generator-select v-model="via" :items="viaColors" id="Via" />
         <generator-select v-model="to" :items="toColors" id="To" />
       </div>
 
-      <generator-text v-model="text" :value="text" id="Text" v-if="edit" />
-
-      <div class="flex items-center justify-end">
-        <shared-save :gradient="gradient" name="Hypercolor Gradient" />
-
-        <button class="p-2.5 rounded-xl bg-gray-800/75 ml-2" @click="handleRandomiser">
-          <icons-refresh class="w-4 h-4" />
-        </button>
-
-        <button class="p-2.5 rounded-xl bg-gray-800/75 ml-2" @click="edit = !edit">
-          <icons-pencil class="w-4 h-4" />
-        </button>
-      </div>
-
+      <generator-text
+        v-if="edit"
+        v-model="text"
+        :value="text"
+        id="Text"
+        slot="text"
+      />
     </generator-controls>
 
     <generator-preview :gradient="gradient" :text="text" />
@@ -59,7 +58,7 @@ export default {
       from: '',
       via: '',
       to: '',
-      text: "Almost before we knew it, we had left the ground.",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec erat in turpis tincidunt mollis.",
       edit: false
     }
   },
@@ -79,6 +78,9 @@ export default {
       this.from = this.getRandom(this.fromColors)
       this.via = this.getRandom(this.viaColors)
       this.to = this.getRandom(this.toColors)
+    },
+    handleEdit() {
+      this.edit = !this.edit
     }
   },
   mounted() {
