@@ -68,7 +68,9 @@ export default {
   },
   methods: {
     handleDirection(data) {
-      this.currentDirection = this.version ? data[this.version] : data.gradient
+      const version = this.version.toLowerCase()
+
+      this.currentDirection = this.version ? data[version] : data.gradient
     },
   }
 }

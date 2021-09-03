@@ -1,9 +1,11 @@
 <template>
-  <div class="pb-16 bg-gray-900">
+  <div class="bg-gray-900">
     <shared-header />
 
     <main>
       <Nuxt />
     </main>
+
+    <shared-footer />
   </div>
 </template>
