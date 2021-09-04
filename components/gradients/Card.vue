@@ -17,7 +17,7 @@
             class="p-0.5"
           >
             <button
-              class="p-1.5 rounded-lg bg-gray-800/75"
+              class="p-1.5 rounded-lg bg-gray-800/75 hover:text-pink-500 transition-colors"
               @click="handleDirection(direction)"
             >
               <icons-center class="w-5 h-5" :class="direction.chevron" v-if="direction.key === 'center'" />

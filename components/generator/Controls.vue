@@ -5,22 +5,16 @@
         <div class="flex items-center">
           <shared-save :gradient="gradient" name="Hypercolor Gradient" />
 
-          <button
-            class="p-2.5 rounded-xl bg-gray-800/75 ml-2"
-            @click="$emit('random')"
-          >
+          <button class="p-2.5 rounded-xl bg-gray-800/75 ml-2" @click="$emit('random')">
             <icons-refresh class="w-4 h-4" />
           </button>
 
-          <button
-            class="p-2.5 rounded-xl bg-gray-800/75 ml-2"
-            @click="$emit('edit')"
-          >
+          <button class="p-2.5 rounded-xl bg-gray-800/75 ml-2" @click="$emit('edit')">
             <icons-pencil class="w-4 h-4" />
           </button>
         </div>
 
-        <div class="mt-4 lg:mt-0">
+        <div class="mt-4 lg:mt-0 lg:col-span-2">
           <slot name="selects" />
         </div>
       </div>
@@ -36,7 +30,11 @@ export default {
     directions: {
       type: Array,
       required: false
+    },
+    gradient: {
+      type: String,
+      required: true
     }
   }
-}
+};
 </script>

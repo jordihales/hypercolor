@@ -10,9 +10,10 @@
     <generator-controls
       @random="handleRandomiser"
       @edit="handleEdit"
+      :gradient="gradient"
     >
       <div
-        class="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:items-center lg:col-span-2"
+        class="grid grid-cols-2 gap-4 sm:grid-cols-4"
         slot="selects"
       >
         <generator-select v-model="direction" :items="directions" id="Direction" />
