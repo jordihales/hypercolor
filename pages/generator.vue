@@ -7,31 +7,16 @@
       A curated collection of beautiful Tailwind CSS gradients using the full range of Tailwind CSS colors. Easily copy and paste the class names, CSS or even save the gradients as an image.
     </shared-banner>
 
-    <generator-controls
-      @random="handleRandomiser"
-      @edit="handleEdit"
-      :gradient="gradient"
-    >
-      <div
-        class="grid grid-cols-2 gap-4 sm:grid-cols-4"
-        slot="selects"
-      >
+    <generator-controls :gradient="gradient" @random="handleRandomiser">
+      <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
         <generator-select v-model="direction" :items="directions" id="Direction" />
         <generator-select v-model="from" :items="fromColors" id="From" />
         <generator-select v-model="via" :items="viaColors" id="Via" />
         <generator-select v-model="to" :items="toColors" id="To" />
       </div>
-
-      <generator-text
-        v-if="edit"
-        v-model="text"
-        :value="text"
-        id="Text"
-        slot="text"
-      />
     </generator-controls>
 
-    <generator-preview :gradient="gradient" :text="text" />
+    <generator-preview :gradient="gradient" />
   </div>
 </template>
 
@@ -59,8 +44,6 @@ export default {
       from: '',
       via: '',
       to: '',
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec erat in turpis tincidunt mollis.",
-      edit: false
     }
   },
   computed: {
@@ -79,9 +62,6 @@ export default {
       this.from = this.getRandom(this.fromColors)
       this.via = this.getRandom(this.viaColors)
       this.to = this.getRandom(this.toColors)
-    },
-    handleEdit() {
-      this.edit = !this.edit
     }
   },
   mounted() {

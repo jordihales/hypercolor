@@ -8,18 +8,12 @@
           <button class="p-2.5 rounded-xl bg-gray-800/75 ml-2" @click="$emit('random')">
             <icons-refresh class="w-4 h-4" />
           </button>
-
-          <button class="p-2.5 rounded-xl bg-gray-800/75 ml-2" @click="$emit('edit')">
-            <icons-pencil class="w-4 h-4" />
-          </button>
         </div>
 
         <div class="mt-4 lg:mt-0 lg:col-span-2">
-          <slot name="selects" />
+          <slot />
         </div>
       </div>
-
-      <slot name="text" />
     </div>
   </section>
 </template>

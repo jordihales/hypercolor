@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky top-0 z-50 text-sm font-medium text-white border-b bg-gray-900/95 border-gray-800/75">
+  <header class="sticky top-0 z-50 text-sm font-medium text-white bg-gray-900 border-b border-gray-800/75">
     <div class="container flex items-center justify-between h-16">
       <nav class="flex items-center space-x-8">
         <nuxt-link :to="{ name: 'index' }">
