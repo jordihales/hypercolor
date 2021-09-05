@@ -446,5 +446,11 @@ export const gradients = [
     direction: "bg-radial-at-b",
     colors: "from-amber-200 via-violet-600 to-sky-900",
     version: "Radial"
+  },
+  {
+    name: "Warm Glow",
+    direction: "bg-radial-at-t",
+    colors: "from-cool-gray-300 via-fuchsia-600 to-orange-600",
+    version: "Radial"
   }
 ];
