@@ -4,7 +4,7 @@
       title="Gradient Generator"
       subtitle="Gradient Generator for Tailwind CSS"
     >
-      A curated collection of beautiful Tailwind CSS gradients using the full range of Tailwind CSS colors. Easily copy and paste the class names, CSS or even save the gradients as an image.
+      Create your own Tailwind CSS gradient with the full Tailwind CSS color library and the extended radial and conic gradient options provided through Hypercolor.
     </shared-banner>
 
     <generator-controls :gradient="gradient" @random="handleRandomiser">
@@ -66,6 +66,18 @@ export default {
   },
   mounted() {
     this.handleRandomiser()
-  }
+  },
+    head () {
+    return {
+      title: "Gradient Generator for Tailwind CSS",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: "Create your own Tailwind CSS gradient with the full Tailwind CSS color library and the extended radial and conic gradient options provided through Hypercolor."
+        }
+      ]
+    }
+  },
 }
 </script>
