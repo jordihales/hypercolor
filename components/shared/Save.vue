@@ -47,10 +47,24 @@ export default {
     handleTailwind() {
       this.code = this.gradient
       navigator.clipboard.writeText(this.code)
+
+      this.$ga.event({
+        eventCategory: 'Copy/Save',
+        eventAction: 'Copy Tailwind',
+        eventLabel: this.name,
+        eventValue: this.code
+      })
     },
     handleCode() {
       this.code = getComputedStyle(this.$refs.image).getPropertyValue('background-image')
       navigator.clipboard.writeText(this.code)
+
+      this.$ga.event({
+        eventCategory: 'Copy/Save',
+        eventAction: 'Copy Code',
+        eventLabel: this.name,
+        eventValue: this.code
+      })
     },
     handleImage() {
       htmlToImage.toJpeg(this.$refs.image, { pixelRatio: 1, quality: 1 }).then((data) => {
@@ -59,6 +73,13 @@ export default {
         link.download = this.name
         link.href = data
         link.click()
+      })
+
+      this.$ga.event({
+        eventCategory: 'Copy/Save',
+        eventAction: 'Save Image',
+        eventLabel: this.name,
+        eventValue: ''
       })
     }
   }

@@ -16,12 +16,19 @@ export default {
   css: [],
   plugins: [],
   components: true,
-  buildModules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts"],
+  buildModules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@nuxtjs/google-analytics"],
   modules: [],
   build: {},
   googleFonts: {
     families: {
       Inter: [400, 500, 600, 700, 900]
+    }
+  },
+  googleAnalytics: {
+    id: "UA-177960351-4",
+    checkDuplicatedScript: true,
+    autoTracking: {
+      screenview: true
     }
   }
 };
