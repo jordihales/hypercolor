@@ -1,7 +1,7 @@
 export default {
   target: 'static',
   head: {
-    titleTemplate: (titleChunk) => {
+    titleTemplate: titleChunk => {
       return titleChunk
         ? `${titleChunk} | Hypercolor`
         : 'Gradients for Tailwind CSS | Hypercolor'
@@ -54,7 +54,7 @@ export default {
     '@nuxtjs/google-fonts',
     '@nuxtjs/google-analytics'
   ],
-  modules: [],
+  modules: ['@nuxtjs/sitemap'],
   build: {},
   googleFonts: {
     families: {
@@ -67,5 +67,8 @@ export default {
     autoTracking: {
       screenview: true
     }
+  },
+  sitemap: {
+    hostname: 'https://hypercolor.dev'
   }
 }
