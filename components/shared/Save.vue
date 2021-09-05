@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="sr-only">
-      <div class="w-screen h-screen" ref="image" :class="gradient"></div>
+      <div ref="image" class="w-screen h-screen" :class="gradient" />
     </div>
 
     <div class="flex items-center space-x-2">
@@ -44,7 +44,7 @@ export default {
     }
   },
   methods: {
-    handleTailwind() {
+    handleTailwind () {
       this.code = this.gradient
       navigator.clipboard.writeText(this.code)
 
@@ -55,7 +55,7 @@ export default {
         eventValue: this.code
       })
     },
-    handleCode() {
+    handleCode () {
       this.code = getComputedStyle(this.$refs.image).getPropertyValue('background-image')
       navigator.clipboard.writeText(this.code)
 
@@ -66,7 +66,7 @@ export default {
         eventValue: this.code
       })
     },
-    handleImage() {
+    handleImage () {
       htmlToImage.toJpeg(this.$refs.image, { pixelRatio: 1, quality: 1 }).then((data) => {
         const link = document.createElement('a')
 

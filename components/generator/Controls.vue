@@ -23,12 +23,12 @@ export default {
   props: {
     directions: {
       type: Array,
-      required: false
+      required: true
     },
     gradient: {
       type: String,
       required: true
     }
   }
-};
+}
 </script>

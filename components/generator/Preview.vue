@@ -6,23 +6,23 @@
       <div :class="background" class="relative flex items-center p-8 rounded-xl">
         <div class="absolute inset-x-0 top-0 flex items-center justify-end p-4">
           <button
-            @click="handleEdit"
             class="text-white bg-gray-800 p-2.5 rounded-xl"
+            @click="handleEdit"
           >
             <icons-pencil class="w-4 h-4" />
           </button>
 
           <button
-            @click="handleBackground"
             class="ml-2 text-white bg-gray-800 p-2.5 rounded-xl"
+            @click="handleBackground"
           >
             <icons-bulb class="w-4 h-4" />
           </button>
         </div>
 
         <p
-          :class="gradient"
           ref="text"
+          :class="gradient"
           class="min-w-full p-2 text-2xl font-bold text-center text-transparent rounded bg-clip-text caret-pink-600"
           spellcheck="false"
           contenteditable="true"
@@ -35,31 +35,31 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      gradient: {
-        type: String,
-        required: true
-      }
+export default {
+  props: {
+    gradient: {
+      type: String,
+      required: true
+    }
+  },
+  data () {
+    return {
+      dark: true,
+      edit: false
+    }
+  },
+  computed: {
+    background () {
+      return this.dark ? 'bg-black' : 'bg-white'
+    }
+  },
+  methods: {
+    handleBackground () {
+      this.dark = !this.dark
     },
-    data() {
-      return {
-        dark: true,
-        edit: false
-      }
-    },
-    methods: {
-      handleBackground() {
-        this.dark = !this.dark
-      },
-      handleEdit() {
-        this.$nextTick(() => this.$refs.text.focus())
-      },
-    },
-    computed: {
-      background() {
-        return this.dark ? "bg-black" : "bg-white"
-      }
+    handleEdit () {
+      this.$nextTick(() => this.$refs.text.focus())
     }
   }
+}
 </script>

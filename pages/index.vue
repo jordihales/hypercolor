@@ -16,7 +16,7 @@ import { gradients } from '~/assets/data/gradients'
 
 export default {
   computed: {
-    gradients() {
+    gradients () {
       return gradients
     }
   }

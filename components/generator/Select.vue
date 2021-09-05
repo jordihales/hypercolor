@@ -2,15 +2,15 @@
   <div>
     <label
       :for="id"
-      v-text="id"
       class="sr-only"
+      v-text="id"
     />
 
     <select
-      @input="$emit('input', $event.target.value)"
+      :id="id"
       class="w-full p-3 font-medium rounded-xl bg-gray-800/10 border-gray-800/75 sm:text-sm"
       :value="value"
-      :id="id"
+      @input="$emit('input', $event.target.value)"
     >
       <option v-for="item of items" :key="item" :value="item" v-text="item" />
     </select>
