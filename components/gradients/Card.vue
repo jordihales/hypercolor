@@ -12,16 +12,16 @@
       <div class="flow-root mt-6">
         <div class="flex flex-wrap justify-center -m-0.5">
           <span
-            v-for="direction of directions"
-            :key="direction.id"
+            v-for="dir of directions"
+            :key="dir.id"
             class="p-0.5"
           >
             <button
               class="p-1.5 rounded-lg bg-gray-800/75 hover:text-pink-500 transition-colors"
-              @click="handleDirection(direction)"
+              @click="handleDirection(dir)"
             >
-              <icons-center v-if="direction.key === 'center'" class="w-5 h-5" :class="direction.chevron" />
-              <icons-chevron v-else class="w-5 h-5" :class="direction.chevron" />
+              <icons-center v-if="dir.key === 'center'" class="w-5 h-5" :class="dir.chevron" />
+              <icons-chevron v-else class="w-5 h-5" :class="dir.chevron" />
             </button>
           </span>
         </div>

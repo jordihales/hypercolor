@@ -1,7 +1,7 @@
 export default {
   target: 'static',
   head: {
-    titleTemplate: titleChunk => {
+    titleTemplate: (titleChunk) => {
       return titleChunk
         ? `${titleChunk} | Hypercolor`
         : 'Gradients for Tailwind CSS | Hypercolor'
