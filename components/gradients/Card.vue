@@ -68,9 +68,8 @@ export default {
   },
   methods: {
     handleDirection (data) {
-      const version = this.version.toLowerCase()
+      this.currentDirection = this.version ? data[this.version.toLowerCase()] : data.gradient
 
-      this.currentDirection = this.version ? data[version] : data.gradient
 
       this.$ga.event({
         eventCategory: 'Direction',
