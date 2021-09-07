@@ -63,10 +63,7 @@ export default {
   },
   googleAnalytics: {
     id: 'UA-177960351-4',
-    checkDuplicatedScript: true,
-    autoTracking: {
-      screenview: true
-    }
+    checkDuplicatedScript: true
   },
   sitemap: {
     hostname: 'https://hypercolor.dev'
