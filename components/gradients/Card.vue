@@ -70,12 +70,7 @@ export default {
     handleDirection (data) {
       this.currentDirection = this.version ? data[this.version.toLowerCase()] : data.gradient
 
-      this.$ga.event({
-        eventCategory: 'Direction',
-        eventAction: 'Change Direction',
-        eventLabel: this.name,
-        eventValue: this.currentDirection
-      })
+      this.$ga.event('Direction', 'Change Direction', this.name, this.currentDirection)
     }
   }
 }
