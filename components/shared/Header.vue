@@ -31,7 +31,7 @@
         </a>
 
         <a
-          href="https://github.com/markmead/nuxt-hypercolor"
+          href="https://github.com/jordihales/hypercolor"
           target="_blank"
           rel="noreferrer"
         >
