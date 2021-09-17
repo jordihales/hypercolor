@@ -30,7 +30,7 @@ export default {
         content:
           'A curated collection of beautiful Tailwind CSS gradients using the full range of Tailwind CSS colors. Easily copy and paste the class names, CSS or even save the gradients as an image.'
       },
-      { property: 'og:image', content: '/social.png' },
+      { property: 'og:image', content: 'https://hypercolor.dev/social.png' },
       { property: 'twitter:card', content: 'summary_large_image' },
       { property: 'twitter:url', content: 'https://hypercolor.dev/' },
       {
@@ -42,7 +42,7 @@ export default {
         content:
           'A curated collection of beautiful Tailwind CSS gradients using the full range of Tailwind CSS colors. Easily copy and paste the class names, CSS or even save the gradients as an image.'
       },
-      { property: 'twitter:image', content: '/social.png' }
+      { property: 'twitter:image', content: 'https://hypercolor.dev/social.png' }
     ],
     link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
   },
