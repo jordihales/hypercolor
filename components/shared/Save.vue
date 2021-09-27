@@ -9,14 +9,16 @@
         class="p-2.5 rounded-xl bg-gray-800/75 hover:text-pink-500 transition-colors"
         @click="handleTailwind"
       >
-        <icons-tailwind class="w-4 h-4" />
+        <icons-clipboard-check v-if="checked === 'tailwind'" class="w-4 h-4" />
+        <icons-tailwind v-else class="w-4 h-4" />
       </button>
 
       <button
         class="p-2.5 rounded-xl bg-gray-800/75 hover:text-pink-500 transition-colors"
         @click="handleCode"
       >
-        <icons-code class="w-4 h-4" />
+        <icons-clipboard-check v-if="checked === 'code'" class="w-4 h-4" />
+        <icons-code v-else class="w-4 h-4" />
       </button>
 
       <button
@@ -43,14 +45,21 @@ export default {
       required: true
     }
   },
+  data () {
+    return {
+      checked: ''
+    }
+  },
   methods: {
     handleTailwind () {
       this.code = this.gradient
       navigator.clipboard.writeText(this.code)
+      this.handleIconChange('tailwind')
     },
     handleCode () {
       this.code = getComputedStyle(this.$refs.image).getPropertyValue('background-image')
       navigator.clipboard.writeText(this.code)
+      this.handleIconChange('code')
     },
     handleImage () {
       htmlToImage.toJpeg(this.$refs.image, { pixelRatio: 1, quality: 1 }).then((data) => {
@@ -60,6 +69,10 @@ export default {
         link.href = data
         link.click()
       })
+    },
+    handleIconChange (type) {
+      this.checked = type
+      setTimeout(() => (this.checked = null), 500)
     }
   }
 }
