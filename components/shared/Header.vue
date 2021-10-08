@@ -9,6 +9,11 @@
         <nuxt-link :to="{ name: 'generator' }">
           Generator
         </nuxt-link>
+
+        <nuxt-link :to="{ name: 'mesh' }">
+          Mesh
+          <span class="px-1 py-0.5 text-xs font-medium text-white bg-blue-500 rounded ml-1.5">WIP</span>
+        </nuxt-link>
       </nav>
 
       <div class="flex items-center sm:space-x-8">
