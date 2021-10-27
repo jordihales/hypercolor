@@ -1,7 +1,7 @@
 export default {
   target: 'static',
   head: {
-    titleTemplate: (titleChunk) => {
+    titleTemplate: titleChunk => {
       return titleChunk
         ? `${titleChunk} | Hypercolor`
         : 'Gradients for Tailwind CSS | Hypercolor'
@@ -42,7 +42,10 @@ export default {
         content:
           'A curated collection of beautiful Tailwind CSS gradients using the full range of Tailwind CSS colors. Easily copy and paste the class names, CSS or even save the gradients as an image.'
       },
-      { property: 'twitter:image', content: 'https://hypercolor.dev/social.png' }
+      {
+        property: 'twitter:image',
+        content: 'https://hypercolor.dev/social.png'
+      }
     ],
     link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
   },
@@ -52,7 +55,8 @@ export default {
   buildModules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    '@nuxtjs/toast'
   ],
   modules: ['@nuxtjs/sitemap'],
   build: {},
@@ -67,5 +71,10 @@ export default {
   },
   sitemap: {
     hostname: 'https://hypercolor.dev'
+  },
+  toast: {
+    position: 'bottom-center',
+    duration: 2000,
+    className: 'notification'
   }
 }
