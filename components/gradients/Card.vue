@@ -1,5 +1,13 @@
 <template>
   <article class="relative">
+    <button
+      class="p-2.5 rounded-full transition-colors bg-gray-800 absolute top-4 right-4"
+      :class="favourite"
+      @click="saveGradient"
+    >
+      <icons-heart class="w-4 h-4" />
+    </button>
+
     <div ref="gradient" class="h-64 rounded-3xl" :class="gradient" />
 
     <div class="p-6 mx-1.5 -mt-8 text-white bg-gray-900 rounded-3xl">
@@ -11,16 +19,16 @@
 
       <div class="flow-root mt-6">
         <div class="flex flex-wrap justify-center -m-0.5">
-          <span
-            v-for="dir of directions"
-            :key="dir.id"
-            class="p-0.5"
-          >
+          <span v-for="dir of directions" :key="dir.id" class="p-0.5">
             <button
               class="p-1.5 rounded-lg bg-gray-800/75 hover:text-pink-500 transition-colors"
               @click="handleDirection(dir)"
             >
-              <icons-center v-if="dir.key === 'center'" class="w-5 h-5" :class="dir.chevron" />
+              <icons-center
+                v-if="dir.key === 'center'"
+                class="w-5 h-5"
+                :class="dir.chevron"
+              />
               <icons-chevron v-else class="w-5 h-5" :class="dir.chevron" />
             </button>
           </span>
@@ -52,23 +60,63 @@ export default {
       default: false
     }
   },
-  data () {
+  data() {
     return {
       currentDirection: this.direction,
-      copyCode: ''
+      copyCode: '',
+      isFavourite: false
     }
   },
   computed: {
-    gradient () {
+    gradient() {
       return `${this.currentDirection} ${this.colors}`
     },
-    directions () {
-      return this.version ? directions : directions.filter(dir => dir.key !== 'center')
+    directions() {
+      return this.version
+        ? directions
+        : directions.filter(dir => dir.key !== 'center')
+    },
+    favourite() {
+      return this.isFavourite ? 'text-rose-500' : 'text-white'
     }
   },
+  mounted() {
+    this.isFavourite = this.checkFavourite()
+  },
   methods: {
-    handleDirection (data) {
-      this.currentDirection = this.version ? data[this.version.toLowerCase()] : data.gradient
+    handleDirection(data) {
+      this.currentDirection = this.version
+        ? data[this.version.toLowerCase()]
+        : data.gradient
+    },
+    saveGradient() {
+      const gradients = JSON.parse(localStorage.getItem('gradients')) || []
+
+      const exists = gradients.find(gradient => gradient.name === this.name)
+
+      if (exists) {
+        gradients.splice(gradients.indexOf(exists), 1)
+
+        this.isFavourite = false
+      } else {
+        gradients.push({
+          name: this.name,
+          colors: this.colors,
+          direction: this.currentDirection,
+          version: this.version
+        })
+
+        this.isFavourite = true
+      }
+
+      localStorage.setItem('gradients', JSON.stringify(gradients))
+
+      this.$emit('update')
+    },
+    checkFavourite() {
+      const gradients = JSON.parse(localStorage.getItem('gradients')) || []
+
+      return gradients.find(gradient => gradient.name === this.name)
     }
   }
 }

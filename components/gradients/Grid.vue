@@ -8,6 +8,7 @@
         :colors="gradient.colors"
         :direction="gradient.direction"
         :version="gradient.version"
+        v-on="$listeners"
       />
     </div>
   </section>

@@ -1,5 +1,7 @@
 <template>
-  <header class="sticky top-0 z-50 text-sm font-medium text-white bg-gray-900 border-b border-gray-800/75">
+  <header
+    class="sticky top-0 z-50 text-sm font-medium text-white bg-gray-900 border-b border-gray-800/75"
+  >
     <div class="container flex items-center justify-between h-16">
       <nav class="flex items-center space-x-8">
         <nuxt-link :to="{ name: 'index' }">
@@ -12,7 +14,15 @@
 
         <nuxt-link :to="{ name: 'mesh' }">
           Mesh
-          <span class="px-1 py-0.5 text-xs font-medium text-white bg-blue-500 rounded ml-1.5">WIP</span>
+          <span
+            class="px-1 py-0.5 text-xs font-medium text-white bg-blue-500 rounded ml-1.5"
+          >
+            WIP
+          </span>
+        </nuxt-link>
+
+        <nuxt-link :to="{ name: 'love' }">
+          Love
         </nuxt-link>
       </nav>
 
