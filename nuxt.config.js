@@ -75,6 +75,7 @@ export default {
   toast: {
     position: 'bottom-center',
     duration: 2000,
-    className: 'notification'
+    className: 'notification',
+    containerClass: 'notification-container'
   }
 }

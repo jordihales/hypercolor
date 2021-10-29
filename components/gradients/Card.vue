@@ -98,6 +98,8 @@ export default {
         gradients.splice(gradients.indexOf(exists), 1)
 
         this.isFavourite = false
+
+        this.$toast.success('Removed from Favourites')
       } else {
         gradients.push({
           name: this.name,
@@ -107,6 +109,8 @@ export default {
         })
 
         this.isFavourite = true
+
+        this.$toast.success('Added to Favourites')
       }
 
       localStorage.setItem('gradients', JSON.stringify(gradients))
