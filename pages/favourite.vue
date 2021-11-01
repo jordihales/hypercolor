@@ -4,14 +4,11 @@
       title="Favourite Gradients"
       subtitle="Your Favourite Hypercolor Gradients"
     >
-      Easily view all your favourie Hypercolor gradients for quick access to
+      Easily view all your favourite Hypercolor gradients for quick access to
       their Tailwind CSS classes, CSS code and image download.
     </shared-banner>
 
-    <gradients-grid
-      :gradients="gradients"
-      @update="setGradients"
-    ></gradients-grid>
+    <gradients-grid :gradients="gradients" @update="setGradients" />
   </div>
 </template>
 
