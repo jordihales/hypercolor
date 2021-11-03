@@ -19,6 +19,10 @@
         <nuxt-link :to="{ name: 'favourite' }">
           Favourite
         </nuxt-link>
+
+        <nuxt-link :to="{ name: 'grainy' }">
+          Grainy
+        </nuxt-link>
       </nav>
 
       <div class="hidden sm:items-center sm:flex sm:space-x-8">
