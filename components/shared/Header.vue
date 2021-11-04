@@ -8,50 +8,18 @@
           Gradients
         </nuxt-link>
 
-        <nuxt-link :to="{ name: 'generator' }">
-          Generator
-        </nuxt-link>
-
-        <nuxt-link :to="{ name: 'mesh' }">
-          Mesh
-        </nuxt-link>
-
-        <nuxt-link :to="{ name: 'favourite' }">
-          Favourite
-        </nuxt-link>
-
-        <nuxt-link :to="{ name: 'grainy' }">
-          Grainy
-        </nuxt-link>
+        <nuxt-link
+          v-for="{ title, name } in navigation"
+          :key="name"
+          :to="{ name }"
+          v-text="title"
+        />
       </nav>
 
       <div class="hidden sm:items-center sm:flex sm:space-x-8">
-        <a
-          href="https://twitter.com/consolelogjordi"
-          target="_blank"
-          rel="noreferrer"
-          class="hidden sm:block"
-        >
-          Jordi
-        </a>
-
-        <a
-          href="https://twitter.com/itsmarkmead"
-          target="_blank"
-          rel="noreferrer"
-          class="hidden sm:block"
-        >
-          Mark
-        </a>
-
-        <a
-          href="https://github.com/jordihales/hypercolor"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span class="sr-only">GitHub</span>
-          <icons-github class="w-5 h-5" />
-        </a>
+        <header-jordi class="hidden sm:block" />
+        <header-mark class="hidden sm:block" />
+        <header-github />
       </div>
 
       <nuxt-link :to="{ name: 'index' }" class="block sm:hidden">
@@ -70,44 +38,18 @@
     <div v-if="mobile" class="absolute z-50 w-full p-4">
       <div class="p-8 bg-gray-900 ring-2 ring-pink-500 rounded-xl">
         <nav class="flex flex-col items-center space-y-4">
-          <nuxt-link :to="{ name: 'generator' }">
-            Generator
-          </nuxt-link>
-
-          <nuxt-link :to="{ name: 'mesh' }">
-            Mesh
-          </nuxt-link>
-
-          <nuxt-link :to="{ name: 'favourite' }">
-            Favourite
-          </nuxt-link>
+          <nuxt-link
+            v-for="{ title, name } in navigation"
+            :key="name"
+            :to="{ name }"
+            v-text="title"
+          />
         </nav>
 
         <div class="flex items-center justify-center mt-8 space-x-8">
-          <a
-            href="https://twitter.com/consolelogjordi"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Jordi
-          </a>
-
-          <a
-            href="https://twitter.com/itsmarkmead"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Mark
-          </a>
-
-          <a
-            href="https://github.com/jordihales/hypercolor"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span class="sr-only">GitHub</span>
-            <icons-github class="w-5 h-5" />
-          </a>
+          <header-jordi />
+          <header-mark />
+          <header-github />
         </div>
       </div>
     </div>
@@ -115,10 +57,17 @@
 </template>
 
 <script>
+import { navigation } from '@/assets/data/navigation'
+
 export default {
   data() {
     return {
       mobile: false
+    }
+  },
+  computed: {
+    navigation() {
+      return navigation
     }
   },
   methods: {
