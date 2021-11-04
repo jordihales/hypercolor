@@ -33,8 +33,7 @@
 </template>
 
 <script>
-import * as htmlToImage from 'html-to-image'
-
+import { downloadImage } from '@/utils/download'
 import { getColor, getRGBA } from '@/utils/colors'
 
 export default {
@@ -60,11 +59,11 @@ export default {
       required: true
     }
   },
-  mounted () {
+  mounted() {
     this.drawCanvas()
   },
   methods: {
-    drawCanvas () {
+    drawCanvas() {
       const canvas = this.$refs.canvas
       const ctx = canvas.getContext('2d')
       const [width, height] = [window.innerWidth, window.innerHeight]
@@ -77,18 +76,22 @@ export default {
       canvas.width = width
       canvas.height = height
 
+      // prettier-ignore
       const topLeft = ctx.createRadialGradient(0, 0, 1, 0, 0, height)
       topLeft.addColorStop(0, tlColor)
       topLeft.addColorStop(1, getRGBA(tlColor))
 
+      // prettier-ignore
       const bottomLeft = ctx.createRadialGradient(0, height, 1, 0, height, height)
       bottomLeft.addColorStop(0, blColor)
       bottomLeft.addColorStop(1, getRGBA(blColor))
 
+      // prettier-ignore
       const topRight = ctx.createRadialGradient(width, 0, 1, height, 0, height)
       topRight.addColorStop(0, trColor)
       topRight.addColorStop(1, getRGBA(trColor))
 
+      // prettier-ignore
       const bottomRight = ctx.createRadialGradient(width, height, 1, height, height, width)
       bottomRight.addColorStop(0, brColor)
       bottomRight.addColorStop(1, getRGBA(brColor))
@@ -102,14 +105,8 @@ export default {
       ctx.fillStyle = topLeft
       ctx.fillRect(0, 0, width, height)
     },
-    handleImage () {
-      htmlToImage.toJpeg(this.$refs.canvas, { pixelRatio: 1, quality: 1 }).then((data) => {
-        const link = document.createElement('a')
-
-        link.download = this.name
-        link.href = data
-        link.click()
-      })
+    handleImage() {
+      downloadImage(this.$refs.canvas, this.name)
     }
   }
 }
