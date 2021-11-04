@@ -4,7 +4,8 @@
       title="Mesh Gradients"
       subtitle="Mesh Gradients for Tailwind CSS"
     >
-      A collection of beautiful mesh style gradients using the full range of Tailwind CSS colors, perfect for your desktop or phone wallpaper.
+      Beautiful mesh style gradients using the full range of Tailwind CSS
+      colors, perfect for your desktop or phone wallpaper.
     </shared-banner>
 
     <div class="space-y-12">
@@ -25,19 +26,20 @@
 import { gradients } from '~/assets/data/mesh'
 
 export default {
-  asyncData () {
+  asyncData() {
     return {
       gradients
     }
   },
-  head () {
+  head() {
     return {
       title: 'Mesh Gradients for Tailwind CSS',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'A collection of beautiful mesh style gradients using the full range of Tailwind CSS colors, perfect for your desktop or phone wallpaper.'
+          content:
+            'Beautiful mesh style gradients using the full range of Tailwind CSS colors, perfect for your desktop or phone wallpaper.'
         }
       ]
     }
