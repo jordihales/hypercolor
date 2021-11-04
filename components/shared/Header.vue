@@ -70,6 +70,11 @@ export default {
       return navigation
     }
   },
+  watch: {
+    $route() {
+      this.mobile = false
+    }
+  },
   methods: {
     toggleMobile() {
       this.mobile = !this.mobile
