@@ -7,24 +7,24 @@ export const gradients = [
     }
   },
   {
-    name: 'Citrus Burst',
+    name: 'Blue Tide',
     colors: {
-      left: 'bg-green-300',
-      right: 'bg-amber-600'
+      left: 'bg-indigo-600',
+      right: 'bg-green-500'
     }
   },
   {
-    name: 'Red Passion',
+    name: 'Power Passion',
     colors: {
-      left: 'bg-red-600',
-      right: 'bg-rose-200'
+      left: 'bg-fuchsia-600',
+      right: 'bg-yellow-500'
     }
   },
   {
-    name: 'Hyper Rise',
+    name: 'Clear Forest',
     colors: {
-      left: 'bg-pink-500',
-      right: 'bg-yellow-300'
+      left: 'bg-lime-600',
+      right: 'bg-sky-500'
     }
   }
 ]
