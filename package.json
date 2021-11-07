@@ -1,7 +1,6 @@
 {
-  "name": "nuxt-hypercolor",
+  "name": "hypercolor",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -22,8 +21,8 @@
     "@nuxtjs/tailwindcss": "^4.2.0",
     "@nuxtjs/toast": "^3.3.1",
     "@tailwindcss/forms": "^0.3.3",
-    "eslint": "^7.32.0",
     "html-to-image": "^1.7.0",
+    "eslint": "^7.32.0",
     "postcss": "^8.3.5"
   }
 }
