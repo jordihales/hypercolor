@@ -55,7 +55,6 @@ export default {
   buildModules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts',
-    '@nuxtjs/google-analytics',
     '@nuxtjs/toast'
   ],
   modules: ['@nuxtjs/sitemap'],
@@ -64,10 +63,6 @@ export default {
     families: {
       Inter: [400, 500, 600, 700, 900]
     }
-  },
-  googleAnalytics: {
-    id: 'UA-177960351-4',
-    checkDuplicatedScript: true
   },
   sitemap: {
     hostname: 'https://hypercolor.dev'
