@@ -11,6 +11,8 @@
 </template>
 
 <script>
+/* eslint-disable space-before-function-paren */
+
 import { gradients } from '~/assets/data/gradients'
 
 export default {

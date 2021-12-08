@@ -39,6 +39,8 @@
 </template>
 
 <script>
+/* eslint-disable space-before-function-paren */
+
 import { directions } from '~/assets/data/directions'
 
 export default {

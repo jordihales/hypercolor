@@ -13,6 +13,8 @@
 </template>
 
 <script>
+/* eslint-disable space-before-function-paren */
+
 export default {
   data() {
     return {

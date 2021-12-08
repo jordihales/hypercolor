@@ -57,6 +57,8 @@
 </template>
 
 <script>
+/* eslint-disable space-before-function-paren */
+
 import { navigation } from '@/assets/data/navigation'
 
 export default {

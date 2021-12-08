@@ -30,6 +30,8 @@
 </template>
 
 <script>
+/* eslint-disable space-before-function-paren */
+
 import * as htmlToImage from 'html-to-image'
 
 export default {

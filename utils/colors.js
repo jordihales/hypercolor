@@ -1,7 +1,9 @@
-export function getColor (element) {
+/* eslint-disable space-before-function-paren */
+
+export function getColor(element) {
   return getComputedStyle(element).getPropertyValue('background-color')
 }
 
-export function getRGBA (color) {
+export function getRGBA(color) {
   return color.replace('rgb', 'rgba').replace(')', ', 0)')
 }

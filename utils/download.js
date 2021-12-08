@@ -1,7 +1,9 @@
+/* eslint-disable space-before-function-paren */
+
 import * as htmlToImage from 'html-to-image'
 
 export function downloadImage(el, filename) {
-  htmlToImage.toJpeg(el, { pixelRatio: 1, quality: 1 }).then(data => {
+  htmlToImage.toJpeg(el, { pixelRatio: 1, quality: 1 }).then((data) => {
     const link = document.createElement('a')
 
     link.download = filename

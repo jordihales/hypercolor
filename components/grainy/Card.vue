@@ -31,6 +31,8 @@
 </template>
 
 <script>
+/* eslint-disable space-before-function-paren */
+
 import { downloadImage } from '@/utils/download'
 
 export default {
