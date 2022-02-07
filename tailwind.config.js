@@ -1,10 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
-const colors = require('tailwindcss/colors')
 
 module.exports = {
-  mode: 'jit',
-  purge: ['pages/*.{vue,js}', 'components/**/*.{vue,js}', 'assets/data/*.js'],
-  darkMode: false,
+  content: ['pages/*.{vue,js}', 'components/**/*.{vue,js}', 'assets/data/*.js'],
   theme: {
     container: {
       center: true,
@@ -13,23 +10,6 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans]
-      },
-      colors: {
-        'blue-gray': colors.blueGray,
-        'cool-gray': colors.coolGray,
-        'true-gray': colors.trueGray,
-        'warm-gray': colors.warmGray,
-        orange: colors.orange,
-        amber: colors.amber,
-        lime: colors.lime,
-        emerald: colors.emerald,
-        teal: colors.teal,
-        cyan: colors.cyan,
-        sky: colors.sky,
-        violet: colors.violet,
-        purple: colors.purple,
-        fuchsia: colors.fuchsia,
-        rose: colors.rose
       },
       backgroundImage: {
         conic: 'conic-gradient(var(--tw-gradient-stops))',

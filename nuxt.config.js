@@ -1,7 +1,7 @@
 export default {
   target: 'static',
   head: {
-    titleTemplate: titleChunk => {
+    titleTemplate: (titleChunk) => {
       return titleChunk
         ? `${titleChunk} | Hypercolor`
         : 'Gradients for Tailwind CSS | Hypercolor'
@@ -49,16 +49,19 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
   },
-  css: [],
+  css: ['@/assets/css/main.css'],
   plugins: [],
   components: true,
-  buildModules: [
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/google-fonts',
-    '@nuxtjs/toast'
-  ],
+  buildModules: ['@nuxt/postcss8', '@nuxtjs/google-fonts', '@nuxtjs/toast'],
   modules: ['@nuxtjs/sitemap'],
-  build: {},
+  build: {
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {}
+      }
+    }
+  },
   googleFonts: {
     families: {
       Inter: [400, 500, 600, 700, 900]
