@@ -227,7 +227,7 @@ export const gradients = [
   {
     name: 'Space',
     direction: 'bg-gradient-to-b',
-    colors: 'from-gray-900 to-bg-gradient-to-r-gray-600'
+    colors: 'from-gray-900 to-gray-600 bg-gradient-to-r'
   },
   {
     name: 'Earth',
