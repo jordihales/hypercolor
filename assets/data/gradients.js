@@ -192,7 +192,7 @@ export const gradients = [
   {
     name: 'Witch',
     direction: 'bg-gradient-to-r',
-    colors: 'from-blue-gray-900 via-purple-900 to-blue-gray-900'
+    colors: 'from-slate-900 via-purple-900 to-slate-900'
   },
   {
     name: 'Powerpuff',
@@ -227,7 +227,7 @@ export const gradients = [
   {
     name: 'Space',
     direction: 'bg-gradient-to-b',
-    colors: 'from-cool-gray-900 to-bg-gradient-to-r-gray-600'
+    colors: 'from-gray-900 to-bg-gradient-to-r-gray-600'
   },
   {
     name: 'Earth',
@@ -282,7 +282,7 @@ export const gradients = [
   {
     name: 'Blue Sand',
     direction: 'bg-gradient-to-r',
-    colors: 'from-blue-gray-500 to-yellow-100'
+    colors: 'from-slate-500 to-yellow-100'
   },
   {
     name: 'Emerald',
@@ -302,7 +302,7 @@ export const gradients = [
   {
     name: 'Silver',
     direction: 'bg-gradient-to-r',
-    colors: 'from-cool-gray-100 to-cool-gray-300'
+    colors: 'from-gray-100 to-gray-300'
   },
   {
     name: 'Orange Coral',
@@ -341,7 +341,7 @@ export const gradients = [
   {
     name: 'Soft Metal',
     direction: 'bg-conic-to-r',
-    colors: 'from-indigo-200 via-blue-gray-600 to-indigo-200',
+    colors: 'from-indigo-200 via-slate-600 to-indigo-200',
     version: 'Conic'
   },
   {
@@ -450,7 +450,7 @@ export const gradients = [
   {
     name: 'Warm Glow',
     direction: 'bg-radial-at-t',
-    colors: 'from-cool-gray-300 via-fuchsia-600 to-orange-600',
+    colors: 'from-gray-300 via-fuchsia-600 to-orange-600',
     version: 'Radial'
   }
 ]
