@@ -12,7 +12,7 @@
       :value="value"
       @input="$emit('input', $event.target.value)"
     >
-      <option v-for="item of items" :key="item" :value="item" v-text="item" />
+      <option  class="bg-gray-800" v-for="item of items" :key="item" :value="item" v-text="item" />
     </select>
   </div>
 </template>
