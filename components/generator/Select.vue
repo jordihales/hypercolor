@@ -8,11 +8,11 @@
 
     <select
       :id="id"
-      class="w-full p-3 font-medium rounded-xl bg-gray-800/10 border-gray-800/75 sm:text-sm"
+      class="w-full p-3 font-medium rounded-xl bg-gray-900 border-gray-800/75 sm:text-sm"
       :value="value"
       @input="$emit('input', $event.target.value)"
     >
-      <option  class="bg-gray-800" v-for="item of items" :key="item" :value="item" v-text="item" />
+      <option v-for="item of items" :key="item" :value="item" v-text="item" />
     </select>
   </div>
 </template>
