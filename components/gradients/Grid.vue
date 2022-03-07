@@ -4,10 +4,12 @@
       <gradients-card
         v-for="gradient of gradients"
         :key="gradient.id"
+        class="first:lg:col-span-3 first:sm:col-span-2"
         :name="gradient.name"
         :colors="gradient.colors"
         :direction="gradient.direction"
         :version="gradient.version"
+        :css="gradient.css"
         v-on="$listeners"
       />
     </div>

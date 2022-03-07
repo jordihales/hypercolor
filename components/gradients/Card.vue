@@ -1,6 +1,7 @@
 <template>
   <article class="relative">
     <button
+      v-if="!featured"
       class="p-2.5 rounded-full transition-colors bg-gray-800 absolute top-4 right-4"
       :class="favourite"
       @click="saveGradient"
@@ -8,7 +9,7 @@
       <icons-heart class="w-4 h-4" />
     </button>
 
-    <div ref="gradient" class="h-64 rounded-3xl" :class="gradient" />
+    <div ref="gradient" class="rounded-3xl" :class="`${gradient} ${featured ? 'h-[500px]' : 'h-64'}`" />
 
     <div class="p-6 mx-1.5 -mt-8 text-white bg-gray-900 rounded-3xl">
       <div class="flex items-center justify-between">
@@ -17,7 +18,7 @@
         <shared-save :gradient="gradient" :name="name" />
       </div>
 
-      <div class="flow-root mt-6">
+      <div v-if="!jit" class="flow-root mt-6">
         <div class="flex flex-wrap justify-center -m-0.5">
           <span v-for="dir of directions" :key="dir.id" class="p-0.5">
             <button
@@ -60,6 +61,10 @@ export default {
     version: {
       type: [String, Boolean],
       default: false
+    },
+    css: {
+      type: String,
+      default: ''
     }
   },
   data() {
@@ -71,7 +76,9 @@ export default {
   },
   computed: {
     gradient() {
-      return `${this.currentDirection} ${this.colors}`
+      return this.version === 'JIT'
+        ? `${this.css}`
+        : `${this.currentDirection} ${this.colors}`
     },
     directions() {
       return this.version
@@ -80,6 +87,12 @@ export default {
     },
     favourite() {
       return this.isFavourite ? 'text-rose-500' : 'text-white'
+    },
+    jit() {
+      return this.version === 'JIT'
+    },
+    featured() {
+      return this.name === 'Ukraine'
     }
   },
   mounted() {
