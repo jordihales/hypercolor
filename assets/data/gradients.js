@@ -1,5 +1,10 @@
 export const gradients = [
   {
+    name: 'Ukraine',
+    version: 'JIT',
+    css: 'bg-[linear-gradient(180deg,#005BBB_49.9%,#FFD500_50%)]'
+  },
+  {
     name: 'Hyper',
     direction: 'bg-gradient-to-r',
     colors: 'from-pink-500 via-red-500 to-yellow-500'
