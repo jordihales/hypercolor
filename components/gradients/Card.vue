@@ -9,7 +9,7 @@
       <icons-heart class="w-4 h-4" />
     </button>
 
-    <div ref="gradient" class="rounded-3xl" :class="`${gradient} ${featured ? 'h-[500px]' : 'h-64'}`" />
+    <div ref="gradient" class="h-64 rounded-3xl" :class="`${gradient} ${featured && 'lg:h-[500px]'}`" />
 
     <div class="p-6 mx-1.5 -mt-8 text-white bg-gray-900 rounded-3xl">
       <div class="flex items-center justify-between">
