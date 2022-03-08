@@ -4,7 +4,7 @@
       <gradients-card
         v-for="gradient of gradients"
         :key="gradient.id"
-        class="first:lg:col-span-3 first:sm:col-span-2"
+        :class="gridClass"
         :name="gradient.name"
         :colors="gradient.colors"
         :direction="gradient.direction"
@@ -22,6 +22,15 @@ export default {
     gradients: {
       type: Array,
       required: true
+    },
+    first: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    gridClass () {
+      return this.first ? 'first:lg:col-span-3 first:sm:col-span-2' : ''
     }
   }
 }

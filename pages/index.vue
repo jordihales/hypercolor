@@ -6,7 +6,7 @@
       or even save the gradients as an image.
     </shared-banner>
 
-    <gradients-grid :gradients="gradients" />
+    <gradients-grid :gradients="gradients" :first="true" />
   </div>
 </template>
 
