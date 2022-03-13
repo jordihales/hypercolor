@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="sr-only">
-      <div v-if="style" ref="image" class="w-screen h-screen" :class="gradient" />
+      <div v-if="css" ref="image" class="w-screen h-screen" :class="gradient" />
       <div v-else ref="image" class="w-screen h-screen" :style="gradient" />
     </div>
 
@@ -46,9 +46,9 @@ export default {
       type: String,
       required: true
     },
-    style: {
+    css: {
       type: Boolean,
-      default: false
+      default: true
     },
     tailwind: {
       type: Boolean,

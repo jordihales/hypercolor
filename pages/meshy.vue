@@ -23,7 +23,7 @@
         </div>
 
         <div class="mt-4 text-white">
-          <shared-save :gradient="gradient()" :style="true" :tailwind="false" name="Mesh Gradient" />
+          <shared-save :gradient="gradient()" :css="false" :tailwind="false" name="Mesh Gradient" />
         </div>
       </div>
 
