@@ -1,11 +1,13 @@
 <template>
   <div>
     <div class="sr-only">
-      <div ref="image" class="w-screen h-screen" :class="gradient" />
+      <div v-if="tailwind" ref="image" class="w-screen h-screen" :class="gradient" />
+      <div v-else ref="image" class="w-screen h-screen" :style="gradient" />
     </div>
 
     <div class="flex items-center space-x-2">
       <button
+        v-if="tailwind"
         class="p-2.5 rounded-xl bg-gray-800/75 hover:text-pink-500 transition-colors"
         @click="handleTailwind"
       >
@@ -43,6 +45,10 @@ export default {
     name: {
       type: String,
       required: true
+    },
+    tailwind: {
+      type: Boolean,
+      default: true
     }
   },
   methods: {
@@ -53,9 +59,10 @@ export default {
       this.showToast()
     },
     handleCode() {
-      this.code = getComputedStyle(this.$refs.image).getPropertyValue(
-        'background-image'
-      )
+      this.code = this.tailwind
+        ? getComputedStyle(this.$refs.image).getPropertyValue('background-image')
+        : this.gradient
+
       navigator.clipboard.writeText(this.code)
 
       this.showToast()
@@ -63,7 +70,7 @@ export default {
     handleImage() {
       htmlToImage
         .toJpeg(this.$refs.image, { pixelRatio: 1, quality: 1 })
-        .then(data => {
+        .then((data) => {
           const link = document.createElement('a')
 
           link.download = this.name

@@ -644,7 +644,7 @@ export const toColors = [
   'to-white'
 ]
 
-const bgColors = [
+export const bgColors = [
   'bg-slate-50',
   'bg-slate-100',
   'bg-slate-200',
