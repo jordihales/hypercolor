@@ -10,7 +10,7 @@
 
     <div class="container grid grid-cols-1 gap-8 lg:grid-cols-4">
       <div class="sticky top-20 lg:col-span-3">
-        <div class="h-[600px] rounded-3xl" :style="gradient()">
+        <div class="h-[600px] rounded-3xl relative" :style="gradient()">
           <div v-if="showControls" class="absolute inset-0">
             <div
               v-for="(stop, index) in stops"
@@ -81,16 +81,20 @@
                     {{ index }}
                   </p>
 
-                  <div class="font-mono text-xs font-medium">
+                  <p class="font-mono text-xs font-medium">
                     {{ colors[index] }} / {{ stop.position.left }}% / {{ stop.position.top }}% / {{ stop.transparent }}%
-                  </div>
+                  </p>
                 </summary>
 
                 <div class="mt-4 space-y-4">
                   <div class="grid grid-cols-2 gap-4">
                     <div>
                       <label for="Left" class="mb-1 text-xs font-medium">
-                        Left
+                        Left -
+
+                        <span class="font-mono text-xs font-medium">
+                          {{ stop.position.left }}%
+                        </span>
                       </label>
 
                       <input id="Left" v-model="stop.position.left" type="range">
@@ -98,7 +102,11 @@
 
                     <div>
                       <label for="Top" class="mb-1 text-xs font-medium">
-                        Top
+                        Top -
+
+                        <span class="font-mono text-xs font-medium">
+                          {{ stop.position.top }}%
+                        </span>
                       </label>
 
                       <input id="Top" v-model="stop.position.top" type="range">
@@ -106,7 +114,11 @@
 
                     <div>
                       <label for="Transparent" class="mb-1 text-xs font-medium">
-                        Transparent
+                        Transparent -
+
+                        <span class="font-mono text-xs font-medium">
+                          {{ stop.transparent }}%
+                        </span>
                       </label>
 
                       <input id="Transparent" v-model="stop.transparent" type="range">
