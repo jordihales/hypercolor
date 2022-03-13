@@ -1,10 +1,10 @@
 <template>
   <div>
     <shared-banner
-      title="Mesh Gradients"
-      subtitle="Mesh Gradients for Tailwind CSS"
+      title="Mesh Gradients Generator"
+      subtitle="Mesh Gradients Generator for Tailwind CSS"
     >
-      Beautiful mesh style gradients using the full range of Tailwind CSS
+      Create beautiful mesh style gradients using the full range of Tailwind CSS
       colors, perfect for your desktop or phone wallpaper.
     </shared-banner>
 
