@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="sr-only">
-      <div v-if="css" ref="image" class="w-screen h-screen" :class="gradient" />
+      <div v-if="tailwind" ref="image" class="w-screen h-screen" :class="gradient" />
       <div v-else ref="image" class="w-screen h-screen" :style="gradient" />
     </div>
 
@@ -46,10 +46,6 @@ export default {
       type: String,
       required: true
     },
-    css: {
-      type: Boolean,
-      default: true
-    },
     tailwind: {
       type: Boolean,
       default: true
@@ -63,9 +59,10 @@ export default {
       this.showToast()
     },
     handleCode() {
-      this.code = getComputedStyle(this.$refs.image).getPropertyValue(
-        'background-image'
-      )
+      this.code = this.tailwind
+        ? getComputedStyle(this.$refs.image).getPropertyValue('background-image')
+        : this.gradient
+
       navigator.clipboard.writeText(this.code)
 
       this.showToast()

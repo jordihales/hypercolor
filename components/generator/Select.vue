@@ -2,14 +2,14 @@
   <div>
     <label
       :for="id"
-      :class="`${label ? 'text-xs font-medium' : 'sr-only'}`"
+      :class="`${sr ? 'sr-only' : 'text-xs font-medium'}`"
       v-text="id"
     />
 
     <select
       :id="id"
       class="w-full p-3 font-medium bg-gray-900 rounded-xl border-gray-800/75 sm:text-sm"
-      :class="`${label ? 'mt-2' : ''}`"
+      :class="`${!sr && 'mt-2'}`"
       :value="value"
       @input="$emit('input', $event.target.value)"
     >
@@ -33,9 +33,9 @@ export default {
       type: String,
       required: true
     },
-    label: {
+    sr: {
       type: Boolean,
-      default: false
+      default: true
     }
   }
 }

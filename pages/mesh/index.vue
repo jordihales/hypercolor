@@ -13,7 +13,7 @@
         <mesh-preview :gradient="gradient()" :controls="showControls" :stops="stops" />
 
         <div class="mt-4 text-white">
-          <shared-save :gradient="gradient()" :css="false" :tailwind="false" name="Mesh Gradient" />
+          <shared-save :gradient="gradient()" :tailwind="false" name="Mesh Gradient" />
         </div>
       </div>
 
@@ -218,7 +218,7 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            'Beautiful mesh style gradients using the full range of Tailwind CSS colors, perfect for your desktop or phone wallpaper.'
+            'Create beautiful mesh style gradients using the full range of Tailwind CSS colors, perfect for your desktop or phone wallpaper.'
         }
       ]
     }
