@@ -10,17 +10,7 @@
 
     <div class="container grid grid-cols-1 gap-8 lg:grid-cols-4">
       <div class="lg:sticky lg:top-20 lg:col-span-3">
-        <div class="h-[300px] sm:h-[400px] lg:h-[600px] rounded-3xl relative" :style="gradient()">
-          <div v-if="showControls" class="absolute inset-0">
-            <div
-              v-for="(stop, index) in stops"
-              :key="index"
-              class="absolute w-6 h-6 text-xs font-medium leading-6 text-center text-white bg-gray-900 rounded-full"
-              :style="`left: ${stop.position.left}%; top: ${stop.position.top}%;`"
-              v-text="index"
-            />
-          </div>
-        </div>
+        <mesh-preview :gradient="gradient()" :controls="showControls" :stops="stops" />
 
         <div class="mt-4 text-white">
           <shared-save :gradient="gradient()" :css="false" :tailwind="false" name="Mesh Gradient" />
@@ -28,16 +18,6 @@
       </div>
 
       <div>
-        <span ref="zColor" class="sr-only" :class="color" />
-
-        <span
-          v-for="(_, index) in colors"
-          :key="index"
-          :ref="`color${index}`"
-          class="sr-only"
-          :class="colors[index]"
-        />
-
         <div class="space-y-8 text-white">
           <div class="flex gap-4">
             <button
@@ -58,19 +38,15 @@
           </div>
 
           <div>
-            <p class="mb-1 text-xs font-medium">
-              Background Color
-            </p>
-
-            <generator-select id="Color" v-model="color" :items="bgColors" />
+            <generator-select id="Background Color" v-model="color" :label="true" :items="bgColors" />
           </div>
 
           <div>
-             <p class="mb-1 text-xs font-medium">
+            <p class="text-xs font-medium">
               Color Stops
             </p>
 
-            <div class="space-y-1">
+            <div class="mt-2 space-y-1">
               <details
                 v-for="(stop, index) in stops"
                 :key="index"
@@ -78,7 +54,7 @@
               >
                 <summary class="flex items-center justify-between text-sm font-medium transition-colors cursor-pointer hover:text-pink-500 focus:ring-0">
                   <p class="text-xs font-medium">
-                    {{ index }}
+                    {{ index + 1 }}
                   </p>
 
                   <p class="font-mono text-xs font-medium">
@@ -139,6 +115,17 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="sr-only">
+      <span ref="bgColor" :class="color" />
+
+      <span
+        v-for="(_, index) in colors"
+        :key="index"
+        :ref="`color${index}`"
+        :class="colors[index]"
+      />
     </div>
   </div>
 </template>
@@ -260,7 +247,7 @@ export default {
       `
     },
     generate() {
-      this.rgbColor = getColor(this.$refs.zColor)
+      this.rgbColor = getColor(this.$refs.bgColor)
 
       this.rgbColors = this.colors.map((_, index) =>
         getColor(this.$refs[`color${index}`][0])

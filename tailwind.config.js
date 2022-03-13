@@ -1,7 +1,12 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  content: ['pages/*.{vue,js}', 'components/**/*.{vue,js}', 'assets/data/*.js'],
+  content: [
+    'pages/*.{vue,js}',
+    'pages/**/*.{vue,js}',
+    'components/**/*.{vue,js}',
+    'assets/data/*.js'
+  ],
   theme: {
     container: {
       center: true,
