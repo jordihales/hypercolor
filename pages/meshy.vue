@@ -9,8 +9,8 @@
     </shared-banner>
 
     <div class="container grid grid-cols-1 gap-8 lg:grid-cols-4">
-      <div class="sticky top-20 lg:col-span-3">
-        <div class="h-[600px] rounded-3xl relative" :style="gradient()">
+      <div class="lg:sticky lg:top-20 lg:col-span-3">
+        <div class="h-[300px] sm:h-[400px] lg:h-[600px] rounded-3xl relative" :style="gradient()">
           <div v-if="showControls" class="absolute inset-0">
             <div
               v-for="(stop, index) in stops"
