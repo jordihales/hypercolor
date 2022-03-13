@@ -9,109 +9,109 @@
     </shared-banner>
 
     <div class="container grid grid-cols-1 gap-8 lg:grid-cols-4">
-      <div class="lg:sticky lg:top-20 lg:col-span-3">
-        <mesh-preview :gradient="gradient()" :controls="showControls" :stops="stops" />
-
-        <div class="mt-4 text-white">
+      <div class="lg:col-span-3">
+        <div class="text-white">
           <shared-save :gradient="gradient()" :tailwind="false" name="Mesh Gradient" />
+        </div>
+
+        <div class="mt-4 lg:sticky lg:top-20">
+          <mesh-preview :gradient="gradient()" :controls="showControls" :stops="stops" />
         </div>
       </div>
 
-      <div>
-        <div class="space-y-8 text-white">
-          <div class="flex gap-4">
-            <button
-              class="w-full py-3 text-sm font-medium transition-colors rounded-xl bg-gray-800/75 hover:text-pink-500"
-              @click="showControls = !showControls"
+      <div class="space-y-8 text-white lg:mt-[3.25rem]">
+        <div class="flex gap-4">
+          <button
+            class="w-full py-3 text-sm font-medium transition-colors rounded-xl bg-gray-800/75 hover:text-pink-500"
+            @click="showControls = !showControls"
+          >
+            <span v-if="showControls">Hide</span>
+            <span v-else>Show</span>
+            Stops
+          </button>
+
+          <button
+            class="w-full py-3 text-sm font-medium transition-colors rounded-xl bg-gray-800/75 hover:text-pink-500"
+            @click="addStop"
+          >
+            Add Stop
+          </button>
+        </div>
+
+        <div>
+          <generator-select id="Background Color" v-model="color" :label="true" :items="bgColors" />
+        </div>
+
+        <div>
+          <p class="text-xs font-medium">
+            Color Stops
+          </p>
+
+          <div class="mt-2 space-y-1">
+            <details
+              v-for="(stop, index) in stops"
+              :key="index"
+              class="border border-gray-800/75 rounded-xl p-2.5 focus-within:ring focus-within:ring-pink-500"
             >
-              <span v-if="showControls">Hide</span>
-              <span v-else>Show</span>
-              Stops
-            </button>
+              <summary class="flex items-center justify-between text-sm font-medium transition-colors cursor-pointer hover:text-pink-500 focus:ring-0">
+                <p class="text-xs font-medium">
+                  {{ index + 1 }}
+                </p>
 
-            <button
-              class="w-full py-3 text-sm font-medium transition-colors rounded-xl bg-gray-800/75 hover:text-pink-500"
-              @click="addStop"
-            >
-              Add Stop
-            </button>
-          </div>
+                <p class="font-mono text-xs font-medium">
+                  {{ colors[index] }} / {{ stop.position.left }}% / {{ stop.position.top }}% / {{ stop.transparent }}%
+                </p>
+              </summary>
 
-          <div>
-            <generator-select id="Background Color" v-model="color" :label="true" :items="bgColors" />
-          </div>
+              <div class="mt-4 space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <label for="Left" class="mb-1 text-xs font-medium">
+                      Left -
 
-          <div>
-            <p class="text-xs font-medium">
-              Color Stops
-            </p>
+                      <span class="font-mono text-xs font-medium">
+                        {{ stop.position.left }}%
+                      </span>
+                    </label>
 
-            <div class="mt-2 space-y-1">
-              <details
-                v-for="(stop, index) in stops"
-                :key="index"
-                class="border border-gray-800/75 rounded-xl p-2.5 focus-within:ring focus-within:ring-pink-500"
-              >
-                <summary class="flex items-center justify-between text-sm font-medium transition-colors cursor-pointer hover:text-pink-500 focus:ring-0">
-                  <p class="text-xs font-medium">
-                    {{ index + 1 }}
-                  </p>
-
-                  <p class="font-mono text-xs font-medium">
-                    {{ colors[index] }} / {{ stop.position.left }}% / {{ stop.position.top }}% / {{ stop.transparent }}%
-                  </p>
-                </summary>
-
-                <div class="mt-4 space-y-4">
-                  <div class="grid grid-cols-2 gap-4">
-                    <div>
-                      <label for="Left" class="mb-1 text-xs font-medium">
-                        Left -
-
-                        <span class="font-mono text-xs font-medium">
-                          {{ stop.position.left }}%
-                        </span>
-                      </label>
-
-                      <input id="Left" v-model="stop.position.left" type="range">
-                    </div>
-
-                    <div>
-                      <label for="Top" class="mb-1 text-xs font-medium">
-                        Top -
-
-                        <span class="font-mono text-xs font-medium">
-                          {{ stop.position.top }}%
-                        </span>
-                      </label>
-
-                      <input id="Top" v-model="stop.position.top" type="range">
-                    </div>
-
-                    <div>
-                      <label for="Transparent" class="mb-1 text-xs font-medium">
-                        Transparent -
-
-                        <span class="font-mono text-xs font-medium">
-                          {{ stop.transparent }}%
-                        </span>
-                      </label>
-
-                      <input id="Transparent" v-model="stop.transparent" type="range">
-                    </div>
+                    <input id="Left" v-model="stop.position.left" type="range">
                   </div>
 
-                  <generator-select id="Background" v-model="colors[index]" :items="bgColors" />
+                  <div>
+                    <label for="Top" class="mb-1 text-xs font-medium">
+                      Top -
 
-                  <button
-                    class="w-full py-3 text-sm font-medium transition-colors rounded-xl bg-gray-800/75 hover:text-pink-500"
-                    @click="removeStop(index)"
-                  >
-                    Remove Stop
-                  </button>
+                      <span class="font-mono text-xs font-medium">
+                        {{ stop.position.top }}%
+                      </span>
+                    </label>
+
+                    <input id="Top" v-model="stop.position.top" type="range">
+                  </div>
+
+                  <div>
+                    <label for="Transparent" class="mb-1 text-xs font-medium">
+                      Transparent -
+
+                      <span class="font-mono text-xs font-medium">
+                        {{ stop.transparent }}%
+                      </span>
+                    </label>
+
+                    <input id="Transparent" v-model="stop.transparent" type="range">
+                  </div>
                 </div>
-              </details>
-            </div>
+
+                <generator-select id="Background" v-model="colors[index]" :items="bgColors" />
+
+                <button
+                  class="w-full py-3 text-sm font-medium transition-colors rounded-xl bg-gray-800/75 hover:text-pink-500"
+                  @click="removeStop(index)"
+                >
+                  Remove Stop
+                </button>
+              </div>
+            </details>
           </div>
         </div>
       </div>
