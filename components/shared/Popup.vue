@@ -15,6 +15,7 @@
 
       <button
         class="p-2.5 rounded-xl bg-gray-800/75 hover:text-pink-500 transition-colors ml-2.5 text-white"
+        aria-label="Close Popup"
         @click="hide"
       >
         <icons-close class="w-4 h-4" />
