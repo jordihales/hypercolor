@@ -2,6 +2,7 @@
   <div class="bg-gray-900">
     <shared-announcement />
     <shared-header />
+    <shared-popup />
 
     <main>
       <Nuxt />
