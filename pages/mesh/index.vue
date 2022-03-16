@@ -11,7 +11,7 @@
     <div class="container grid grid-cols-1 gap-8 lg:grid-cols-4">
       <div class="lg:col-span-3">
         <div class="text-white">
-          <shared-save :gradient="gradient()" :tailwind="false" name="Mesh Gradient" />
+          <shared-save :gradient="gradient()" type="mesh" name="Hypercolor Mesh Gradient" />
         </div>
 
         <div class="mt-4 lg:sticky lg:top-20">
