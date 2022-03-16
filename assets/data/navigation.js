@@ -14,5 +14,9 @@ export const navigation = [
   {
     name: 'favourite',
     title: 'Favourite'
+  },
+  {
+    name: 'flags',
+    title: 'Flags'
   }
 ]

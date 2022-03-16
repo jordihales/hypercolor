@@ -6,14 +6,14 @@
       or even save the gradients as an image.
     </shared-banner>
 
-    <gradients-grid :gradients="gradients" />
+    <gradients-grid :gradients="gradients" :directions="false" />
   </div>
 </template>
 
 <script>
 /* eslint-disable space-before-function-paren */
 
-import { gradients } from '~/assets/data/gradients'
+import { gradients } from '~/assets/data/flags'
 
 export default {
   computed: {
