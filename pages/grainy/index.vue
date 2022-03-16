@@ -1,10 +1,11 @@
 <template>
   <div>
     <shared-banner
-      title="Gradient Generator"
-      subtitle="Gradient Generator for Tailwind CSS"
+      title="Grainy Gradient Generator"
+      subtitle="Grainy Gradient Generator for Tailwind CSS"
     >
-      Create your own Tailwind CSS gradient with the full Tailwind CSS color library and the extended radial and conic gradient options provided through Hypercolor.
+      Create beautiful grainy style gradients using the full range of Tailwind CSS
+      colors, perfect for your desktop or phone wallpaper.
     </shared-banner>
 
     <generator-controls :gradient="gradient" :color="color" type="grainy" @random="handleRandomiser">
