@@ -1,8 +1,8 @@
 <template>
   <div>
     <shared-banner
-      title="Mesh Gradients Generator"
-      subtitle="Mesh Gradients Generator for Tailwind CSS"
+      title="Mesh Gradient Generator"
+      subtitle="Mesh Gradient Generator for Tailwind CSS"
     >
       Create beautiful mesh style gradients using the full range of Tailwind CSS
       colors, perfect for your desktop or phone wallpaper.
@@ -11,7 +11,7 @@
     <div class="container grid grid-cols-1 gap-8 lg:grid-cols-4">
       <div class="lg:col-span-3">
         <div class="text-white">
-          <shared-save :gradient="gradient()" :tailwind="false" name="Mesh Gradient" />
+          <shared-save :gradient="gradient()" type="mesh" name="Hypercolor Gradient" />
         </div>
 
         <div class="mt-4 lg:sticky lg:top-20">
