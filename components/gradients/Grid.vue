@@ -4,12 +4,12 @@
       <gradients-card
         v-for="gradient of gradients"
         :key="gradient.id"
-        :class="gridClass"
         :name="gradient.name"
         :colors="gradient.colors"
         :direction="gradient.direction"
         :version="gradient.version"
-        :css="gradient.css"
+        :controls="directions"
+        :overlap="overlap"
         v-on="$listeners"
       />
     </div>
@@ -23,14 +23,13 @@ export default {
       type: Array,
       required: true
     },
-    first: {
+    directions: {
       type: Boolean,
-      default: false
-    }
-  },
-  computed: {
-    gridClass () {
-      return this.first ? 'first:lg:col-span-3 first:sm:col-span-2' : ''
+      default: true
+    },
+    overlap: {
+      type: Boolean,
+      default: true
     }
   }
 }
