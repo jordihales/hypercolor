@@ -1,9 +1,7 @@
 <template>
   <div>
-    <shared-banner title="Hypercolor" subtitle="Gradients for Tailwind CSS">
-      A curated collection of beautiful Tailwind CSS gradients using the full
-      range of Tailwind CSS colors. Easily copy and paste the class names, CSS
-      or even save the gradients as an image.
+    <shared-banner title="World Flags" subtitle="Flag Gradients with Tailwind CSS">
+      A collection of country flags created with Tailwind CSS.
     </shared-banner>
 
     <gradients-grid :gradients="gradients" :directions="false" />
