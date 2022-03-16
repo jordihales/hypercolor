@@ -78,9 +78,9 @@ export default {
       this.showToast()
     },
     handleCode() {
-      this.code = this.tailwind
-        ? getComputedStyle(this.$refs.image).getPropertyValue('background-image')
-        : this.gradient
+      this.code = this.mesh
+        ? this.gradient
+        : getComputedStyle(this.$refs.image).getPropertyValue('background-image')
 
       navigator.clipboard.writeText(this.code)
 
