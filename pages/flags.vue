@@ -4,7 +4,7 @@
       A collection of country flags created with Tailwind CSS.
     </shared-banner>
 
-    <gradients-grid :gradients="gradients" :directions="false" />
+    <gradients-grid :gradients="gradients" :directions="false" :overlap="false" />
   </div>
 </template>
 
