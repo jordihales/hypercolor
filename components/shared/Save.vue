@@ -12,6 +12,7 @@
       <button
         v-if="standard"
         class="p-2.5 rounded-xl bg-gray-800/75 hover:text-pink-500 transition-colors"
+        aria-label="Copy Tailwind CSS class names"
         @click="handleTailwind"
       >
         <icons-tailwind class="w-4 h-4" />
@@ -20,6 +21,7 @@
       <button
         v-if="standard || mesh"
         class="p-2.5 rounded-xl bg-gray-800/75 hover:text-pink-500 transition-colors"
+        aria-label="Copy CSS"
         @click="handleCode"
       >
         <icons-code class="w-4 h-4" />
@@ -27,6 +29,7 @@
 
       <button
         class="p-2.5 rounded-xl bg-gray-800/75 hover:text-pink-500 transition-colors"
+        aria-label="Download image"
         @click="handleImage"
       >
         <icons-image class="w-4 h-4" />

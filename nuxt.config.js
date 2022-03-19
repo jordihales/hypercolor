@@ -53,7 +53,7 @@ export default {
   plugins: [],
   components: true,
   buildModules: ['@nuxt/postcss8', '@nuxtjs/google-fonts', '@nuxtjs/toast'],
-  modules: ['@nuxtjs/sitemap'],
+  modules: ['@nuxtjs/sitemap', '@nuxtjs/robots'],
   build: {
     postcss: {
       plugins: {
@@ -75,5 +75,8 @@ export default {
     duration: 2000,
     className: 'notification',
     containerClass: 'notification-container'
+  },
+  robots: {
+    UserAgent: '*'
   }
 }
