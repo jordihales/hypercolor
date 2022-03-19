@@ -1,6 +1,7 @@
 <template>
   <article class="relative">
     <button
+      aria-label="Save gradient to favourites"
       class="p-2.5 rounded-full transition-colors bg-gray-800 absolute top-4 right-4"
       :class="favourite"
       @click="saveGradient"
@@ -22,6 +23,7 @@
           <span v-for="dir of directions" :key="dir.id" class="p-0.5">
             <button
               class="p-1.5 rounded-lg bg-gray-800/75 hover:text-pink-500 transition-colors"
+              :aria-label="`Change gradient direction to ${dir.key}`"
               @click="handleDirection(dir)"
             >
               <icons-center

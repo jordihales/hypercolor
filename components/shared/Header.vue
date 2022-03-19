@@ -27,7 +27,7 @@
       </nuxt-link>
 
       <button
-        type="button"
+        aria-label="Toggle mobile menu"
         class="inline-block sm:hidden p-2.5 rounded-xl bg-gray-800/75"
         @click="toggleMobile"
       >
