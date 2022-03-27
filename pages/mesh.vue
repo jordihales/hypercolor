@@ -10,8 +10,12 @@
 
     <div class="container grid grid-cols-1 gap-8 lg:grid-cols-4">
       <div class="lg:col-span-3">
-        <div class="text-white">
+        <div class="flex items-center space-x-2 text-white">
           <shared-save :gradient="gradient()" type="mesh" name="Hypercolor Gradient" />
+
+          <button class="p-2.5 rounded-xl bg-gray-800/75 ml-2" @click="handleRandomiser">
+            <icons-refresh class="w-4 h-4" />
+          </button>
         </div>
 
         <div class="mt-4 lg:sticky lg:top-20">
@@ -144,67 +148,9 @@ export default {
   },
   data() {
     return {
-      stops: [
-        {
-          position: {
-            left: 61,
-            top: 76
-          },
-          transparent: 56
-        },
-        {
-          position: {
-            left: 81,
-            top: 12
-          },
-          transparent: 46
-        },
-        {
-          position: {
-            left: 69,
-            top: 5
-          },
-          transparent: 48
-        },
-        {
-          position: {
-            left: 21,
-            top: 87
-          },
-          transparent: 47
-        },
-        {
-          position: {
-            left: 5,
-            top: 62
-          },
-          transparent: 58
-        },
-        {
-          position: {
-            left: 97,
-            top: 70
-          },
-          transparent: 55
-        },
-        {
-          position: {
-            left: 64,
-            top: 80
-          },
-          transparent: 41
-        }
-      ],
-      color: 'bg-yellow-100',
-      colors: [
-        'bg-blue-500',
-        'bg-red-500',
-        'bg-yellow-500',
-        'bg-green-500',
-        'bg-purple-500',
-        'bg-orange-500',
-        'bg-indigo-500'
-      ],
+      color: '',
+      colors: [],
+      stops: [],
       rgbColor: '',
       rgbColors: [],
       showControls: false
@@ -237,9 +183,41 @@ export default {
     }
   },
   mounted() {
-    this.generate()
+    this.handleRandomiser()
   },
   methods: {
+    getRandomColor (array) {
+      return array[Math.floor(Math.random() * array.length)]
+    },
+
+    getRandomNumber () {
+      return Math.floor(Math.random() * 100) + 1
+    },
+
+    handleRandomiser () {
+      this.color = this.getRandomColor(bgColors)
+
+      this.colors = []
+      this.stops = []
+
+      // eslint-disable-next-line array-callback-return
+      Array.from(new Array(6), () => {
+        this.colors.push(this.getRandomColor(bgColors))
+
+        const newStop = {
+          position: {
+            left: this.getRandomNumber(),
+            top: this.getRandomNumber()
+          },
+          transparent: this.getRandomNumber()
+        }
+
+        this.stops.push(newStop)
+      })
+
+      this.$nextTick(() => this.generate())
+    },
+
     gradient() {
       return `
         background-color: ${this.rgbColor};
@@ -260,18 +238,16 @@ export default {
       this.stops.splice(index, 1)
     },
     addStop() {
-      const left = Math.floor(Math.random() * 100)
-      const top = Math.floor(Math.random() * 100)
-      const transparent = Math.floor(Math.random() * 100)
+      const newStop = {
+        position: {
+          left: this.getRandomNumber(),
+          top: this.getRandomNumber()
+        },
+        transparent: this.getRandomNumber()
+      }
       const color = this.bgColors[Math.floor(Math.random() * this.bgColors.length)]
 
-      this.stops.push({
-        position: {
-          left,
-          top
-        },
-        transparent
-      })
+      this.stops.push(newStop)
 
       this.colors.push(color)
     }
