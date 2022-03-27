@@ -10,10 +10,13 @@
 
     <div class="container grid grid-cols-1 gap-8 lg:grid-cols-4">
       <div class="lg:col-span-3">
-        <div class="flex items-center space-x-2 text-white">
+        <div class="flex items-center text-white">
           <shared-save :gradient="gradient()" type="mesh" name="Hypercolor Gradient" />
 
-          <button class="p-2.5 rounded-xl bg-gray-800/75 ml-2" @click="handleRandomiser">
+          <button
+            class="p-2.5 rounded-xl bg-gray-800/75 ml-2 hover:text-pink-500 transition-colors"
+            @click="handleRandomiser"
+          >
             <icons-refresh class="w-4 h-4" />
           </button>
         </div>
