@@ -5,7 +5,10 @@
         <div class="flex items-center">
           <shared-save :gradient="gradient" :color="color" :type="type" name="Hypercolor Gradient" />
 
-          <button class="p-2.5 rounded-xl bg-gray-800/75 ml-2" @click="$emit('random')">
+          <button
+            class="p-2.5 rounded-xl bg-gray-800/75 ml-2 hover:text-pink-500 transition-colors"
+            @click="$emit('random')"
+          >
             <icons-refresh class="w-4 h-4" />
           </button>
         </div>
