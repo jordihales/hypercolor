@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="grid max-w-screen-xl grid-cols-1 gap-8 px-4 mx-auto sm:px-6 lg:px-8 sm:grid-cols-2 lg:grid-cols-3">
       <gradients-card
         v-for="gradient of gradients"
         :key="gradient.id"

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
       <div class="flex items-center space-x-4">
         <h2
           class="text-xl font-black tracking-wide text-white uppercase"

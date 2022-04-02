@@ -2,7 +2,7 @@
   <header
     class="sticky top-0 z-50 text-sm font-medium text-white bg-gray-900 border-b border-gray-800/75"
   >
-    <div class="container flex items-center justify-between h-16">
+    <div class="flex items-center justify-between h-16 max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
       <nav class="hidden sm:items-center sm:space-x-8 sm:flex">
         <nuxt-link :to="{ name: 'index' }">
           Gradients

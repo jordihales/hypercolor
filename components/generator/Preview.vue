@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container grid grid-cols-1 gap-8 mt-16 lg:grid-cols-2">
+    <div class="grid max-w-screen-xl grid-cols-1 gap-8 px-4 mx-auto mt-16 sm:px-6 lg:px-8 lg:grid-cols-2">
       <div :class="gradient" class="h-[300px] lg:h-full lg:min-h-[400px] rounded-3xl" />
 
       <div :class="background" class="relative flex items-center p-8 rounded-xl">

@@ -8,10 +8,6 @@ module.exports = {
     'assets/data/*.js'
   ],
   theme: {
-    container: {
-      center: true,
-      padding: '1rem'
-    },
     extend: {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans]
