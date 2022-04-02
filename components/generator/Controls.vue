@@ -1,6 +1,6 @@
 <template>
   <section class="text-white bg-gray-900 border-t border-b border-gray-800/75">
-    <div class="container py-4 space-y-4">
+    <div class="max-w-screen-xl px-4 py-4 mx-auto space-y-4 sm:px-6 lg:px-8">
       <div class="lg:grid lg:grid-cols-3">
         <div class="flex items-center">
           <shared-save :gradient="gradient" :color="color" :type="type" name="Hypercolor Gradient" />

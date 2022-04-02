@@ -8,7 +8,7 @@
       colors, perfect for your desktop or phone wallpaper.
     </shared-banner>
 
-    <div class="container grid grid-cols-1 gap-8 lg:grid-cols-4">
+    <div class="grid max-w-screen-xl grid-cols-1 gap-8 px-4 mx-auto sm:px-6 lg:px-8 lg:grid-cols-4">
       <div class="lg:col-span-3">
         <div class="flex items-center text-white">
           <shared-save :gradient="gradient()" type="mesh" name="Hypercolor Gradient" />
