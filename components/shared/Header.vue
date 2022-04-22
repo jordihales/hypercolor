@@ -16,15 +16,13 @@
         />
       </nav>
 
-      <div class="hidden sm:items-center sm:flex sm:space-x-4 lg:space-x-8">
+      <div class="hidden md:items-center md:flex md:space-x-4 lg:space-x-8">
         <a href="https://twwordle.hyperui.dev/" target="_blank" rel="noreferrer">
-          <span aria-hidden="true" class="mr-1.5" role="img">🟧</span>
           Tailwind CSS Wordle
-          <span aria-hidden="true" class="ml-1.5" role="img">🟩</span>
         </a>
 
-        <header-jordi class="hidden sm:block" />
-        <header-mark class="hidden sm:block" />
+        <header-jordi class="hidden md:block" />
+        <header-mark class="hidden md:block" />
         <header-github />
       </div>
 
@@ -34,7 +32,7 @@
 
       <button
         aria-label="Toggle mobile menu"
-        class="inline-block sm:hidden p-2.5 rounded-xl bg-gray-800/75"
+        class="inline-block md:hidden p-2.5 rounded-xl bg-gray-800/75"
         @click="toggleMobile"
       >
         <icons-menu class="w-4 h-4" />
@@ -54,9 +52,7 @@
 
         <div class="mt-8 text-center">
           <a href="https://twwordle.hyperui.dev/" target="_blank" rel="noreferrer">
-            <span aria-hidden="true" class="mr-1.5" role="img">🟧</span>
             Tailwind CSS Wordle
-            <span aria-hidden="true" class="ml-1.5" role="img">🟩</span>
           </a>
         </div>
 
