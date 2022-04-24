@@ -147,11 +147,6 @@ export const gradients = [
       'bg-[linear-gradient(180deg,_#1EB53A_33.333%,_#FFF_33.333%_66.666%,_#0072C6_66.666%)]'
   },
   {
-    name: 'Sierra Leon',
-    colors:
-      'bg-[linear-gradient(90deg,_#1EB53A_33.333%,_#FCD116_33.333%_66.666%,_#0072C6_66.666%)]'
-  },
-  {
     name: 'Thailand',
     colors:
       'bg-[linear-gradient(180deg,_#012169_15%,_#FFF_15%_30%,_#C8102E_30%_70%,_#FFF_70%_85%,_#012169_85%)]'
