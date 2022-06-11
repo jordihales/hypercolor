@@ -17,10 +17,6 @@
       </nav>
 
       <div class="hidden md:items-center md:flex md:space-x-4 lg:space-x-8">
-        <a href="https://twwordle.hyperui.dev/" target="_blank" rel="noreferrer">
-          Tailwind CSS Wordle
-        </a>
-
         <header-jordi class="hidden md:block" />
         <header-mark class="hidden md:block" />
         <header-github />
@@ -49,12 +45,6 @@
             v-text="title"
           />
         </nav>
-
-        <div class="mt-8 text-center">
-          <a href="https://twwordle.hyperui.dev/" target="_blank" rel="noreferrer">
-            Tailwind CSS Wordle
-          </a>
-        </div>
 
         <div class="flex items-center justify-center mt-8 space-x-8">
           <header-jordi />
