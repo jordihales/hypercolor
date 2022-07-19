@@ -134,7 +134,7 @@ export const gradients = [
   },
   {
     name: 'Poland',
-    colors: 'bg-[linear-gradient(180deg,_#D22630_50%,_#FFF_50%)]'
+    colors: 'bg-[linear-gradient(0deg,_#D22630_50%,_#FFF_50%)]'
   },
   {
     name: 'Romania',
