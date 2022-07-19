@@ -120,7 +120,7 @@ export const gradients = [
   {
     name: 'Netherlands',
     colors:
-      'bg-[linear-gradient(90deg,_#AE1C28_33.333%,_#FFF_33.333%_66.666%,_#21468B_66.666%)]'
+      'bg-[linear-gradient(180deg,_#AE1C28_33.333%,_#FFF_33.333%_66.666%,_#21468B_66.666%)]'
   },
   {
     name: 'Nigeria',
