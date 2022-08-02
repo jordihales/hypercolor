@@ -6,7 +6,7 @@
       :class="favourite"
       @click="saveGradient"
     >
-      <icons-heart class="w-4 h-4" />
+      <icon-heart class="w-4 h-4" />
     </button>
 
     <div ref="gradient" class="h-64 rounded-3xl" :class="gradient" />
@@ -15,7 +15,7 @@
       <div class="flex items-center justify-between">
         <p class="font-black tracking-wide uppercase" v-text="name" />
 
-        <shared-save :gradient="gradient" :name="name" />
+        <action-save :gradient="gradient" :name="name" />
       </div>
 
       <div v-if="controls" class="flow-root mt-6">
@@ -26,12 +26,12 @@
               :aria-label="`Change gradient direction to ${dir.key}`"
               @click="handleDirection(dir)"
             >
-              <icons-center
+              <icon-center
                 v-if="dir.key === 'center'"
                 class="w-5 h-5"
                 :class="dir.chevron"
               />
-              <icons-chevron v-else class="w-5 h-5" :class="dir.chevron" />
+              <icon-chevron v-else class="w-5 h-5" :class="dir.chevron" />
             </button>
           </span>
         </div>

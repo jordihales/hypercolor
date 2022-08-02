@@ -31,7 +31,7 @@
         class="inline-block md:hidden p-2.5 rounded-xl bg-gray-800/75"
         @click="toggleMobile"
       >
-        <icons-menu class="w-4 h-4" />
+        <icon-menu class="w-4 h-4" />
       </button>
     </div>
 

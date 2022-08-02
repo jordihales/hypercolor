@@ -9,14 +9,14 @@
             class="text-white bg-gray-800 p-2.5 rounded-xl"
             @click="handleEdit"
           >
-            <icons-pencil class="w-4 h-4" />
+            <icon-pencil class="w-4 h-4" />
           </button>
 
           <button
             class="ml-2 text-white bg-gray-800 p-2.5 rounded-xl"
             @click="handleBackground"
           >
-            <icons-bulb class="w-4 h-4" />
+            <icon-bulb class="w-4 h-4" />
           </button>
         </div>
 

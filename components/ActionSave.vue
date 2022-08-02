@@ -15,7 +15,7 @@
         aria-label="Copy Tailwind CSS class names"
         @click="handleTailwind"
       >
-        <icons-tailwind class="w-4 h-4" />
+        <icon-tailwind class="w-4 h-4" />
       </button>
 
       <button
@@ -24,7 +24,7 @@
         aria-label="Copy CSS"
         @click="handleCode"
       >
-        <icons-code class="w-4 h-4" />
+        <icon-code class="w-4 h-4" />
       </button>
 
       <button
@@ -32,7 +32,7 @@
         aria-label="Download image"
         @click="handleImage"
       >
-        <icons-image class="w-4 h-4" />
+        <icon-image class="w-4 h-4" />
       </button>
     </div>
   </div>

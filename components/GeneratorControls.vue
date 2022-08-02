@@ -3,13 +3,13 @@
     <div class="max-w-screen-xl px-4 py-4 mx-auto space-y-4 sm:px-6 lg:px-8">
       <div class="lg:grid lg:grid-cols-3">
         <div class="flex items-center">
-          <shared-save :gradient="gradient" :color="color" :type="type" name="Hypercolor Gradient" />
+          <action-save :gradient="gradient" :color="color" :type="type" name="Hypercolor Gradient" />
 
           <button
             class="p-2.5 rounded-xl bg-gray-800/75 ml-2 hover:text-pink-500 transition-colors"
             @click="$emit('random')"
           >
-            <icons-refresh class="w-4 h-4" />
+            <icon-refresh class="w-4 h-4" />
           </button>
         </div>
 

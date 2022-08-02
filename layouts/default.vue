@@ -1,16 +1,22 @@
 <template>
   <div class="bg-gray-900">
-    <shared-announcement />
-    <shared-header />
-    <shared-popup />
+    <global-announcement />
+    <global-header />
+    <global-popup />
 
     <main>
       <Nuxt />
     </main>
 
-    <shared-footer />
+    <global-footer />
   </div>
 </template>
+
+<script>
+export default {
+  name: 'LayoutComponent'
+}
+</script>
 
 <style lang="postcss">
 *:focus {
