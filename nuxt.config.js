@@ -62,11 +62,6 @@ export default {
       }
     }
   },
-  googleFonts: {
-    families: {
-      Inter: [400, 500, 600, 700, 900]
-    }
-  },
   sitemap: {
     hostname: 'https://hypercolor.dev'
   },
