@@ -52,7 +52,7 @@ export default {
   css: ['@/assets/css/main.css'],
   plugins: [],
   components: true,
-  buildModules: ['@nuxt/postcss8', '@nuxtjs/google-fonts', '@nuxtjs/toast'],
+  buildModules: ['@nuxt/postcss8', '@nuxtjs/toast'],
   modules: ['@nuxtjs/sitemap', '@nuxtjs/robots'],
   build: {
     postcss: {
