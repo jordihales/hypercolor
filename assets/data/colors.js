@@ -210,7 +210,7 @@ export const fromColors = [
   'from-red-800',
   'from-red-900',
   'from-black',
-  'from-white'
+  'from-white',
 ]
 
 export const viaColors = [
@@ -426,7 +426,7 @@ export const viaColors = [
   'via-red-900',
   'via-black',
   'via-white',
-  'none'
+  'none',
 ]
 
 export const toColors = [
@@ -641,7 +641,7 @@ export const toColors = [
   'to-red-800',
   'to-red-900',
   'to-black',
-  'to-white'
+  'to-white',
 ]
 
 export const bgColors = [
@@ -856,5 +856,5 @@ export const bgColors = [
   'bg-red-800',
   'bg-red-900',
   'bg-black',
-  'bg-white'
+  'bg-white',
 ]
