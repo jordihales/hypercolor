@@ -1,22 +1,22 @@
 export const navigation = [
   {
     name: 'generator',
-    title: 'Generator'
+    title: 'Generator',
   },
   {
     name: 'mesh',
-    title: 'Mesh'
+    title: 'Mesh',
   },
   {
     name: 'grainy',
-    title: 'Grainy'
+    title: 'Grainy',
   },
   {
     name: 'favourite',
-    title: 'Favourite'
+    title: 'Favourite',
   },
   {
     name: 'flags',
-    title: 'Flags'
-  }
+    title: 'Flags',
+  },
 ]

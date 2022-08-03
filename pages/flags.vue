@@ -1,10 +1,10 @@
 <template>
   <div>
-    <shared-banner title="World Flags" subtitle="Flag Gradients with Tailwind CSS">
+    <content-banner title="World Flags" subtitle="Flag Gradients with Tailwind CSS">
       A collection of country flags created with Tailwind CSS.
-    </shared-banner>
+    </content-banner>
 
-    <gradients-grid :gradients="gradients" :directions="false" :overlap="false" />
+    <gradient-grid :gradients="gradients" :directions="false" :overlap="false" />
   </div>
 </template>
 
@@ -14,6 +14,7 @@
 import { gradients } from '~/assets/data/flags'
 
 export default {
+  name: 'FlagsPage',
   computed: {
     gradients() {
       return gradients

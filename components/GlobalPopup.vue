@@ -18,7 +18,7 @@
         aria-label="Close Popup"
         @click="hide"
       >
-        <icons-close class="w-4 h-4" />
+        <icon-close class="w-4 h-4" />
       </button>
     </div>
   </aside>

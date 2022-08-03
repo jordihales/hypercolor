@@ -1,11 +1,11 @@
 <template>
   <div>
-    <shared-banner
+    <content-banner
       title="Gradient Generator"
       subtitle="Gradient Generator for Tailwind CSS"
     >
       Create your own Tailwind CSS gradient with the full Tailwind CSS color library and the extended radial and conic gradient options provided through Hypercolor.
-    </shared-banner>
+    </content-banner>
 
     <generator-controls :gradient="gradient" @random="handleRandomiser">
       <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
@@ -25,6 +25,7 @@ import { directions } from '~/assets/data/directions'
 import { fromColors, viaColors, toColors } from '~/assets/data/colors'
 
 export default {
+  name: 'GeneratorPage',
   asyncData () {
     const filteredDirections = directions
       .flatMap(dir => [dir.gradient, dir.radial, dir.conic])

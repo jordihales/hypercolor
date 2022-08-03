@@ -5,6 +5,7 @@
     rel="noreferrer"
   >
     <span class="sr-only">GitHub</span>
-    <icons-github class="w-5 h-5" />
+
+    <icon-github class="w-5 h-5" />
   </a>
 </template>

@@ -8,7 +8,7 @@
     <p class="flex items-center justify-center text-xs font-medium text-white transition group-hover:text-opacity-75">
       Hypercolor is Open Source! Drop a Star on GitHub
 
-      <icons-star class="w-4 h-4 ml-1.5" />
+      <icon-star class="w-4 h-4 ml-1.5" />
     </p>
   </a>
 </template>

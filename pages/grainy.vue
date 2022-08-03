@@ -1,12 +1,12 @@
 <template>
   <div>
-    <shared-banner
+    <content-banner
       title="Grainy Gradient Generator"
       subtitle="Grainy Gradient Generator for Tailwind CSS"
     >
       Create beautiful grainy style gradients using the full range of Tailwind CSS
       colors, perfect for your desktop or phone wallpaper.
-    </shared-banner>
+    </content-banner>
 
     <generator-controls :gradient="gradient" :color="color" type="grainy" @random="handleRandomiser">
       <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
@@ -29,6 +29,7 @@ import { fromColors, viaColors, toColors } from '~/assets/data/colors'
 import { getColor } from '@/utils/colors'
 
 export default {
+  name: 'GrainyPage',
   asyncData () {
     const filteredDirections = directions
       .flatMap(dir => [dir.gradient, dir.radial, dir.conic])

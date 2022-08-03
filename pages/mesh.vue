@@ -1,23 +1,23 @@
 <template>
   <div>
-    <shared-banner
+    <content-banner
       title="Mesh Gradient Generator"
       subtitle="Mesh Gradient Generator for Tailwind CSS"
     >
       Create beautiful mesh style gradients using the full range of Tailwind CSS
       colors, perfect for your desktop or phone wallpaper.
-    </shared-banner>
+    </content-banner>
 
     <div class="grid max-w-screen-xl grid-cols-1 gap-8 px-4 mx-auto sm:px-6 lg:px-8 lg:grid-cols-4">
       <div class="lg:col-span-3">
         <div class="flex items-center text-white">
-          <shared-save :gradient="gradient()" type="mesh" name="Hypercolor Gradient" />
+          <action-save :gradient="gradient()" type="mesh" name="Hypercolor Gradient" />
 
           <button
             class="p-2.5 rounded-xl bg-gray-800/75 ml-2 hover:text-pink-500 transition-colors"
             @click="handleRandomiser"
           >
-            <icons-refresh class="w-4 h-4" />
+            <icon-refresh class="w-4 h-4" />
           </button>
         </div>
 
@@ -144,6 +144,7 @@ import { bgColors } from '~/assets/data/colors'
 import { getColor } from '@/utils/colors'
 
 export default {
+  name: 'MeshPage',
   asyncData () {
     return {
       bgColors

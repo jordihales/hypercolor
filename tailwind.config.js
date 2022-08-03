@@ -5,12 +5,12 @@ module.exports = {
     'pages/*.{vue,js}',
     'pages/**/*.{vue,js}',
     'components/**/*.{vue,js}',
-    'assets/data/*.js'
+    'assets/data/*.js',
   ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans]
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
         conic: 'conic-gradient(var(--tw-gradient-stops))',
@@ -40,18 +40,18 @@ module.exports = {
         'radial-at-bl':
           'radial-gradient(ellipse at bottom left, var(--tw-gradient-stops))',
         'radial-at-br':
-          'radial-gradient(ellipse at bottom right, var(--tw-gradient-stops))'
+          'radial-gradient(ellipse at bottom right, var(--tw-gradient-stops))',
       },
       rotate: {
         135: '135deg',
-        '-135': '-135deg'
-      }
-    }
+        '-135': '-135deg',
+      },
+    },
   },
   variants: {
     gradientColorStops: [],
     backgroundImage: [],
-    extend: {}
+    extend: {},
   },
-  plugins: [require('@tailwindcss/forms')]
+  plugins: [require('@tailwindcss/forms')],
 }
