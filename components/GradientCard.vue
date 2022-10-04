@@ -81,9 +81,11 @@ export default {
   },
   computed: {
     gradient() {
-      return this.version === 'JIT'
-        ? `${this.css}`
-        : `${this.currentDirection} ${this.colors}`
+      if (this.version === 'JIT') {
+        return this.css
+      }
+
+      return this.currentDirection !== undefined ? `${this.currentDirection} ${this.colors}` : this.colors
     },
     directions() {
       return this.version
