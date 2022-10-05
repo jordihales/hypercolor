@@ -56,8 +56,8 @@ export default {
       required: true
     },
     direction: {
-      type: String,
-      required: true
+      type: [String, Boolean],
+      default: false
     },
     version: {
       type: [String, Boolean],
@@ -81,11 +81,9 @@ export default {
   },
   computed: {
     gradient() {
-      if (this.version === 'JIT') {
-        return this.css
-      }
-
-      return this.currentDirection !== undefined ? `${this.currentDirection} ${this.colors}` : this.colors
+      return this.currentDirection
+        ? `${this.currentDirection} ${this.colors}`
+        : `${this.colors}`
     },
     directions() {
       return this.version
