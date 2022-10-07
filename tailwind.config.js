@@ -1,11 +1,11 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    'pages/*.{vue,js}',
     'pages/**/*.{vue,js}',
     'components/**/*.{vue,js}',
-    'assets/data/*.js',
+    'assets/**/*.js',
   ],
   theme: {
     extend: {

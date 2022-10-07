@@ -2,11 +2,11 @@
   <header
     class="sticky top-0 z-50 text-sm font-medium text-white bg-gray-900 border-b border-gray-800/75"
   >
-    <div class="flex items-center justify-between h-16 max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
-      <nav class="hidden sm:items-center sm:space-x-4 lg:space-x-8 sm:flex">
-        <nuxt-link :to="{ name: 'index' }">
-          Gradients
-        </nuxt-link>
+    <div
+      class="flex items-center justify-between h-16 max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8"
+    >
+      <nav class="hidden sm:flex sm:items-center sm:space-x-4 lg:space-x-8">
+        <nuxt-link :to="{ name: 'index' }"> Gradients </nuxt-link>
 
         <nuxt-link
           v-for="{ title, name } in navigation"
@@ -16,7 +16,7 @@
         />
       </nav>
 
-      <div class="hidden md:items-center md:flex md:space-x-4 lg:space-x-8">
+      <div class="hidden md:flex md:items-center md:space-x-4 lg:space-x-8">
         <header-jordi class="hidden md:block" />
         <header-mark class="hidden md:block" />
         <header-github />
@@ -28,7 +28,7 @@
 
       <button
         aria-label="Toggle mobile menu"
-        class="inline-block md:hidden p-2.5 rounded-xl bg-gray-800/75"
+        class="inline-block rounded-xl bg-gray-800/75 p-2.5 md:hidden"
         @click="toggleMobile"
       >
         <icon-menu class="w-4 h-4" />
@@ -36,7 +36,7 @@
     </div>
 
     <div v-if="mobile" class="absolute z-50 w-full p-4">
-      <div class="p-8 bg-gray-900 ring-2 ring-pink-500 rounded-xl">
+      <div class="p-8 bg-gray-900 rounded-xl ring-2 ring-pink-500">
         <nav class="flex flex-col items-center space-y-4">
           <nuxt-link
             v-for="{ title, name } in navigation"
@@ -64,23 +64,23 @@ import { navigation } from '@/assets/data/navigation'
 export default {
   data() {
     return {
-      mobile: false
+      mobile: false,
     }
   },
   computed: {
     navigation() {
       return navigation
-    }
+    },
   },
   watch: {
     $route() {
       this.mobile = false
-    }
+    },
   },
   methods: {
     toggleMobile() {
       this.mobile = !this.mobile
-    }
-  }
+    },
+  },
 }
 </script>
