@@ -43,7 +43,7 @@
 <script>
 /* eslint-disable space-before-function-paren */
 
-import { directions } from '~/assets/data/directions'
+import { directionOptions } from '@/assets/data/directionOptions'
 
 export default {
   props: {
@@ -87,8 +87,8 @@ export default {
     },
     directions() {
       return this.version
-        ? directions
-        : directions.filter((dir) => dir.key !== 'center')
+        ? directionOptions
+        : directionOptions.filter((dir) => dir.key !== 'center')
     },
     favourite() {
       return this.isFavourite ? 'text-rose-500' : 'text-white'

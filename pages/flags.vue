@@ -18,13 +18,13 @@
 <script>
 /* eslint-disable space-before-function-paren */
 
-import { gradients } from '~/assets/data/flags'
+import { gradientsFlag } from '@/assets/data/gradientsFlag'
 
 export default {
   name: 'FlagsPage',
   computed: {
     gradients() {
-      return gradients
+      return gradientsFlag
     },
   },
 }

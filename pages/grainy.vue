@@ -33,14 +33,14 @@
 </template>
 
 <script>
-import { directions } from '~/assets/data/directions'
-import { fromColors, viaColors, toColors } from '~/assets/data/colors'
-import { getColor } from '@/utils/colors'
+import { directionOptions } from '@/assets/data/directionOptions'
+import { fromColors, viaColors, toColors } from '@/assets/data/tailwindColors'
+import { getBackgroundColor } from '@/utils/getColor'
 
 export default {
   name: 'GrainyPage',
   asyncData() {
-    const filteredDirections = directions
+    const filteredDirections = directionOptions
       .flatMap((dir) => [dir.gradient, dir.radial, dir.conic])
       .filter((dir) => dir !== '')
       .sort()
@@ -105,7 +105,7 @@ export default {
       this.to = this.getRandom(this.toColors)
     },
     getColor() {
-      this.color = getColor(this.$refs.bgColor)
+      this.color = getBackgroundColor(this.$refs.bgColor)
     },
   },
 }

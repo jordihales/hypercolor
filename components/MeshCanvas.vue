@@ -35,8 +35,8 @@
 <script>
 /* eslint-disable space-before-function-paren */
 
-import { downloadImage } from '@/utils/download'
-import { getColor, getRGBA } from '@/utils/colors'
+import { createAndDownloadImage } from '@/utils/downloadImage'
+import { getBackgroundColor, convertToRgba } from '@/utils/getColor'
 
 export default {
   props: {
@@ -70,10 +70,10 @@ export default {
       const ctx = canvas.getContext('2d')
       const [width, height] = [window.innerWidth, window.innerHeight]
       const colors = this.$refs.colors
-      const tlColor = getColor(colors.$refs.topLeft)
-      const trColor = getColor(colors.$refs.topRight)
-      const blColor = getColor(colors.$refs.bottomLeft)
-      const brColor = getColor(colors.$refs.bottomRight)
+      const tlColor = getBackgroundColor(colors.$refs.topLeft)
+      const trColor = getBackgroundColor(colors.$refs.topRight)
+      const blColor = getBackgroundColor(colors.$refs.bottomLeft)
+      const brColor = getBackgroundColor(colors.$refs.bottomRight)
 
       canvas.width = width
       canvas.height = height
@@ -81,22 +81,22 @@ export default {
       // prettier-ignore
       const topLeft = ctx.createRadialGradient(0, 0, 1, 0, 0, height)
       topLeft.addColorStop(0, tlColor)
-      topLeft.addColorStop(1, getRGBA(tlColor))
+      topLeft.addColorStop(1, convertToRgba(tlColor))
 
       // prettier-ignore
       const bottomLeft = ctx.createRadialGradient(0, height, 1, 0, height, height)
       bottomLeft.addColorStop(0, blColor)
-      bottomLeft.addColorStop(1, getRGBA(blColor))
+      bottomLeft.addColorStop(1, convertToRgba(blColor))
 
       // prettier-ignore
       const topRight = ctx.createRadialGradient(width, 0, 1, height, 0, height)
       topRight.addColorStop(0, trColor)
-      topRight.addColorStop(1, getRGBA(trColor))
+      topRight.addColorStop(1, convertToRgba(trColor))
 
       // prettier-ignore
       const bottomRight = ctx.createRadialGradient(width, height, 1, height, height, width)
       bottomRight.addColorStop(0, brColor)
-      bottomRight.addColorStop(1, getRGBA(brColor))
+      bottomRight.addColorStop(1, convertToRgba(brColor))
 
       ctx.fillStyle = bottomRight
       ctx.fillRect(0, 0, width, height)
@@ -108,7 +108,7 @@ export default {
       ctx.fillRect(0, 0, width, height)
     },
     handleImage() {
-      downloadImage(this.$refs.canvas, this.name)
+      createAndDownloadImage(this.$refs.canvas, this.name)
     },
   },
 }

@@ -59,7 +59,8 @@
 <script>
 /* eslint-disable space-before-function-paren */
 
-import * as htmlToImage from 'html-to-image'
+import { getBackgroundImage } from '@/utils/getColor'
+import { createAndDownloadImage } from '@/utils/downloadImage'
 
 export default {
   props: {
@@ -101,24 +102,14 @@ export default {
     handleCode() {
       this.code = this.mesh
         ? this.gradient
-        : getComputedStyle(this.$refs.image).getPropertyValue(
-            'background-image'
-          )
+        : getBackgroundImage(this.$refs.image)
 
       navigator.clipboard.writeText(this.code)
 
       this.showToast()
     },
     handleImage() {
-      htmlToImage
-        .toJpeg(this.$refs.image, { pixelRatio: 1, quality: 1 })
-        .then((data) => {
-          const link = document.createElement('a')
-
-          link.download = this.name
-          link.href = data
-          link.click()
-        })
+      createAndDownloadImage(this.$refs.image, this.name)
     },
     showToast() {
       this.$toast.success('Copied to Clipboard')
@@ -131,7 +122,7 @@ export default {
 /* https://css-tricks.com/grainy-gradients/ */
 
 .noise {
-  background: linear-gradient(to right, var(--color), transparent),
+  background: linear-gradient(180deg, var(--color), transparent),
     url(https://grainy-gradients.vercel.app/noise.svg);
 }
 </style>

@@ -1,4 +1,4 @@
-export const navigation = [
+export const siteNavigation = [
   {
     name: 'generator',
     title: 'Generator',
