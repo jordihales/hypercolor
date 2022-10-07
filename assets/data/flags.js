@@ -2,7 +2,7 @@ export const gradients = [
   {
     name: 'Armenia',
     colors:
-      'bg-[linear-gradient(180deg,_#DA291C_33.333%,_#0033A0_33.333%_66.666%,_#FF9E1B_66.666%)]'
+      'bg-[linear-gradient(180deg,_#DA291C_33.333%,_#0033A0_33.333%_66.666%,_#FF9E1B_66.666%)]',
   },
   {
     name: 'Austria',
@@ -17,7 +17,7 @@ export const gradients = [
   {
     name: 'Botswana',
     colors:
-      'bg-[linear-gradient(180deg,_#ABCAE9_35%,_#FFF_35%_40%,_#000000_40%_60%,_#FFF_60%_65%,_#ABCAE9_65%)]'
+      'bg-[linear-gradient(180deg,_#ABCAE9_35%,_#FFF_35%_40%,_#000000_40%_60%,_#FFF_60%_65%,_#ABCAE9_65%)]',
   },
   {
     name: 'Bulgaria',
@@ -138,11 +138,6 @@ export const gradients = [
       'bg-[linear-gradient(90deg,_#008753_33.333%,_#FFF_33.333%_66.666%,_#008753_66.666%)]',
   },
   {
-    name: 'Peru',
-    colors:
-      'bg-[linear-gradient(90deg,_#D91023_33.333%,_#FFF_33.333%_66.666%,_#D91023_66.666%)]',
-  },
-  {
     name: 'Poland',
     colors: 'bg-[linear-gradient(0deg,_#D22630_50%,_#FFF_50%)]',
   },
@@ -157,14 +152,9 @@ export const gradients = [
       'bg-[linear-gradient(180deg,_#1EB53A_33.333%,_#FFF_33.333%_66.666%,_#0072C6_66.666%)]',
   },
   {
-    name: 'Spain',
-    colors:
-      'bg-[linear-gradient(180deg,_#AD1519_25%,_#FABD00_25%_75%,_#AD1519_75%)]',
-  },
-  {
     name: 'Tanzania',
     colors:
-      'bg-[linear-gradient(150deg,_#43B02A_35%,_#FFCD00_35%_40%,_#000_40%_60%,_#FFCD00_60%_65%,_#00A3E0_65%)]'
+      'bg-[linear-gradient(150deg,_#43B02A_35%,_#FFCD00_35%_40%,_#000_40%_60%,_#FFCD00_60%_65%,_#00A3E0_65%)]',
   },
   {
     name: 'Thailand',
