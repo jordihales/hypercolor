@@ -1,6 +1,6 @@
 <template>
   <a
-    class="block p-3 group bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
+    class="group block bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-3"
     href="https://github.com/jordihales/hypercolor"
     target="_blank"
     rel="noopener noreferrer"

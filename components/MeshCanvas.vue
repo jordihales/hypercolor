@@ -8,20 +8,20 @@
       :br-color="brColor"
     />
 
-    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
       <div class="flex items-center space-x-4">
         <h2
-          class="text-xl font-black tracking-wide text-white uppercase"
+          class="text-xl font-black uppercase tracking-wide text-white"
           v-text="name"
         />
 
-        <span class="w-6 h-px bg-white/50" />
+        <span class="h-px w-6 bg-white/50" />
 
         <button
-          class="p-2.5 rounded-xl bg-gray-800/75 text-white hover:text-pink-500 transition-colors"
+          class="rounded-xl bg-gray-800/75 p-2.5 text-white transition-colors hover:text-pink-500"
           @click="handleImage"
         >
-          <icon-image class="w-4 h-4" />
+          <icon-image class="h-4 w-4" />
         </button>
       </div>
     </div>
@@ -42,24 +42,24 @@ export default {
   props: {
     tlColor: {
       type: String,
-      required: true
+      required: true,
     },
     trColor: {
       type: String,
-      required: true
+      required: true,
     },
     blColor: {
       type: String,
-      required: true
+      required: true,
     },
     brColor: {
       type: String,
-      required: true
+      required: true,
     },
     name: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   mounted() {
     this.drawCanvas()
@@ -109,7 +109,7 @@ export default {
     },
     handleImage() {
       downloadImage(this.$refs.canvas, this.name)
-    }
-  }
+    },
+  },
 }
 </script>

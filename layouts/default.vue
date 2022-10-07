@@ -14,20 +14,20 @@
 
 <script>
 export default {
-  name: 'LayoutComponent'
+  name: 'LayoutComponent',
 }
 </script>
 
 <style lang="postcss">
 *:focus {
-  @apply outline-none ring-2 ring-pink-500 ring-offset-2 ring-offset-gray-900 border-transparent;
+  @apply border-transparent outline-none ring-2 ring-pink-500 ring-offset-2 ring-offset-gray-900;
 }
 
 .toasted-container.notification-container.bottom-center {
-  @apply max-w-xs mx-auto p-4;
+  @apply mx-auto max-w-xs p-4;
 }
 
 .toasted.notification.toasted-primary.success {
-  @apply bg-blue-500 text-white font-bold tracking-wide text-xs uppercase rounded-lg px-6 py-4 shadow-xl justify-center;
+  @apply justify-center rounded-lg bg-blue-500 px-6 py-4 text-xs font-bold uppercase tracking-wide text-white shadow-xl;
 }
 </style>

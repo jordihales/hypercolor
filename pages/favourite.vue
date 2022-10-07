@@ -19,7 +19,7 @@ export default {
   name: 'FavouritePage',
   data() {
     return {
-      gradients: []
+      gradients: [],
     }
   },
   mounted() {
@@ -28,7 +28,7 @@ export default {
   methods: {
     setGradients() {
       this.gradients = JSON.parse(localStorage.getItem('gradients'))
-    }
-  }
+    },
+  },
 }
 </script>

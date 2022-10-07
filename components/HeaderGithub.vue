@@ -6,6 +6,6 @@
   >
     <span class="sr-only">GitHub</span>
 
-    <icon-github class="w-5 h-5" />
+    <icon-github class="h-5 w-5" />
   </a>
 </template>

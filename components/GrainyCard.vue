@@ -1,27 +1,27 @@
 <template>
   <div>
-    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
       <div class="flex items-center space-x-4">
         <h2
-          class="text-xl font-black tracking-wide text-white uppercase"
+          class="text-xl font-black uppercase tracking-wide text-white"
           v-text="name"
         />
 
-        <span class="w-6 h-px bg-white/50" />
+        <span class="h-px w-6 bg-white/50" />
 
         <button
-          class="p-2.5 rounded-xl bg-gray-800/75 text-white hover:text-pink-500 transition-colors"
+          class="rounded-xl bg-gray-800/75 p-2.5 text-white transition-colors hover:text-pink-500"
           @click="handleImage"
         >
-          <icon-image class="w-4 h-4" />
+          <icon-image class="h-4 w-4" />
         </button>
       </div>
     </div>
 
     <div class="mt-4">
-      <div ref="parent" class="relative w-screen h-screen" :class="leftColor">
+      <div ref="parent" class="relative h-screen w-screen" :class="leftColor">
         <div
-          class="absolute inset-0 filter brightness-100 contrast-150 noise"
+          class="noise absolute inset-0 brightness-100 contrast-150 filter"
           :style="`--color: ${color}`"
         />
         <div class="absolute inset-0 mix-blend-multiply" :class="rightColor" />
@@ -39,20 +39,20 @@ export default {
   props: {
     leftColor: {
       type: String,
-      required: true
+      required: true,
     },
     rightColor: {
       type: String,
-      required: true
+      required: true,
     },
     name: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-      color: ''
+      color: '',
     }
   },
   mounted() {
@@ -63,8 +63,8 @@ export default {
   methods: {
     handleImage() {
       downloadImage(this.$refs.parent, this.name)
-    }
-  }
+    },
+  },
 }
 </script>
 

@@ -1,19 +1,21 @@
 <template>
   <section class="relative text-center">
-    <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-24 lg:py-32">
-      <div class="flex flex-col max-w-3xl mx-auto">
+    <div
+      class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32"
+    >
+      <div class="mx-auto flex max-w-3xl flex-col">
         <h1
-          class="mt-1 text-4xl font-extrabold tracking-tighter text-transparent uppercase sm:text-5xl lg:text-7xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text"
+          class="mt-1 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-4xl font-extrabold uppercase tracking-tighter text-transparent sm:text-5xl lg:text-7xl"
           v-text="title"
         />
 
         <h2
-          class="order-first font-medium tracking-wide text-transparent bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text"
+          class="order-first bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text font-medium tracking-wide text-transparent"
           v-text="subtitle"
         />
       </div>
 
-      <p class="max-w-2xl mx-auto mt-8 text-xl font-medium text-white">
+      <p class="mx-auto mt-8 max-w-2xl text-xl font-medium text-white">
         <slot />
       </p>
     </div>
@@ -25,12 +27,12 @@ export default {
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     subtitle: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 }
 </script>
