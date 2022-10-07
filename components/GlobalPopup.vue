@@ -1,9 +1,9 @@
 <template>
   <aside
     v-if="show"
-    class="fixed z-50 p-1 bottom-4 right-4 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-xl"
+    class="fixed bottom-4 right-4 z-50 rounded-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1"
   >
-    <div class="flex items-center px-5 py-3 bg-gray-900 rounded-lg">
+    <div class="flex items-center rounded-lg bg-gray-900 px-5 py-3">
       <a
         href="https://www.hyperui.dev/"
         target="_blank"
@@ -14,11 +14,11 @@
       </a>
 
       <button
-        class="p-2.5 rounded-xl bg-gray-800/75 hover:text-pink-500 transition-colors ml-2.5 text-white"
+        class="ml-2.5 rounded-xl bg-gray-800/75 p-2.5 text-white transition-colors hover:text-pink-500"
         aria-label="Close Popup"
         @click="hide"
       >
-        <icon-close class="w-4 h-4" />
+        <icon-close class="h-4 w-4" />
       </button>
     </div>
   </aside>
@@ -30,13 +30,15 @@
 export default {
   data() {
     return {
-      show: false
+      show: false,
     }
   },
   mounted() {
     const showPopup = localStorage.getItem('showPopup')
     const showPopupDate = localStorage.getItem('showPopupDate')
-    const hourHasPassed = showPopupDate && new Date().getTime() - new Date(showPopupDate).getTime() > 3600000
+    const hourHasPassed =
+      showPopupDate &&
+      new Date().getTime() - new Date(showPopupDate).getTime() > 3600000
 
     if (hourHasPassed) {
       this.show = true
@@ -55,7 +57,7 @@ export default {
 
       localStorage.setItem('showPopup', 'FALSE')
       localStorage.setItem('showPopupDate', new Date().toISOString())
-    }
-  }
+    },
+  },
 }
 </script>

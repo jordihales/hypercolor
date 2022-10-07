@@ -18,7 +18,6 @@ export default {
         content:
           'A curated collection of beautiful Tailwind CSS gradients using the full range of Tailwind CSS colors. Easily copy and paste the class names, CSS or even save the gradients as an image.',
       },
-      { name: 'format-detection', content: 'telephone=no' },
       { property: 'og:type', content: 'website' },
       { property: 'og:url', content: 'https://hypercolor.dev/' },
       {
@@ -49,7 +48,7 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
   },
-  css: ['@/assets/css/main.css'],
+  css: ['@/assets/css/tailwind.css'],
   plugins: [],
   components: true,
   buildModules: ['@nuxt/postcss8', '@nuxtjs/toast'],
@@ -65,13 +64,13 @@ export default {
   sitemap: {
     hostname: 'https://hypercolor.dev',
   },
+  robots: {
+    UserAgent: '*',
+  },
   toast: {
     position: 'bottom-center',
     duration: 2000,
     className: 'notification',
     containerClass: 'notification-container',
-  },
-  robots: {
-    UserAgent: '*',
   },
 }

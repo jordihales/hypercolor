@@ -20,7 +20,7 @@ export default {
   computed: {
     gradients() {
       return gradients
-    }
-  }
+    },
+  },
 }
 </script>

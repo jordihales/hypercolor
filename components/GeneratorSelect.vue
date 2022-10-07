@@ -8,7 +8,7 @@
 
     <select
       :id="id"
-      class="w-full p-3 font-medium bg-gray-900 rounded-xl border-gray-800/75 sm:text-sm"
+      class="w-full rounded-xl border-gray-800/75 bg-gray-900 p-3 font-medium sm:text-sm"
       :class="`${!sr && 'mt-2'}`"
       :value="value"
       @input="$emit('input', $event.target.value)"
@@ -23,20 +23,20 @@ export default {
   props: {
     items: {
       type: Array,
-      required: true
+      required: true,
     },
     value: {
       type: String,
-      required: true
+      required: true,
     },
     id: {
       type: String,
-      required: true
+      required: true,
     },
     sr: {
       type: Boolean,
-      default: true
-    }
-  }
+      default: true,
+    },
+  },
 }
 </script>

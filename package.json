@@ -25,6 +25,9 @@
     "eslint": "^8.0.0",
     "html-to-image": "^1.9.0",
     "postcss": "^8.4.10",
-    "tailwindcss": "^3.1.5"
+    "tailwindcss": "^3.1.8",
+    "fast-glob": "^3.2.12",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13"
   }
 }

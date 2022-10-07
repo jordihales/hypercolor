@@ -8,28 +8,38 @@
       colors, perfect for your desktop or phone wallpaper.
     </content-banner>
 
-    <div class="grid max-w-screen-xl grid-cols-1 gap-8 px-4 mx-auto sm:px-6 lg:px-8 lg:grid-cols-4">
+    <div
+      class="mx-auto grid max-w-screen-xl grid-cols-1 gap-8 px-4 sm:px-6 lg:grid-cols-4 lg:px-8"
+    >
       <div class="lg:col-span-3">
         <div class="flex items-center text-white">
-          <action-save :gradient="gradient()" type="mesh" name="Hypercolor Gradient" />
+          <action-save
+            :gradient="gradient()"
+            type="mesh"
+            name="Hypercolor Gradient"
+          />
 
           <button
-            class="p-2.5 rounded-xl bg-gray-800/75 ml-2 hover:text-pink-500 transition-colors"
+            class="ml-2 rounded-xl bg-gray-800/75 p-2.5 transition-colors hover:text-pink-500"
             @click="handleRandomiser"
           >
-            <icon-refresh class="w-4 h-4" />
+            <icon-refresh class="h-4 w-4" />
           </button>
         </div>
 
         <div class="mt-4 lg:sticky lg:top-20">
-          <mesh-preview :gradient="gradient()" :controls="showControls" :stops="stops" />
+          <mesh-preview
+            :gradient="gradient()"
+            :controls="showControls"
+            :stops="stops"
+          />
         </div>
       </div>
 
       <div class="space-y-8 text-white lg:mt-[3.25rem]">
         <div class="flex gap-4">
           <button
-            class="w-full py-3 text-sm font-medium transition-colors rounded-xl bg-gray-800/75 hover:text-pink-500"
+            class="w-full rounded-xl bg-gray-800/75 py-3 text-sm font-medium transition-colors hover:text-pink-500"
             @click="showControls = !showControls"
           >
             <span v-if="showControls">Hide</span>
@@ -38,7 +48,7 @@
           </button>
 
           <button
-            class="w-full py-3 text-sm font-medium transition-colors rounded-xl bg-gray-800/75 hover:text-pink-500"
+            class="w-full rounded-xl bg-gray-800/75 py-3 text-sm font-medium transition-colors hover:text-pink-500"
             @click="addStop"
           >
             Add Stop
@@ -46,27 +56,33 @@
         </div>
 
         <div>
-          <generator-select id="Background Color" v-model="color" :label="true" :items="bgColors" />
+          <generator-select
+            id="Background Color"
+            v-model="color"
+            :label="true"
+            :items="bgColors"
+          />
         </div>
 
         <div>
-          <p class="text-xs font-medium">
-            Color Stops
-          </p>
+          <p class="text-xs font-medium">Color Stops</p>
 
           <div class="mt-2 space-y-1">
             <details
               v-for="(stop, index) in stops"
               :key="index"
-              class="border border-gray-800/75 rounded-xl p-2.5 focus-within:ring focus-within:ring-pink-500"
+              class="rounded-xl border border-gray-800/75 p-2.5 focus-within:ring focus-within:ring-pink-500"
             >
-              <summary class="flex items-center justify-between text-sm font-medium transition-colors cursor-pointer hover:text-pink-500 focus:ring-0">
+              <summary
+                class="flex cursor-pointer items-center justify-between text-sm font-medium transition-colors hover:text-pink-500 focus:ring-0"
+              >
                 <p class="text-xs font-medium">
                   {{ index + 1 }}
                 </p>
 
                 <p class="font-mono text-xs font-medium">
-                  {{ colors[index] }} / {{ stop.position.left }}% / {{ stop.position.top }}% / {{ stop.transparent }}%
+                  {{ colors[index] }} / {{ stop.position.left }}% /
+                  {{ stop.position.top }}% / {{ stop.transparent }}%
                 </p>
               </summary>
 
@@ -81,7 +97,11 @@
                       </span>
                     </label>
 
-                    <input id="Left" v-model="stop.position.left" type="range">
+                    <input
+                      id="Left"
+                      v-model="stop.position.left"
+                      type="range"
+                    />
                   </div>
 
                   <div>
@@ -93,7 +113,7 @@
                       </span>
                     </label>
 
-                    <input id="Top" v-model="stop.position.top" type="range">
+                    <input id="Top" v-model="stop.position.top" type="range" />
                   </div>
 
                   <div>
@@ -105,14 +125,22 @@
                       </span>
                     </label>
 
-                    <input id="Transparent" v-model="stop.transparent" type="range">
+                    <input
+                      id="Transparent"
+                      v-model="stop.transparent"
+                      type="range"
+                    />
                   </div>
                 </div>
 
-                <generator-select id="Background" v-model="colors[index]" :items="bgColors" />
+                <generator-select
+                  id="Background"
+                  v-model="colors[index]"
+                  :items="bgColors"
+                />
 
                 <button
-                  class="w-full py-3 text-sm font-medium transition-colors rounded-xl bg-gray-800/75 hover:text-pink-500"
+                  class="w-full rounded-xl bg-gray-800/75 py-3 text-sm font-medium transition-colors hover:text-pink-500"
                   @click="removeStop(index)"
                 >
                   Remove Stop
@@ -145,9 +173,9 @@ import { getColor } from '@/utils/colors'
 
 export default {
   name: 'MeshPage',
-  asyncData () {
+  asyncData() {
     return {
-      bgColors
+      bgColors,
     }
   },
   data() {
@@ -157,7 +185,7 @@ export default {
       stops: [],
       rgbColor: '',
       rgbColors: [],
-      showControls: false
+      showControls: false,
     }
   },
   head() {
@@ -168,37 +196,37 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            'Create beautiful mesh style gradients using the full range of Tailwind CSS colors, perfect for your desktop or phone wallpaper.'
-        }
-      ]
+            'Create beautiful mesh style gradients using the full range of Tailwind CSS colors, perfect for your desktop or phone wallpaper.',
+        },
+      ],
     }
   },
   watch: {
     color: {
       handler() {
         this.update()
-      }
+      },
     },
     colors: {
       handler() {
         this.update()
       },
-      deep: true
-    }
+      deep: true,
+    },
   },
   mounted() {
     this.handleRandomiser()
   },
   methods: {
-    getRandomColor (array) {
+    getRandomColor(array) {
       return array[Math.floor(Math.random() * array.length)]
     },
 
-    getRandomNumber () {
+    getRandomNumber() {
       return Math.floor(Math.random() * 100) + 1
     },
 
-    handleRandomiser () {
+    handleRandomiser() {
       this.color = this.getRandomColor(bgColors)
 
       this.colors = []
@@ -211,9 +239,9 @@ export default {
         const newStop = {
           position: {
             left: this.getRandomNumber(),
-            top: this.getRandomNumber()
+            top: this.getRandomNumber(),
           },
-          transparent: this.getRandomNumber()
+          transparent: this.getRandomNumber(),
         }
 
         this.stops.push(newStop)
@@ -225,7 +253,12 @@ export default {
     gradient() {
       return `
         background-color: ${this.rgbColor};
-        background-image: ${this.stops.map((stop, index) => `radial-gradient(at ${stop.position.left}% ${stop.position.top}%, ${this.rgbColors[index]} 0, transparent ${stop.transparent}%)`).join(', ')};
+        background-image: ${this.stops
+          .map(
+            (stop, index) =>
+              `radial-gradient(at ${stop.position.left}% ${stop.position.top}%, ${this.rgbColors[index]} 0, transparent ${stop.transparent}%)`
+          )
+          .join(', ')};
       `
     },
     generate() {
@@ -245,16 +278,17 @@ export default {
       const newStop = {
         position: {
           left: this.getRandomNumber(),
-          top: this.getRandomNumber()
+          top: this.getRandomNumber(),
         },
-        transparent: this.getRandomNumber()
+        transparent: this.getRandomNumber(),
       }
-      const color = this.bgColors[Math.floor(Math.random() * this.bgColors.length)]
+      const color =
+        this.bgColors[Math.floor(Math.random() * this.bgColors.length)]
 
       this.stops.push(newStop)
 
       this.colors.push(color)
-    }
-  }
+    },
+  },
 }
 </script>
