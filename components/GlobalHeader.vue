@@ -5,7 +5,7 @@
     <div
       class="mx-auto flex h-16 max-w-screen-xl items-center justify-between px-4 sm:px-6 lg:px-8"
     >
-      <nav class="hidden sm:flex sm:items-center sm:space-x-4 lg:space-x-8">
+      <nav class="hidden sm:flex sm:items-center sm:gap-4 lg:gap-8">
         <nuxt-link :to="{ name: 'index' }"> Gradients </nuxt-link>
 
         <nuxt-link
@@ -16,7 +16,7 @@
         />
       </nav>
 
-      <div class="hidden md:flex md:items-center md:space-x-4 lg:space-x-8">
+      <div class="hidden md:flex md:items-center md:gap-4 lg:gap-8">
         <header-jordi class="hidden md:block" />
         <header-mark class="hidden md:block" />
         <header-github />
@@ -46,7 +46,7 @@
           />
         </nav>
 
-        <div class="mt-8 flex items-center justify-center space-x-8">
+        <div class="mt-8 flex items-center justify-center gap-8">
           <header-jordi />
           <header-mark />
           <header-github />

@@ -9,7 +9,7 @@
     />
 
     <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center space-x-4">
+      <div class="flex items-center gap-4">
         <h2
           class="text-xl font-black uppercase tracking-wide text-white"
           v-text="name"

@@ -26,7 +26,7 @@
       </div>
     </div>
 
-    <div class="flex items-center space-x-2">
+    <div class="flex items-center gap-2">
       <button
         v-if="standard"
         class="rounded-xl bg-gray-800/75 p-2.5 transition-colors hover:text-pink-500"
