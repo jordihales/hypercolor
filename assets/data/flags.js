@@ -25,6 +25,11 @@ export const gradients = [
       'bg-[linear-gradient(180deg,_#FFF_33.333%,_#00966E_33.333%_66.666%,_#D62612_66.666%)]',
   },
   {
+    name: 'Canary Islands',
+    colors:
+      'bg-[linear-gradient(90deg,_#FFF_33.333%,_#0768A9_33.333%_66.666%,_#FC0_66.666%)]',
+  },
+  {
     name: 'Catalonia',
     colors:
       'bg-[repeating-linear-gradient(180deg,_#FCDD09,_#FCDD09_11.111%,_#DA121A_11.111%,_#DA121A_22.222%)]',
