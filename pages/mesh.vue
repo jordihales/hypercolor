@@ -168,8 +168,8 @@
 <script>
 /* eslint-disable space-before-function-paren */
 
-import { bgColors } from '~/assets/data/colors'
-import { getColor } from '@/utils/colors'
+import { bgColors } from '@/assets/data/tailwindColors'
+import { getBackgroundColor } from '@/utils/getColor'
 
 export default {
   name: 'MeshPage',
@@ -262,10 +262,10 @@ export default {
       `
     },
     generate() {
-      this.rgbColor = getColor(this.$refs.bgColor)
+      this.rgbColor = getBackgroundColor(this.$refs.bgColor)
 
       this.rgbColors = this.colors.map((_, index) =>
-        getColor(this.$refs[`color${index}`][0])
+        getBackgroundColor(this.$refs[`color${index}`][0])
       )
     },
     update() {

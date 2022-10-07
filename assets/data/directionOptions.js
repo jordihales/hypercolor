@@ -1,4 +1,4 @@
-export const directions = [
+export const directionOptions = [
   {
     key: 'top',
     chevron: '',

@@ -1,4 +1,4 @@
-export const gradients = [
+export const gradientsCore = [
   {
     name: 'Hyper',
     direction: 'bg-gradient-to-r',

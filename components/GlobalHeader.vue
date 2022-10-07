@@ -59,7 +59,7 @@
 <script>
 /* eslint-disable space-before-function-paren */
 
-import { navigation } from '@/assets/data/navigation'
+import { siteNavigation } from '@/assets/data/siteNavigation'
 
 export default {
   data() {
@@ -69,7 +69,7 @@ export default {
   },
   computed: {
     navigation() {
-      return navigation
+      return siteNavigation
     },
   },
   watch: {

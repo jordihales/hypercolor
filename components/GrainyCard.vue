@@ -33,7 +33,7 @@
 <script>
 /* eslint-disable space-before-function-paren */
 
-import { downloadImage } from '@/utils/download'
+import { createAndDownloadImage } from '@/utils/downloadImage'
 
 export default {
   props: {
@@ -62,7 +62,7 @@ export default {
   },
   methods: {
     handleImage() {
-      downloadImage(this.$refs.parent, this.name)
+      createAndDownloadImage(this.$refs.parent, this.name)
     },
   },
 }

@@ -13,13 +13,13 @@
 <script>
 /* eslint-disable space-before-function-paren */
 
-import { gradients } from '~/assets/data/gradients'
+import { gradientsCore } from '@/assets/data/gradientsCore'
 
 export default {
   name: 'HomePage',
   computed: {
     gradients() {
-      return gradients
+      return gradientsCore
     },
   },
 }

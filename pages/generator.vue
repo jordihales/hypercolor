@@ -27,13 +27,13 @@
 </template>
 
 <script>
-import { directions } from '~/assets/data/directions'
-import { fromColors, viaColors, toColors } from '~/assets/data/colors'
+import { directionOptions } from '@/assets/data/directionOptions.js'
+import { fromColors, viaColors, toColors } from '@/assets/data/tailwindColors'
 
 export default {
   name: 'GeneratorPage',
   asyncData() {
-    const filteredDirections = directions
+    const filteredDirections = directionOptions
       .flatMap((dir) => [dir.gradient, dir.radial, dir.conic])
       .filter((dir) => dir !== '')
       .sort()

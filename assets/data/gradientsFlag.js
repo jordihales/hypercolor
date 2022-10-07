@@ -1,4 +1,4 @@
-export const gradients = [
+export const gradientsFlag = [
   {
     name: 'Armenia',
     colors:
