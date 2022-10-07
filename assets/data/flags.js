@@ -167,6 +167,11 @@ export const gradients = [
       'bg-[linear-gradient(180deg,_#012169_15%,_#FFF_15%_30%,_#C8102E_30%_70%,_#FFF_70%_85%,_#012169_85%)]',
   },
   {
+    name: 'Trinidad & Tobago',
+    colors:
+      'bg-[linear-gradient(45deg,_#E00000_40%,_#FFF_40%_43.5%,_#000_43.5%_56.5%,_#FFF_56.5%_60%,_#E00000_60%)]',
+  },
+  {
     name: 'Ukraine',
     colors: 'bg-[linear-gradient(180deg,_#005BBB_50%,_#FFD500_50%)]',
   },
