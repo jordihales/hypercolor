@@ -8,20 +8,20 @@
       :br-color="brColor"
     />
 
-    <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
       <div class="flex items-center gap-4">
         <h2
-          class="text-xl font-black uppercase tracking-wide text-white"
+          class="text-xl font-black tracking-wide text-white uppercase"
           v-text="name"
         />
 
-        <span class="h-px w-6 bg-white/50" />
+        <span class="w-6 h-px bg-white/50" />
 
         <button
           class="rounded-xl bg-gray-800/75 p-2.5 text-white transition-colors hover:text-pink-500"
           @click="handleImage"
         >
-          <icon-image class="h-4 w-4" />
+          <icon-image class="w-4 h-4" />
         </button>
       </div>
     </div>
@@ -33,8 +33,6 @@
 </template>
 
 <script>
-/* eslint-disable space-before-function-paren */
-
 import { createAndDownloadImage } from '@/utils/downloadImage'
 import { getBackgroundColor, convertToRgba } from '@/utils/getColor'
 
@@ -42,30 +40,30 @@ export default {
   props: {
     tlColor: {
       type: String,
-      required: true,
+      required: true
     },
     trColor: {
       type: String,
-      required: true,
+      required: true
     },
     blColor: {
       type: String,
-      required: true,
+      required: true
     },
     brColor: {
       type: String,
-      required: true,
+      required: true
     },
     name: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
-  mounted() {
+  mounted () {
     this.drawCanvas()
   },
   methods: {
-    drawCanvas() {
+    drawCanvas () {
       const canvas = this.$refs.canvas
       const ctx = canvas.getContext('2d')
       const [width, height] = [window.innerWidth, window.innerHeight]
@@ -107,9 +105,9 @@ export default {
       ctx.fillStyle = topLeft
       ctx.fillRect(0, 0, width, height)
     },
-    handleImage() {
+    handleImage () {
       createAndDownloadImage(this.$refs.canvas, this.name)
-    },
-  },
+    }
+  }
 }
 </script>

@@ -8,12 +8,17 @@
 
     <select
       :id="id"
-      class="w-full rounded-xl border-gray-800/75 bg-gray-900 p-3 font-medium sm:text-sm"
+      class="w-full p-3 font-medium bg-gray-900 rounded-xl border-gray-800/75 sm:text-sm"
       :class="`${!sr && 'mt-2'}`"
       :value="value"
       @input="$emit('input', $event.target.value)"
     >
-      <option v-for="item of items" :key="item" :value="item" v-text="item" />
+      <option
+        v-for="item of items"
+        :key="labelKey ? item[labelKey] : item"
+        :value="valueKey ? item[valueKey] : item"
+        v-text="labelKey ? item[labelKey] : item"
+      />
     </select>
   </div>
 </template>
@@ -36,6 +41,14 @@ export default {
     sr: {
       type: Boolean,
       default: true,
+    },
+    labelKey: {
+      type: String,
+      default: '',
+    },
+    valueKey: {
+      type: String,
+      default: '',
     },
   },
 }

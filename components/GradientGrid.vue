@@ -23,16 +23,16 @@ export default {
   props: {
     gradients: {
       type: Array,
-      required: true,
+      required: true
     },
     directions: {
       type: Boolean,
-      default: true,
+      default: true
     },
     overlap: {
       type: Boolean,
-      default: true,
-    },
-  },
+      default: true
+    }
+  }
 }
 </script>

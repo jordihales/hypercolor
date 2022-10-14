@@ -1,8 +1,6 @@
-/* eslint-disable space-before-function-paren */
-
 import * as htmlToImage from 'html-to-image'
 
-export function createAndDownloadImage(gradientEl, imageFilename) {
+export function createAndDownloadImage (gradientEl, imageFilename) {
   htmlToImage
     .toJpeg(gradientEl, { pixelRatio: 1, quality: 1 })
     .then((imageData) => {

@@ -13,22 +13,20 @@
 </template>
 
 <script>
-/* eslint-disable space-before-function-paren */
-
 export default {
   name: 'FavouritePage',
-  data() {
+  data () {
     return {
-      gradients: [],
+      gradients: []
     }
   },
-  mounted() {
+  mounted () {
     this.setGradients()
   },
   methods: {
-    setGradients() {
+    setGradients () {
       this.gradients = JSON.parse(localStorage.getItem('gradients'))
-    },
-  },
+    }
+  }
 }
 </script>

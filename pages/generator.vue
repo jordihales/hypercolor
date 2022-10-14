@@ -15,6 +15,8 @@
           id="Direction"
           v-model="direction"
           :items="directions"
+          label-key="name"
+          value-key="css"
         />
         <generator-select id="From" v-model="from" :items="fromColors" />
         <generator-select id="Via" v-model="via" :items="viaColors" />
@@ -27,33 +29,27 @@
 </template>
 
 <script>
-import { directionOptions } from '@/assets/data/directionOptions.js'
-import { fromColors, viaColors, toColors } from '@/assets/data/tailwindColors'
+import { createColorClasses } from '@/utils/createColors'
+import { getDirections } from '@/utils/getDirections'
 
 export default {
   name: 'GeneratorPage',
-  asyncData() {
-    const filteredDirections = directionOptions
-      .flatMap((dir) => [dir.gradient, dir.radial, dir.conic])
-      .filter((dir) => dir !== '')
-      .sort()
-
+  asyncData () {
     return {
-      directions: filteredDirections,
-      fromColors,
-      viaColors,
-      toColors,
+      fromColors: createColorClasses('from'),
+      viaColors: createColorClasses('via'),
+      toColors: createColorClasses('to')
     }
   },
-  data() {
+  data () {
     return {
       direction: '',
       from: '',
       via: '',
-      to: '',
+      to: ''
     }
   },
-  head() {
+  head () {
     return {
       title: 'Gradient Generator for Tailwind CSS',
       meta: [
@@ -61,31 +57,34 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            'Create your own Tailwind CSS gradient with the full Tailwind CSS color library and the extended radial and conic gradient options provided through Hypercolor.',
-        },
-      ],
+            'Create your own Tailwind CSS gradient with the full Tailwind CSS color library and the extended radial and conic gradient options provided through Hypercolor.'
+        }
+      ]
     }
   },
   computed: {
-    gradient() {
+    directions () {
+      return getDirections()
+    },
+    gradient () {
       return this.via !== 'none'
         ? `${this.direction} ${this.from} ${this.via} ${this.to}`
         : `${this.direction} ${this.from} ${this.to}`
-    },
+    }
   },
-  mounted() {
+  mounted () {
     this.handleRandomiser()
   },
   methods: {
-    getRandom(array) {
+    getRandom (array) {
       return array[Math.floor(Math.random() * array.length)]
     },
-    handleRandomiser() {
-      this.direction = this.getRandom(this.directions)
+    handleRandomiser () {
+      this.direction = this.getRandom(this.directions).css
       this.from = this.getRandom(this.fromColors)
       this.via = this.getRandom(this.viaColors)
       this.to = this.getRandom(this.toColors)
-    },
-  },
+    }
+  }
 }
 </script>
