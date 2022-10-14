@@ -32,11 +32,6 @@
 <script>
 /* eslint-disable space-before-function-paren */
 
-// import {
-//   directionOptions,
-//   directionOptionsEnhanced,
-// } from '@/assets/data/directionOptions'
-
 import { getDirections } from '@/utils/getDirections'
 
 export default {
@@ -81,9 +76,6 @@ export default {
     },
     directions() {
       return getDirections()
-      // return this.version
-      //   ? directionOptions
-      //   : directionOptions.filter((dir) => dir.key !== 'center')
     },
     favourite() {
       return this.isFavourite ? 'text-rose-500' : 'text-white'

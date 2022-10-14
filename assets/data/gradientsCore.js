@@ -316,69 +316,58 @@ export const gradientsCore = [
   },
   {
     name: 'Beam of Light',
-    direction: 'bg-conic-to-t',
+    direction: 'bg-[conic-gradient(at_top,_var(--tw-gradient-stops))]',
     colors: 'from-gray-900 via-gray-100 to-gray-900',
-    version: 'Conic',
   },
   {
     name: 'Safari Sunset',
-    direction: 'bg-conic-to-l',
+    direction: 'bg-[conic-gradient(at_left,_var(--tw-gradient-stops))]',
     colors: 'from-yellow-500 via-purple-500 to-blue-500',
-    version: 'Conic',
   },
   {
     name: 'High Tide',
-    direction: 'bg-conic-to-tl',
+    direction: 'bg-[conic-gradient(at_top,_var(--tw-gradient-stops))]l',
     colors: 'from-sky-500 via-orange-200 to-yellow-600',
-    version: 'Conic',
   },
   {
     name: 'Hunniepop',
-    direction: 'bg-conic-to-bl',
+    direction: 'bg-[conic-gradient(at_bottom_left,_var(--tw-gradient-stops))]',
     colors: 'from-fuchsia-300 via-green-400 to-rose-700',
-    version: 'Conic',
   },
   {
     name: 'Soft Metal',
-    direction: 'bg-conic-to-r',
+    direction: 'bg-[conic-gradient(at_right,_var(--tw-gradient-stops))]',
     colors: 'from-indigo-200 via-slate-600 to-indigo-200',
-    version: 'Conic',
   },
   {
     name: 'Coral Sun',
-    direction: 'bg-conic-to-tl',
+    direction: 'bg-[conic-gradient(at_top,_var(--tw-gradient-stops))]l',
     colors: 'from-yellow-200 via-emerald-200 to-yellow-200',
-    version: 'Conic',
   },
   {
     name: 'Power Pink',
-    direction: 'bg-conic-to-l',
+    direction: 'bg-[conic-gradient(at_left,_var(--tw-gradient-stops))]',
     colors: 'from-rose-500 to-indigo-700',
-    version: 'Conic',
   },
   {
     name: 'Powder Blue',
-    direction: 'bg-conic-to-l',
+    direction: 'bg-[conic-gradient(at_left,_var(--tw-gradient-stops))]',
     colors: 'from-sky-400 to-blue-800',
-    version: 'Conic',
   },
   {
     name: 'Moody Sunset',
-    direction: 'bg-conic-to-l',
+    direction: 'bg-[conic-gradient(at_left,_var(--tw-gradient-stops))]',
     colors: 'from-rose-900 via-amber-800 to-rose-400',
-    version: 'Conic',
   },
   {
     name: 'Burnt Sand',
-    direction: 'bg-conic-to-l',
+    direction: 'bg-[conic-gradient(at_left,_var(--tw-gradient-stops))]',
     colors: 'from-yellow-200 via-red-500 to-fuchsia-500',
-    version: 'Conic',
   },
   {
     name: 'Blue / White Split',
-    direction: 'bg-conic-to-b',
+    direction: 'bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))]',
     colors: 'from-white via-sky-500 to-sky-500',
-    version: 'Conic',
   },
   {
     name: 'Purple Beam',
@@ -387,9 +376,8 @@ export const gradientsCore = [
   },
   {
     name: 'Sand Beam',
-    direction: 'bg-conic-to-t',
+    direction: 'bg-[conic-gradient(at_top,_var(--tw-gradient-stops))]',
     colors: 'from-orange-900 via-amber-100 to-orange-900',
-    version: 'Conic',
   },
   {
     name: 'Island Waves',
@@ -408,9 +396,8 @@ export const gradientsCore = [
   },
   {
     name: 'Peach Pie',
-    direction: 'bg-conic-to-r',
+    direction: 'bg-[conic-gradient(at_right,_var(--tw-gradient-stops))]',
     colors: 'from-red-900 via-violet-200 to-orange-500',
-    version: 'Conic',
   },
   {
     name: 'Salem',
@@ -419,38 +406,36 @@ export const gradientsCore = [
   },
   {
     name: 'Purple Burst',
-    direction: 'bg-radial',
+    direction:
+      'bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]',
     colors: 'from-purple-900 to-indigo-500',
-    version: 'Radial',
   },
   {
     name: 'Amber Sunrise',
-    direction: 'bg-radial-at-b',
+    direction:
+      'bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))]',
     colors: 'from-amber-900 to-yellow-300',
-    version: 'Radial',
   },
   {
     name: 'Sky Sea',
-    direction: 'bg-radial-at-r',
+    direction:
+      'bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))]',
     colors: 'from-sky-400 to-indigo-900',
-    version: 'Radial',
   },
   {
     name: 'Rocket Power',
-    direction: 'bg-radial-at-t',
+    direction: 'bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))]',
     colors: 'from-amber-700 via-orange-300 to-rose-800',
-    version: 'Radial',
   },
   {
     name: 'Blue Flame',
-    direction: 'bg-radial-at-b',
+    direction:
+      'bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))]',
     colors: 'from-amber-200 via-violet-600 to-sky-900',
-    version: 'Radial',
   },
   {
     name: 'Warm Glow',
-    direction: 'bg-radial-at-t',
+    direction: 'bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))]',
     colors: 'from-gray-300 via-fuchsia-600 to-orange-600',
-    version: 'Radial',
   },
 ]
