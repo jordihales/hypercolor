@@ -10,7 +10,6 @@
         :colors="gradient.colors"
         :direction="gradient.direction"
         :controls="directions"
-        :overlap="overlap"
         v-on="$listeners"
       />
     </div>
@@ -25,10 +24,6 @@ export default {
       required: true,
     },
     directions: {
-      type: Boolean,
-      default: true,
-    },
-    overlap: {
       type: Boolean,
       default: true,
     },

@@ -11,7 +11,7 @@
 
     <div ref="gradient" class="h-64 rounded-3xl" :class="gradient" />
 
-    <div class="mx-1.5 rounded-3xl bg-gray-900 p-6 text-white" :class="card">
+    <div class="mx-1.5 rounded-3xl bg-gray-900 p-6 text-white">
       <p class="font-black tracking-wide uppercase" v-text="name" />
 
       <div class="flex items-center gap-4 mt-4">
@@ -50,10 +50,6 @@ export default {
       type: Boolean,
       default: true,
     },
-    overlap: {
-      type: Boolean,
-      default: true,
-    },
   },
   data() {
     return {
@@ -73,9 +69,6 @@ export default {
     },
     favourite() {
       return this.isFavourite ? 'text-rose-500' : 'text-white'
-    },
-    card() {
-      return this.overlap && '-mt-8'
     },
   },
   mounted() {

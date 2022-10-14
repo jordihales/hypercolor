@@ -7,11 +7,7 @@
       A collection of country flags created with Tailwind CSS.
     </content-banner>
 
-    <gradient-grid
-      :gradients="gradients"
-      :directions="false"
-      :overlap="false"
-    />
+    <gradient-grid :gradients="gradients" :directions="false" />
   </div>
 </template>
 
@@ -21,9 +17,9 @@ import { gradientsFlag } from '@/assets/data/gradientsFlag'
 export default {
   name: 'FlagsPage',
   computed: {
-    gradients () {
+    gradients() {
       return gradientsFlag
-    }
-  }
+    },
+  },
 }
 </script>
