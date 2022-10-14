@@ -11,7 +11,7 @@
 
     <div ref="gradient" class="h-64 rounded-3xl" :class="gradient" />
 
-    <div class="mx-1.5 rounded-3xl bg-gray-900 p-6 text-white">
+    <div class="mx-1.5 -mt-6 rounded-3xl bg-gray-900 p-6 text-white">
       <p class="font-black tracking-wide uppercase" v-text="name" />
 
       <div class="flex items-center gap-4 mt-4">
