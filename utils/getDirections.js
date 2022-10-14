@@ -1,14 +1,14 @@
 import {
   primaryDirections,
   conicDirections,
-  radialDirections,
+  radialDirections
 } from '@/assets/data/directionOptions'
 
-export function getDirections() {
+export function getDirections () {
   return [...primaryDirections, ...conicDirections, ...radialDirections]
 }
 
-export function getDirectionClasses() {
+export function getDirectionClasses () {
   return getDirections().map(function (gradientDirection) {
     return gradientDirection.css
   })

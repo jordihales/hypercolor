@@ -20,16 +20,16 @@ export default {
   props: {
     gradient: {
       type: String,
-      required: true,
+      required: true
     },
     controls: {
       type: Boolean,
-      default: false,
+      default: false
     },
     stops: {
       type: Array,
-      required: true,
-    },
-  },
+      required: true
+    }
+  }
 }
 </script>

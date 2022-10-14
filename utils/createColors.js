@@ -1,17 +1,17 @@
 import {
   themeColors,
   themeColorShades,
-  themeColorsWithoutShades,
+  themeColorsWithoutShades
 } from '@/assets/data/tailwindColors'
 
-export function createColorClasses(classPrefix) {
+export function createColorClasses (classPrefix) {
   return themeColors.flatMap(function (tailwindColor) {
     if (themeColorsWithoutShades.includes(tailwindColor)) {
       return `${classPrefix}-${tailwindColor}`
     }
 
     return themeColorShades.flatMap(
-      (tailwindColorShade) =>
+      tailwindColorShade =>
         `${classPrefix}-${tailwindColor}-${tailwindColorShade}`
     )
   })

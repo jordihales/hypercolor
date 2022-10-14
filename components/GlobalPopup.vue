@@ -1,9 +1,9 @@
 <template>
   <aside
     v-if="show"
-    class="fixed bottom-4 right-4 z-50 rounded-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1"
+    class="fixed z-50 p-1 bottom-4 right-4 rounded-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500"
   >
-    <div class="flex items-center rounded-lg bg-gray-900 px-5 py-3">
+    <div class="flex items-center px-5 py-3 bg-gray-900 rounded-lg">
       <a
         href="https://www.hyperui.dev/"
         target="_blank"
@@ -18,22 +18,20 @@
         aria-label="Close Popup"
         @click="hide"
       >
-        <icon-close class="h-4 w-4" />
+        <icon-close class="w-4 h-4" />
       </button>
     </div>
   </aside>
 </template>
 
 <script>
-/* eslint-disable space-before-function-paren */
-
 export default {
-  data() {
+  data () {
     return {
-      show: false,
+      show: false
     }
   },
-  mounted() {
+  mounted () {
     const showPopup = localStorage.getItem('showPopup')
     const showPopupDate = localStorage.getItem('showPopupDate')
     const hourHasPassed =
@@ -52,12 +50,12 @@ export default {
     }
   },
   methods: {
-    hide() {
+    hide () {
       this.show = false
 
       localStorage.setItem('showPopup', 'FALSE')
       localStorage.setItem('showPopupDate', new Date().toISOString())
-    },
-  },
+    }
+  }
 }
 </script>

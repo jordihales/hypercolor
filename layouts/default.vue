@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'LayoutComponent',
+  name: 'LayoutComponent'
 }
 </script>
 

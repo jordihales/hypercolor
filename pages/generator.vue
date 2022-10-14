@@ -34,7 +34,22 @@ import { getDirections } from '@/utils/getDirections'
 
 export default {
   name: 'GeneratorPage',
-  head() {
+  asyncData () {
+    return {
+      fromColors: createColorClasses('from'),
+      viaColors: createColorClasses('via'),
+      toColors: createColorClasses('to')
+    }
+  },
+  data () {
+    return {
+      direction: '',
+      from: '',
+      via: '',
+      to: ''
+    }
+  },
+  head () {
     return {
       title: 'Gradient Generator for Tailwind CSS',
       meta: [
@@ -42,49 +57,34 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            'Create your own Tailwind CSS gradient with the full Tailwind CSS color library and the extended radial and conic gradient options provided through Hypercolor.',
-        },
-      ],
+            'Create your own Tailwind CSS gradient with the full Tailwind CSS color library and the extended radial and conic gradient options provided through Hypercolor.'
+        }
+      ]
     }
-  },
-  asyncData() {
-    return {
-      fromColors: createColorClasses('from'),
-      viaColors: createColorClasses('via'),
-      toColors: createColorClasses('to'),
-    }
-  },
-  data() {
-    return {
-      direction: '',
-      from: '',
-      via: '',
-      to: '',
-    }
-  },
-  mounted() {
-    this.handleRandomiser()
   },
   computed: {
-    directions() {
+    directions () {
       return getDirections()
     },
-    gradient() {
+    gradient () {
       return this.via !== 'none'
         ? `${this.direction} ${this.from} ${this.via} ${this.to}`
         : `${this.direction} ${this.from} ${this.to}`
-    },
+    }
+  },
+  mounted () {
+    this.handleRandomiser()
   },
   methods: {
-    getRandom(array) {
+    getRandom (array) {
       return array[Math.floor(Math.random() * array.length)]
     },
-    handleRandomiser() {
+    handleRandomiser () {
       this.direction = this.getRandom(this.directions).css
       this.from = this.getRandom(this.fromColors)
       this.via = this.getRandom(this.viaColors)
       this.to = this.getRandom(this.toColors)
-    },
-  },
+    }
+  }
 }
 </script>

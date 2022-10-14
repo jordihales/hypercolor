@@ -5,22 +5,22 @@ module.exports = {
   content: [
     'assets/**/*.js',
     'components/**/*.{vue,js}',
-    'pages/**/*.{vue,js}',
+    'pages/**/*.{vue,js}'
   ],
   safelist: [
     {
-      pattern: /(from|via|to|bg)-(black|white)/,
+      pattern: /(from|via|to|bg)-(black|white)/
     },
     {
-      pattern: /(from|via|to|bg)-(.+)-([1-9]00)/,
-    },
+      pattern: /(from|via|to|bg)-(.+)-([1-9]00)/
+    }
   ],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
-      },
-    },
+        sans: ['Inter', ...defaultTheme.fontFamily.sans]
+      }
+    }
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms')]
 }

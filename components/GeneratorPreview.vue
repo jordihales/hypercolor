@@ -48,27 +48,27 @@ export default {
   props: {
     gradient: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
-  data() {
+  data () {
     return {
       dark: true,
-      edit: false,
+      edit: false
     }
   },
   computed: {
-    background() {
+    background () {
       return this.dark ? 'bg-black' : 'bg-white'
-    },
+    }
   },
   methods: {
-    handleBackground() {
+    handleBackground () {
       this.dark = !this.dark
     },
-    handleEdit() {
+    handleEdit () {
       this.$nextTick(() => this.$refs.text.focus())
-    },
-  },
+    }
+  }
 }
 </script>

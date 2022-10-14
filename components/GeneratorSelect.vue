@@ -44,11 +44,11 @@ export default {
     },
     labelKey: {
       type: String,
-      required: false,
+      default: '',
     },
     valueKey: {
       type: String,
-      required: false,
+      default: '',
     },
   },
 }

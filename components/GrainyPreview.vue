@@ -17,13 +17,13 @@ export default {
   props: {
     gradient: {
       type: String,
-      required: true,
+      required: true
     },
     color: {
       type: String,
-      required: true,
-    },
-  },
+      required: true
+    }
+  }
 }
 </script>
 

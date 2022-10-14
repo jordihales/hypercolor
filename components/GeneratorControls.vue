@@ -31,16 +31,16 @@ export default {
   props: {
     gradient: {
       type: String,
-      required: true,
+      required: true
     },
     color: {
       type: String,
-      default: '',
+      default: ''
     },
     type: {
       type: String,
-      default: 'standard',
-    },
-  },
+      default: 'standard'
+    }
+  }
 }
 </script>

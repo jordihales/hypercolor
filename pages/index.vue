@@ -11,16 +11,14 @@
 </template>
 
 <script>
-/* eslint-disable space-before-function-paren */
-
 import { gradientsCore } from '@/assets/data/gradientsCore'
 
 export default {
   name: 'HomePage',
   computed: {
-    gradients() {
+    gradients () {
       return gradientsCore
-    },
-  },
+    }
+  }
 }
 </script>

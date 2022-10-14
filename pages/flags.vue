@@ -16,16 +16,14 @@
 </template>
 
 <script>
-/* eslint-disable space-before-function-paren */
-
 import { gradientsFlag } from '@/assets/data/gradientsFlag'
 
 export default {
   name: 'FlagsPage',
   computed: {
-    gradients() {
+    gradients () {
       return gradientsFlag
-    },
-  },
+    }
+  }
 }
 </script>

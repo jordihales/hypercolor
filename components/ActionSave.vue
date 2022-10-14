@@ -4,23 +4,23 @@
       <div
         v-if="standard"
         ref="image"
-        class="h-screen w-screen"
+        class="w-screen h-screen"
         :class="gradient"
       />
       <div
         v-if="mesh"
         ref="image"
-        class="h-screen w-screen"
+        class="w-screen h-screen"
         :style="gradient"
       />
       <div
         v-if="grainy"
         ref="image"
-        class="relative h-screen w-screen"
+        class="relative w-screen h-screen"
         :class="gradient"
       >
         <div
-          class="noise absolute inset-0 brightness-100 contrast-150 filter"
+          class="absolute inset-0 noise brightness-100 contrast-150 filter"
           :style="`--color: ${color}`"
         />
       </div>
@@ -33,7 +33,7 @@
         aria-label="Copy Tailwind CSS class names"
         @click="handleTailwind"
       >
-        <icon-tailwind class="h-4 w-4" />
+        <icon-tailwind class="w-4 h-4" />
       </button>
 
       <button
@@ -42,7 +42,7 @@
         aria-label="Copy CSS"
         @click="handleCode"
       >
-        <icon-code class="h-4 w-4" />
+        <icon-code class="w-4 h-4" />
       </button>
 
       <button
@@ -50,15 +50,13 @@
         aria-label="Download image"
         @click="handleImage"
       >
-        <icon-image class="h-4 w-4" />
+        <icon-image class="w-4 h-4" />
       </button>
     </div>
   </div>
 </template>
 
 <script>
-/* eslint-disable space-before-function-paren */
-
 import { getBackgroundImage } from '@/utils/getColor'
 import { createAndDownloadImage } from '@/utils/downloadImage'
 
@@ -66,40 +64,40 @@ export default {
   props: {
     name: {
       type: String,
-      required: true,
+      required: true
     },
     gradient: {
       type: String,
-      required: true,
+      required: true
     },
     color: {
       type: String,
-      default: '',
+      default: ''
     },
     type: {
       type: String,
-      default: 'standard',
-    },
+      default: 'standard'
+    }
   },
   computed: {
-    standard() {
+    standard () {
       return this.type === 'standard'
     },
-    mesh() {
+    mesh () {
       return this.type === 'mesh'
     },
-    grainy() {
+    grainy () {
       return this.type === 'grainy'
-    },
+    }
   },
   methods: {
-    handleTailwind() {
+    handleTailwind () {
       this.code = this.gradient
       navigator.clipboard.writeText(this.code)
 
       this.showToast()
     },
-    handleCode() {
+    handleCode () {
       this.code = this.mesh
         ? this.gradient
         : getBackgroundImage(this.$refs.image)
@@ -108,13 +106,13 @@ export default {
 
       this.showToast()
     },
-    handleImage() {
+    handleImage () {
       createAndDownloadImage(this.$refs.image, this.name)
     },
-    showToast() {
+    showToast () {
       this.$toast.success('Copied to Clipboard')
-    },
-  },
+    }
+  }
 }
 </script>
 
