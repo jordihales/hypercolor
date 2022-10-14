@@ -11,7 +11,7 @@
 
     <div ref="gradient" class="h-64 rounded-3xl" :class="gradient" />
 
-    <div class="mx-1.5 rounded-3xl bg-gray-900 p-6 text-white" :class="card">
+    <div class="mx-1.5 -mt-6 rounded-3xl bg-gray-900 p-6 text-white">
       <p class="font-black tracking-wide uppercase" v-text="name" />
 
       <div class="flex items-center gap-4 mt-4">
@@ -36,65 +36,49 @@ export default {
   props: {
     name: {
       type: String,
-      required: true
+      required: true,
     },
     colors: {
       type: String,
-      required: true
+      required: true,
     },
     direction: {
       type: [String, Boolean],
-      default: false
-    },
-    version: {
-      type: [String, Boolean],
-      default: false
+      default: false,
     },
     controls: {
       type: Boolean,
-      default: true
+      default: true,
     },
-    overlap: {
-      type: Boolean,
-      default: true
-    }
   },
-  data () {
+  data() {
     return {
       currentDirection: this.direction,
       copyCode: '',
-      isFavourite: false
+      isFavourite: false,
     }
   },
   computed: {
-    gradient () {
+    gradient() {
       return this.currentDirection
         ? `${this.currentDirection} ${this.colors}`
         : `${this.colors}`
     },
-    directions () {
+    directions() {
       return getDirections()
     },
-    favourite () {
+    favourite() {
       return this.isFavourite ? 'text-rose-500' : 'text-white'
     },
-    card () {
-      return this.overlap && '-mt-8'
-    }
   },
-  mounted () {
+  mounted() {
     this.isFavourite = this.checkFavourite()
   },
   methods: {
-    handleDirection (data) {
-      this.currentDirection = this.version
-        ? data[this.version.toLowerCase()]
-        : data.gradient
-    },
-    saveGradient () {
+    saveGradient() {
       const gradients = JSON.parse(localStorage.getItem('gradients')) || []
 
-      const exists = gradients.find(gradient => gradient.name === this.name)
+      const exists = gradients.find((gradient) => gradient.name === this.name)
 
       if (exists) {
         gradients.splice(gradients.indexOf(exists), 1)
@@ -107,7 +91,6 @@ export default {
           name: this.name,
           colors: this.colors,
           direction: this.currentDirection,
-          version: this.version
         })
 
         this.isFavourite = true
@@ -119,11 +102,11 @@ export default {
 
       this.$emit('update')
     },
-    checkFavourite () {
+    checkFavourite() {
       const gradients = JSON.parse(localStorage.getItem('gradients')) || []
 
-      return gradients.find(gradient => gradient.name === this.name)
-    }
-  }
+      return gradients.find((gradient) => gradient.name === this.name)
+    },
+  },
 }
 </script>
