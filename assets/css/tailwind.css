@@ -4,3 +4,15 @@
 @import 'tailwindcss/components';
 @import './range.css';
 @import 'tailwindcss/utilities';
+
+*:focus {
+  @apply border-transparent outline-none ring-2 ring-pink-500 ring-offset-2 ring-offset-gray-900;
+}
+
+.toasted-container.notification-container.bottom-center {
+  @apply mx-auto max-w-xs px-4;
+}
+
+.toasted.notification.toasted-primary.success {
+  @apply justify-center rounded-lg border-2 border-pink-500 bg-gray-900 px-6 py-4 text-sm font-medium text-white shadow-xl;
+}
