@@ -7,6 +7,14 @@ module.exports = {
     'components/**/*.{vue,js}',
     'assets/**/*.js',
   ],
+  safelist: [
+    {
+      pattern: /(from|via|to|bg)-(black|white)/,
+    },
+    {
+      pattern: /(from|via|to|bg)-(.+)-([1-9]00)/,
+    },
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -42,16 +50,7 @@ module.exports = {
         'radial-at-br':
           'radial-gradient(ellipse at bottom right, var(--tw-gradient-stops))',
       },
-      rotate: {
-        135: '135deg',
-        '-135': '-135deg',
-      },
     },
-  },
-  variants: {
-    gradientColorStops: [],
-    backgroundImage: [],
-    extend: {},
   },
   plugins: [require('@tailwindcss/forms')],
 }

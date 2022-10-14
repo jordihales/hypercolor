@@ -19,6 +19,8 @@
           id="Direction"
           v-model="direction"
           :items="directions"
+          label-key="name"
+          value-key="css"
         />
         <generator-select id="From" v-model="from" :items="fromColors" />
         <generator-select id="Via" v-model="via" :items="viaColors" />
@@ -34,33 +36,12 @@
 
 <script>
 import { directionOptions } from '@/assets/data/directionOptions'
-import { fromColors, viaColors, toColors } from '@/assets/data/tailwindColors'
 import { getBackgroundColor } from '@/utils/getColor'
+import { createColorClasses } from '@/utils/createColors'
+import { getDirections } from '@/utils/getDirections'
 
 export default {
   name: 'GrainyPage',
-  asyncData() {
-    const filteredDirections = directionOptions
-      .flatMap((dir) => [dir.gradient, dir.radial, dir.conic])
-      .filter((dir) => dir !== '')
-      .sort()
-
-    return {
-      directions: filteredDirections,
-      fromColors,
-      viaColors,
-      toColors,
-    }
-  },
-  data() {
-    return {
-      direction: '',
-      from: '',
-      via: '',
-      to: '',
-      color: '',
-    }
-  },
   head() {
     return {
       title: 'Gradient Generator for Tailwind CSS',
@@ -74,6 +55,27 @@ export default {
       ],
     }
   },
+  asyncData() {
+    return {
+      fromColors: createColorClasses('from'),
+      viaColors: createColorClasses('via'),
+      toColors: createColorClasses('to'),
+    }
+  },
+  data() {
+    return {
+      direction: '',
+      from: '',
+      via: '',
+      to: '',
+      color: '',
+    }
+  },
+  mounted() {
+    this.handleRandomiser()
+
+    this.$nextTick(() => this.getColor())
+  },
   computed: {
     gradient() {
       return this.via !== 'none'
@@ -83,23 +85,21 @@ export default {
     bgColor() {
       return this.from.replace('from', 'bg')
     },
+    directions() {
+      return getDirections()
+    },
   },
   watch: {
     from() {
       this.getColor()
     },
   },
-  mounted() {
-    this.handleRandomiser()
-
-    this.$nextTick(() => this.getColor())
-  },
   methods: {
     getRandom(array) {
       return array[Math.floor(Math.random() * array.length)]
     },
     handleRandomiser() {
-      this.direction = this.getRandom(this.directions)
+      this.direction = this.getRandom(this.directions).css
       this.from = this.getRandom(this.fromColors)
       this.via = this.getRandom(this.viaColors)
       this.to = this.getRandom(this.toColors)
