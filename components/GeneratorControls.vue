@@ -14,6 +14,7 @@
             class="ml-2 rounded-xl bg-gray-800/75 p-2.5 transition-colors hover:text-pink-500"
             @click="$emit('random')"
           >
+            <span class="sr-only">Random Gradient</span>
             <icon-refresh class="w-4 h-4" />
           </button>
         </div>
@@ -31,16 +32,16 @@ export default {
   props: {
     gradient: {
       type: String,
-      required: true
+      required: true,
     },
     color: {
       type: String,
-      default: ''
+      default: '',
     },
     type: {
       type: String,
-      default: 'standard'
-    }
-  }
+      default: 'standard',
+    },
+  },
 }
 </script>

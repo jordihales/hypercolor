@@ -23,6 +23,7 @@
             class="ml-2 rounded-xl bg-gray-800/75 p-2.5 transition-colors hover:text-pink-500"
             @click="handleRandomiser"
           >
+            <span class="sr-only">Random Gradient</span>
             <icon-refresh class="w-4 h-4" />
           </button>
         </div>
@@ -89,7 +90,10 @@
               <div class="mt-4 space-y-4">
                 <div class="grid grid-cols-2 gap-4">
                   <div>
-                    <label for="Left" class="mb-1 text-xs font-medium">
+                    <label
+                      :for="`Left${index}`"
+                      class="mb-1 text-xs font-medium"
+                    >
                       Left -
 
                       <span class="font-mono text-xs font-medium">
@@ -98,14 +102,17 @@
                     </label>
 
                     <input
-                      id="Left"
+                      :id="`Left${index}`"
                       v-model="stop.position.left"
                       type="range"
                     />
                   </div>
 
                   <div>
-                    <label for="Top" class="mb-1 text-xs font-medium">
+                    <label
+                      :for="`Top${index}`"
+                      class="mb-1 text-xs font-medium"
+                    >
                       Top -
 
                       <span class="font-mono text-xs font-medium">
@@ -113,11 +120,18 @@
                       </span>
                     </label>
 
-                    <input id="Top" v-model="stop.position.top" type="range" />
+                    <input
+                      :id="`Top${index}`"
+                      v-model="stop.position.top"
+                      type="range"
+                    />
                   </div>
 
                   <div>
-                    <label for="Transparent" class="mb-1 text-xs font-medium">
+                    <label
+                      :for="`Transparent${index}`"
+                      class="mb-1 text-xs font-medium"
+                    >
                       Transparent -
 
                       <span class="font-mono text-xs font-medium">
@@ -126,7 +140,7 @@
                     </label>
 
                     <input
-                      id="Transparent"
+                      :id="`Transparent${index}`"
                       v-model="stop.transparent"
                       type="range"
                     />
@@ -134,7 +148,7 @@
                 </div>
 
                 <generator-select
-                  id="Background"
+                  :id="`Background${index}`"
                   v-model="colors[index]"
                   :items="bgColors"
                 />
