@@ -16,11 +16,12 @@
 
       <div class="flex items-center gap-4 mt-4">
         <generator-select
-          id="Direction"
+          :id="id"
           v-model="currentDirection"
           :items="directions"
           label-key="name"
           value-key="css"
+          v-if="direction"
         />
 
         <action-save :gradient="gradient" :name="name" />
@@ -69,6 +70,9 @@ export default {
     },
     favourite() {
       return this.isFavourite ? 'text-rose-500' : 'text-white'
+    },
+    id() {
+      return `Direction${this.name.replace(' ', '')}`
     },
   },
   mounted() {

@@ -57,7 +57,7 @@
 
         <div>
           <generator-select
-            id="Background Color"
+            id="BackgroundColor"
             v-model="color"
             :label="true"
             :items="bgColors"
@@ -65,9 +65,7 @@
         </div>
 
         <div>
-          <p class="text-xs font-medium">
-            Color Stops
-          </p>
+          <p class="text-xs font-medium">Color Stops</p>
 
           <div class="mt-2 space-y-1">
             <details
@@ -103,7 +101,7 @@
                       id="Left"
                       v-model="stop.position.left"
                       type="range"
-                    >
+                    />
                   </div>
 
                   <div>
@@ -115,7 +113,7 @@
                       </span>
                     </label>
 
-                    <input id="Top" v-model="stop.position.top" type="range">
+                    <input id="Top" v-model="stop.position.top" type="range" />
                   </div>
 
                   <div>
@@ -131,7 +129,7 @@
                       id="Transparent"
                       v-model="stop.transparent"
                       type="range"
-                    >
+                    />
                   </div>
                 </div>
 
@@ -173,22 +171,22 @@ import { createColorClasses } from '@/utils/createColors'
 
 export default {
   name: 'MeshPage',
-  asyncData () {
+  asyncData() {
     return {
-      bgColors: createColorClasses('bg')
+      bgColors: createColorClasses('bg'),
     }
   },
-  data () {
+  data() {
     return {
       color: '',
       colors: [],
       stops: [],
       rgbColor: '',
       rgbColors: [],
-      showControls: false
+      showControls: false,
     }
   },
-  head () {
+  head() {
     return {
       title: 'Mesh Gradients for Tailwind CSS',
       meta: [
@@ -196,35 +194,35 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            'Create beautiful mesh style gradients using the full range of Tailwind CSS colors, perfect for your desktop or phone wallpaper.'
-        }
-      ]
+            'Create beautiful mesh style gradients using the full range of Tailwind CSS colors, perfect for your desktop or phone wallpaper.',
+        },
+      ],
     }
   },
   watch: {
     color: {
-      handler () {
-        this.update()
-      }
-    },
-    colors: {
-      handler () {
+      handler() {
         this.update()
       },
-      deep: true
-    }
+    },
+    colors: {
+      handler() {
+        this.update()
+      },
+      deep: true,
+    },
   },
-  mounted () {
+  mounted() {
     this.handleRandomiser()
   },
   methods: {
-    getRandomColor (array) {
+    getRandomColor(array) {
       return array[Math.floor(Math.random() * array.length)]
     },
-    getRandomNumber () {
+    getRandomNumber() {
       return Math.floor(Math.random() * 100) + 1
     },
-    handleRandomiser () {
+    handleRandomiser() {
       this.color = this.getRandomColor(this.bgColors)
 
       this.colors = []
@@ -237,9 +235,9 @@ export default {
         const newStop = {
           position: {
             left: this.getRandomNumber(),
-            top: this.getRandomNumber()
+            top: this.getRandomNumber(),
           },
-          transparent: this.getRandomNumber()
+          transparent: this.getRandomNumber(),
         }
 
         this.stops.push(newStop)
@@ -247,7 +245,7 @@ export default {
 
       this.$nextTick(() => this.generate())
     },
-    gradient () {
+    gradient() {
       return `
         background-color: ${this.rgbColor};
         background-image: ${this.stops
@@ -258,26 +256,26 @@ export default {
           .join(', ')};
       `
     },
-    generate () {
+    generate() {
       this.rgbColor = getBackgroundColor(this.$refs.bgColor)
 
       this.rgbColors = this.colors.map((_, index) =>
         getBackgroundColor(this.$refs[`color${index}`][0])
       )
     },
-    update () {
+    update() {
       this.$nextTick(() => this.generate())
     },
-    removeStop (index) {
+    removeStop(index) {
       this.stops.splice(index, 1)
     },
-    addStop () {
+    addStop() {
       const newStop = {
         position: {
           left: this.getRandomNumber(),
-          top: this.getRandomNumber()
+          top: this.getRandomNumber(),
         },
-        transparent: this.getRandomNumber()
+        transparent: this.getRandomNumber(),
       }
       const color =
         this.bgColors[Math.floor(Math.random() * this.bgColors.length)]
@@ -285,7 +283,7 @@ export default {
       this.stops.push(newStop)
 
       this.colors.push(color)
-    }
-  }
+    },
+  },
 }
 </script>
