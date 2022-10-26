@@ -326,7 +326,7 @@ export const gradientsCore = [
   },
   {
     name: 'High Tide',
-    direction: 'bg-[conic-gradient(at_top,_var(--tw-gradient-stops))]l',
+    direction: 'bg-[conic-gradient(at_top,_var(--tw-gradient-stops))]',
     colors: 'from-sky-500 via-orange-200 to-yellow-600'
   },
   {
@@ -341,7 +341,7 @@ export const gradientsCore = [
   },
   {
     name: 'Coral Sun',
-    direction: 'bg-[conic-gradient(at_top,_var(--tw-gradient-stops))]l',
+    direction: 'bg-[conic-gradient(at_top,_var(--tw-gradient-stops))]',
     colors: 'from-yellow-200 via-emerald-200 to-yellow-200'
   },
   {
