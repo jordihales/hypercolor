@@ -169,7 +169,7 @@ export const gradientsFlag = [
   {
     name: 'Thailand',
     colors:
-      'bg-[linear-gradient(180deg,_#012169_15%,_#FFF_15%_30%,_#C8102E_30%_70%,_#FFF_70%_85%,_#012169_85%)]'
+      'bg-[linear-gradient(180deg,_#A51931_16.667%,_#F4F5F8_16.667%_33.334%,_#2D2A4A_33.334%_66.667%,_#F4F5F8_66.667%_83.333%,_#A51931_83.333%)]'
   },
   {
     name: 'Trinidad & Tobago',
