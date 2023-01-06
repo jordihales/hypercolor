@@ -2,7 +2,7 @@
   <div class="bg-gray-900">
     <global-header />
 
-    <main>
+    <main style="min-height: calc(100vh - 198px)">
       <Nuxt />
     </main>
 
