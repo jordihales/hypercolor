@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-gray-900">
+  <div class="flex flex-col justify-between min-h-screen bg-gray-900">
     <global-header />
 
-    <main style="min-height: calc(100vh - 198px)">
+    <main>
       <Nuxt />
     </main>
 
