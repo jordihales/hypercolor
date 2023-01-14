@@ -5,6 +5,7 @@ module.exports = {
   content: [
     'assets/**/*.js',
     'components/**/*.{vue,js}',
+    'layouts/**/*.{vue,js}',
     'pages/**/*.{vue,js}'
   ],
   safelist: [

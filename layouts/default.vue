@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-900">
+  <div class="flex flex-col justify-between min-h-screen bg-gray-900">
     <global-header />
 
     <main>
