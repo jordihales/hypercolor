@@ -12,7 +12,7 @@ export const primaryDirections = [
     css: 'bg-gradient-to-r'
   },
   {
-    name: 'To Bottom Top',
+    name: 'To Bottom Right',
     css: 'bg-gradient-to-br'
   },
   {
