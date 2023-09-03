@@ -386,8 +386,8 @@ export const gradientsCore = [
   },
   {
     name: 'Big Sur',
-    direction: 'Pastel',
-    colors: 'bg-gradient-to-tr from-violet-500 to-orange-300'
+    direction: 'bg-gradient-to-tr',
+    colors: 'from-violet-500 to-orange-300'
   },
   {
     name: 'Oahu',
