@@ -184,5 +184,15 @@ export const gradientsFlag = [
     name: 'Yemen',
     colors:
       'bg-[linear-gradient(180deg,_#F42938_33.333%,_#FFF_33.333%_66.666%,_#000_66.666%)]'
-  }
+  },
+  {
+    name: 'Sierra Leone',
+    colors:
+      'bg-[linear-gradient(0deg,_#0073c7_33.33%,_#FFFFFF_33.33%,_#FFFFFF_66.67%,_#18b637_66.67%)]'
+  },
+  {
+    name: 'Peru',
+    colors:
+      'bg-[linear-gradient(90deg,_#da071e_33.33%,_#FFFFFF_33.33%,_#FFFFFF_66.67%,_#da071e_66.67%)]'
+  },
 ]
