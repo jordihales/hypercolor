@@ -194,5 +194,5 @@ export const gradientsFlag = [
     name: 'Peru',
     colors:
       'bg-[linear-gradient(90deg,_#da071e_33.33%,_#FFFFFF_33.33%,_#FFFFFF_66.67%,_#da071e_66.67%)]'
-  },
+  }
 ]
