@@ -22,7 +22,8 @@ export const themeColors = [
   'pink',
   'rose',
   'black',
-  'white'
+  'white',
+  'transparent'
 ]
 
 export const themeColorShades = [
@@ -37,4 +38,4 @@ export const themeColorShades = [
   '900'
 ]
 
-export const themeColorsWithoutShades = ['black', 'white']
+export const themeColorsWithoutShades = ['black', 'white', 'transparent']
