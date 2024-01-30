@@ -4,24 +4,25 @@
       <div
         v-if="standard"
         ref="image"
-        class="w-screen h-screen"
+        class="h-screen w-screen"
         :class="gradient"
       />
+
       <div
         v-if="mesh"
         ref="image"
-        class="w-screen h-screen"
+        class="h-screen w-screen"
         :style="gradient"
       />
+
       <div
         v-if="grainy"
         ref="image"
-        class="relative w-screen h-screen"
+        class="relative h-screen w-screen"
         :class="gradient"
       >
         <div
-          class="absolute inset-0 noise brightness-100 contrast-150 filter"
-          :style="`--color: ${color}`"
+          class="absolute inset-0 bg-[url(https://grainy-gradients.vercel.app/noise.svg)] opacity-25 brightness-100 contrast-150"
         />
       </div>
     </div>
@@ -33,7 +34,7 @@
         aria-label="Copy Tailwind CSS class names"
         @click="handleTailwind"
       >
-        <icon-tailwind class="w-4 h-4" />
+        <icon-tailwind class="h-4 w-4" />
       </button>
 
       <button
@@ -42,7 +43,7 @@
         aria-label="Copy CSS"
         @click="handleCode"
       >
-        <icon-code class="w-4 h-4" />
+        <icon-code class="h-4 w-4" />
       </button>
 
       <button
@@ -50,7 +51,7 @@
         aria-label="Download image"
         @click="handleImage"
       >
-        <icon-image class="w-4 h-4" />
+        <icon-image class="h-4 w-4" />
       </button>
     </div>
   </div>
@@ -64,40 +65,40 @@ export default {
   props: {
     name: {
       type: String,
-      required: true
+      required: true,
     },
     gradient: {
       type: String,
-      required: true
+      required: true,
     },
     color: {
       type: String,
-      default: ''
+      default: '',
     },
     type: {
       type: String,
-      default: 'standard'
-    }
+      default: 'standard',
+    },
   },
   computed: {
-    standard () {
+    standard() {
       return this.type === 'standard'
     },
-    mesh () {
+    mesh() {
       return this.type === 'mesh'
     },
-    grainy () {
+    grainy() {
       return this.type === 'grainy'
-    }
+    },
   },
   methods: {
-    handleTailwind () {
+    handleTailwind() {
       this.code = this.gradient
       navigator.clipboard.writeText(this.code)
 
       this.showToast()
     },
-    handleCode () {
+    handleCode() {
       this.code = this.mesh
         ? this.gradient
         : getBackgroundImage(this.$refs.image)
@@ -106,21 +107,12 @@ export default {
 
       this.showToast()
     },
-    handleImage () {
+    handleImage() {
       createAndDownloadImage(this.$refs.image, this.name)
     },
-    showToast () {
+    showToast() {
       this.$toast.success('Copied to Clipboard')
-    }
-  }
+    },
+  },
 }
 </script>
-
-<style lang="postcss" scoped>
-/* https://css-tricks.com/grainy-gradients/ */
-
-.noise {
-  background: linear-gradient(180deg, var(--color), transparent),
-    url(https://grainy-gradients.vercel.app/noise.svg);
-}
-</style>

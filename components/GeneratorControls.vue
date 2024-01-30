@@ -1,6 +1,6 @@
 <template>
-  <section class="text-white bg-gray-900 border-t border-b border-gray-800/75">
-    <div class="max-w-screen-xl px-4 py-4 mx-auto space-y-4 sm:px-6 lg:px-8">
+  <section class="border-t border-b border-gray-800/75 bg-gray-900 text-white">
+    <div class="mx-auto max-w-screen-xl space-y-4 px-4 py-4 sm:px-6 lg:px-8">
       <div class="lg:grid lg:grid-cols-3">
         <div class="flex items-center">
           <action-save
@@ -15,7 +15,7 @@
             @click="$emit('random')"
           >
             <span class="sr-only">Random Gradient</span>
-            <icon-refresh class="w-4 h-4" />
+            <icon-refresh class="h-4 w-4" />
           </button>
         </div>
 
