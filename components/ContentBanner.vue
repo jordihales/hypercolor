@@ -1,3 +1,16 @@
+<script setup>
+defineProps({
+  title: {
+    type: String,
+    required: true,
+  },
+  subtitle: {
+    type: String,
+    required: true,
+  },
+})
+</script>
+
 <template>
   <section class="relative text-center">
     <div
@@ -6,13 +19,15 @@
       <div class="mx-auto flex max-w-3xl flex-col">
         <h1
           class="mt-1 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-4xl font-extrabold uppercase tracking-tighter text-transparent sm:text-5xl lg:text-7xl"
-          v-text="title"
-        />
+        >
+          {{ title }}
+        </h1>
 
         <h2
           class="order-first bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text font-medium tracking-wide text-transparent"
-          v-text="subtitle"
-        />
+        >
+          {{ subtitle }}
+        </h2>
       </div>
 
       <p class="mx-auto mt-8 max-w-2xl text-xl font-medium text-white">
@@ -21,18 +36,3 @@
     </div>
   </section>
 </template>
-
-<script>
-export default {
-  props: {
-    title: {
-      type: String,
-      required: true
-    },
-    subtitle: {
-      type: String,
-      required: true
-    }
-  }
-}
-</script>
