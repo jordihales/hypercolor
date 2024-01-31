@@ -1,17 +1,11 @@
 <template>
-  <div class="flex flex-col justify-between min-h-screen bg-gray-900">
-    <global-header />
+  <div class="flex min-h-screen flex-col justify-between bg-gray-900">
+    <GlobalHeader />
 
     <main>
-      <Nuxt />
+      <slot />
     </main>
 
-    <global-footer />
+    <GlobalFooter />
   </div>
 </template>
-
-<script>
-export default {
-  name: 'LayoutComponent',
-}
-</script>

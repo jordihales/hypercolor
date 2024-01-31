@@ -1,55 +1,60 @@
+<script setup>
+const selectProps = defineProps({
+  selectId: {
+    type: String,
+    default: '',
+  },
+  selectOptions: {
+    type: Array,
+    default: () => [],
+  },
+  labelKey: {
+    type: String,
+    default: '',
+  },
+  valueKey: {
+    type: String,
+    default: '',
+  },
+  modelValue: {
+    type: String,
+    default: '',
+  },
+})
+
+const selectEmits = defineEmits(['update:modelValue'])
+
+const localValue = toRef(selectProps, 'modelValue')
+
+watch(
+  () => localValue.value,
+  (oldValue, newValue) => {
+    if (oldValue === newValue)
+      return
+
+    selectEmits('update:modelValue', localValue.value)
+  },
+)
+</script>
+
 <template>
   <div>
-    <label
-      :for="id"
-      :class="`${sr ? 'sr-only' : 'text-xs font-medium'}`"
-      v-text="id"
-    />
+    <label :for="selectId" class="sr-only">
+      {{ selectId }}
+    </label>
 
     <select
-      :id="id"
-      class="w-full p-3 font-medium bg-gray-900 rounded-xl border-gray-800/75 sm:text-sm"
-      :class="`${!sr && 'mt-2'}`"
-      :value="value"
-      @input="$emit('input', $event.target.value)"
+      :id="selectId"
+      v-model="localValue"
+      class="w-full rounded-xl border-gray-800/75 bg-gray-900 p-3 font-medium sm:text-sm"
     >
       <option
-        v-for="item of items"
-        :key="labelKey ? item[labelKey] : item"
-        :value="valueKey ? item[valueKey] : item"
-        v-text="labelKey ? item[labelKey] : item"
-      />
+        v-for="(optionItem, itemIndex) of selectOptions"
+        :key="itemIndex"
+        :value="valueKey ? optionItem[valueKey] : optionItem"
+      >
+        {{ labelKey ? optionItem[labelKey] : optionItem }}
+      </option>
     </select>
   </div>
 </template>
-
-<script>
-export default {
-  props: {
-    items: {
-      type: Array,
-      required: true,
-    },
-    value: {
-      type: String,
-      required: true,
-    },
-    id: {
-      type: String,
-      required: true,
-    },
-    sr: {
-      type: Boolean,
-      default: true,
-    },
-    labelKey: {
-      type: String,
-      default: '',
-    },
-    valueKey: {
-      type: String,
-      default: '',
-    },
-  },
-}
-</script>

@@ -1,9 +1,0 @@
-<template>
-  <a
-    href="https://twitter.com/consolelogjordi"
-    target="_blank"
-    rel="noreferrer"
-  >
-    Jordi
-  </a>
-</template>

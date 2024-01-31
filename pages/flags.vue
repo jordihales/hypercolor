@@ -1,25 +1,26 @@
+<script setup>
+import { flagTitle, siteSeo } from '~/assets/data/siteSeo'
+import { gradientsFlag } from '~/assets/data/gradientsFlag'
+
+const gradientItems = computed(() => gradientsFlag)
+
+useSeoMeta({
+  ...siteSeo,
+  title: flagTitle,
+  ogTitle: flagTitle,
+  twitterTitle: flagTitle,
+})
+</script>
+
 <template>
   <div>
-    <content-banner
+    <ContentBanner
       title="World Flags"
       subtitle="Flag Gradients with Tailwind CSS"
     >
       A collection of country flags created with Tailwind CSS.
-    </content-banner>
+    </ContentBanner>
 
-    <gradient-grid :gradients="gradients" :directions="false" />
+    <GradientGrid :gradient-items="gradientItems" />
   </div>
 </template>
-
-<script>
-import { gradientsFlag } from '@/assets/data/gradientsFlag'
-
-export default {
-  name: 'FlagsPage',
-  computed: {
-    gradients() {
-      return gradientsFlag
-    },
-  },
-}
-</script>

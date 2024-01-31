@@ -1,6 +1,0 @@
-{
-  "extends": ["@nuxtjs"],
-  "rules": {
-    "comma-dangle": 0
-  }
-}
