@@ -1,11 +1,11 @@
-export function getBackgroundColor (element) {
-  return getComputedStyle(element).getPropertyValue('background-color')
+export function getBackgroundColor(targetEl) {
+  return getComputedStyle(targetEl).getPropertyValue('background-color')
 }
 
-export function getBackgroundImage (element) {
-  return getComputedStyle(element).getPropertyValue('background-image')
+export function getBackgroundImage(targetEl) {
+  return getComputedStyle(targetEl).getPropertyValue('background-image')
 }
 
-export function convertToRgba (color) {
-  return color.replace('rgb', 'rgba').replace(')', ', 0)')
+export function convertToRgba(targetColor) {
+  return targetColor.replace('rgb', 'rgba').replace(')', ', 0)')
 }

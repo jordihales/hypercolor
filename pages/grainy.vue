@@ -1,95 +1,90 @@
+<script setup>
+import { grainyTitle, siteSeo } from '~/assets/data/siteSeo'
+import { getDirections } from '~/utils/getDirections'
+import { createColorClasses } from '~/utils/createColors'
+
+const currentDirection = ref('')
+const currentFrom = ref('')
+const currentVia = ref('')
+const currentTo = ref('')
+
+const fromColors = computed(() => createColorClasses('from'))
+const viaColors = computed(() => createColorClasses('via'))
+const toColors = computed(() => createColorClasses('to'))
+
+const gradientStyle = computed(() => {
+  return currentDirection.value
+    ? `${currentDirection.value} ${currentFrom.value} ${currentVia.value} ${currentTo.value}`
+    : `${currentFrom.value} ${currentVia.value} ${currentTo.value}`
+})
+
+const directionOptions = computed(() => getDirections())
+
+onMounted(() => handleRandomiser())
+
+function getRandom(itemArray) {
+  return itemArray[Math.floor(Math.random() * itemArray.length)]
+}
+
+function handleRandomiser() {
+  currentDirection.value = getRandom(directionOptions.value).css
+  currentFrom.value = getRandom(fromColors.value)
+  currentVia.value = getRandom(viaColors.value)
+  currentTo.value = getRandom(toColors.value)
+}
+
+useSeoMeta({
+  ...siteSeo,
+  title: grainyTitle,
+  ogTitle: grainyTitle,
+  twitterTitle: grainyTitle,
+})
+</script>
+
 <template>
   <div>
-    <content-banner
+    <ContentBanner
       title="Grainy Gradient Generator"
       subtitle="Grainy Gradient Generator for Tailwind CSS"
     >
       Create beautiful grainy style gradients using the full range of Tailwind
       CSS colors, perfect for your desktop or phone wallpaper.
-    </content-banner>
+    </ContentBanner>
 
-    <generator-controls
-      :gradient="gradient"
-      :color="color"
-      type="grainy"
-      @random="handleRandomiser"
+    <GeneratorControls
+      :gradient-style="gradientStyle"
+      gradient-type="grainy"
+      @gradient:randomise="handleRandomiser"
     >
       <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
-        <generator-select
-          id="Direction"
-          v-model="direction"
-          :items="directions"
+        <GeneratorSelect
+          v-model="currentDirection"
+          select-id="Direction"
+          :select-options="directionOptions"
           label-key="name"
           value-key="css"
         />
-        <generator-select id="From" v-model="from" :items="fromColors" />
-        <generator-select id="Via" v-model="via" :items="viaColors" />
-        <generator-select id="To" v-model="to" :items="toColors" />
-      </div>
-    </generator-controls>
 
-    <grainy-preview :gradient="gradient" :color="color" />
+        <GeneratorSelect
+          v-model="currentFrom"
+          select-id="From"
+          :select-options="fromColors"
+        />
+
+        <GeneratorSelect
+          v-model="currentVia"
+          select-id="Via"
+          :select-options="viaColors"
+        />
+
+        <GeneratorSelect
+          v-model="currentTo"
+          select-id="To"
+          :select-options="toColors"
+        />
+      </div>
+    </GeneratorControls>
+
+    <GrainyPreview :gradient-style="gradientStyle" />
   </div>
 </template>
-
-<script>
-import { createColorClasses } from '@/utils/createColors'
-import { getDirections } from '@/utils/getDirections'
-
-export default {
-  name: 'GrainyPage',
-  asyncData() {
-    return {
-      fromColors: createColorClasses('from'),
-      viaColors: createColorClasses('via'),
-      toColors: createColorClasses('to'),
-    }
-  },
-  data() {
-    return {
-      direction: '',
-      from: '',
-      via: '',
-      to: '',
-      color: '',
-    }
-  },
-  head() {
-    return {
-      title: 'Gradient Generator for Tailwind CSS',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            'Create your own Tailwind CSS gradient with the full Tailwind CSS color library and the extended radial and conic gradient options provided through Hypercolor.',
-        },
-      ],
-    }
-  },
-  computed: {
-    gradient() {
-      return this.via !== 'none'
-        ? `${this.direction} ${this.from} ${this.via} ${this.to}`
-        : `${this.direction} ${this.from} ${this.to}`
-    },
-    directions() {
-      return getDirections()
-    },
-  },
-  mounted() {
-    this.handleRandomiser()
-  },
-  methods: {
-    getRandom(array) {
-      return array[Math.floor(Math.random() * array.length)]
-    },
-    handleRandomiser() {
-      this.direction = this.getRandom(this.directions).css
-      this.from = this.getRandom(this.fromColors)
-      this.via = this.getRandom(this.viaColors)
-      this.to = this.getRandom(this.toColors)
-    },
-  },
-}
-</script>

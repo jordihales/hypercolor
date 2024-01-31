@@ -1,76 +1,13 @@
-export default {
-  target: 'static',
-  head: {
-    titleTemplate: (titleChunk) => {
-      return titleChunk
-        ? `${titleChunk} | Hypercolor`
-        : 'Gradients for Tailwind CSS | Hypercolor'
+export default defineNuxtConfig({
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
+      link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     },
-    htmlAttrs: {
-      lang: 'en',
-    },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content:
-          'A curated collection of beautiful Tailwind CSS gradients using the full range of Tailwind CSS colors. Easily copy and paste the class names, CSS or even save the gradients as an image.',
-      },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: 'https://hypercolor.dev/' },
-      {
-        property: 'og:title',
-        content: 'Gradients for Tailwind CSS | Hypercolor',
-      },
-      {
-        property: 'og:description',
-        content:
-          'A curated collection of beautiful Tailwind CSS gradients using the full range of Tailwind CSS colors. Easily copy and paste the class names, CSS or even save the gradients as an image.',
-      },
-      { property: 'og:image', content: 'https://hypercolor.dev/social.png' },
-      { property: 'twitter:card', content: 'summary_large_image' },
-      { property: 'twitter:url', content: 'https://hypercolor.dev/' },
-      {
-        property: 'twitter:title',
-        content: 'Gradients for Tailwind CSS | Hypercolor',
-      },
-      {
-        property: 'twitter:description',
-        content:
-          'A curated collection of beautiful Tailwind CSS gradients using the full range of Tailwind CSS colors. Easily copy and paste the class names, CSS or even save the gradients as an image.',
-      },
-      {
-        property: 'twitter:image',
-        content: 'https://hypercolor.dev/social.png',
-      },
-    ],
-    link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
-  css: ['@/assets/css/tailwind.css'],
-  plugins: [],
-  components: true,
-  buildModules: ['@nuxt/postcss8', '@nuxtjs/toast'],
-  modules: ['@nuxtjs/sitemap', '@nuxtjs/robots'],
-  build: {
-    postcss: {
-      plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
-      },
-    },
-  },
-  sitemap: {
-    hostname: 'https://hypercolor.dev',
-  },
-  robots: {
-    UserAgent: '*',
-  },
-  toast: {
-    position: 'top-right',
-    duration: 3000,
-    className: 'notification',
-    containerClass: 'notification-container',
-  },
-}
+  css: ['~/assets/css/tailwind.css'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/robots', '@nuxtjs/sitemap'],
+})

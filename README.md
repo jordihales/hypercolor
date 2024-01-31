@@ -1,4 +1,4 @@
-![Hypercolor](https://hypercolor.dev/social.png)
+![Hypercolor](https://hypercolor-maintained.vercel.app/social.png)
 
 A curated collection of beautiful Tailwind CSS gradients using the full
 range of Tailwind CSS colors. Easily copy and paste the class names, CSS

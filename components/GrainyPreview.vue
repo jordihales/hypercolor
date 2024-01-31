@@ -1,7 +1,16 @@
+<script setup>
+defineProps({
+  gradientStyle: {
+    type: String,
+    default: '',
+  },
+})
+</script>
+
 <template>
-  <div class="max-w-screen-xl px-4 mx-auto mt-16 sm:px-6 lg:px-8">
+  <div class="mx-auto mt-16 max-w-screen-xl px-4 sm:px-6 lg:px-8">
     <div
-      :class="gradient"
+      :class="gradientStyle"
       class="relative h-[300px] overflow-hidden rounded-3xl sm:h-[400px] lg:h-[600px]"
     >
       <div
@@ -10,18 +19,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  props: {
-    gradient: {
-      type: String,
-      required: true,
-    },
-    color: {
-      type: String,
-      required: true,
-    },
-  },
-}
-</script>

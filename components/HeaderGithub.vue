@@ -1,11 +1,11 @@
 <template>
   <a
-    href="https://github.com/jordihales/hypercolor"
+    href="https://github.com/markmead/hypercolor-maintained"
     target="_blank"
     rel="noreferrer"
   >
     <span class="sr-only">GitHub</span>
 
-    <icon-github class="h-5 w-5" />
+    <IconGithub class="h-5 w-5" />
   </a>
 </template>
