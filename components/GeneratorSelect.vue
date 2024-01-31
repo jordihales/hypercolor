@@ -24,17 +24,14 @@ const selectProps = defineProps({
 
 const selectEmits = defineEmits(['update:modelValue'])
 
-const localValue = toRef(selectProps, 'modelValue')
-
-watch(
-  () => localValue.value,
-  (oldValue, newValue) => {
-    if (oldValue === newValue)
-      return
-
-    selectEmits('update:modelValue', localValue.value)
+const localValue = computed({
+  get() {
+    return selectProps.modelValue
   },
-)
+  set(localValue) {
+    selectEmits('update:modelValue', localValue)
+  },
+})
 </script>
 
 <template>
