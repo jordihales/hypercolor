@@ -1,6 +1,6 @@
 <template>
   <a
-    href="https://github.com/markmead/hypercolor-maintained"
+    href="https://github.com/jordihales/hypercolor"
     target="_blank"
     rel="noreferrer"
   >

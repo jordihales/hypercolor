@@ -20,8 +20,6 @@
         >
           Mark </a
         >.
-
-        <span class="block mt-2"> Maintained by Mark. </span>
       </p>
     </div>
   </footer>
