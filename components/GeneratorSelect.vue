@@ -29,12 +29,11 @@ const localValue = toRef(selectProps, 'modelValue')
 watch(
   () => localValue.value,
   (oldValue, newValue) => {
-    if (oldValue === newValue) {
+    if (oldValue === newValue)
       return
-    }
 
     selectEmits('update:modelValue', localValue.value)
-  }
+  },
 )
 </script>
 
