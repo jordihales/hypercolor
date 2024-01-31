@@ -9,7 +9,7 @@ export default {
     'pages/**/*.{vue,js}',
   ],
   safelist: [
-    { pattern: /(from|via|to|bg)-(black|white)/ },
+    { pattern: /(from|via|to|bg)-(black|white|transparent)/ },
     { pattern: /(from|via|to|bg)-(.+)-([1-9]00)/ },
   ],
   theme: {
