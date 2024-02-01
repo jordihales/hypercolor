@@ -6,11 +6,13 @@ export const gradientsFlag = [
   },
   {
     name: 'Austria',
-    colors: 'bg-[linear-gradient(180deg,_#ED2939_33.333%,_#FFF_33.333%_66.666%,_#ED2939_66.666%)]',
+    colors:
+      'bg-[linear-gradient(180deg,_#ED2939_33.333%,_#FFF_33.333%_66.666%,_#ED2939_66.666%)]',
   },
   {
     name: 'Belgium',
-    colors: 'bg-[linear-gradient(90deg,_#000_33.333%,_#FFE936_33.333%_66.666%,_#FF0F21_66.666%)]',
+    colors:
+      'bg-[linear-gradient(90deg,_#000_33.333%,_#FFE936_33.333%_66.666%,_#FF0F21_66.666%)]',
   },
   {
     name: 'Botswana',
@@ -19,11 +21,13 @@ export const gradientsFlag = [
   },
   {
     name: 'Bulgaria',
-    colors: 'bg-[linear-gradient(180deg,_#FFF_33.333%,_#00966E_33.333%_66.666%,_#D62612_66.666%)]',
+    colors:
+      'bg-[linear-gradient(180deg,_#FFF_33.333%,_#00966E_33.333%_66.666%,_#D62612_66.666%)]',
   },
   {
     name: 'Canary Islands',
-    colors: 'bg-[linear-gradient(90deg,_#FFF_33.333%,_#0768A9_33.333%_66.666%,_#FC0_66.666%)]',
+    colors:
+      'bg-[linear-gradient(90deg,_#FFF_33.333%,_#0768A9_33.333%_66.666%,_#FC0_66.666%)]',
   },
   {
     name: 'Catalonia',
@@ -37,11 +41,13 @@ export const gradientsFlag = [
   },
   {
     name: 'Colombia',
-    colors: 'bg-[linear-gradient(180deg,_#FCD116_50%,_#003893_50%_75%,_#CE1126_75%)]',
+    colors:
+      'bg-[linear-gradient(180deg,_#FCD116_50%,_#003893_50%_75%,_#CE1126_75%)]',
   },
   {
     name: 'Congo',
-    colors: 'bg-[linear-gradient(135deg,_#009543_40%,_#FBDE4A_40%_60%,_#DC241F_60%)]',
+    colors:
+      'bg-[linear-gradient(135deg,_#009543_40%,_#FBDE4A_40%_60%,_#DC241F_60%)]',
   },
   {
     name: 'Costa Rica',
@@ -50,11 +56,13 @@ export const gradientsFlag = [
   },
   {
     name: 'Estonia',
-    colors: 'bg-[linear-gradient(180deg,_#1291FF_33.333%,_#000_33.333%_66.666%,_#FFF_66.666%)]',
+    colors:
+      'bg-[linear-gradient(180deg,_#1291FF_33.333%,_#000_33.333%_66.666%,_#FFF_66.666%)]',
   },
   {
     name: 'France',
-    colors: 'bg-[linear-gradient(90deg,_#002395_33.333%,_#FFF_33.333%_66.666%,_#ED2939_66.666%)]',
+    colors:
+      'bg-[linear-gradient(90deg,_#002395_33.333%,_#FFF_33.333%_66.666%,_#ED2939_66.666%)]',
   },
   {
     name: 'Gabon',
@@ -68,7 +76,8 @@ export const gradientsFlag = [
   },
   {
     name: 'Germany',
-    colors: 'bg-[linear-gradient(180deg,_#000_33.333%,_#FF0000_33.333%_66.666%,_#FFCC00_66.666%)]',
+    colors:
+      'bg-[linear-gradient(180deg,_#000_33.333%,_#FF0000_33.333%_66.666%,_#FFCC00_66.666%)]',
   },
   {
     name: 'Guinea',
@@ -77,7 +86,8 @@ export const gradientsFlag = [
   },
   {
     name: 'Hungary',
-    colors: 'bg-[linear-gradient(180deg,_#C8102E_33.333%,_#FFF_33.333%_66.666%,_#00843E_66.666%)]',
+    colors:
+      'bg-[linear-gradient(180deg,_#C8102E_33.333%,_#FFF_33.333%_66.666%,_#00843E_66.666%)]',
   },
   {
     name: 'Indonesia',
@@ -85,19 +95,23 @@ export const gradientsFlag = [
   },
   {
     name: 'Ireland',
-    colors: 'bg-[linear-gradient(90deg,_#009B48_33.333%,_#FFF_33.333%_66.666%,_#FF7900_66.666%)]',
+    colors:
+      'bg-[linear-gradient(90deg,_#009B48_33.333%,_#FFF_33.333%_66.666%,_#FF7900_66.666%)]',
   },
   {
     name: 'Italy',
-    colors: 'bg-[linear-gradient(90deg,_#009246_33.333%,_#FFF_33.333%_66.666%,_#CE2B37_66.666%)]',
+    colors:
+      'bg-[linear-gradient(90deg,_#009246_33.333%,_#FFF_33.333%_66.666%,_#CE2B37_66.666%)]',
   },
   {
     name: 'Ivory Coast',
-    colors: 'bg-[linear-gradient(90deg,_#F77F00_33.333%,_#FFF_33.333%_66.666%,_#009E60_66.666%)]',
+    colors:
+      'bg-[linear-gradient(90deg,_#F77F00_33.333%,_#FFF_33.333%_66.666%,_#009E60_66.666%)]',
   },
   {
     name: 'Latvia',
-    colors: 'bg-[linear-gradient(180deg,_#9E1B34_40%,_#FFF_40%_60%,_#9E1B34_60%)]',
+    colors:
+      'bg-[linear-gradient(180deg,_#9E1B34_40%,_#FFF_40%_60%,_#9E1B34_60%)]',
   },
   {
     name: 'Lithuania',
@@ -106,7 +120,8 @@ export const gradientsFlag = [
   },
   {
     name: 'Luxemburg',
-    colors: 'bg-[linear-gradient(180deg,_#ED2939_33.333%,_#FFF_33.333%_66.666%,_#00A1DE_66.666%)]',
+    colors:
+      'bg-[linear-gradient(180deg,_#ED2939_33.333%,_#FFF_33.333%_66.666%,_#00A1DE_66.666%)]',
   },
   {
     name: 'Mali',
@@ -124,11 +139,13 @@ export const gradientsFlag = [
   },
   {
     name: 'Netherlands',
-    colors: 'bg-[linear-gradient(180deg,_#AE1C28_33.333%,_#FFF_33.333%_66.666%,_#21468B_66.666%)]',
+    colors:
+      'bg-[linear-gradient(180deg,_#AE1C28_33.333%,_#FFF_33.333%_66.666%,_#21468B_66.666%)]',
   },
   {
     name: 'Nigeria',
-    colors: 'bg-[linear-gradient(90deg,_#008753_33.333%,_#FFF_33.333%_66.666%,_#008753_66.666%)]',
+    colors:
+      'bg-[linear-gradient(90deg,_#008753_33.333%,_#FFF_33.333%_66.666%,_#008753_66.666%)]',
   },
   {
     name: 'Poland',
@@ -141,7 +158,8 @@ export const gradientsFlag = [
   },
   {
     name: 'Sierra Leone',
-    colors: 'bg-[linear-gradient(180deg,_#1EB53A_33.333%,_#FFF_33.333%_66.666%,_#0072C6_66.666%)]',
+    colors:
+      'bg-[linear-gradient(180deg,_#1EB53A_33.333%,_#FFF_33.333%_66.666%,_#0072C6_66.666%)]',
   },
   {
     name: 'Tanzania',
@@ -164,6 +182,7 @@ export const gradientsFlag = [
   },
   {
     name: 'Yemen',
-    colors: 'bg-[linear-gradient(180deg,_#F42938_33.333%,_#FFF_33.333%_66.666%,_#000_66.666%)]',
+    colors:
+      'bg-[linear-gradient(180deg,_#F42938_33.333%,_#FFF_33.333%_66.666%,_#000_66.666%)]',
   },
 ]

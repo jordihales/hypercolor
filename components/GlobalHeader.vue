@@ -26,7 +26,7 @@ const navigationItems = computed(() => {
 
 watch(
   () => appRouter.currentRoute.value,
-  () => (showMobile.value = false),
+  () => (showMobile.value = false)
 )
 
 function toggleMobile() {
