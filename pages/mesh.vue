@@ -16,7 +16,7 @@ const showControls = ref(false)
 
 watch(
   () => currentColor.value,
-  () => nextTick(() => handleGenerate())
+  () => nextTick(() => handleGenerate()),
 )
 
 watch(
@@ -32,7 +32,7 @@ watch(
         }
       })
     }),
-  { deep: true }
+  { deep: true },
 )
 
 onMounted(() => handleRandomiser())
@@ -89,7 +89,7 @@ function getGradient() {
     background-image: ${currentStops.value
       .map(
         (stopItem, itemIndex) =>
-          `radial-gradient(at ${stopItem.positionLeft}% ${stopItem.positionTop}%, ${currentRgbColors.value[itemIndex]} 0, transparent ${stopItem.colorSize}%)`
+          `radial-gradient(at ${stopItem.positionLeft}% ${stopItem.positionTop}%, ${currentRgbColors.value[itemIndex]} 0, transparent ${stopItem.colorSize}%)`,
       )
       .join(', ')};
   `
