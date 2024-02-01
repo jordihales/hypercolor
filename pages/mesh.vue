@@ -128,6 +128,17 @@ useSeoMeta({
 
             <IconRefresh class="h-4 w-4" />
           </button>
+
+          <div
+            class="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-lg p-0.5 ml-auto"
+          >
+            <div class="rounded-md bg-gray-900 p-2.5">
+              <p class="text-sm font-medium text-white">
+                You can now drag the stops to change the position of the colors!
+                🎉
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="mt-4 lg:sticky lg:top-20">
