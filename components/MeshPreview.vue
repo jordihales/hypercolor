@@ -59,7 +59,7 @@ function handleStartDrag(stopIndex) {
         v-for="(stopItem, itemIndex) in gradientStops"
         :id="`Stop${itemIndex}`"
         :key="itemIndex"
-        class="absolute h-6 w-6 rounded-full bg-gray-900 text-center text-xs font-medium leading-6 text-white cursor-move -mt-1.5 -ml-1.5"
+        class="absolute h-6 w-6 rounded-full bg-gray-900 text-center text-xs font-medium leading-6 text-white cursor-move -mt-3 -ml-3"
         :style="`left: ${stopItem.positionLeft}%; top: ${stopItem.positionTop}%;`"
         @mousedown="handleStartDrag(itemIndex)"
       >
