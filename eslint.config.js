@@ -10,5 +10,10 @@ export default antfu(
       'vue/singleline-html-element-content-newline': 'off',
     },
   },
-  // {}
+  {
+    // All files
+    rules: {
+      'style/comma-dangle': 'off',
+    },
+  }
 )
