@@ -31,7 +31,7 @@ function handleCode() {
   navigator.clipboard.writeText(
     isMesh.value
       ? saveProps.gradientStyle
-      : getBackgroundImage(gradientPreview.value),
+      : getBackgroundImage(gradientPreview.value)
   )
 }
 

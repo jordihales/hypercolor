@@ -16,13 +16,25 @@ const showControls = ref(false)
 
 watch(
   () => currentColor.value,
-  () => nextTick(() => handleGenerate()),
+  () => nextTick(() => handleGenerate())
 )
 
 watch(
   () => currentColors.value,
-  () => nextTick(() => handleGenerate()),
-  { deep: true },
+  () =>
+    nextTick(() => {
+      handleGenerate()
+
+      currentStops.value = currentStops.value.map((stopItem, itemIndex) => {
+        return {
+          ...stopItem,
+          colorName: currentColors.value[itemIndex].replace('bg-', ''),
+        }
+      })
+    }),
+  {
+    deep: true,
+  }
 )
 
 onMounted(() => handleRandomiser())
@@ -41,20 +53,7 @@ function handleRandomiser() {
   currentColors.value = []
   currentStops.value = []
 
-  // eslint-disable-next-line array-callback-return
-  Array.from(Array.from({ length: 6 }), () => {
-    currentColors.value.push(getRandomColor(bgColors.value))
-
-    const newStop = {
-      position: {
-        left: getRandomNumber(),
-        top: getRandomNumber(),
-      },
-      transparent: getRandomNumber(),
-    }
-
-    currentStops.value.push(newStop)
-  })
+  Array.from(Array.from({ length: 6 }), () => addStop())
 
   nextTick(() => handleGenerate())
 }
@@ -69,18 +68,18 @@ function handleGenerate() {
 
 function removeStop(stopIndex) {
   currentStops.value.splice(stopIndex, 1)
+  currentColors.value.splice(stopIndex, 1)
 }
 
 function addStop() {
-  const newStop = {
-    position: {
-      left: getRandomNumber(),
-      top: getRandomNumber(),
-    },
-    transparent: getRandomNumber(),
-  }
-
   const newColor = getRandomColor(bgColors.value)
+
+  const newStop = {
+    colorName: newColor.replace('bg-', ''),
+    colorSize: getRandomNumber(),
+    positionLeft: getRandomNumber(),
+    positionTop: getRandomNumber(),
+  }
 
   currentStops.value.push(newStop)
 
@@ -93,7 +92,7 @@ function getGradient() {
     background-image: ${currentStops.value
       .map(
         (stopItem, itemIndex) =>
-          `radial-gradient(at ${stopItem.position.left}% ${stopItem.position.top}%, ${currentRgbColors.value[itemIndex]} 0, transparent ${stopItem.transparent}%)`,
+          `radial-gradient(at ${stopItem.positionLeft}% ${stopItem.positionTop}%, ${currentRgbColors.value[itemIndex]} 0, transparent ${stopItem.colorSize}%)`
       )
       .join(', ')};
   `
@@ -121,17 +120,28 @@ useSeoMeta({
       class="mx-auto grid max-w-screen-xl grid-cols-1 gap-8 px-4 sm:px-6 lg:grid-cols-4 lg:px-8"
     >
       <div class="lg:col-span-3">
-        <div class="flex items-center text-white">
+        <div class="flex items-center text-white gap-2">
           <ActionSave :gradient-style="getGradient()" gradient-type="mesh" />
 
           <button
-            class="ml-2 rounded-xl bg-gray-800/75 p-2.5 transition-colors hover:text-pink-500"
+            class="rounded-xl bg-gray-800/75 p-2.5 transition-colors hover:text-pink-500"
             @click="handleRandomiser"
           >
             <span class="sr-only"> Generate random gradient </span>
 
             <IconRefresh class="h-4 w-4" />
           </button>
+
+          <div
+            class="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-lg p-0.5 ml-auto"
+          >
+            <div class="rounded-md bg-gray-900 p-2.5">
+              <p class="text-sm font-medium text-white">
+                You can now drag the stops to change the position of the colors!
+                🎉
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="mt-4 lg:sticky lg:top-20">
@@ -186,9 +196,11 @@ useSeoMeta({
                   {{ itemIndex + 1 }}
                 </p>
 
-                <p class="font-mono text-xs font-medium">
-                  {{ currentColors[itemIndex] }} / {{ stopItem.position.left }}%
-                  / {{ stopItem.position.top }}% / {{ stopItem.transparent }}%
+                <p
+                  class="font-mono text-xs font-medium max-w-[30ch] overflow-hidden truncate"
+                >
+                  {{ stopItem.colorName }} / {{ stopItem.positionLeft }}% /
+                  {{ stopItem.positionTop }}% / {{ stopItem.colorSize }}%
                 </p>
               </summary>
 
@@ -202,13 +214,13 @@ useSeoMeta({
                       Left -
 
                       <span class="font-mono text-xs font-medium">
-                        {{ stopItem.position.left }}%
+                        {{ stopItem.positionLeft }}%
                       </span>
                     </label>
 
                     <input
                       :id="`Left${itemIndex}`"
-                      v-model="stopItem.position.left"
+                      v-model="stopItem.positionLeft"
                       type="range"
                     />
                   </div>
@@ -221,13 +233,13 @@ useSeoMeta({
                       Top -
 
                       <span class="font-mono text-xs font-medium">
-                        {{ stopItem.position.top }}%
+                        {{ stopItem.positionTop }}%
                       </span>
                     </label>
 
                     <input
                       :id="`Top${itemIndex}`"
-                      v-model="stopItem.position.top"
+                      v-model="stopItem.positionTop"
                       type="range"
                     />
                   </div>
@@ -237,16 +249,16 @@ useSeoMeta({
                       :for="`Transparent${itemIndex}`"
                       class="mb-1 text-xs font-medium"
                     >
-                      Transparent -
+                      Size -
 
                       <span class="font-mono text-xs font-medium">
-                        {{ stopItem.transparent }}%
+                        {{ stopItem.colorSize }}%
                       </span>
                     </label>
 
                     <input
                       :id="`Transparent${itemIndex}`"
-                      v-model="stopItem.transparent"
+                      v-model="stopItem.colorSize"
                       type="range"
                     />
                   </div>

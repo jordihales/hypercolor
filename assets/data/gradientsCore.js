@@ -406,17 +406,20 @@ export const gradientsCore = [
   },
   {
     name: 'Purple Burst',
-    direction: 'bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]',
+    direction:
+      'bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))]',
     colors: 'from-purple-900 to-indigo-500',
   },
   {
     name: 'Amber Sunrise',
-    direction: 'bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))]',
+    direction:
+      'bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))]',
     colors: 'from-amber-900 to-yellow-300',
   },
   {
     name: 'Sky Sea',
-    direction: 'bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))]',
+    direction:
+      'bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))]',
     colors: 'from-sky-400 to-indigo-900',
   },
   {
@@ -426,7 +429,8 @@ export const gradientsCore = [
   },
   {
     name: 'Blue Flame',
-    direction: 'bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))]',
+    direction:
+      'bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))]',
     colors: 'from-amber-200 via-violet-600 to-sky-900',
   },
   {
