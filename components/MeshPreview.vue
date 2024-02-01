@@ -21,17 +21,17 @@ function handleStartDrag(stopIndex) {
   const handleMouseMove = (dragEvent) => {
     const { clientX, clientY } = dragEvent
 
-    const { left: elLeft, top: elTop }
-      = stopEl.parentElement.getBoundingClientRect()
+    const { left: elLeft, top: elTop } =
+      stopEl.parentElement.getBoundingClientRect()
 
     const newPositionLeft = (
-      ((clientX - elLeft) / stopEl.parentElement.offsetWidth)
-      * 100
+      ((clientX - elLeft) / stopEl.parentElement.offsetWidth) *
+      100
     ).toFixed(2)
 
     const newPositionTop = (
-      ((clientY - elTop) / stopEl.parentElement.offsetHeight)
-      * 100
+      ((clientY - elTop) / stopEl.parentElement.offsetHeight) *
+      100
     ).toFixed(2)
 
     stopItem.positionLeft = newPositionLeft
@@ -59,7 +59,7 @@ function handleStartDrag(stopIndex) {
         v-for="(stopItem, itemIndex) in gradientStops"
         :id="`Stop${itemIndex}`"
         :key="itemIndex"
-        class="absolute h-6 w-6 rounded-full bg-gray-900 text-center text-xs font-medium leading-6 text-white cursor-move -mt-3 -ml-3"
+        class="absolute h-6 w-6 rounded-full bg-gray-900 text-center text-xs font-medium leading-6 text-white cursor-move -mt-3 -ml-3 select-none"
         :style="`left: ${stopItem.positionLeft}%; top: ${stopItem.positionTop}%;`"
         @mousedown="handleStartDrag(itemIndex)"
       >
