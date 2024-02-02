@@ -133,7 +133,7 @@ useSeoMeta({
           </button>
 
           <div
-            class="bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-lg p-0.5 ml-auto"
+            class="hidden md:block bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 rounded-lg p-0.5 ml-auto"
           >
             <div class="rounded-md bg-gray-900 p-2.5">
               <p class="text-sm font-medium text-white">

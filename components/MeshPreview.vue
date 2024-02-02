@@ -39,13 +39,12 @@ function handleStartDrag(stopIndex) {
   }
 
   const handleMouseUp = () => {
-    document.removeEventListener('mousemove', handleMouseMove)
     document.removeEventListener('mouseup', handleMouseUp)
+    document.removeEventListener('mousemove', handleMouseMove)
   }
 
-  document.addEventListener('mousemove', handleMouseMove)
-
   document.addEventListener('mouseup', handleMouseUp)
+  document.addEventListener('mousemove', handleMouseMove)
 }
 </script>
 
