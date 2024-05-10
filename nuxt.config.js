@@ -5,6 +5,7 @@ export default defineNuxtConfig({
         lang: 'en',
       },
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
+      script: [{ src: 'https://media.ethicalads.io/media/client/ethicalads.min.js', async: true }],
     },
     pageTransition: { name: 'page', mode: 'out-in' },
   },
