@@ -55,6 +55,11 @@ export const gradientsFlag = [
       'bg-[linear-gradient(180deg,_#002B7F_15%,_#FFF_15%_30%,_#CE1126_30%_70%,_#FFF_70%_85%,_#002B7F_85%)]',
   },
   {
+    name: 'England',
+    colors:
+      'bg-white bg-[linear-gradient(90deg,_transparent_42%,_#CE1124_20%_58%,_transparent_58%),_linear-gradient(180deg,_transparent_40%,_#CE1124_20%_60%,_transparent_60%)]',
+  },
+  {
     name: 'Estonia',
     colors:
       'bg-[linear-gradient(180deg,_#1291FF_33.333%,_#000_33.333%_66.666%,_#FFF_66.666%)]',
