@@ -167,6 +167,11 @@ export const gradientsFlag = [
       'bg-[linear-gradient(180deg,_#1EB53A_33.333%,_#FFF_33.333%_66.666%,_#0072C6_66.666%)]',
   },
   {
+    name: 'Scotland',
+    colors:
+      'bg-[#005EB8] bg-[linear-gradient(150deg,_transparent_44%,_#FFF_44%_56%,_transparent_56%),_linear-gradient(-150deg,_transparent_44%,_#FFF_44%_56%,_transparent_56%)]',
+  },
+  {
     name: 'Tanzania',
     colors:
       'bg-[linear-gradient(150deg,_#43B02A_35%,_#FFCD00_35%_40%,_#000_40%_60%,_#FFCD00_60%_65%,_#00A3E0_65%)]',
