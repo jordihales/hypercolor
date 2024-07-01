@@ -57,7 +57,7 @@ export const gradientsFlag = [
   {
     name: 'England',
     colors:
-      'bg-white bg-[linear-gradient(90deg,_transparent_42%,_#CE1124_20%_58%,_transparent_58%),_linear-gradient(180deg,_transparent_40%,_#CE1124_20%_60%,_transparent_60%)]',
+      'bg-white bg-[linear-gradient(90deg,_transparent_43%,_#CE1124_43%_57%,_transparent_57%),_linear-gradient(180deg,_transparent_40%,_#CE1124_40%_60%,_transparent_60%)]',
   },
   {
     name: 'Estonia',
