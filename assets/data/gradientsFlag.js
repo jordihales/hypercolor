@@ -55,6 +55,11 @@ export const gradientsFlag = [
       'bg-[linear-gradient(180deg,_#002B7F_15%,_#FFF_15%_30%,_#CE1126_30%_70%,_#FFF_70%_85%,_#002B7F_85%)]',
   },
   {
+    name: 'England',
+    colors:
+      'bg-white bg-[linear-gradient(90deg,_transparent_43%,_#CE1124_43%_57%,_transparent_57%),_linear-gradient(180deg,_transparent_40%,_#CE1124_40%_60%,_transparent_60%)]',
+  },
+  {
     name: 'Estonia',
     colors:
       'bg-[linear-gradient(180deg,_#1291FF_33.333%,_#000_33.333%_66.666%,_#FFF_66.666%)]',
@@ -160,6 +165,11 @@ export const gradientsFlag = [
     name: 'Sierra Leone',
     colors:
       'bg-[linear-gradient(180deg,_#1EB53A_33.333%,_#FFF_33.333%_66.666%,_#0072C6_66.666%)]',
+  },
+  {
+    name: 'Scotland',
+    colors:
+      'bg-[#005EB8] bg-[linear-gradient(150deg,_transparent_44%,_#FFF_44%_56%,_transparent_56%),_linear-gradient(-150deg,_transparent_44%,_#FFF_44%_56%,_transparent_56%)]',
   },
   {
     name: 'Tanzania',
